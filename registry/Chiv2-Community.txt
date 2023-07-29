@@ -1,0 +1,3 @@
+https://github.com/Chiv2-Community/C2ServerPlugin
+https://github.com/Chiv2-Community/C2BrowserPlugin
+https://github.com/Chiv2-Community/C2AssetLoaderPlugin
