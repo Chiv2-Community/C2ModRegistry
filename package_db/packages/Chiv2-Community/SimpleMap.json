@@ -1,0 +1,38 @@
+{
+  "latest_manifest": {
+    "repo_url": "https://github.com/Chiv2-Community/SimpleMap",
+    "name": "SimpleMap",
+    "description": "A simple map that depends on the health charger",
+    "mod_type": "Shared",
+    "authors": [ "DrLong" ],
+    "dependencies": [
+      {
+        "repo_url": "https://github.com/Chiv2-Community/healthCharger",
+        "version": "v1.0.0"
+      }
+    ],
+    "tags": [ "Map" ]
+  },
+  "releases": [
+    {
+      "tag": "v1.0.0",
+      "hash": "838C46FEE168BED151B711F879D4A4D129D0C403A0DEE468D740E1793AF04ED3",
+      "pak_file_name": "SimpleMap.pak",
+      "release_date": "2023-08-07T19:01:55.714942+03:00",
+      "manifest": {
+        "repo_url": "https://github.com/Chiv2-Community/SimpleMap",
+        "name": "SimpleMap",
+        "description": "A simple map that depends on the health charger",
+        "mod_type": "Shared",
+        "authors": [ "DrLong" ],
+        "dependencies": [
+          {
+            "repo_url": "https://github.com/Chiv2-Community/healthCharger",
+            "version": "v1.0.0"
+          }
+        ],
+        "tags": [ "Map" ]
+      }
+    }
+  ]
+}
