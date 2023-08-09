@@ -1,2 +1,2 @@
-SimpleMap
-healthCharger
+Chiv2-Community/SimpleMap
+Chiv2-Community/healthCharger
