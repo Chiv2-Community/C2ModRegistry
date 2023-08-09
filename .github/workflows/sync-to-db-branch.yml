@@ -1,0 +1,18 @@
+name: Merge any release branch to uat
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  merge-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Merge main -> db
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          target_branch: db
+          message: Merge main into db
+          github_token: ${{ secrets.GITHUB_TOKEN }}
