@@ -37,7 +37,7 @@ def main() -> None:
     add_subparser.add_argument("repo_url", type=str, help="The repo url to add or remove.")
     add_subparser.add_argument("release_tag", type=str, help="The release tag to add or remove.")
 
-    remove_subparser = subparsers.add_parser("remove", help="Remove a release from a mod repo.")
+    remove_subparser = subparsers.add_parser("remove", help="Remove mod from the repo.")
     remove_subparser.add_argument("repo_url", type=str, help="The repo url to add or remove.")
 
     args = argparser.parse_args()
