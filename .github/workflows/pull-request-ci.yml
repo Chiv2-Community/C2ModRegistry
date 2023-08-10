@@ -80,6 +80,9 @@ jobs:
 
           EXIT_CODE=$?
 
+          echo "$EXIT_CODE"
+          echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
+
           RESULT=$(cat result.txt)
           
           # The EOF stuff is github actions nonsense
