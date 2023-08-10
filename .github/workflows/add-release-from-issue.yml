@@ -76,7 +76,14 @@ jobs:
           EXIT_CODE=$?
           echo "*** STDOUT ***"
           echo "$RESULT"
-          echo "result=$RESULT" >> $GITHUB_OUTPUT
+          
+          # The EOF stuff is github actions nonsense
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+
+          echo "result<<$EOF" >> $GITHUB_OUTPUT
+          echo "$RESULT" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+
 
           FAILED=false
           if [ $EXIT_CODE -ne 0 ]; then
