@@ -5,7 +5,7 @@ on:
       - 'main'
 jobs:
   merge-branch:
-    runs-on: ubuntu-latest
+    runs-on: python:3.11-slim-bullseye
     steps:
       - uses: actions/checkout@master
 
@@ -16,3 +16,17 @@ jobs:
           target_branch: db
           message: Merge main into db
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update package list
+        run: python3 build_package_list.py
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update package list
+          branch: db
+          file_pattern: package_db
+          
