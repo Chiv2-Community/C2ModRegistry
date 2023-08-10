@@ -12,6 +12,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           issue_id: ${{ github.event.issue.number }}
+
+      - uses: ben-z/actions-comment-on-issue@1.0.2
+        with:
+          message: "Successfully parsed issue body. Attempting to add release to package DB."
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
       
       - name: Checkout db branch
         uses: actions/checkout@master
@@ -31,14 +36,23 @@ jobs:
           poetry config virtualenvs.create true --local
           poetry config virtualenvs.in-project true --local
 
-      - uses: actions/cache@v3
-        name: Define a cache for the virtual environment based on the dependencies lock file
+      - name: Define a cache for the virtual environment based on the dependencies lock file
+        uses: actions/cache@v3
         with:
           path: ./.venv
           key: venv-${{ hashFiles('poetry.lock') }}
 
       - name: Update package list
-        run: poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}'
+        run: poetry install && poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }} >> result.txt'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post Results
+        uses: machine-learning-apps/pr-comment@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          path: result.txt
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
