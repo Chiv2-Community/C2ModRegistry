@@ -1,6 +1,6 @@
 name: Add release from issue
 on:
-  issue:
+  issues:
     types: [opened]
 jobs:
   add-release:
