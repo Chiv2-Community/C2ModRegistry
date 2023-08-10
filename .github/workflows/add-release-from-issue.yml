@@ -13,10 +13,11 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           issue_id: ${{ github.event.issue.number }}
 
-      - uses: ben-z/actions-comment-on-issue@1.0.2
+      - name: Confirmation Message
+        uses: peter-evans/create-or-update-comment@v3
         with:
-          message: "Successfully parsed issue body. Attempting to add release to package DB."
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          issue-number: ${{ github.event.issue.number }}
+          body: "Successfully parsed issue body. Attempting to add release to package DB."
       
       - name: Checkout db branch
         uses: actions/checkout@master
@@ -52,13 +53,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Post Results
-        uses: ben-z/actions-comment-on-issue@1.0.2
+        uses: peter-evans/create-or-update-comment@v3
         with:
-          message: |
+          issue-number: ${{ github.event.issue.number }}
+          body: |
             ```
             ${{ steps.update-package-list.outputs.result }}
             ```
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -66,3 +67,8 @@ jobs:
           commit_message: Update package list
           branch: db
           file_pattern: package_db
+
+      - name: Close Issue
+        run: gh issue close "${{ github.event.issue.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
