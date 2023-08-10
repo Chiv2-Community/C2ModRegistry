@@ -75,7 +75,7 @@ jobs:
           poetry install
           poetry run \
             python3 src/c2modregistry/main.py \
-            process-registry-updates
+            process-registry-updates \
             > result.txt 2>&1
 
           EXIT_CODE=$?
