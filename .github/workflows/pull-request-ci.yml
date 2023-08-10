@@ -69,7 +69,6 @@ jobs:
 
       - name: Add release
         id: update-package-list
-        continue-on-error: true
         run: |
           set +e
           poetry install
@@ -95,29 +94,23 @@ jobs:
 
           FAILED=false
           if [ $EXIT_CODE -ne 0 ]; then
+            echo ":x: Failed." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
             FAILED=true
+          else
+            echo ":white_check_mark: All checks passed." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
+            echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
+            echo "```" >> $GITHUB_STEP_SUMMARY
           fi
 
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
 
+          exit $EXIT_CODE
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
-      - name: Post failure Results 
-        if: steps.update-package-list.outputs.failed == 'true'
-        run: |
-          echo ":x: Failed." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
-          exit 1
-
-      - name: Post success results
-        if: steps.update-package-list.outputs.failed == 'false'
-        run: |
-          echo ":white_check_mark: All checks passed." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
