@@ -53,6 +53,12 @@ jobs:
         with:
           python-version: 3.11
 
+      - uses: actions/cache@v3
+        name: Define a cache for the virtual environment based on the dependencies lock file
+        with:
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
 
@@ -60,12 +66,6 @@ jobs:
         run: |
           poetry config virtualenvs.create true --local
           poetry config virtualenvs.in-project true --local
-
-      - uses: actions/cache@v3
-        name: Define a cache for the virtual environment based on the dependencies lock file
-        with:
-          path: ./.venv
-          key: venv-${{ hashFiles('poetry.lock') }}
 
       - name: Add release
         id: update-package-list
