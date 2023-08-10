@@ -109,6 +109,10 @@ def init(org: str, repoName: str) -> None:
     print(f"Initializing repo {org}/{repoName}...")
     mod = initialize_repo(org, repoName)
 
+    if mod is None:
+        print(f"Failed to initialize repo {org}/{repoName}.")
+        exit(1)
+
     if not os.path.exists(f"{DEFAULT_PACKAGES_DIR}/{org}"):
         os.makedirs(f"{DEFAULT_PACKAGES_DIR}/{org}")
 
@@ -126,8 +130,20 @@ def add_release(org: str, repoName: str, release_tag: str) -> None:
         # No need to coninue. Initialization will get all releases.
         return
     
+    [mod_org, mod_repoName] = mod.latest_manifest.repo_url.split("/")[-2:]
+    
+    tags = [release.tag for release in mod.releases]
+    
+    if release_tag in tags:
+        print(f"Release {release_tag} already exists in repo {org}/{repoName}.")
+        return
+    
     print(f"Adding release {release_tag} to repo {org}/{repoName}...")
     updated_mod = add_release_tag(mod, release_tag)
+
+    if updated_mod is None:
+        print(f"Release {release_tag} already exists in repo {org}/{repoName}.")
+        return
 
     with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
         print(f"Writing updated mod metadata for {org}/{repoName}...")

@@ -36,7 +36,7 @@ def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
         )
 
     except Exception as e:
-        print(f"Failed to add release tag {release_tag} for repo {org, repoName}: {e}")
+        print(f"Failed to add release tag {release_tag} for repo {org}/{repoName}: {e}")
         return None
 
 def all_releases(org: str, repoName: str) -> List[Release]:
