@@ -43,16 +43,22 @@ jobs:
           key: venv-${{ hashFiles('poetry.lock') }}
 
       - name: Update package list
-        run: poetry install && poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }} >> result.txt'
+        id: update-package-list
+        run: |
+          poetry install
+          RESULT=$(poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}')
+          echo "::set-output name=result::$RESULT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Post Results
-        uses: machine-learning-apps/pr-comment@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ben-z/actions-comment-on-issue@1.0.2
         with:
-          path: result.txt
+          message: |
+            ```
+            ${{ steps.update-package-list.outputs.result }}
+            ```
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
