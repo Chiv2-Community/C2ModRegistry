@@ -38,7 +38,7 @@ jobs:
       - name: Merge db branch -> PR branch
         run: |
           git fetch origin db 
-          git merge origin db
+          git merge origin/db
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
