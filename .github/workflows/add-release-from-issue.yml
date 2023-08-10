@@ -14,15 +14,15 @@ jobs:
         id: check
         run: |
           shopt -s nocasematch
+          SHOULD_EXECUTE=true
+
           if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
             if [[ "${{ github.event.comment.body }}" != "retry" ]]; then
-              echo "::set-output name=should_execute::false"
-            else
-              echo "::set-output name=should_execute::true"
+              echo "should_execute=false" >> $GITHUB_OUTPUT
             fi
-          else
-            echo "::set-output name=should_execute::true"
           fi
+
+          echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
 
   add-release:
     runs-on: ubuntu-latest
@@ -70,18 +70,21 @@ jobs:
         id: update-package-list
         continue-on-error: true
         run: |
+          set +e
           poetry install
           RESULT=$(poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}')
           EXIT_CODE=$?
           echo "*** STDOUT ***"
           echo "$RESULT"
-          echo "::set-output name=result::$RESULT"
+          echo "result=$RESULT" >> $GITHUB_OUTPUT
 
+          FAILED=false
           if [ $EXIT_CODE -ne 0 ]; then
-            echo "::set-output name=failed::true"
-          else
-            echo "::set-output name=failed::false"
+            FAILED=true
           fi
+
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
