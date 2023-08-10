@@ -4,6 +4,7 @@ on:
     types: [opened]
   issue_comment:
     types: [created]
+
 jobs:
   check-should-execute:
     runs-on: ubuntu-latest
