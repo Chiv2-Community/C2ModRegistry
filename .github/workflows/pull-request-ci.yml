@@ -103,27 +103,19 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
       - name: Post failure Results 
-        uses: peter-evans/create-or-update-comment@v3
         if: steps.update-package-list.outputs.failed == 'true'
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            :x: Failed to add repo to package DB. Please check the logs below for more details.
-
-            ```
-            ${{ steps.update-package-list.outputs.result }}
-            ```
-
-            After addressing the errors, reply "retry"
+        run: |
+          echo ":x: Failed." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "```" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "```" >> $GITHUB_STEP_SUMMARY
 
       - name: Post success results
-        uses: peter-evans/create-or-update-comment@v3
         if: steps.update-package-list.outputs.failed == 'false'
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            :white_check_mark: All checks passed.
-
-            ```
-            ${{ steps.update-package-list.outputs.result }}
-            ```
+        run: |
+          echo ":white_check_mark: All checks passed." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "```" >> $GITHUB_STEP_SUMMARY
+          echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "```" >> $GITHUB_STEP_SUMMARY
