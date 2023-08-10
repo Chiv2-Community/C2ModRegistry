@@ -35,7 +35,7 @@ jobs:
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
 
-      - name: Setup a local virtual environment (if no poetry.toml file)
+      - name: Setup a local virtual environment 
         run: |
           poetry config virtualenvs.create true --local
           poetry config virtualenvs.in-project true --local
@@ -48,6 +48,8 @@ jobs:
 
       - name: Update package list
         run: poetry install && poetry run python3 src/c2modregistry/main.py process-registry-updates
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
