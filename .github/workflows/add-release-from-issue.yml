@@ -38,7 +38,7 @@ jobs:
           key: venv-${{ hashFiles('poetry.lock') }}
 
       - name: Update package list
-        run: poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).version }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}'
+        run: poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}'
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
