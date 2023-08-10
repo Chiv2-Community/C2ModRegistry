@@ -29,7 +29,6 @@ jobs:
     needs: check-should-execute
     if: needs.check-should-execute.outputs.should_execute == 'true'
     steps:
-        uses: actions/checkout@master
       - name: Parse Json in Issue
         uses: peter-murray/issue-body-parser-action@v1
         id: issue_json_payload
