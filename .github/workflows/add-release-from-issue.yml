@@ -1,26 +1,18 @@
-name: Update package list
+name: Add release from issue
 on:
-  push:
-    branches:
-      - 'main'
+  issue:
+    types: [opened]
 jobs:
-  merge-branch:
+  add-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main
-        uses: actions/checkout@master
-
-      - name: Merge main into db
-        uses: devmasx/merge-branch@master
+      - name: Parse Json in Issue
+        uses: peter-murray/issue-body-parser-action@v1
+        id: issue_json_payload
         with:
-          type: now
-          target_branch: db
-          message: Merge main into db
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-  update-package-list:
-    runs-on: ubuntu-latest
-    steps:
+          issue_id: ${{ github.event.issue.number }}
+      
       - name: Checkout db branch
         uses: actions/checkout@master
         with: 
@@ -46,7 +38,7 @@ jobs:
           key: venv-${{ hashFiles('poetry.lock') }}
 
       - name: Update package list
-        run: poetry run python3 src/c2modregistry/main.py process-registry-updates
+        run: poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).version }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}'
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
