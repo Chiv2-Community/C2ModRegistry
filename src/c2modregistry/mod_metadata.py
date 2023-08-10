@@ -53,8 +53,8 @@ def all_releases(org: str, repoName: str) -> List[Release]:
         except Exception as e:
             print(f"Failed to get release for tag {release.tag_name}: {e}")
 
-    natsorted(results, key=lambda x: x.tag)
-                
+    natsorted(results, key=lambda x: x.release_date)
+        
     print(f"Successfully processed {len(results)} releases for {org}/{repoName}")
     return results
 
