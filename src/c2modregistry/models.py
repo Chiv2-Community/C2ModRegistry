@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from datetime import datetime
 from typing import Dict, List
 
@@ -65,3 +65,6 @@ class Mod:
             latest_manifest=Manifest.from_dict(data["latest_manifest"]),
             releases=[Release.from_dict(release) for release in data["releases"]]
         )
+    
+    def asdict(self) -> Dict:
+        return asdict(self)
