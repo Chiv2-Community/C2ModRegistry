@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 import requests
 from github import Github, Auth
 from github.GitRelease import GitRelease
@@ -10,24 +10,34 @@ auth = Auth.Token(environ.get("GITHUB_TOKEN") or "")
 github_client = Github(auth=auth)
 
 
-def initialize_repo(org: str, repoName: str) -> Mod:
-    releases = all_releases(org, repoName)
+def initialize_repo(org: str, repoName: str) -> Optional[Mod]:
+    try:
+        releases = all_releases(org, repoName)
 
-    return Mod(
-        latest_manifest=releases[-1].manifest,
-        releases=releases
-    )
+        return Mod(
+            latest_manifest=releases[-1].manifest,
+            releases=releases
+        )
+    except Exception as e:
+        print(f"Failed to initialize repo {org}/{repoName}: {e}")
+        return None
 
-def add_release_tag(mod: Mod, release_tag: str) -> Mod:
-    github_repo = github_client.get_repo(mod.latest_manifest.repo_url)
-    release = github_repo.get_release(release_tag)
-
+def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
     [org, repoName] = mod.latest_manifest.repo_url.split("/")[-2:]
+    try:
+        github_repo = github_client.get_repo(mod.latest_manifest.repo_url)
+        release = github_repo.get_release(release_tag)
+        
+        mod_releases = mod.releases + [process_release(org, repoName, release)]
+        natsorted(mod_releases, key=lambda x: x.release_date)
+        return Mod(
+            latest_manifest=mod_releases[-1].manifest,
+            releases=mod.releases + [process_release(org, repoName, release)]
+        )
 
-    return Mod(
-        latest_manifest=mod.latest_manifest,
-        releases=mod.releases + [process_release(org, repoName, release)]
-    )
+    except Exception as e:
+        print(f"Failed to add release tag {release_tag} for repo {org, repoName}: {e}")
+        return None
 
 def all_releases(org: str, repoName: str) -> List[Release]:
     print(f"Getting all releases for {org}/{repoName}")
