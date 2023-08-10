@@ -121,7 +121,6 @@ def init(org: str, repoName: str, dry_run: bool) -> None:
 
     if mod is None:
         print(f"Failed to initialize repo {org}/{repoName}.")
-        print("Exitting (1)")
         exit(1)
 
     if dry_run:
