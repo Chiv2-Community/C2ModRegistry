@@ -72,7 +72,12 @@ jobs:
         run: |
           set +e
           poetry install
-          RESULT=$(poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}')
+          poetry run \
+            python3 src/c2modregistry/main.py \
+            add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
+            > result.txt 2>&1
+
+          RESULT=$(cat result.txt)
           EXIT_CODE=$?
           echo "*** STDOUT ***"
           echo "$RESULT"
