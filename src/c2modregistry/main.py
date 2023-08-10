@@ -142,7 +142,8 @@ def add_release(org: str, repoName: str, release_tag: str) -> None:
     updated_mod = add_release_tag(mod, release_tag)
 
     if updated_mod is None:
-        print(f"Release {release_tag} already exists in repo {org}/{repoName}.")
+        print(f"Failed to add release {release_tag} to repo {org}/{repoName}.")
+        exit(1)
         return
 
     with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
