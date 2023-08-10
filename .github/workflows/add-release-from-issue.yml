@@ -77,8 +77,9 @@ jobs:
             add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
             > result.txt 2>&1
 
-          RESULT=$(cat result.txt)
           EXIT_CODE=$?
+
+          RESULT=$(cat result.txt)
           echo "*** STDOUT ***"
           echo "$RESULT"
           
@@ -123,7 +124,7 @@ jobs:
       
       - name: Post success results
         uses: peter-evans/create-or-update-comment@v3
-        if: steps.update-package-list.outputs.failed == 'true'
+        if: steps.update-package-list.outputs.failed == 'false'
         with:
           issue-number: ${{ github.event.issue.number }}
           body: Successfully added release to package DB.
