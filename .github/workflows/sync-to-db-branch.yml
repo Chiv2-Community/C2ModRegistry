@@ -1,4 +1,4 @@
-name: Merge any release branch to uat
+name: Update package list
 on:
   push:
     branches:
@@ -7,12 +7,37 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout main
+        uses: actions/checkout@master
 
-      - name: Merge main -> db
+      - name: Merge main into db
         uses: devmasx/merge-branch@master
         with:
           type: now
           target_branch: db
           message: Merge main into db
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Checkout db branch
+        uses: actions/checkout@master
+        with: 
+          ref: db
+
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Update package list
+        run: python3 build_package_list.py
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update package list
+          branch: db
+          file_pattern: package_db
