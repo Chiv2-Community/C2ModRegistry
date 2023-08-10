@@ -25,6 +25,9 @@ json_encoder = PackageManagerJsonEncoder()
 
 def main() -> None:
     argparser = argparse.ArgumentParser(description="Manage the mod registry.")
+
+    # add dry-run flag
+    argparser.add_argument("--dry-run", action="store_true", help="Don't actually make any changes.")
     
     subparsers = argparser.add_subparsers(dest="command", required=True)
 
@@ -43,20 +46,20 @@ def main() -> None:
     args = argparser.parse_args()
 
     if args.command == "process-registry-updates":
-        process_registry_updates("./registry", "./package_db/mod_list_index.txt")
+        process_registry_updates("./registry", "./package_db/mod_list_index.txt", args.dry_run)
     elif args.command == "init":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        init(org, repoName)
+        init(org, repoName, args.dry_run)
     elif args.command == "add":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        add_release(org, repoName, args.release_tag)
+        add_release(org, repoName, args.release_tag, args.dry_run)
     elif args.command == "remove":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        remove_mod(org, repoName)
+        remove_mod(org, repoName, args.dry_run)
     else:
         print("Unknown command.")
 
-def process_registry_updates(registry_dir: str, mod_list_index_path: str) -> None:
+def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_run: bool) -> None:
     # Get repo lines from the registry dir
     print("Loading package list entries...")
     updated_index_entries = get_package_list(registry_dir)
@@ -76,7 +79,7 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str) -> Non
     for entry in new_entries:
         [org, repoName] = entry.split("/")
         try:
-            init(org, repoName)
+            init(org, repoName, dry_run)
             print("")
         except Exception as e:
             # If we fail to initialize a repo, remove it from the package list
@@ -88,7 +91,7 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str) -> Non
     for entry in removed_entries:
         [org, repoName] = entry.split("/")
         try:
-            remove_mod(org, repoName)
+            remove_mod(org, repoName, dry_run)
         except Exception as e:
             # If we fail to remove a repo, add it back to the package list
             print(f"Failed to remove repo {org}/{repoName}: {e}")
@@ -96,6 +99,10 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str) -> Non
             failures += 1
 
     print(f"Writing {len(updated_index_entries)} packages to the package list. ({failures} failures)")
+
+    if dry_run:
+        print("Dry run; not writing to package list.")
+        return
 
     if not os.path.exists(DEFAULT_PACKAGE_DB_DIR):
         os.makedirs(DEFAULT_PACKAGE_DB_DIR)
@@ -105,7 +112,7 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str) -> Non
 
     print("Package list built.")
 
-def init(org: str, repoName: str) -> None:
+def init(org: str, repoName: str, dry_run: bool) -> None:
     print(f"Initializing repo {org}/{repoName}...")
     mod = initialize_repo(org, repoName)
 
@@ -113,7 +120,9 @@ def init(org: str, repoName: str) -> None:
         print(f"Failed to initialize repo {org}/{repoName}.")
         exit(1)
 
-    validate_repo_urls(org, repoName, mod)
+    if dry_run:
+        print("Dry run; not writing to package dir.")
+        return
 
     if not os.path.exists(f"{DEFAULT_PACKAGES_DIR}/{org}"):
         os.makedirs(f"{DEFAULT_PACKAGES_DIR}/{org}")
@@ -121,13 +130,13 @@ def init(org: str, repoName: str) -> None:
     with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
         file.write(json_encoder.encode(mod.asdict()))
 
-def add_release(org: str, repoName: str, release_tag: str) -> None:
+def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> None:
     print(f"Loading mod metadata for {org}/{repoName}...")
     mod = load_mod(org, repoName, DEFAULT_PACKAGES_DIR)
 
     if mod is None:
         print(f"Mod {org}/{repoName} not initialized.")
-        init(org, repoName)
+        init(org, repoName, dry_run)
 
         # No need to coninue. Initialization will get all releases.
         return
@@ -146,7 +155,9 @@ def add_release(org: str, repoName: str, release_tag: str) -> None:
         exit(1)
         return
 
-    validate_repo_urls(org, repoName, updated_mod)
+    if dry_run:
+        print("Dry run; not writing to mod metadata.")
+        return
 
     with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
         print(f"Writing updated mod metadata for {org}/{repoName}...")
@@ -154,7 +165,7 @@ def add_release(org: str, repoName: str, release_tag: str) -> None:
     
     print(f"Successfully added release {release_tag} to repo {org}/{repoName}.")
 
-def remove_mod(org: str, repoName: str) -> None:
+def remove_mod(org: str, repoName: str, dry_run: bool) -> None:
     print(f"Loading mod metadata for {org}/{repoName}...")
     mod = load_mod(org, repoName, DEFAULT_PACKAGES_DIR)
 
@@ -163,6 +174,11 @@ def remove_mod(org: str, repoName: str) -> None:
         return
     
     print(f"Removing mod {org}/{repoName}...")
+    
+    if dry_run:
+        print("Dry run; not writing to mod metadata.")
+        return
+
     os.remove(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json")
 
     # If org directory is empty, remove it
@@ -177,15 +193,6 @@ def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
             return Mod.from_dict(mod_dict)
     except FileNotFoundError:
         return None
-
-def validate_repo_urls(org: str, repoName: str, mod: Mod) -> None:
-    repo_urls = [release.manifest.repo_url for release in mod.releases] + [mod.latest_manifest.repo_url]
-    expected_url = f"https://github.com/{org}/{repoName}"
-    non_matching_urls = [url for url in repo_urls if url != expected_url]
-
-    if len(non_matching_urls) > 0:
-        print(f"Repo {org}/{repoName} has releases with manifests containing invalid repo urls: {non_matching_urls}")
-        exit(1)
 
 if __name__ == "__main__":
     main()
