@@ -40,6 +40,8 @@ jobs:
       - name: Merge db branch -> PR branch
         run: |
           git fetch origin db 
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git config --global user.name "github-actions"
           git merge origin/db
 
       - name: Set up Python ${{ matrix.python-version }}
