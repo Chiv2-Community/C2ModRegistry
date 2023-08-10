@@ -102,18 +102,24 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3
         if: steps.update-package-list.outputs.failed == 'true'
         with:
-          issue-number: ${{ github.event.issue.number }}
+          issue-number: ${{ github.event.pull_request.number }}
           body: |
-            Failed to add repo to package DB. Please check the logs below for more details.
-            After addressing the errors, reply "retry"
+            :x: Failed to add repo to package DB. Please check the logs below for more details.
 
             ```
             ${{ steps.update-package-list.outputs.result }}
             ```
 
+            After addressing the errors, reply "retry"
+
       - name: Post success results
         uses: peter-evans/create-or-update-comment@v3
         if: steps.update-package-list.outputs.failed == 'false'
         with:
-          issue-number: ${{ github.event.issue.number }}
-          body: All checks passed.
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            :white_check_mark: All checks passed.
+
+            ```
+            ${{ steps.update-package-list.outputs.result }}
+            ```
