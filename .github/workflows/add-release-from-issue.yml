@@ -48,6 +48,8 @@ jobs:
         run: |
           poetry install
           RESULT=$(poetry run python3 src/c2modregistry/main.py add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}')
+          echo "*** STDOUT ***"
+          echo "$RESULT"
           echo "::set-output name=result::$RESULT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
