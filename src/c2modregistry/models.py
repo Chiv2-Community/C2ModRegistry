@@ -39,7 +39,6 @@ class Manifest:
 @dataclass(frozen=True)
 class Release:
     tag: str
-    hash: str
     pak_file_name: str
     release_date: datetime
     manifest: Manifest
@@ -48,7 +47,6 @@ class Release:
     def from_dict(data: Dict) -> "Release":
         return Release(
             tag=data["tag"],
-            hash=data["hash"],
             pak_file_name=data["pak_file_name"],
             release_date=datetime.fromisoformat(data["release_date"]),
             manifest=Manifest.from_dict(data["manifest"])

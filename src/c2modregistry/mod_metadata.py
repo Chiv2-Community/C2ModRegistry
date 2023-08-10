@@ -80,7 +80,6 @@ def process_release(org: str, repoName: str, release: GitRelease) -> Release:
     
     return Release(
         tag=release.tag_name,
-        hash=release.target_commitish,
         pak_file_name=paks[0].name,
         release_date=paks[0].updated_at,
         manifest=mod_json

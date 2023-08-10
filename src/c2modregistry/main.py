@@ -113,6 +113,8 @@ def init(org: str, repoName: str) -> None:
         print(f"Failed to initialize repo {org}/{repoName}.")
         exit(1)
 
+    validate_repo_urls(org, repoName, mod)
+
     if not os.path.exists(f"{DEFAULT_PACKAGES_DIR}/{org}"):
         os.makedirs(f"{DEFAULT_PACKAGES_DIR}/{org}")
 
@@ -144,6 +146,8 @@ def add_release(org: str, repoName: str, release_tag: str) -> None:
         exit(1)
         return
 
+    validate_repo_urls(org, repoName, updated_mod)
+
     with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
         print(f"Writing updated mod metadata for {org}/{repoName}...")
         file.write(json_encoder.encode(updated_mod.asdict()))
@@ -174,6 +178,14 @@ def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
     except FileNotFoundError:
         return None
 
+def validate_repo_urls(org: str, repoName: str, mod: Mod) -> None:
+    repo_urls = [release.manifest.repo_url for release in mod.releases] + [mod.latest_manifest.repo_url]
+    expected_url = f"https://github.com/{org}/{repoName}"
+    non_matching_urls = [url for url in repo_urls if url != expected_url]
+
+    if len(non_matching_urls) > 0:
+        print(f"Repo {org}/{repoName} has releases with manifests containing invalid repo urls: {non_matching_urls}")
+        exit(1)
 
 if __name__ == "__main__":
     main()
