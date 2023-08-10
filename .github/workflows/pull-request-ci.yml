@@ -94,14 +94,14 @@ jobs:
             echo ":x: Failed." >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
-            echo "$RESULT" >> $GITHUB_STEP_SUMMARY
+            cat result.txt >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
             FAILED=true
           else
             echo ":white_check_mark: All checks passed." >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
-            echo "$RESULT" >> $GITHUB_STEP_SUMMARY
+            cat result.txt >> $GITHUB_STEP_SUMMARY
             echo "```" >> $GITHUB_STEP_SUMMARY
           fi
 
