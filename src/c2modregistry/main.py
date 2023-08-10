@@ -130,8 +130,6 @@ def add_release(org: str, repoName: str, release_tag: str) -> None:
         # No need to coninue. Initialization will get all releases.
         return
     
-    [mod_org, mod_repoName] = mod.latest_manifest.repo_url.split("/")[-2:]
-    
     tags = [release.tag for release in mod.releases]
     
     if release_tag in tags:

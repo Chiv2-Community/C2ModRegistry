@@ -25,7 +25,7 @@ def initialize_repo(org: str, repoName: str) -> Optional[Mod]:
 def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
     [org, repoName] = mod.latest_manifest.repo_url.split("/")[-2:]
     try:
-        github_repo = github_client.get_repo(mod.latest_manifest.repo_url)
+        github_repo = github_client.get_repo(f"{org}/{repoName}")
         release = github_repo.get_release(release_tag)
         
         mod_releases = mod.releases + [process_release(org, repoName, release)]
