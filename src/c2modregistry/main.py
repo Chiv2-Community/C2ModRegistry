@@ -98,7 +98,10 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
             updated_index_entries.append(entry)
             failures += 1
 
-    print(f"Writing {len(updated_index_entries)} packages to the package list. ({failures} failures)")
+    if failures > 0:
+        print(f"{failures} failures occurred while processing the package list.")
+        print("The package list has not been updated.")
+        exit(1)
 
     if dry_run:
         print("Dry run; not writing to package list.")
