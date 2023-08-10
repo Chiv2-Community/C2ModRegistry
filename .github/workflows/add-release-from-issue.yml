@@ -99,7 +99,9 @@ jobs:
           echo "failed=$FAILED" >> $GITHUB_OUTPUT
 
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Note the alternate token in use here.
+          # This is because the default token doesn't have read access to repos that the packagedb needs.
+          GITHUB_TOKEN: ${{ secrets.C2ModRegistry_Steward }}
 
       - name: Post failure Results 
         uses: peter-evans/create-or-update-comment@v3
