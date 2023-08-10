@@ -7,15 +7,22 @@ jobs:
   merge-branch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout main
+        uses: actions/checkout@master
 
-      - name: Merge main -> db
+      - name: Merge main into db
         uses: devmasx/merge-branch@master
         with:
           type: now
           target_branch: db
           message: Merge main into db
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Checkout db branch
+        uses: actions/checkout@master
+        with: 
+          ref: db
+
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
