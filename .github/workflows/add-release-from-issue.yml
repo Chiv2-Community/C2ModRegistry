@@ -100,13 +100,22 @@ jobs:
             ```
 
       - name: Commit changes
+        if: steps.update-package-list.outputs.failed == 'false'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update package list
           branch: db
           file_pattern: package_db
+      
+      - name: Post success results
+        uses: peter-evans/create-or-update-comment@v3
+        if: steps.update-package-list.outputs.failed == 'true'
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: Successfully added release to package DB.
 
       - name: Close Issue
+        if: steps.update-package-list.outputs.failed == 'false'
         run: gh issue close "${{ github.event.issue.number }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
