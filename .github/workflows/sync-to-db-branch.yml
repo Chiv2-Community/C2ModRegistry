@@ -1,4 +1,4 @@
-name: Merge any release branch to uat
+name: Update package list
 on:
   push:
     branches:
@@ -29,4 +29,3 @@ jobs:
           commit_message: Update package list
           branch: db
           file_pattern: package_db
-          
