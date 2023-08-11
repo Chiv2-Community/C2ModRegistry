@@ -1,0 +1,74 @@
+name: Run tests
+
+on:  
+  pull_request:
+    branches:
+      - main
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:  
+  check-should-execute:
+    runs-on: ubuntu-latest
+    outputs:
+      should_execute: ${{ steps.check.outputs.should_execute }}
+    steps:
+      - name: Check if this should execute
+        id: check
+        run: |
+          shopt -s nocasematch
+          SHOULD_EXECUTE=true
+
+          if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
+            if [[ "${{ github.event.comment.body }}" != "retry" ]]; then
+              SHOULD_EXECUTE=false
+            fi
+          fi
+
+          echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
+
+  update-package-list-dry-run:
+    runs-on: ubuntu-latest
+    needs: check-should-execute 
+    if: needs.check-should-execute.outputs.should_execute == 'true'
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 0
+
+      - name: Merge db branch -> PR branch
+        run: |
+          git fetch origin db 
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git config --global user.name "github-actions"
+          git merge origin/db
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - uses: actions/cache@v3
+        name: Define a cache for the virtual environment based on the dependencies lock file
+        with:
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+
+      - name: Setup a local virtual environment 
+        run: |
+          poetry config virtualenvs.create true --local
+          poetry config virtualenvs.in-project true --local
+
+      - name: Attempt to initialize updated package list
+        id: update-package-list
+        run: .github/workflows/scripts/run-package-manager.sh --dry-run process-registry-updates
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

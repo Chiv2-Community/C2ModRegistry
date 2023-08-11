@@ -1,0 +1,109 @@
+name: Add release from issue
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+jobs:
+  check-should-execute:
+    runs-on: ubuntu-latest
+    outputs:
+      should_execute: ${{ steps.check.outputs.should_execute }}
+    steps:
+      - name: Check if this should execute
+        id: check
+        run: |
+          shopt -s nocasematch
+          SHOULD_EXECUTE=true
+
+          if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
+            if [[ "${{ github.event.comment.body }}" != "retry" ]]; then
+              echo "should_execute=false" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+          echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
+
+  add-release:
+    runs-on: ubuntu-latest
+    needs: check-should-execute
+    if: needs.check-should-execute.outputs.should_execute == 'true'
+    steps:
+      - name: Parse Json in Issue
+        uses: peter-murray/issue-body-parser-action@v1
+        id: issue_json_payload
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          issue_id: ${{ github.event.issue.number || github.event.issue_comment.issue.number }}
+
+      - name: Confirmation Message
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: "Successfully parsed issue body. Attempting to add release to package DB."
+      
+      - name: Checkout db branch
+        uses: actions/checkout@master
+        with: 
+          ref: db
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Define a cache for the virtual environment based on the dependencies lock file
+        uses: actions/cache@v3
+        with:
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v2
+
+      - name: Setup a local virtual environment 
+        run: |
+          poetry config virtualenvs.create true --local
+          poetry config virtualenvs.in-project true --local
+
+      - name: Add release
+        id: update-package-list
+        continue-on-error: true
+        run: .github/workflows/scripts/run-package-manager.sh process-registry-updates add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post failure Results 
+        uses: peter-evans/create-or-update-comment@v3
+        if: steps.update-package-list.outputs.failed == 'true'
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Failed to add release to package DB. Please check the logs below for more details.
+            After addressing the errors, reply "retry"
+
+            ```
+            ${{ steps.update-package-list.outputs.result }}
+            ```
+
+      - name: Commit changes
+        if: steps.update-package-list.outputs.failed == 'false'
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update package list
+          branch: db
+          file_pattern: package_db
+      
+      - name: Post success results
+        uses: peter-evans/create-or-update-comment@v3
+        if: steps.update-package-list.outputs.failed == 'false'
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: Successfully added release to package DB.
+
+      - name: Close Issue
+        if: steps.update-package-list.outputs.failed == 'false'
+        run: gh issue close "${{ github.event.issue.number }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
