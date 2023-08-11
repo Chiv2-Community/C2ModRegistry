@@ -9,7 +9,12 @@ def repo_to_index_entry(repo: str) -> str:
     repo = repo.strip().rstrip("/")
     return "/".join(repo.split("/")[-2:])
 
-def get_package_list(directory: str) -> list[str]:
+def load_package_list(path: str) -> List[str]:
+    """Loads the package list from a file."""
+    with open(path, 'r') as file:
+        return file.read().splitlines()
+
+def generate_package_list(directory: str) -> List[str]:
     """Gets all lines from all files, ignoring any empty lines or lines starting with #"""
     all_lines = []
 

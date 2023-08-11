@@ -3,11 +3,13 @@ import argparse
 from datetime import datetime
 import json
 import os
-from typing import Optional
+from typing import List, Optional, Tuple
 
 from c2modregistry import add_release_tag, initialize_repo
 from c2modregistry import Mod
-from c2modregistry import get_package_list, repo_to_index_entry
+from c2modregistry import generate_package_list, repo_to_index_entry
+from c2modregistry.models import Dependency, Release
+from c2modregistry.package_list import load_package_list
 
 DEFAULT_REGISTRY_PATH = "./registry"
 DEFAULT_PACKAGE_DB_DIR = "./package_db"
@@ -62,7 +64,7 @@ def main() -> None:
 def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_run: bool) -> None:
     # Get repo lines from the registry dir
     print("Loading package list entries...")
-    updated_index_entries = get_package_list(registry_dir)
+    updated_index_entries = generate_package_list(registry_dir)
     previous_index_entries = []
     try:
         with open(mod_list_index_path, "r") as file:
@@ -135,6 +137,10 @@ def init(org: str, repoName: str, dry_run: bool) -> None:
     with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
         file.write(json_encoder.encode(mod.asdict()))
 
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR)
+
+    print(f"Repo {org}/{repoName} initialized.")
+
 def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> None:
     print(f"Loading mod metadata for {org}/{repoName}...")
     mod = load_mod(org, repoName, DEFAULT_PACKAGES_DIR)
@@ -168,6 +174,8 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
         print(f"Writing updated mod metadata for {org}/{repoName}...")
         file.write(json_encoder.encode(updated_mod.asdict()))
     
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR)
+    
     print(f"Successfully added release {release_tag} to repo {org}/{repoName}.")
 
 def remove_mod(org: str, repoName: str, dry_run: bool) -> None:
@@ -190,6 +198,10 @@ def remove_mod(org: str, repoName: str, dry_run: bool) -> None:
     if not os.listdir(f"{DEFAULT_PACKAGES_DIR}/{org}"):
         print(f"Removing empty org {org}...")
         os.rmdir(f"{DEFAULT_PACKAGES_DIR}/{org}")
+    
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR)
+
+    print(f"Successfully removed mod {org}/{repoName}.")
 
 def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
     try:
@@ -198,6 +210,60 @@ def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
             return Mod.from_dict(mod_dict)
     except FileNotFoundError:
         return None
+    
+def validate_package_db(package_dir: str) -> None:
+    print("Validating package database...")
+    packages = load_package_list(package_dir + "/mod_list_index.txt")
+    mods: List[Mod] = []
+
+    # Load all mods
+    for package in packages:
+        package_path = f"{package_dir}/packages/{package}.json"
+        try:
+            with open(package_path, "r") as file:
+                mod_dict = json.loads(file.read())
+                mod = Mod.from_dict(mod_dict)
+
+                if mod is None:
+                    print(f"Failed to load mod {package} during validation.")
+                    exit(1)
+
+                mods.append(mod)
+        except FileNotFoundError:
+            print(f"Package {package} not found during validation.")
+            exit(1)
+    
+    # Check for missing dependencies
+    missing_deps: List[Tuple[Release, Dependency]] = []
+    for mod in mods:
+        for release in mod.releases:
+            for dep in release.manifest.dependencies:
+                found_release = find_dependency(mods, dep)
+                if found_release is None:
+                    missing_deps.append((release, dep))
+
+    if len(missing_deps) > 0:
+        print(f"{len(missing_deps)} missing dependencies:")
+
+        for (release, dep) in missing_deps:
+            print(f"{release.manifest.name} {release.tag} requires missing dependency {dep.repo_url} {dep.version}")
+
+        print("Package database is invalid.")
+        exit(1)
+    
+    print("Package database is valid.")
+                
+def find_dependency(mods: List[Mod], dep: Dependency) -> Optional[Release]:
+    for mod in mods:
+        for release in mod.releases:
+            if release.manifest.repo_url == dep.repo_url and dep.version in release.tag:
+                return release
+
+    return None
+
+
+
+    print("Package database is valid.")
 
 if __name__ == "__main__":
     main()
