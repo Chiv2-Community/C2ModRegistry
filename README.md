@@ -36,6 +36,8 @@ A registry for available chivalry 2 mods.  People who create mods can register t
    - Assign a name and a unique tag to your release.
    - Attach the a single `.pak` file which contains your mod release.
 
+---
+
 ### Adding Your Mod to the Mod List:
 
 **1. Pre-Release Checklist:** 
@@ -56,6 +58,8 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 
 **6. Approval:**
    - Once approved, your mod's data will be integrated and updated in the main registry.
+
+---
 
 ### Adding a New Release to the Mod List:
 
