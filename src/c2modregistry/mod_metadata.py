@@ -80,7 +80,7 @@ def process_release(org: str, repoName: str, release: GitRelease) -> Release:
     response_json = response.json()
 
     response_json["repo_url"] = repo_url
-    mod_json = Manifest.from_dict(response.json())
+    mod_json = Manifest.from_dict(response_json)
 
     paks = list(filter(lambda asset: asset.name.endswith(".pak"), release.get_assets()))
 
