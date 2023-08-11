@@ -32,6 +32,12 @@ jobs:
         with:
           python-version: 3.11
 
+      - uses: actions/cache@v3
+        name: Define a cache for the virtual environment based on the dependencies lock file
+        with:
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
 
@@ -40,14 +46,8 @@ jobs:
           poetry config virtualenvs.create true --local
           poetry config virtualenvs.in-project true --local
 
-      - uses: actions/cache@v3
-        name: Define a cache for the virtual environment based on the dependencies lock file
-        with:
-          path: ./.venv
-          key: venv-${{ hashFiles('poetry.lock') }}
-
       - name: Update package list
-        run: poetry install && poetry run python3 src/c2modregistry/main.py process-registry-updates
+        run: .github/workflows/scripts/run-package-manager.sh process-registry-updates
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

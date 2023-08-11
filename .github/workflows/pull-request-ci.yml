@@ -53,6 +53,12 @@ jobs:
         with:
           python-version: 3.11
 
+      - uses: actions/cache@v3
+        name: Define a cache for the virtual environment based on the dependencies lock file
+        with:
+          path: ./.venv
+          key: venv-${{ hashFiles('poetry.lock') }}
+
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
 
@@ -61,63 +67,8 @@ jobs:
           poetry config virtualenvs.create true --local
           poetry config virtualenvs.in-project true --local
 
-      - uses: actions/cache@v3
-        name: Define a cache for the virtual environment based on the dependencies lock file
-        with:
-          path: ./.venv
-          key: venv-${{ hashFiles('poetry.lock') }}
-
-      - name: Add release
+      - name: Attempt to initialize updated package list
         id: update-package-list
-        continue-on-error: true
-        run: |
-          set +e
-          poetry install
-          poetry run \
-            python3 src/c2modregistry/main.py \
-            process-registry-updates \
-            > result.txt 2>&1
-
-          EXIT_CODE=$?
-
-          echo "$EXIT_CODE"
-          echo "exit_code=$EXIT_CODE" >> $GITHUB_OUTPUT
-
-          RESULT=$(cat result.txt)
-          
-          # The EOF stuff is github actions nonsense
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-
-          echo "result<<$EOF" >> $GITHUB_OUTPUT
-          echo "$RESULT" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
-
-
-          FAILED=false
-          if [ $EXIT_CODE -ne 0 ]; then
-            FAILED=true
-          fi
-
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-
+        run: .github/workflows/scripts/run-package-manager.sh --dry-run process-registry-updates
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  
-      - name: Post failure Results 
-        if: steps.update-package-list.outputs.failed == 'true'
-        run: |
-          echo ":x: Failed." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
-          exit 1
-
-      - name: Post success results
-        if: steps.update-package-list.outputs.failed == 'false'
-        run: |
-          echo ":white_check_mark: All checks passed." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
-          echo "${{ steps.update-package-list.outputs.result }}" >> $GITHUB_STEP_SUMMARY
-          echo "```" >> $GITHUB_STEP_SUMMARY
