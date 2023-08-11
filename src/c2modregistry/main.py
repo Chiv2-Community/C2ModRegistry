@@ -74,37 +74,32 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
 
     new_entries = list(set(updated_index_entries) - set(previous_index_entries))
     removed_entries = list(set(previous_index_entries) - set(updated_index_entries)) 
-    failures = 0
+    failed = False
 
     if len(new_entries) > 0:
         print(f"Adding {len(new_entries)} new packages to the package list...")
-        for entry in new_entries:
-            print(f"Adding {len(new_entries)} packages from the package list...")
+        try:
             split_entries = [entry.split("/") for entry in new_entries]
             tupled_entries = [(entry[0], entry[1]) for entry in split_entries]
-            try:
-                init(tupled_entries, dry_run)
-            except Exception as e:
-                # If we fail to initialize a repo, remove it from the package list
-                print(f"Failed to initialize repos {tupled_entries}: {e}\n")
-                updated_index_entries.remove(entry)
-                failures += 1
+            init(tupled_entries, dry_run)
+        except Exception as e:
+            # If we fail to initialize a repo, remove it from the package list
+            print(f"Failed to initialize repos {tupled_entries}: {e}\n")
+            failed = True
     
     if len(removed_entries) > 0:
         print(f"Removing {len(removed_entries)} packages from the package list...")
-        # build (org, repo) list
-        split_entries = [entry.split("/") for entry in removed_entries]
-        tupled_entries = [(entry[0], entry[1]) for entry in split_entries]
         try:
+            split_entries = [entry.split("/") for entry in removed_entries]
+            tupled_entries = [(entry[0], entry[1]) for entry in split_entries]
             remove_mods(tupled_entries, dry_run)
         except Exception as e:
             # If we fail to remove a repo, add it back to the package list
             print(f"Failed to remove repos {tupled_entries}: {e}\n")
-            updated_index_entries.append(entry)
-            failures += 1
+            failed = True
 
-    if failures > 0:
-        print(f"{failures} failures occurred while processing the package list.")
+    if failed:
+        print(f"Failures occurred while processing the package list.")
         print("The package list has not been updated.")
         exit(1)
 
