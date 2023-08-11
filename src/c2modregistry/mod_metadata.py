@@ -4,7 +4,7 @@ from github import Github, Auth
 from github.GitRelease import GitRelease
 from os import environ
 from .models import Mod, Release, Manifest
-from .hashes import get_remote_sha512_sum
+from .hashes import sha512_sum
 
 auth = Auth.Token(environ.get("GITHUB_TOKEN") or "")
 github_client = Github(auth=auth)
@@ -95,7 +95,9 @@ def process_release(org: str, repoName: str, release: GitRelease) -> Release:
     pak = paks[0]
 
     # Download the pak and calculate hash of pak file
-    pak_hash = get_remote_sha512_sum(pak.browser_download_url)
+    pak_download = requests.get(pak.browser_download_url)
+    pak_hash = sha512_sum(pak_download.content)
+    
 
     
     return Release(
