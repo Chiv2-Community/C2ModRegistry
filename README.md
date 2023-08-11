@@ -5,53 +5,72 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 
 ### Registering your mod
 
-**1. Fork the Mod Registry:**
-- Start by forking the mod registry. This creates a personal copy of the mod registry on your GitHub account.
+### Creating a Release:
 
-**2. Adding Your Mod(s) To the Registry files**
-- Navigate to the `registry` folder on your fork.
-- Create a new file named `$UserOrg.txt`. 
-  - If your repo is `https://github.com/Jeoffrey/GoodForNothing`, the file should be named `Jeoffrey.txt`
-- For each mod that you want listed, put the mod repo url as a line within the file.
-  - Following the example above, Your file should look like this:
-    ```
-    # registry/Jeoffrey.txt
-    https://github.com/Jeoffrey/GoodForNothing 
-    ```
-  - Check the [registry dir](./registry/) for more examples.
+**1. Setting up your `mod.json` file:**
+   - Every mod requires a `mod.json` file, which should be located at the root of your mod repository.
+   - Here's a generic structure for the `mod.json`:
+     ```json
+     {
+       "name": "[Mod-Name]",
+       "description": "[Short-Description]",
+       "mod_type": "[Type]",
+       "authors": [ "[Author-Name]" ],
+       "dependencies": [
+         {
+           "repo_url": "[Dependency-Repo-URL]",
+           "version": "[Version-Number]"
+         }
+       ],
+       "tags": [ "[Tag]" ]
+     }
+     ```
+   - Replace placeholders like `[Your-Repo-URL]`, `[Mod-Name]`, etc., with your actual data.
+   - The mod_type can have the following values: "shared", "client", or "server".
+   - The available tags for your mod are: "Weapon","Map","Assets","Framework","Mod","Gamemode","Misc","Explicit". These tags help categorize and easily identify the purpose and nature of your mod.
 
-**3. Submitting Your Changes:**
-- Now that you've updated your copy of the registry, you need to get those changes merged in to the main registry
-- Create a PR here: https://github.com/Chiv2-Community/C2ModRegistry/pulls
-- Set `Chiv2-Community/main` as the base branch, and your branch containing changes as the compare branch.
-- Include some description of your mod in the PR
 
-**4. Awaiting Approval:**
-- Members of the Chiv2-Community will review your PR.
-- If everything looks good, they will approve it.
+**2. Creating a Repository Release:**
+   - Head over to your mod repository's main page.
+   - Find and click on "Create a new release", typically on the right-hand side.
+   - Assign a name and a unique tag to your release.
+   - Attach the a single `.pak` file which contains your mod release.
 
----
+### Adding Your Mod to the Mod List:
 
-### How it works
+**1. Pre-Release Checklist:** Ensure you've completed the "Creating a Release" steps.
 
-**1. Merging the Pull Request:**
-- Once approved, the PR is merged into the `main` branch of the mod registry.
+**2. Fork the ModRegistry Repository:**
+   - Visit the ModRegistry repository and create a fork.
 
-**2. Triggering the GitHub Action:**
-- The merge into the `main` branch automatically triggers a GitHub action.
+**3. Register your Organization or Username:**
+   - In the `registry` directory, add or update a file named after your organization or username.
 
-**3. Merging Changes:**
-- This GitHub action will merge the changes from the `main` branch into the `db` branch.
+**4. Commit and Update:**
+   - Save your changes locally and then push them to your forked ModRegistry repository.
 
-**4. Scanning the Registry Folder:**
-- The action will then scan the `registry` folder to identify all the files present.
+**5. Requesting Inclusion:**
+   - From your fork, submit a pull request to merge with the main ModRegistry repository.
+   - Inform the review team of your mod inclusion request.
 
-**5. Reading the Registry Files:**
-- Each file in the registry is read by the action.
-- Every line in these files represents a separate mod repository.
+**6. Approval:**
+   - Once approved, your mod's data will be integrated and updated in the main registry.
 
-**6. Processing New Repositories:**
-- For each new mod repository identified:
-  - **Initialization:** The action will pull all releases that contain a `pak` file.
-  - **Updating the Package List:** The mod is added to the list in `package_db/mod_list_index.txt`.
-  - **Storing Mod Metadata:** Metadata for the mod (including release metadata) is saved in a JSON file located at `package_db/packages/$org/$repo.json`.
+### Adding a New Release to the Mod List:
+
+**1. Release Creation:** 
+   - Ensure you have a fresh release following the earlier guidelines.
+
+**2. Update Request on ModRegistry:**
+   - Navigate to the main ModRegistry repository and initiate a new issue.
+   - Use the following generic JSON structure in the issue:
+     ```json
+     {
+       "repo_url": "[Your-Repo-URL]",
+       "release_tag": "[Version-Tag]"
+     }
+     ```
+     Replace placeholders with your mod details.
+
+**3. Troubleshooting:**
+   - For any challenges or queries, consult with a community member. They'll likely be able to guide or assist you.
