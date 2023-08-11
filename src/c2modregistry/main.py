@@ -180,15 +180,9 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
     print(f"Successfully added release {release_tag} to repo {org}/{repoName}.")
 
 def remove_mod(org: str, repoName: str, dry_run: bool) -> None:
-    print(f"Loading mod metadata for {org}/{repoName}...")
-    mod = load_mod(org, repoName, DEFAULT_PACKAGES_DIR)
-    repo_url = f"https://github.com/{org}/{repoName}"
+    print(f"Removing mod {org}/{repoName}...")
 
-    if mod is None:
-        print(f"Mod {org}/{repoName} not found.")
-        return
-    else:
-        print(f"Removing mod {org}/{repoName}...")
+    repo_url = f"https://github.com/{org}/{repoName}"
         
     validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], lambda m: m.latest_manifest.repo_url != repo_url)
         
