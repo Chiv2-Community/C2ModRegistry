@@ -51,13 +51,13 @@ def main() -> None:
         process_registry_updates("./registry", "./package_db/mod_list_index.txt", args.dry_run)
     elif args.command == "init":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        init(org, repoName, args.dry_run)
+        init([(org, repoName)], args.dry_run)
     elif args.command == "add":
         [org, repoName] = args.repo_url.split("/")[-2:]
         add_release(org, repoName, args.release_tag, args.dry_run)
     elif args.command == "remove":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        remove_mod(org, repoName, args.dry_run)
+        remove_mods([(org, repoName)], args.dry_run)
     else:
         print("Unknown command.")
 
@@ -78,29 +78,30 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
 
     if len(new_entries) > 0:
         print(f"Adding {len(new_entries)} new packages to the package list...")
-        print("")
         for entry in new_entries:
-            [org, repoName] = entry.split("/")
+            print(f"Adding {len(new_entries)} packages from the package list...")
+            split_entries = [entry.split("/") for entry in new_entries]
+            tupled_entries = [(entry[0], entry[1]) for entry in split_entries]
             try:
-                init(org, repoName, dry_run)
-                print("")
+                init(tupled_entries, dry_run)
             except Exception as e:
                 # If we fail to initialize a repo, remove it from the package list
-                print(f"Failed to initialize repo {org}/{repoName}: {e}\n")
+                print(f"Failed to initialize repos {tupled_entries}: {e}\n")
                 updated_index_entries.remove(entry)
                 failures += 1
     
     if len(removed_entries) > 0:
         print(f"Removing {len(removed_entries)} packages from the package list...")
-        for entry in removed_entries:
-            [org, repoName] = entry.split("/")
-            try:
-                remove_mod(org, repoName, dry_run)
-            except Exception as e:
-                # If we fail to remove a repo, add it back to the package list
-                print(f"Failed to remove repo {org}/{repoName}: {e}")
-                updated_index_entries.append(entry)
-                failures += 1
+        # build (org, repo) list
+        split_entries = [entry.split("/") for entry in removed_entries]
+        tupled_entries = [(entry[0], entry[1]) for entry in split_entries]
+        try:
+            remove_mods(tupled_entries, dry_run)
+        except Exception as e:
+            # If we fail to remove a repo, add it back to the package list
+            print(f"Failed to remove repos {tupled_entries}: {e}\n")
+            updated_index_entries.append(entry)
+            failures += 1
 
     if failures > 0:
         print(f"{failures} failures occurred while processing the package list.")
@@ -119,28 +120,34 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
 
     print("Package list built.")
 
-def init(org: str, repoName: str, dry_run: bool) -> None:
-    print(f"Initializing repo {org}/{repoName}...")
-    mod = initialize_repo(org, repoName)
+def init(repos: List[Tuple[str, str]], dry_run: bool) -> None:
+    print(f"Initializing {len(repos)} repos...")
+    mods = [initialize_repo(org, repoName) for (org, repoName) in repos]
+    filtered_mods = [mod for mod in mods if mod is not None]
 
-    if mod is None:
-        print(f"Failed to initialize repo {org}/{repoName}.")
+    if len(filtered_mods) != len(repos):
+        print("Failed to initialize some repos.")
         exit(1)
     
-    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [mod])
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR, filtered_mods)
 
     if dry_run:
         print("Dry run; not writing to package dir.")
         return
 
-    if not os.path.exists(f"{DEFAULT_PACKAGES_DIR}/{org}"):
-        os.makedirs(f"{DEFAULT_PACKAGES_DIR}/{org}")
+    for mod in filtered_mods:
+        [org, repoName] = mod.latest_manifest.repo_url.split("/")[-2:]
 
-    with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
-        file.write(json_encoder.encode(mod.asdict()))
+        if not os.path.exists(f"{DEFAULT_PACKAGES_DIR}/{org}"):
+            os.makedirs(f"{DEFAULT_PACKAGES_DIR}/{org}")
+
+        with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
+            file.write(json_encoder.encode(mod.asdict()))
 
 
-    print(f"Repo {org}/{repoName} initialized.")
+        print(f"Repo {org}/{repoName} initialized.")
+
+    print("Successfully initialized all repos.")
 
 def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> None:
     print(f"Loading mod metadata for {org}/{repoName}...")
@@ -148,7 +155,7 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
 
     if mod is None:
         print(f"Mod {org}/{repoName} not initialized.")
-        init(org, repoName, dry_run)
+        init([(org, repoName)], dry_run)
 
         # No need to coninue. Initialization will get all releases.
         return
@@ -179,26 +186,27 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
     
     print(f"Successfully added release {release_tag} to repo {org}/{repoName}.")
 
-def remove_mod(org: str, repoName: str, dry_run: bool) -> None:
-    print(f"Removing mod {org}/{repoName}...")
+def remove_mods(mods: List[Tuple[str, str]], dry_run: bool) -> None:
+    print(f"Removing {len(mods)} mods...")
 
-    repo_url = f"https://github.com/{org}/{repoName}"
-        
-    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], lambda m: m.latest_manifest.repo_url != repo_url)
+    repo_urls = [f"https://github.com/{org}/{repoName}" for (org, repoName) in mods]
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], lambda m: m.latest_manifest.repo_url not in repo_urls)
         
     if dry_run:
         print("Dry run; not writing to mod metadata.")
         return
 
-    os.remove(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json")
+    for (org, repoName) in mods:
+        os.remove(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json")
 
-    # If org directory is empty, remove it
-    if not os.listdir(f"{DEFAULT_PACKAGES_DIR}/{org}"):
-        print(f"Removing empty org {org}...")
-        os.rmdir(f"{DEFAULT_PACKAGES_DIR}/{org}")
+        # If org directory is empty, remove it
+        if not os.listdir(f"{DEFAULT_PACKAGES_DIR}/{org}"):
+            print(f"Removing empty org {org}...")
+            os.rmdir(f"{DEFAULT_PACKAGES_DIR}/{org}")
     
-
-    print(f"Successfully removed mod {org}/{repoName}.")
+            print(f"Successfully removed mod {org}/{repoName}.")
+    
+    print(f"Successfully removed {len(mods)} mods.")
 
 def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
     try:
