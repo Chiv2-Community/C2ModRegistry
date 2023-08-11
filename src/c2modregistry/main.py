@@ -8,7 +8,7 @@ from typing import Callable, List, Optional, Tuple
 from c2modregistry import add_release_tag, initialize_repo
 from c2modregistry import Mod
 from c2modregistry import generate_package_list, repo_to_index_entry
-from c2modregistry.models import Dependency, Release
+from c2modregistry.models import Dependency, Release, Repo
 from c2modregistry.package_list import load_package_list
 
 DEFAULT_REGISTRY_PATH = "./registry"
@@ -51,13 +51,13 @@ def main() -> None:
         process_registry_updates("./registry", "./package_db/mod_list_index.txt", args.dry_run)
     elif args.command == "init":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        init([(org, repoName)], args.dry_run)
+        init([Repo(org, repoName)], args.dry_run)
     elif args.command == "add":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        add_release(org, repoName, args.release_tag, args.dry_run)
+        add_release(Repo(org, repoName), args.release_tag, args.dry_run)
     elif args.command == "remove":
         [org, repoName] = args.repo_url.split("/")[-2:]
-        remove_mods([(org, repoName)], args.dry_run)
+        remove_mods([Repo(org, repoName)], args.dry_run)
     else:
         print("Unknown command.")
 
@@ -80,22 +80,22 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
         print(f"Adding {len(new_entries)} new packages to the package list...")
         try:
             split_entries = [entry.split("/") for entry in new_entries]
-            tupled_entries = [(entry[0], entry[1]) for entry in split_entries]
-            init(tupled_entries, dry_run)
+            repo_entries = [Repo(entry[0], entry[1]) for entry in split_entries]
+            init(repo_entries, dry_run)
         except Exception as e:
             # If we fail to initialize a repo, remove it from the package list
-            print(f"Failed to initialize repos {tupled_entries}: {e}\n")
+            print(f"Failed to initialize repos {repo_entries}: {e}\n")
             failed = True
     
     if len(removed_entries) > 0:
         print(f"Removing {len(removed_entries)} packages from the package list...")
         try:
             split_entries = [entry.split("/") for entry in removed_entries]
-            tupled_entries = [(entry[0], entry[1]) for entry in split_entries]
-            remove_mods(tupled_entries, dry_run)
+            repo_entries = [Repo(entry[0], entry[1]) for entry in split_entries]
+            remove_mods(repo_entries, dry_run)
         except Exception as e:
             # If we fail to remove a repo, add it back to the package list
-            print(f"Failed to remove repos {tupled_entries}: {e}\n")
+            print(f"Failed to remove repos {repo_entries}: {e}\n")
             failed = True
 
     if failed:
@@ -115,9 +115,9 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
 
     print("Package list built.")
 
-def init(repos: List[Tuple[str, str]], dry_run: bool) -> None:
+def init(repos: List[Repo], dry_run: bool) -> None:
     print(f"Initializing {len(repos)} repos...")
-    mods = [initialize_repo(org, repoName) for (org, repoName) in repos]
+    mods = [initialize_repo(repo) for repo in repos]
     filtered_mods = [mod for mod in mods if mod is not None]
 
     if len(filtered_mods) != len(repos):
@@ -144,13 +144,13 @@ def init(repos: List[Tuple[str, str]], dry_run: bool) -> None:
 
     print("Successfully initialized all repos.")
 
-def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> None:
-    print(f"Loading mod metadata for {org}/{repoName}...")
-    mod = load_mod(org, repoName, DEFAULT_PACKAGES_DIR)
+def add_release(repo: Repo, release_tag: str, dry_run: bool) -> None:
+    print(f"Loading mod metadata for {repo}...")
+    mod = load_mod(repo, DEFAULT_PACKAGES_DIR)
 
     if mod is None:
-        print(f"Mod {org}/{repoName} not initialized.")
-        init([(org, repoName)], dry_run)
+        print(f"Mod {repo} not initialized.")
+        init([repo], dry_run)
 
         # No need to coninue. Initialization will get all releases.
         return
@@ -158,14 +158,14 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
     tags = [release.tag for release in mod.releases]
     
     if release_tag in tags:
-        print(f"Release {release_tag} already exists in repo {org}/{repoName}.")
+        print(f"Release {release_tag} already exists in repo {repo}.")
         return
     
-    print(f"Adding release {release_tag} to repo {org}/{repoName}...")
+    print(f"Adding release {release_tag} to repo {repo}...")
     updated_mod = add_release_tag(mod, release_tag)
 
     if updated_mod is None:
-        print(f"Failed to add release {release_tag} to repo {org}/{repoName}.")
+        print(f"Failed to add release {release_tag} to repo {repo}.")
         exit(1)
         return
     
@@ -175,16 +175,16 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
         print("Dry run; not writing to mod metadata.")
         return
 
-    with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
-        print(f"Writing updated mod metadata for {org}/{repoName}...")
+    with open(f"{DEFAULT_PACKAGES_DIR}/{repo}.json", "w") as file:
+        print(f"Writing updated mod metadata for {repo}...")
         file.write(json_encoder.encode(updated_mod.asdict()))
     
-    print(f"Successfully added release {release_tag} to repo {org}/{repoName}.")
+    print(f"Successfully added release {release_tag} to repo {repo}.")
 
-def remove_mods(mods: List[Tuple[str, str]], dry_run: bool) -> None:
-    print(f"Removing {len(mods)} mods...")
+def remove_mods(repo_list: List[Repo], dry_run: bool) -> None:
+    print(f"Removing {len(repo_list)} mods...")
 
-    removed_mod_package_path_segements = [f"/{org}/{repoName}.json" for (org, repoName) in mods]
+    removed_mod_package_path_segements = [f"/{repo.org}/{repo.name}.json" for repo in repo_list]
 
     def filter_func(mod_path: str) -> bool:
         for removed_mod_package_path_segement in removed_mod_package_path_segements:
@@ -200,21 +200,21 @@ def remove_mods(mods: List[Tuple[str, str]], dry_run: bool) -> None:
         print("Dry run; not writing to mod metadata.")
         return
 
-    for (org, repoName) in mods:
-        os.remove(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json")
+    for repo in repo_list:
+        os.remove(f"{DEFAULT_PACKAGES_DIR}/{repo}.json")
 
         # If org directory is empty, remove it
-        if not os.listdir(f"{DEFAULT_PACKAGES_DIR}/{org}"):
-            print(f"Removing empty org {org}...")
-            os.rmdir(f"{DEFAULT_PACKAGES_DIR}/{org}")
+        if not os.listdir(f"{DEFAULT_PACKAGES_DIR}/{repo.org}"):
+            print(f"Removing empty org {repo.org}...")
+            os.rmdir(f"{DEFAULT_PACKAGES_DIR}/{repo.org}")
     
-            print(f"Successfully removed mod {org}/{repoName}.")
+            print(f"Successfully removed mod {repo}.")
     
-    print(f"Successfully removed {len(mods)} mods.")
+    print(f"Successfully removed {len(repo_list)} mods.")
 
-def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
+def load_mod(repo: Repo, package_dir: str) -> Optional[Mod]:
     try:
-        with open(f"{package_dir}/{org}/{repoName}.json", "r") as file:
+        with open(f"{package_dir}/{repo}.json", "r") as file:
             mod_dict = json.loads(file.read())
             return Mod.from_dict(mod_dict)
     except FileNotFoundError:

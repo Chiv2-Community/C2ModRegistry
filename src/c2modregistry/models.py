@@ -3,6 +3,17 @@ from datetime import datetime
 from typing import Dict, List
 
 @dataclass(frozen=True)
+class Repo:
+    org: str
+    name: str
+
+    def __str__(self) -> str:
+        return f"{self.org}/{self.name}"
+    
+    def github_url(self) -> str:
+        return f"https://github.com/{self.org}/{self.name}"
+
+@dataclass(frozen=True)
 class Dependency:
     repo_url: str
     version: str
