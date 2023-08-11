@@ -184,8 +184,17 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
 def remove_mods(mods: List[Tuple[str, str]], dry_run: bool) -> None:
     print(f"Removing {len(mods)} mods...")
 
-    repo_urls = [f"https://github.com/{org}/{repoName}" for (org, repoName) in mods]
-    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], lambda m: m.latest_manifest.repo_url not in repo_urls)
+    removed_mod_package_path_segements = [f"/{org}/{repoName}.json" for (org, repoName) in mods]
+
+    def filter_func(mod_path: str) -> bool:
+        for removed_mod_package_path_segement in removed_mod_package_path_segements:
+            if removed_mod_package_path_segement in mod_path:
+                return False
+
+        return True
+
+
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], filter_func)
         
     if dry_run:
         print("Dry run; not writing to mod metadata.")
@@ -211,7 +220,7 @@ def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
     except FileNotFoundError:
         return None
     
-def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_filter: Callable[[Mod], bool] = lambda x: True) -> None:
+def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_path_filter: Callable[[str], bool] = lambda x: True) -> None:
     print("Validating package database...")
     packages = load_package_list(package_dir + "/mod_list_index.txt")
     mods: List[Mod] = additional_mods
@@ -219,21 +228,21 @@ def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_filter
     # Load all mods
     for package in packages:
         package_path = f"{package_dir}/packages/{package}.json"
-        try:
-            with open(package_path, "r") as file:
-                mod_dict = json.loads(file.read())
-                mod = Mod.from_dict(mod_dict)
+        if mod_path_filter(package_path):
+            try:
+                with open(package_path, "r") as file:
+                    mod_dict = json.loads(file.read())
+                    mod = Mod.from_dict(mod_dict)
 
-                if mod is None:
-                    print(f"Failed to load mod {package} during validation.")
-                    exit(1)
+                    if mod is None:
+                        print(f"Failed to load mod {package} during validation.")
+                        exit(1)
 
-                if mod_filter(mod):
                     mods.append(mod)
 
-        except FileNotFoundError:
-            print(f"Package {package} not found during validation.")
-            exit(1)
+            except FileNotFoundError:
+                print(f"Package {package} not found during validation.")
+                exit(1)
     
     # Check for missing dependencies
     missing_deps: List[Tuple[Release, Dependency]] = []
