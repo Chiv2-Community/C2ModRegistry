@@ -1,2 +1,2 @@
-# https://github.com/Chiv2-Community/SimpleMap
-# https://github.com/Chiv2-Community/healthCharger
+https://github.com/Chiv2-Community/SimpleMap
+https://github.com/Chiv2-Community/healthCharger
