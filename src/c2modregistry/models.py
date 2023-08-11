@@ -39,6 +39,7 @@ class Manifest:
 @dataclass(frozen=True)
 class Release:
     tag: str
+    hash: str
     pak_file_name: str
     release_date: datetime
     manifest: Manifest

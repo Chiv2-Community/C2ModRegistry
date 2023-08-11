@@ -4,7 +4,7 @@ from github import Github, Auth
 from github.GitRelease import GitRelease
 from os import environ
 from .models import Mod, Release, Manifest
-from natsort import natsorted
+from .hashes import get_remote_sha512_sum
 
 auth = Auth.Token(environ.get("GITHUB_TOKEN") or "")
 github_client = Github(auth=auth)
@@ -33,7 +33,9 @@ def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
         release = github_repo.get_release(release_tag)
         
         mod_releases = mod.releases + [process_release(org, repoName, release)]
-        natsorted(mod_releases, key=lambda x: x.release_date)
+
+        mod_releases.sort(key=lambda x: x.release_date, reverse=True)
+
         return Mod(
             latest_manifest=mod_releases[-1].manifest,
             releases=mod.releases + [process_release(org, repoName, release)]
@@ -59,7 +61,7 @@ def all_releases(org: str, repoName: str) -> List[Release]:
         except Exception as e:
             print(f"Failed to get release for tag {release.tag_name}: {e}")
 
-    natsorted(results, key=lambda x: x.release_date)
+    results.sort(key=lambda x: x.release_date, reverse=True)
         
     print(f"Successfully processed {len(results)} releases for {org}/{repoName}")
     return results
@@ -90,8 +92,15 @@ def process_release(org: str, repoName: str, release: GitRelease) -> Release:
     if len(paks) > 1:
         raise Exception(f"Multiple pak files found for release {release.tag_name}.")
     
+    pak = paks[0]
+
+    # Download the pak and calculate hash of pak file
+    pak_hash = get_remote_sha512_sum(pak.url)
+
+    
     return Release(
         tag=release.tag_name,
+        hash=pak_hash,
         pak_file_name=paks[0].name,
         release_date=paks[0].updated_at,
         manifest=mod_json
