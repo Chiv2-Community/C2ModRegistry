@@ -70,7 +70,7 @@ jobs:
       - name: Add release
         id: update-package-list
         continue-on-error: true
-        run: .github/workflows/scripts/update-package-list.sh process-registry-updates add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
+        run: .github/workflows/scripts/run-package-manager.sh process-registry-updates add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
