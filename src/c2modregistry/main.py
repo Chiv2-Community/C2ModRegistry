@@ -74,29 +74,31 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
     removed_entries = list(set(previous_index_entries) - set(updated_index_entries)) 
     failures = 0
 
-    print(f"Adding {len(new_entries)} new packages to the package list...")
-    print("")
-    for entry in new_entries:
-        [org, repoName] = entry.split("/")
-        try:
-            init(org, repoName, dry_run)
-            print("")
-        except Exception as e:
-            # If we fail to initialize a repo, remove it from the package list
-            print(f"Failed to initialize repo {org}/{repoName}: {e}\n")
-            updated_index_entries.remove(entry)
-            failures += 1
+    if len(new_entries) > 0:
+        print(f"Adding {len(new_entries)} new packages to the package list...")
+        print("")
+        for entry in new_entries:
+            [org, repoName] = entry.split("/")
+            try:
+                init(org, repoName, dry_run)
+                print("")
+            except Exception as e:
+                # If we fail to initialize a repo, remove it from the package list
+                print(f"Failed to initialize repo {org}/{repoName}: {e}\n")
+                updated_index_entries.remove(entry)
+                failures += 1
     
-    print(f"Removing {len(removed_entries)} packages from the package list...")
-    for entry in removed_entries:
-        [org, repoName] = entry.split("/")
-        try:
-            remove_mod(org, repoName, dry_run)
-        except Exception as e:
-            # If we fail to remove a repo, add it back to the package list
-            print(f"Failed to remove repo {org}/{repoName}: {e}")
-            updated_index_entries.append(entry)
-            failures += 1
+    if len(removed_entries) > 0:
+        print(f"Removing {len(removed_entries)} packages from the package list...")
+        for entry in removed_entries:
+            [org, repoName] = entry.split("/")
+            try:
+                remove_mod(org, repoName, dry_run)
+            except Exception as e:
+                # If we fail to remove a repo, add it back to the package list
+                print(f"Failed to remove repo {org}/{repoName}: {e}")
+                updated_index_entries.append(entry)
+                failures += 1
 
     if failures > 0:
         print(f"{failures} failures occurred while processing the package list.")
