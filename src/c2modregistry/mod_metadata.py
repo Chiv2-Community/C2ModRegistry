@@ -14,6 +14,10 @@ def initialize_repo(org: str, repoName: str) -> Optional[Mod]:
     try:
         releases = all_releases(org, repoName)
 
+        if len(releases) == 0:
+            print(f"Repo {org}/{repoName} has no releases.")
+            return None
+
         return Mod(
             latest_manifest=releases[-1].manifest,
             releases=releases
