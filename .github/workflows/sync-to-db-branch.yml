@@ -47,7 +47,7 @@ jobs:
           poetry config virtualenvs.in-project true --local
 
       - name: Update package list
-        run: .github/workflows/scripts/update-package-list.sh --dry-run process-registry-updates
+        run: .github/workflows/scripts/run-package-manager.sh process-registry-updates
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
