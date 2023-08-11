@@ -69,9 +69,15 @@ def process_release(org: str, repoName: str, release: GitRelease) -> Release:
     print(f"Downloading mod.json from {mod_json_url}")
     response = requests.get(mod_json_url)
 
-    if response.status_code != 200:
+    if response.status_code == 404:
+        raise Exception(f"mod.json does not exist for this release.")
+    elif response.status_code != 200:
         raise Exception(f"Failed to download mod.json from {mod_json_url} with status code {response.status_code}")
 
+    repo_url = f"https://github.com/{org}/{repoName}"
+    response_json = response.json()
+
+    response_json["repo_url"] = repo_url
     mod_json = Manifest.from_dict(response.json())
 
     paks = list(filter(lambda asset: asset.name.endswith(".pak"), release.get_assets()))
