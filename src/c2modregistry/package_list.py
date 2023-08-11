@@ -11,8 +11,11 @@ def repo_to_index_entry(repo: str) -> str:
 
 def load_package_list(path: str) -> List[str]:
     """Loads the package list from a file."""
-    with open(path, 'r') as file:
-        return file.read().splitlines()
+    try:
+        with open(path, 'r') as file:
+            return file.read().splitlines()
+    except FileNotFoundError:
+        return []
 
 def generate_package_list(directory: str) -> List[str]:
     """Gets all lines from all files, ignoring any empty lines or lines starting with #"""

@@ -95,7 +95,7 @@ def process_release(org: str, repoName: str, release: GitRelease) -> Release:
     pak = paks[0]
 
     # Download the pak and calculate hash of pak file
-    pak_hash = get_remote_sha512_sum(pak.url)
+    pak_hash = get_remote_sha512_sum(pak.browser_download_url)
 
     
     return Release(
