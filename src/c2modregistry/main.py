@@ -3,7 +3,7 @@ import argparse
 from datetime import datetime
 import json
 import os
-from typing import List, Optional, Tuple
+from typing import Callable, List, Optional, Tuple
 
 from c2modregistry import add_release_tag, initialize_repo
 from c2modregistry import Mod
@@ -126,6 +126,8 @@ def init(org: str, repoName: str, dry_run: bool) -> None:
     if mod is None:
         print(f"Failed to initialize repo {org}/{repoName}.")
         exit(1)
+    
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [mod])
 
     if dry_run:
         print("Dry run; not writing to package dir.")
@@ -137,7 +139,6 @@ def init(org: str, repoName: str, dry_run: bool) -> None:
     with open(f"{DEFAULT_PACKAGES_DIR}/{org}/{repoName}.json", "w") as file:
         file.write(json_encoder.encode(mod.asdict()))
 
-    validate_package_db(DEFAULT_PACKAGE_DB_DIR)
 
     print(f"Repo {org}/{repoName} initialized.")
 
@@ -165,6 +166,8 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
         print(f"Failed to add release {release_tag} to repo {org}/{repoName}.")
         exit(1)
         return
+    
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [updated_mod])
 
     if dry_run:
         print("Dry run; not writing to mod metadata.")
@@ -174,20 +177,21 @@ def add_release(org: str, repoName: str, release_tag: str, dry_run: bool) -> Non
         print(f"Writing updated mod metadata for {org}/{repoName}...")
         file.write(json_encoder.encode(updated_mod.asdict()))
     
-    validate_package_db(DEFAULT_PACKAGE_DB_DIR)
-    
     print(f"Successfully added release {release_tag} to repo {org}/{repoName}.")
 
 def remove_mod(org: str, repoName: str, dry_run: bool) -> None:
     print(f"Loading mod metadata for {org}/{repoName}...")
     mod = load_mod(org, repoName, DEFAULT_PACKAGES_DIR)
+    repo_url = f"https://github.com/{org}/{repoName}"
 
     if mod is None:
         print(f"Mod {org}/{repoName} not found.")
         return
-    
-    print(f"Removing mod {org}/{repoName}...")
-    
+    else:
+        print(f"Removing mod {org}/{repoName}...")
+        
+    validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], lambda m: m.latest_manifest.repo_url != repo_url)
+        
     if dry_run:
         print("Dry run; not writing to mod metadata.")
         return
@@ -199,7 +203,6 @@ def remove_mod(org: str, repoName: str, dry_run: bool) -> None:
         print(f"Removing empty org {org}...")
         os.rmdir(f"{DEFAULT_PACKAGES_DIR}/{org}")
     
-    validate_package_db(DEFAULT_PACKAGE_DB_DIR)
 
     print(f"Successfully removed mod {org}/{repoName}.")
 
@@ -211,10 +214,10 @@ def load_mod(org: str, repoName: str, package_dir: str) -> Optional[Mod]:
     except FileNotFoundError:
         return None
     
-def validate_package_db(package_dir: str) -> None:
+def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_filter: Callable[[Mod], bool] = lambda x: True) -> None:
     print("Validating package database...")
     packages = load_package_list(package_dir + "/mod_list_index.txt")
-    mods: List[Mod] = []
+    mods: List[Mod] = additional_mods
 
     # Load all mods
     for package in packages:
@@ -228,7 +231,9 @@ def validate_package_db(package_dir: str) -> None:
                     print(f"Failed to load mod {package} during validation.")
                     exit(1)
 
-                mods.append(mod)
+                if mod_filter(mod):
+                    mods.append(mod)
+
         except FileNotFoundError:
             print(f"Package {package} not found during validation.")
             exit(1)
@@ -260,8 +265,6 @@ def find_dependency(mods: List[Mod], dep: Dependency) -> Optional[Release]:
                 return release
 
     return None
-
-
 
     print("Package database is valid.")
 
