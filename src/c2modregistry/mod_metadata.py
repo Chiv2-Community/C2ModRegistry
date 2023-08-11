@@ -54,6 +54,8 @@ def all_releases(org: str, repoName: str) -> List[Release]:
         try:
             print(f"Processing release {release.tag_name} for {org}/{repoName}")
             results.append(process_release(org, repoName, release))
+        except KeyError as e:
+            print(f"Mod manifest missing required field: {e}")
         except Exception as e:
             print(f"Failed to get release for tag {release.tag_name}: {e}")
 
