@@ -38,7 +38,8 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 
 ### Adding Your Mod to the Mod List:
 
-**1. Pre-Release Checklist:** Ensure you've completed the "Creating a Release" steps.
+**1. Pre-Release Checklist:** 
+   - Ensure you've completed the "Creating a Release" steps.
 
 **2. Fork the ModRegistry Repository:**
    - Visit the ModRegistry repository and create a fork.
