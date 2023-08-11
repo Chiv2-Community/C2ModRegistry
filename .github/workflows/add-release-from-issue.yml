@@ -70,33 +70,7 @@ jobs:
       - name: Add release
         id: update-package-list
         continue-on-error: true
-        run: |
-          set +e
-          poetry install
-          poetry run \
-            python3 src/c2modregistry/main.py \
-            add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
-            > result.txt 2>&1
-
-          EXIT_CODE=$?
-
-          RESULT=$(cat result.txt)
-          
-          # The EOF stuff is github actions nonsense
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-
-          echo "result<<$EOF" >> $GITHUB_OUTPUT
-          echo "$RESULT" >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
-
-
-          FAILED=false
-          if [ $EXIT_CODE -ne 0 ]; then
-            FAILED=true
-          fi
-
-          echo "failed=$FAILED" >> $GITHUB_OUTPUT
-
+        run: .github/workflows/scripts/update-package-list.sh process-registry-updates add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
