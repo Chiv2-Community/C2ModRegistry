@@ -8,6 +8,7 @@ on:
 jobs:
   check-should-execute:
     runs-on: ubuntu-latest
+    if: ${{ !github.event.issue.pull_request }}
     outputs:
       should_execute: ${{ steps.check.outputs.should_execute }}
     steps:
