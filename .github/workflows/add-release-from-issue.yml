@@ -36,7 +36,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
         with:
@@ -48,7 +47,7 @@ jobs:
         with: 
           ref: db
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
