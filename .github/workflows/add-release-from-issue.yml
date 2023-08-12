@@ -30,9 +30,15 @@ jobs:
     needs: check-should-execute
     if: needs.check-should-execute.outputs.should_execute == 'true'
     steps:
+      - name: Checkout db branch
+        uses: actions/checkout@master
+        with: 
+          ref: db
+
       - name: Parse Json in Issue
         id: issue_json_payload
-        run: ./.github/workflows/scripts/extract-issue-json-body.sh "${{ github.event.issue.number }}"
+        run:
+          ./.github/workflows/scripts/extract-issue-json-body.sh "${{ github.event.issue.number }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -42,12 +48,7 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: "Successfully parsed issue body. Attempting to add release to package DB."
       
-      - name: Checkout db branch
-        uses: actions/checkout@master
-        with: 
-          ref: db
-
-      - name: Set up Python 3.11
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
