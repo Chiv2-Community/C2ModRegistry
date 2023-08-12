@@ -3,7 +3,7 @@
 ISSUE_NUMBER="$1"
 
 # Fetch issue body using GitHub CLI
-BODY_CONTENT=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" --auth="$GITHUB_TOKEN" -q '.body')
+BODY_CONTENT=$(GH_TOKEN=$GITHUB_TOKEN gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" -q '.body')
 
 EXTRACTED_JSON=$(echo "$BODY_CONTENT" | awk '/^```/{flag=1; next} /^```/{flag=0} flag')
 
