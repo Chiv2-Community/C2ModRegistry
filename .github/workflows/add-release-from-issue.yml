@@ -31,11 +31,11 @@ jobs:
     if: needs.check-should-execute.outputs.should_execute == 'true'
     steps:
       - name: Parse Json in Issue
-        uses: peter-murray/issue-body-parser-action@v1
         id: issue_json_payload
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          issue_id: ${{ github.event.issue.number || github.event.issue_comment.issue.number }}
+        run: ./.github/workflows/scripts/extract-issue-json-body.sh "${{ github.event.issue.number }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
