@@ -41,7 +41,7 @@ jobs:
         run:
           ./.github/workflows/scripts/extract-issue-json-body.sh "${{ github.event.issue.number }}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
