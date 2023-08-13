@@ -1,2 +1,4 @@
 Chiv2-Community/SimpleMap
 Chiv2-Community/healthCharger
+Chiv2-Community/ArgonSDK-Mods
+Chiv2-Community/ArgonSDK-ExampleMod
