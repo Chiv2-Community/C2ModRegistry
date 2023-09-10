@@ -88,7 +88,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3
         if: steps.update-package-list.outputs.failed == 'true'
         with:
-          issue-number: ${{ github.event.issue.number }}
+          issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
           body: |
             Failed to add release to package DB. Please check the logs below for more details.
             After addressing the errors, reply "retry"
@@ -109,11 +109,11 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3
         if: steps.update-package-list.outputs.failed == 'false'
         with:
-          issue-number: ${{ github.event.issue.number }}
+          issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
           body: Successfully added release to package DB.
 
       - name: Merge PR
         if: steps.update-package-list.outputs.failed == 'false'
-        run: gh pr merge "${{ github.event.issue.number }}"
+        run: gh pr merge "${{ github.event.issue.number || github.event.pull_request.number }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
