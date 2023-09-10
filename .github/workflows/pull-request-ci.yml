@@ -114,6 +114,6 @@ jobs:
 
       - name: Merge PR
         if: steps.update-package-list.outputs.failed == 'false'
-        run: gh pr merge ${{ github.event.issue.number || github.event.pull_request.number }}
+        run: gh pr merge ${{ github.event.issue.number || github.event.pull_request.number }} --merge
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
