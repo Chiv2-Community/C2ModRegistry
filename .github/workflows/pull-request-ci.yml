@@ -43,6 +43,9 @@ jobs:
           echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
 
   update-package-list-dry-run:
+    # Necessary to be able to merge the PR
+    permissions: write-all
+
     runs-on: ubuntu-latest
     needs: check-should-execute 
     if: needs.check-should-execute.outputs.should_execute == 'true'
