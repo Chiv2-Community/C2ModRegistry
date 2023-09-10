@@ -4,4 +4,3 @@ https://github.com/Chiv2-Community/ArgonSDK-Mods
 https://github.com/Chiv2-Community/ArgonSDK-ExampleMod
 https://github.com/Chiv2-Community/GiantSlayers
 https://github.com/Chiv2-Community/FilthyPeasants
-https://github.com/Chiv2-Community/FlashBlades
