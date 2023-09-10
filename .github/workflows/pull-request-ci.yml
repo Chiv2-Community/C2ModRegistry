@@ -113,8 +113,8 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: Successfully added release to package DB.
 
-      - name: Close Issue
+      - name: Merge PR
         if: steps.update-package-list.outputs.failed == 'false'
-        run: gh issue close "${{ github.event.issue.number }}"
+        run: gh pr merge "${{ github.event.issue.number }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
