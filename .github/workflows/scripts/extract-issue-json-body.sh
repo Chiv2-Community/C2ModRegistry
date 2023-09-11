@@ -9,7 +9,7 @@ EXTRACTED_JSON=$(echo "$BODY_CONTENT" | awk '/^```/{flag=1; next} /^```/{flag=0}
 
 echo "$EXTRACTED_JSON" | jq empty
 
-# Check the exit status to determine if JSON is valid
+# If extracted json is empty then we failed
 if [[ -z "$EXTRACTED_JSON" ]]; then
   exit 1
 fi
