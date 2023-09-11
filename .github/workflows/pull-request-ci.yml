@@ -25,6 +25,9 @@ jobs:
           
   check-should-execute:
     runs-on: ubuntu-latest
+    # If the ref is main, this is an issue comment so do nothing. Otherwise its a PR
+    # If the event_name is pull_request, this is a PR event, so its valid
+    if: github.ref != 'refs/heads/main' || github.event_name == 'pull_request'
     outputs:
       should_execute: ${{ steps.check.outputs.should_execute }}
     steps:
