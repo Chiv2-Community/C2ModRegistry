@@ -5,7 +5,7 @@ from github.GitRelease import GitRelease
 from os import environ
 from .models import Dependency, Mod, Release, Manifest, Repo
 from .hashes import sha512_sum
-import semantic_version
+from semantic_version import SimpleSpec, Version
 
 import logging
 
@@ -19,7 +19,7 @@ def initialize_repo(repo: Repo) -> Optional[Mod]:
         releases = all_releases(repo)
 
         if len(releases) == 0:
-            logging.warn(f"Repo {repo} has no valid releases.")
+            logging.warning(f"Repo {repo} has no valid releases.")
             return None
 
         return Mod(
@@ -60,7 +60,7 @@ def all_releases(repo: Repo) -> List[Release]:
     has_error = False
     for release in git_releases:
         try:
-            logging.info(f"Processing release {release.tag_name} for {repo}\n")
+            logging.info(f"Processing release {release.tag_name} for {repo}")
             results.append(process_release(repo, release))
         except KeyError as e:
             has_error = True
@@ -141,7 +141,7 @@ def validate_version_tag_name(tag_name: str) -> Optional[str]:
         tag_name = tag_name[1:]
 
     try:
-        semantic_version.Version(tag_name)
+        Version(tag_name)
         return None
     except ValueError as e:
         return f"Version Tag '{tag_name}' Does not conform to the semver spec: {e}"
@@ -154,7 +154,7 @@ def validate_dependency_versions(dependencies: List[Dependency]) -> List[str]:
             if input_version_range.startswith("v"):
                 input_version_range = input_version_range[1:]
 
-            semantic_version.SimpleSpec(input_version_range)
+            SimpleSpec(input_version_range)
         except ValueError as e:
             dependency_name = "/".join(dependency.repo_url.split("/")[-2:])
             errors.append(f"Version Range '{dependency.version}' for dependency '{dependency_name}' does not conform to the semver spec: {e}")

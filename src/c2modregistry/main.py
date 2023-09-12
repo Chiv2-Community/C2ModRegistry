@@ -11,9 +11,11 @@ from c2modregistry import generate_package_list, repo_to_index_entry
 from c2modregistry.models import Dependency, Release, Repo
 from c2modregistry.package_list import load_package_list
 
+from semantic_version import SimpleSpec, Version
+
 import logging
 
-level = os.environ.get("LOG_LEVEL", "WARN")
+level = os.environ.get("LOG_LEVEL", "WARNING")
 logging.basicConfig(format='%(asctime)s %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=level)
 
 
@@ -111,7 +113,7 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
         exit(1)
 
     if dry_run:
-        logging.warn("Dry run; not writing to package list.")
+        logging.warning("Dry run; not writing to package list.")
         return
 
     if not os.path.exists(DEFAULT_PACKAGE_DB_DIR):
@@ -134,7 +136,7 @@ def init(repos: List[Repo], dry_run: bool) -> None:
     validate_package_db(DEFAULT_PACKAGE_DB_DIR, filtered_mods)
 
     if dry_run:
-        logging.warn("Dry run; not writing to package dir.")
+        logging.warning("Dry run; not writing to package dir.")
         return
 
     for mod in filtered_mods:
@@ -165,7 +167,7 @@ def add_release(repo: Repo, release_tag: str, dry_run: bool) -> None:
     tags = [release.tag for release in mod.releases]
     
     if release_tag in tags:
-        logging.warn(f"Release {release_tag} already exists in repo {repo}.")
+        logging.warning(f"Release {release_tag} already exists in repo {repo}.")
         return
     
     logging.info(f"Adding release {release_tag} to repo {repo}...")
@@ -179,7 +181,7 @@ def add_release(repo: Repo, release_tag: str, dry_run: bool) -> None:
     validate_package_db(DEFAULT_PACKAGE_DB_DIR, [updated_mod])
 
     if dry_run:
-        logging.warn("Dry run; not writing to mod metadata.")
+        logging.warning("Dry run; not writing to mod metadata.")
         return
 
     with open(f"{DEFAULT_PACKAGES_DIR}/{repo}.json", "w") as file:
@@ -204,7 +206,7 @@ def remove_mods(repo_list: List[Repo], dry_run: bool) -> None:
     validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], filter_func)
         
     if dry_run:
-        logging.warn("Dry run; not writing to mod metadata.")
+        logging.warning("Dry run; not writing to mod metadata.")
         return
 
     for repo in repo_list:
@@ -274,7 +276,15 @@ def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_path_f
 def find_dependency(mods: List[Mod], dep: Dependency) -> Optional[Release]:
     for mod in mods:
         for release in mod.releases:
-            if release.manifest.repo_url == dep.repo_url and dep.version in release.tag:
+            release_tag = release.tag
+            if release_tag.startswith("v"):
+                release_tag = release_tag[1:]
+
+            dep_version = dep.version
+            if dep_version.startswith("v"):
+                dep_version = dep_version[1:]
+
+            if release.manifest.repo_url == dep.repo_url and Version(release_tag) in SimpleSpec(dep_version):
                 return release
 
     return None

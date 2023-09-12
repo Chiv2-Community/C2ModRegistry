@@ -34,6 +34,7 @@ class Manifest:
     authors: List[str]
     dependencies: List[Dependency]
     tags: List[str]
+    ag_mod: bool
 
     @staticmethod
     def from_dict(data: Dict) -> "Manifest":
@@ -44,7 +45,8 @@ class Manifest:
             mod_type=data["mod_type"],
             authors=data["authors"],
             dependencies=[Dependency.from_dict(dep) for dep in data["dependencies"]],
-            tags=data["tags"]
+            tags=data["tags"],
+            ag_mod=data.get("ag_mod", False)
         )
 
 @dataclass(frozen=True)
