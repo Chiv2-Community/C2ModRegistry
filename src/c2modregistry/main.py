@@ -11,6 +11,12 @@ from c2modregistry import generate_package_list, repo_to_index_entry
 from c2modregistry.models import Dependency, Release, Repo
 from c2modregistry.package_list import load_package_list
 
+import logging
+
+level = os.environ.get("LOG_LEVEL", "WARN")
+logging.basicConfig(format='%(asctime)s %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S', level=level)
+
+
 DEFAULT_REGISTRY_PATH = "./registry"
 DEFAULT_PACKAGE_DB_DIR = "./package_db"
 DEFAULT_MOD_LIST_INDEX_PATH = f"{DEFAULT_PACKAGE_DB_DIR}/mod_list_index.txt"
@@ -59,11 +65,12 @@ def main() -> None:
         [org, repoName] = args.repo_url.split("/")[-2:]
         remove_mods([Repo(org, repoName)], args.dry_run)
     else:
-        print("Unknown command.")
+        logging.error("Unknown command.")
+        exit(1)
 
 def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_run: bool) -> None:
     # Get repo lines from the registry dir
-    print("Loading package list entries...")
+    logging.info("Loading package list entries...")
     updated_index_entries = generate_package_list(registry_dir)
     previous_index_entries = []
     try:
@@ -77,18 +84,18 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
     failed = False
 
     if len(new_entries) > 0:
-        print(f"Adding {len(new_entries)} new packages to the package list...")
+        logging.info(f"Adding {len(new_entries)} new packages to the package list...")
         try:
             split_entries = [entry.split("/") for entry in new_entries]
             repo_entries = [Repo(entry[0], entry[1]) for entry in split_entries]
             init(repo_entries, dry_run)
         except Exception as e:
             # If we fail to initialize a repo, remove it from the package list
-            print(f"Failed to initialize repos {repo_entries}: {e}\n")
+            logging.error(f"Failed to initialize repos {repo_entries}: {e}\n")
             failed = True
     
     if len(removed_entries) > 0:
-        print(f"Removing {len(removed_entries)} packages from the package list...")
+        logging.info(f"Removing {len(removed_entries)} packages from the package list...")
         try:
             split_entries = [entry.split("/") for entry in removed_entries]
             repo_entries = [Repo(entry[0], entry[1]) for entry in split_entries]
@@ -99,12 +106,12 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
             failed = True
 
     if failed:
-        print(f"Failures occurred while processing the package list.")
-        print("The package list has not been updated.")
+        logging.error(f"Failures occurred while processing the package list.")
+        logging.error("The package list has not been updated.")
         exit(1)
 
     if dry_run:
-        print("Dry run; not writing to package list.")
+        logging.warn("Dry run; not writing to package list.")
         return
 
     if not os.path.exists(DEFAULT_PACKAGE_DB_DIR):
@@ -113,21 +120,21 @@ def process_registry_updates(registry_dir: str, mod_list_index_path: str, dry_ru
     with open(mod_list_index_path, "w") as file:
         file.write('\n'.join(updated_index_entries))
 
-    print("Package list built.")
+    logging.info("Package list built.")
 
 def init(repos: List[Repo], dry_run: bool) -> None:
-    print(f"Initializing {len(repos)} repos...")
+    logging.info(f"Initializing {len(repos)} repos...")
     mods = [initialize_repo(repo) for repo in repos]
     filtered_mods = [mod for mod in mods if mod is not None]
 
     if len(filtered_mods) != len(repos):
-        print("Failed to initialize some repos.")
+        logging.error("Failed to initialize some repos.")
         exit(1)
     
     validate_package_db(DEFAULT_PACKAGE_DB_DIR, filtered_mods)
 
     if dry_run:
-        print("Dry run; not writing to package dir.")
+        logging.warn("Dry run; not writing to package dir.")
         return
 
     for mod in filtered_mods:
@@ -140,16 +147,16 @@ def init(repos: List[Repo], dry_run: bool) -> None:
             file.write(json_encoder.encode(mod.asdict()))
 
 
-        print(f"Repo {org}/{repoName} initialized.")
+        logging.info(f"Repo {org}/{repoName} initialized.")
 
-    print("Successfully initialized all repos.")
+    logging.info("Successfully initialized all repos.")
 
 def add_release(repo: Repo, release_tag: str, dry_run: bool) -> None:
-    print(f"Loading mod metadata for {repo}...")
+    logging.info(f"Loading mod metadata for {repo}...")
     mod = load_mod(repo, DEFAULT_PACKAGES_DIR)
 
     if mod is None:
-        print(f"Mod {repo} not initialized.")
+        logging.info(f"Mod {repo} not initialized.")
         init([repo], dry_run)
 
         # No need to coninue. Initialization will get all releases.
@@ -158,31 +165,31 @@ def add_release(repo: Repo, release_tag: str, dry_run: bool) -> None:
     tags = [release.tag for release in mod.releases]
     
     if release_tag in tags:
-        print(f"Release {release_tag} already exists in repo {repo}.")
+        logging.warn(f"Release {release_tag} already exists in repo {repo}.")
         return
     
-    print(f"Adding release {release_tag} to repo {repo}...")
+    logging.info(f"Adding release {release_tag} to repo {repo}...")
     updated_mod = add_release_tag(mod, release_tag)
 
     if updated_mod is None:
-        print(f"Failed to add release {release_tag} to repo {repo}.")
+        logging.info(f"Failed to add release {release_tag} to repo {repo}.")
         exit(1)
         return
     
     validate_package_db(DEFAULT_PACKAGE_DB_DIR, [updated_mod])
 
     if dry_run:
-        print("Dry run; not writing to mod metadata.")
+        logging.warn("Dry run; not writing to mod metadata.")
         return
 
     with open(f"{DEFAULT_PACKAGES_DIR}/{repo}.json", "w") as file:
-        print(f"Writing updated mod metadata for {repo}...")
+        logging.info(f"Writing updated mod metadata for {repo}...")
         file.write(json_encoder.encode(updated_mod.asdict()))
     
-    print(f"Successfully added release {release_tag} to repo {repo}.")
+    logging.info(f"Successfully added release {release_tag} to repo {repo}.")
 
 def remove_mods(repo_list: List[Repo], dry_run: bool) -> None:
-    print(f"Removing {len(repo_list)} mods...")
+    logging.info(f"Removing {len(repo_list)} mods...")
 
     removed_mod_package_path_segements = [f"/{repo.org}/{repo.name}.json" for repo in repo_list]
 
@@ -197,20 +204,20 @@ def remove_mods(repo_list: List[Repo], dry_run: bool) -> None:
     validate_package_db(DEFAULT_PACKAGE_DB_DIR, [], filter_func)
         
     if dry_run:
-        print("Dry run; not writing to mod metadata.")
+        logging.warn("Dry run; not writing to mod metadata.")
         return
 
     for repo in repo_list:
         os.remove(f"{DEFAULT_PACKAGES_DIR}/{repo}.json")
+        logging.info(f"Successfully removed mod {repo}.")
 
         # If org directory is empty, remove it
         if not os.listdir(f"{DEFAULT_PACKAGES_DIR}/{repo.org}"):
-            print(f"Removing empty org {repo.org}...")
+            logging.info(f"Removing empty org {repo.org}...")
             os.rmdir(f"{DEFAULT_PACKAGES_DIR}/{repo.org}")
     
-            print(f"Successfully removed mod {repo}.")
     
-    print(f"Successfully removed {len(repo_list)} mods.")
+    logging.info(f"Successfully removed {len(repo_list)} mods.")
 
 def load_mod(repo: Repo, package_dir: str) -> Optional[Mod]:
     try:
@@ -221,7 +228,7 @@ def load_mod(repo: Repo, package_dir: str) -> Optional[Mod]:
         return None
     
 def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_path_filter: Callable[[str], bool] = lambda x: True) -> None:
-    print("Validating package database...")
+    logging.info("Validating package database...")
     packages = load_package_list(package_dir + "/mod_list_index.txt")
     mods: List[Mod] = additional_mods
 
@@ -235,13 +242,13 @@ def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_path_f
                     mod = Mod.from_dict(mod_dict)
 
                     if mod is None:
-                        print(f"Failed to load mod {package} during validation.")
+                        logging.error(f"Failed to load mod {package} during validation.")
                         exit(1)
 
                     mods.append(mod)
 
             except FileNotFoundError:
-                print(f"Package {package} not found during validation.")
+                logging.error(f"Package {package} not found during validation.")
                 exit(1)
     
     # Check for missing dependencies
@@ -254,15 +261,15 @@ def validate_package_db(package_dir: str, additional_mods: List[Mod], mod_path_f
                     missing_deps.append((release, dep))
 
     if len(missing_deps) > 0:
-        print(f"{len(missing_deps)} missing dependencies:")
+        logging.error(f"{len(missing_deps)} missing dependencies:")
 
         for (release, dep) in missing_deps:
-            print(f"{release.manifest.name} {release.tag} requires missing dependency {dep.repo_url} {dep.version}")
+            logging.error(f"{release.manifest.name} {release.tag} requires missing dependency {dep.repo_url} {dep.version}")
 
-        print("Package database is invalid.")
+        logging.error("Package database is invalid.")
         exit(1)
     
-    print("Package database is valid.")
+    logging.info("Package database is valid.")
                 
 def find_dependency(mods: List[Mod], dep: Dependency) -> Optional[Release]:
     for mod in mods:
@@ -271,8 +278,6 @@ def find_dependency(mods: List[Mod], dep: Dependency) -> Optional[Release]:
                 return release
 
     return None
-
-    print("Package database is valid.")
 
 if __name__ == "__main__":
     main()
