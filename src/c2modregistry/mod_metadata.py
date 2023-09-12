@@ -134,7 +134,7 @@ def find_pak_file(release) -> Any | str:
     return pak
 
 # Should line up with https://github.com/Chiv2-Community/C2GUILauncher/blob/main/C2GUILauncher/src/JsonModels/Mod.cs#L29-L38
-VALID_TAGS = ["Mutator", "Map", "Cosmetic", "Audio", "Model", "Weapon", "Doodad"]
+VALID_TAGS = ["Mutator", "Map", "Cosmetic", "Audio", "Model", "Weapon", "Doodad", "Explicit"]
 
 def validate_version_tag_name(tag_name: str) -> Optional[str]:
     if tag_name.startswith("v"):

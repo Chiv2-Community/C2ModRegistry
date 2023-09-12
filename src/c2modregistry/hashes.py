@@ -2,6 +2,7 @@ import gzip
 from typing import Dict
 import hashlib
 import requests
+import base64
 
 def sha512_sum(data: bytes) -> str:
     # Check if gzipped
@@ -10,4 +11,4 @@ def sha512_sum(data: bytes) -> str:
     
     digest = hashlib.sha512()
     digest.update(data)
-    return digest.hexdigest()
+    return base64.b64encode(digest.digest()).decode()
