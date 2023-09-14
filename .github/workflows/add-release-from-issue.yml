@@ -50,7 +50,7 @@ jobs:
       - name: Parse Json in Issue
         id: issue_json_payload
         run:
-          ./.github/workflows/scripts/extract-issue-json-body.sh "${{ github.event.issue.number }}"
+          LOG_LEVEL=INFO ./.github/workflows/scripts/extract-issue-json-body.sh "${{ github.event.issue.number }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -112,7 +112,11 @@ jobs:
         if: steps.update-package-list.outputs.failed == 'false'
         with:
           issue-number: ${{ github.event.issue.number }}
-          body: Successfully added release to package DB.
+          body: |
+            Successfully added release to package DB.
+            ```
+            ${{ steps.update-package-list.outputs.result }}
+            ```
 
       - name: Close Issue
         if: steps.update-package-list.outputs.failed == 'false'
