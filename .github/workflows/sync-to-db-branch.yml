@@ -3,8 +3,13 @@ on:
   push:
     branches:
       - 'main'
+  pull_request:
+    types: [closed]
+    branches:
+      - main
 jobs:
   merge-branch:
+    if: (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true) || github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
