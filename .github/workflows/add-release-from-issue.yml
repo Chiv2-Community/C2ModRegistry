@@ -42,17 +42,37 @@ jobs:
     needs: check-should-execute
     if: needs.check-should-execute.outputs.should_execute == 'true'
     steps:
-      - name: Checkout db branch
-        uses: actions/checkout@master
-        with: 
-          ref: db
-
       - name: Parse Json in Issue
         id: issue_json_payload
         run:
           LOG_LEVEL=INFO ./.github/workflows/scripts/extract-issue-json-body.sh "${{ github.event.issue.number }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Post failure Results 
+        uses: peter-evans/create-or-update-comment@v3
+        if: steps.issue_json_payload.outputs.failed == 'true'
+        with:
+          issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
+          body: |
+            Failed to parse the json in the issue body. Copy and paste the template below and add it to
+            the issue description. Fill out the fields with the correct details.
+
+            ```
+            \`\`\`
+            {
+              "repo_url": "https://github.com/Chiv2-Community/GiantSlayers",
+              "release_tag": "v0.0.1a_hotfix_nodep2"
+             }
+             \`\`\`
+             ```
+             
+             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) discord for support.
+    
+      - name: Checkout db branch
+        uses: actions/checkout@master
+        with: 
+          ref: db
 
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
