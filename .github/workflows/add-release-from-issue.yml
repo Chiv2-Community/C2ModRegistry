@@ -42,6 +42,11 @@ jobs:
     needs: check-should-execute
     if: needs.check-should-execute.outputs.should_execute == 'true'
     steps:
+      - name: Checkout db branch
+        uses: actions/checkout@master
+        with: 
+          ref: db
+          
       - name: Parse Json in Issue
         id: issue_json_payload
         run:
@@ -68,11 +73,6 @@ jobs:
              ```
              
              Check out the [Unchained Discord](https://discord.gg/chiv2unchained) discord for support.
-    
-      - name: Checkout db branch
-        uses: actions/checkout@master
-        with: 
-          ref: db
 
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
