@@ -66,17 +66,15 @@ jobs:
             Failed to parse the json in the issue body. Copy and paste the template below and add it to
             the issue description. Fill out the fields with the correct details. When complete, respond 
             to this issue thread with "retry"
-
             ````
             ```
             {
               "repo_url": "https://github.com/Username/ExampleMod",
               "release_tag": "v0.0.1"
-             }
-             ```
-             ````
-             
-             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
+            }
+            ```
+            ````
+            Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
              
   add-release:
     runs-on: ubuntu-latest
