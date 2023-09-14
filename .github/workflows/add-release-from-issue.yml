@@ -64,7 +64,8 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             Failed to parse the json in the issue body. Copy and paste the template below and add it to
-            the issue description. Fill out the fields with the correct details.
+            the issue description. Fill out the fields with the correct details. When complete, respond 
+            to this issue thread with "retry"
 
             ````
             ```
