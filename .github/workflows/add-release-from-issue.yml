@@ -66,8 +66,8 @@ jobs:
             ````
             ```
             {
-              "repo_url": "https://github.com/Chiv2-Community/GiantSlayers",
-              "release_tag": "v0.0.1a_hotfix_nodep2"
+              "repo_url": "https://github.com/Username/ExampleMod",
+              "release_tag": "v0.0.1"
              }
              ```
              ````
