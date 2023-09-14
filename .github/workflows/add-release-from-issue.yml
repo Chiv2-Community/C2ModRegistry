@@ -87,7 +87,12 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: "Successfully parsed issue body. Attempting to add release to package DB."
-      
+
+      - name: Checkout db branch
+        uses: actions/checkout@master
+        with: 
+          ref: db
+          
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
