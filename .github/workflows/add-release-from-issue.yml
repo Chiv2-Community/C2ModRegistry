@@ -63,16 +63,16 @@ jobs:
             Failed to parse the json in the issue body. Copy and paste the template below and add it to
             the issue description. Fill out the fields with the correct details.
 
+            ````
             ```
-            \`\`\`
             {
               "repo_url": "https://github.com/Chiv2-Community/GiantSlayers",
               "release_tag": "v0.0.1a_hotfix_nodep2"
              }
-             \`\`\`
              ```
+             ````
              
-             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) discord for support.
+             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
 
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
@@ -119,7 +119,7 @@ jobs:
             ${{ steps.update-package-list.outputs.result }}
             ```
             
-            Check out the [Unchained Discord](https://discord.gg/chiv2unchained) discord for support.
+            Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
 
       - name: Commit changes
         if: steps.update-package-list.outputs.failed == 'false'
