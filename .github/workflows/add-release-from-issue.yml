@@ -98,6 +98,8 @@ jobs:
             ```
             ${{ steps.update-package-list.outputs.result }}
             ```
+            
+            Check out the [Unchained Discord](https://discord.gg/chiv2unchained) discord for support.
 
       - name: Commit changes
         if: steps.update-package-list.outputs.failed == 'false'
