@@ -1,8 +1,8 @@
 ---
 name: Add Release to Registry
 about: Automatically add a release for a registered mod
-title: "[RELEASE] "
-labels: ''
+title: "[RELEASE] $MY_MOD Version $MY_VERSION"
+labels: 'mod-release'
 assignees: ''
 
 ---
