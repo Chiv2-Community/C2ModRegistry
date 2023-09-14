@@ -103,7 +103,7 @@ jobs:
             ${{ steps.update-package-list.outputs.result }}
             ```
 
-             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) discord for support.
+             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
 
       - name: Post success results
         uses: peter-evans/create-or-update-comment@v3
@@ -111,7 +111,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
           body: |
-            Successfully processed new packages. Contact an admin in the [Unchained Discord](https://discord.gg/chiv2unchained) discord for approval.
+            Successfully processed new packages. Contact an admin in the [Unchained Discord](https://discord.gg/chiv2unchained) for approval.
 
             ```
             ${{ steps.update-package-list.outputs.result }}
