@@ -103,23 +103,16 @@ jobs:
             ${{ steps.update-package-list.outputs.result }}
             ```
 
-      - name: Commit changes
-        if: steps.update-package-list.outputs.failed == 'false'
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update package list
-          branch: db
-          file_pattern: package_db
-      
       - name: Post success results
         uses: peter-evans/create-or-update-comment@v3
         if: steps.update-package-list.outputs.failed == 'false'
         with:
           issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
-          body: Successfully added release to package DB.
+          body: |
+            Successfully added release to package DB.
 
-      - name: Merge PR
-        if: steps.update-package-list.outputs.failed == 'false'
-        run: gh pr merge ${{ github.event.issue.number || github.event.pull_request.number }} --merge
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ```
+            ${{ steps.update-package-list.outputs.result }}
+            ```
+
+
