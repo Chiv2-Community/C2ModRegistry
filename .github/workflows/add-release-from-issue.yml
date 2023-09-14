@@ -36,11 +36,13 @@ jobs:
           fi
 
           echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
-
-  add-release:
+  parse-json:
     runs-on: ubuntu-latest
     needs: check-should-execute
     if: needs.check-should-execute.outputs.should_execute == 'true'
+    outputs:
+      parse_json: ${{ steps.issue_json_payload.outputs.payload }}
+      failed: ${{ steps.issue_json_payload.outputs.failed }}
     steps:
       - name: Checkout db branch
         uses: actions/checkout@master
@@ -58,7 +60,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v3
         if: steps.issue_json_payload.outputs.failed == 'true'
         with:
-          issue-number: ${{ github.event.issue.number || github.event.pull_request.number }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
             Failed to parse the json in the issue body. Copy and paste the template below and add it to
             the issue description. Fill out the fields with the correct details.
@@ -73,7 +75,12 @@ jobs:
              ````
              
              Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
-
+             
+  add-release:
+    runs-on: ubuntu-latest
+    needs: parse-json
+    if: needs.parse-json.outputs.failed == 'false'
+    steps:
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
         with:
