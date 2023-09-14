@@ -9,10 +9,13 @@ EXTRACTED_JSON=$(echo "$BODY_CONTENT" | awk '/^```/{flag=1; next} /^```/{flag=0}
 
 echo "$EXTRACTED_JSON" | jq empty
 
+FAILED=false
 # If extracted json is empty then we failed
 if [[ -z "$EXTRACTED_JSON" ]]; then
-  exit 1
+  FAILED=true
 fi
+
+echo "failed=$FAILED" >> $GITHUB_OUTPUT
 
 # Github actions nonsense
 EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
