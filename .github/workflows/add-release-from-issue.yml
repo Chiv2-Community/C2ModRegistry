@@ -42,7 +42,7 @@ jobs:
     needs: check-should-execute
     if: needs.check-should-execute.outputs.should_execute == 'true'
     outputs:
-      parse_json: ${{ steps.issue_json_payload.outputs.payload }}
+      json_payload: ${{ steps.issue_json_payload.outputs.payload }}
       failed: ${{ steps.issue_json_payload.outputs.failed }}
     steps:
       - name: Checkout db branch
@@ -110,7 +110,7 @@ jobs:
       - name: Add release
         id: update-package-list
         continue-on-error: true
-        run: .github/workflows/scripts/run-package-manager.sh add '${{ fromJson(steps.issue_json_payload.outputs.payload).repo_url }}' '${{ fromJson(steps.issue_json_payload.outputs.payload).release_tag }}' \
+        run: .github/workflows/scripts/run-package-manager.sh add '${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}' '${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}' \
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
