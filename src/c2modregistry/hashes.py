@@ -11,4 +11,4 @@ def sha512_sum(data: bytes) -> str:
     
     digest = hashlib.sha512()
     digest.update(data)
-    return base64.b64encode(digest.digest()).decode()
+    return digest.hexdigest()
