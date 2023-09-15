@@ -1,8 +1,8 @@
-# https://github.com/Chiv2-Community/SimpleMap
-# https://github.com/Chiv2-Community/healthCharger
-# https://github.com/Chiv2-Community/ArgonSDK-Mods
-# https://github.com/Chiv2-Community/ArgonSDK-ExampleMod
-# https://github.com/Chiv2-Community/GiantSlayers
-# https://github.com/Chiv2-Community/FilthyPeasants
-# https://github.com/Chiv2-Community/FlashBlades
+https://github.com/Chiv2-Community/SimpleMap
+https://github.com/Chiv2-Community/healthCharger
+https://github.com/Chiv2-Community/ArgonSDK-Mods
+https://github.com/Chiv2-Community/ArgonSDK-ExampleMod
+https://github.com/Chiv2-Community/GiantSlayers
+https://github.com/Chiv2-Community/FilthyPeasants
+https://github.com/Chiv2-Community/FlashBlades
 # https://github.com/Chiv2-Community/StubbyMesser
