@@ -6,3 +6,4 @@ Chiv2-Community/ArgonSDK-ExampleMod
 Chiv2-Community/GiantSlayers
 Chiv2-Community/FilthyPeasants
 Chiv2-Community/FlashBlades
+Chiv2-Community/ManlyMen
