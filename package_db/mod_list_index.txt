@@ -1,4 +1,3 @@
-ARoese/C2WeaponLength
 Chiv2-Community/SimpleMap
 Chiv2-Community/healthCharger
 Chiv2-Community/Unchained-Mods
@@ -7,3 +6,5 @@ Chiv2-Community/GiantSlayers
 Chiv2-Community/FlashBlades
 Chiv2-Community/ManlyMen
 Chiv2-Community/Chiv2Turbo
+ARoese/C2WeaponLength
+ARoese/C2Showroom
