@@ -6,6 +6,7 @@ Chiv2-Community/GiantSlayers
 Chiv2-Community/FlashBlades
 Chiv2-Community/ManlyMen
 Chiv2-Community/Chiv2Turbo
+Chiv2-Community/Sharingan
 Knutschbert/NightLife
 Knutschbert/FFA_stronghold_cy
 ARoese/C2WeaponLength
