@@ -9,5 +9,6 @@ Chiv2-Community/Chiv2Turbo
 Chiv2-Community/Sharingan
 Knutschbert/NightLife
 Knutschbert/FFA_stronghold_cy
+Knutschbert/BigNumbers
 ARoese/C2WeaponLength
 ARoese/C2Showroom
