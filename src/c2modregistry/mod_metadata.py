@@ -34,9 +34,14 @@ def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
     (org, repoName) = mod.latest_manifest.repo_url.split("/")[-2:]
     repo = Repo(org, repoName)
     try:
-        github_repo = github_client.get_repo(str(repo))
-        release = github_repo.get_release(release_tag)
+        repoString = str(repo)
         
+        logging.info(f"Fetching repo {repoString}") 
+        github_repo = github_client.get_repo(repoString)
+        
+        logging.info(f"Successfully Retrieved repository. Fetching release {release_tag}")
+        release = github_repo.get_release(release_tag)
+
         mod_releases = mod.releases + [process_release(repo, release)]
 
         mod_releases.sort(key=lambda x: x.release_date, reverse=True)
