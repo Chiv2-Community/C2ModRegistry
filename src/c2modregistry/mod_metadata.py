@@ -37,10 +37,10 @@ def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
     try:
         repoString = str(repo)
         
-        logging.info(f"Fetching repo {repoString}") 
+        logging.info(f"Fetching repo '{repoString}'") 
         github_repo = github_client.get_repo(repoString)
         
-        logging.info(f"Successfully Retrieved repository. Fetching release {release_tag}")
+        logging.info(f"Successfully Retrieved repository. Fetching release '{release_tag}'")
         release = github_repo.get_release(release_tag)
 
         mod_releases = mod.releases + [process_release(repo, release)]
@@ -53,7 +53,7 @@ def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
         )
 
     except Exception as e:
-        logging.error(f"Failed to add release tag {release_tag} for repo {repo}: {e}")
+        logging.error(f"Failed to add release tag '{release_tag}' for repo '{repo}': {e}")
         traceback.print_exc()
         return None
 

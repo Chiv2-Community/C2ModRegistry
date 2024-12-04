@@ -59,15 +59,15 @@ def main() -> None:
     if args.command == "process-registry-updates":
         process_registry_updates("registry", "package_db", args.dry_run)
     elif args.command == "init":
-        [org, repoName] = args.repo_url.split("/")[-2:]
+        [org, repoName] = args.repo_url.strip().split("/")[-2:]
         redirects = load_redirects("package_db")
         init([Repo(org, repoName)], redirects, args.dry_run)
     elif args.command == "add":
-        [org, repoName] = args.repo_url.split("/")[-2:]
+        [org, repoName] = args.repo_url.strip().split("/")[-2:]
         redirects = load_redirects("package_db")
-        add_release(Repo(org, repoName), args.release_tag, redirects, args.dry_run)
+        add_release(Repo(org, repoName), args.release_tag.strip(), redirects, args.dry_run)
     elif args.command == "remove":
-        [org, repoName] = args.repo_url.split("/")[-2:]
+        [org, repoName] = args.repo_url.strip().split("/")[-2:]
         redirects = load_redirects("package_db")
         remove_mods([Repo(org, repoName)], redirects, args.dry_run)
     else:
