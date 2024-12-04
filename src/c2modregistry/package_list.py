@@ -52,5 +52,4 @@ def load_redirects(package_db_dir: str) -> Dict[str, str]:
 
 def parse_redirects(redirect_lines: List[str]) -> Dict[str, str]:
     redirect_lines = [line.strip().split(" -> ") for line in redirect_lines if line.strip() != ""]
-    print(redirect_lines)
     return {line[0]: line[1] for line in redirect_lines}
