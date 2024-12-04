@@ -54,7 +54,7 @@ jobs:
       - name: Update package list
         run: LOG_LEVEL=INFO .github/workflows/scripts/run-package-manager.sh process-registry-updates
         env:
-          GITHUB_TOKEN: ${{ secrets.PACKAGE_MANAGER_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

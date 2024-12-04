@@ -116,7 +116,7 @@ jobs:
         continue-on-error: true
         run: LOG_LEVEL=INFO .github/workflows/scripts/run-package-manager.sh add '${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}' '${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}' \
         env:
-          GITHUB_TOKEN: ${{ secrets.PACKAGE_MANAGER_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Post failure Results 
         uses: peter-evans/create-or-update-comment@v3
