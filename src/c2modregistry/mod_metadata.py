@@ -1,3 +1,4 @@
+import traceback
 from typing import Any, List, Optional
 import requests
 from github import Github, Auth
@@ -53,6 +54,7 @@ def add_release_tag(mod: Mod, release_tag: str) -> Optional[Mod]:
 
     except Exception as e:
         logging.error(f"Failed to add release tag {release_tag} for repo {repo}: {e}")
+        traceback.print_exc()
         return None
 
 def all_releases(repo: Repo) -> List[Release]:
@@ -96,6 +98,7 @@ def process_release(repo: Repo, release: GitRelease) -> Release:
     elif response.status_code != 200:
         raise Exception(f"Failed to download mod.json from {mod_json_url} with status code {response.status_code}")
 
+    logging.info(f"Successfully downloaded mod.json")
     response_json = response.json()
 
     response_json["repo_url"] = repo.github_url()
@@ -121,7 +124,7 @@ def process_release(repo: Repo, release: GitRelease) -> Release:
         tag=release.tag_name,
         hash=pak_hash,
         pak_file_name=pak.name,
-        release_date=pak.updated_at,
+        release_date=pak.updated_at.replace(tzinfo=None),
         manifest=manifest
     )
 
