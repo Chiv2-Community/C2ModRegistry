@@ -88,7 +88,7 @@ jobs:
         id: update-package-list
         run: LOG_LEVEL=INFO .github/workflows/scripts/run-package-manager.sh --dry-run process-registry-updates
         env:
-          GITHUB_TOKEN: ${{ secrets.PACKAGE_MANAGER_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
       - name: Post failure Results 
