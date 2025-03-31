@@ -45,10 +45,8 @@ jobs:
       json_payload: ${{ steps.issue_json_payload.outputs.payload }}
       failed: ${{ steps.issue_json_payload.outputs.failed }}
     steps:
-      - name: Checkout db branch
-        uses: actions/checkout@master
-        with: 
-          ref: db
+      - name: Checkout repository
+        uses: actions/checkout@v3
           
       - name: Parse Json in Issue
         id: issue_json_payload
@@ -80,6 +78,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: parse-json
     if: needs.parse-json.outputs.failed == 'false'
+    permissions:
+      contents: write  # Needed for making changes to repo
+      issues: write    # Needed for commenting on issues
     steps:
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v3
@@ -87,40 +88,51 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: "Successfully parsed issue body. Attempting to add release to package DB."
 
-      - name: Checkout db branch
-        uses: actions/checkout@master
-        with: 
-          ref: db
+      - name: Checkout repository
+        uses: actions/checkout@v3
           
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-
-      - name: Define a cache for the virtual environment based on the dependencies lock file
-        uses: actions/cache@v3
-        with:
-          path: ./.venv
-          key: venv-${{ hashFiles('poetry.lock') }}
-
-      - name: Install poetry
-        uses: abatilo/actions-poetry@v2
-
-      - name: Setup a local virtual environment 
-        run: |
-          poetry config virtualenvs.create true --local
-          poetry config virtualenvs.in-project true --local
-
       - name: Add release
-        id: update-package-list
+        id: add-release
+        uses: Chiv2-Community/zero-infra-mod-registry@main
         continue-on-error: true
-        run: LOG_LEVEL=INFO .github/workflows/scripts/run-package-manager.sh add '${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}' '${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}' \
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          command: add
+          repo_url: ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}
+          release_tag: ${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: 'INFO'
+          
+      - name: Capture log output
+        id: capture-logs
+        if: always()
+        run: |
+          # The logs should be available in the action's output
+          # Create a file to store them if not already captured
+          if [ -f "result.txt" ]; then
+            cat result.txt
+          else
+            echo "No log file found, attempting to use step outputs"
+            # Try to get logs from the previous step's outputs if available
+            echo "${{ steps.add-release.outputs.result }}" > result.txt
+          fi
+          
+          # Set up the log output for GitHub Actions
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          RESULT=$(cat result.txt)
+          echo "result<<$EOF" >> $GITHUB_OUTPUT
+          echo "$RESULT" >> $GITHUB_OUTPUT
+          echo "$EOF" >> $GITHUB_OUTPUT
+          
+          # Determine if the step failed
+          if [ "${{ steps.add-release.outcome }}" != "success" ]; then
+            echo "failed=true" >> $GITHUB_OUTPUT
+          else
+            echo "failed=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Post failure Results 
         uses: peter-evans/create-or-update-comment@v3
-        if: steps.update-package-list.outputs.failed == 'true'
+        if: steps.add-release.outcome != 'success'
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
@@ -128,32 +140,32 @@ jobs:
             After addressing the errors, reply "retry"
 
             ```
-            ${{ steps.update-package-list.outputs.result }}
+            ${{ steps.capture-logs.outputs.result }}
             ```
             
             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
 
       - name: Commit changes
-        if: steps.update-package-list.outputs.failed == 'false'
+        if: steps.add-release.outcome == 'success'
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update package list
+          commit_message: "Add release via issue #${{ github.event.issue.number }}"
           branch: db
           file_pattern: package_db
       
       - name: Post success results
         uses: peter-evans/create-or-update-comment@v3
-        if: steps.update-package-list.outputs.failed == 'false'
+        if: steps.add-release.outcome == 'success'
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
             Successfully added release to package DB.
             ```
-            ${{ steps.update-package-list.outputs.result }}
+            ${{ steps.capture-logs.outputs.result }}
             ```
 
       - name: Close Issue
-        if: steps.update-package-list.outputs.failed == 'false'
+        if: steps.add-release.outcome == 'success'
         run: gh issue close "${{ github.event.issue.number }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
