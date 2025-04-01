@@ -13,16 +13,6 @@ permissions:
   pull-requests: write
 
 jobs:  
-  add-pr-to-project:
-    runs-on: ubuntu-latest
-    if: github.event.action == 'opened'
-    steps:
-      - name: Add PR to Project
-        uses: actions/add-to-project@v0.5.0
-        with:
-          project-url: https://github.com/orgs/Chiv2-Community/projects/4
-          github-token: ${{ secrets.PROJECT_MANAGER_PAT }}
-          
   check-should-execute:
     runs-on: ubuntu-latest
     # If the ref is main, this is an issue comment so do nothing. Otherwise its a PR
