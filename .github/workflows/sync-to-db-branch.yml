@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
 
       - name: Merge main into db
         uses: devmasx/merge-branch@master
@@ -26,35 +26,21 @@ jobs:
   update-package-list:
     runs-on: ubuntu-latest
     needs: merge-branch
+    permissions:
+      contents: write
     steps:
       - name: Checkout db branch
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with: 
           ref: db
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-
-      - uses: actions/cache@v3
-        name: Define a cache for the virtual environment based on the dependencies lock file
-        with:
-          path: ./.venv
-          key: venv-${{ hashFiles('poetry.lock') }}
-
-      - name: Install poetry
-        uses: abatilo/actions-poetry@v2
-
-      - name: Setup a local virtual environment 
-        run: |
-          poetry config virtualenvs.create true --local
-          poetry config virtualenvs.in-project true --local
-
       - name: Update package list
-        run: LOG_LEVEL=INFO .github/workflows/scripts/run-package-manager.sh process-registry-updates
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: Chiv2-Community/zero-infra-mod-registry@main
+        id: update-package-list
+        with:
+          command: process-registry-updates
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: INFO
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

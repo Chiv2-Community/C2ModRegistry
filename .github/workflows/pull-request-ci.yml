@@ -54,7 +54,7 @@ jobs:
     if: needs.check-should-execute.outputs.should_execute == 'true'
     steps:
       - name: Checkout PR branch
-        uses: actions/checkout@master
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -65,31 +65,14 @@ jobs:
           git config --global user.name "github-actions"
           git merge origin/db
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
-
-      - uses: actions/cache@v3
-        name: Define a cache for the virtual environment based on the dependencies lock file
-        with:
-          path: ./.venv
-          key: venv-${{ hashFiles('poetry.lock') }}
-
-      - name: Install poetry
-        uses: abatilo/actions-poetry@v2
-
-      - name: Setup a local virtual environment 
-        run: |
-          poetry config virtualenvs.create true --local
-          poetry config virtualenvs.in-project true --local
-
       - name: Attempt to initialize updated package list
         id: update-package-list
-        run: LOG_LEVEL=INFO .github/workflows/scripts/run-package-manager.sh --dry-run process-registry-updates
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+        uses: Chiv2-Community/zero-infra-mod-registry@main
+        with:
+          command: process-registry-updates
+          dry_run: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: INFO
 
       - name: Post failure Results 
         uses: peter-evans/create-or-update-comment@v3
@@ -104,7 +87,7 @@ jobs:
             ${{ steps.update-package-list.outputs.result }}
             ```
 
-             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
+            Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
 
       - name: Post success results
         uses: peter-evans/create-or-update-comment@v3
@@ -117,5 +100,3 @@ jobs:
             ```
             ${{ steps.update-package-list.outputs.result }}
             ```
-
-
