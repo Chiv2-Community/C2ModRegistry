@@ -16,12 +16,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Merge main into db
-        uses: devmasx/merge-branch@master
+        uses: everlytic/branch-merge@1.1.5
         with:
-          type: now
+          github_token: ${{ github.token }}
+          source_ref: ${{ github.ref }}
           target_branch: db
-          message: Merge main into db
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message_template: Merge main into db
 
   update-package-list:
     runs-on: ubuntu-latest
@@ -39,7 +39,6 @@ jobs:
         id: update-package-list
         with:
           command: process-registry-updates
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           log_level: INFO
 
       - name: Commit changes
