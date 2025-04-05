@@ -115,10 +115,25 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: "Successfully parsed issue body. Attempting to ${{ needs.parse-json.outputs.action }} to package DB."
 
+      - name: Generate branch name
+        id: branch-name
+        run: |
+          if [[ "${{ needs.parse-json.outputs.action }}" == "add_package" ]]; then
+            BRANCH_NAME="issue-${{ github.event.issue.number }}-add-package"
+          else
+            BRANCH_NAME="main"
+          fi
+          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
       - name: Checkout main branch
         uses: actions/checkout@v3
         with: 
           ref: main
+          
+      - name: Create new branch for add_package
+        if: needs.parse-json.outputs.action == 'add_package'
+        run: |
+          git checkout -b ${{ steps.branch-name.outputs.branch_name }}
           
       - name: Process repository action
         id: update-package-list
@@ -150,24 +165,54 @@ jobs:
         if: steps.update-package-list.outputs.failed == 'false'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Update package list
-          branch: main
+          commit_message: |
+            ${{ needs.parse-json.outputs.action == 'add_package_release' && 'Add release' || 'Add package' }} for ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}
+            ${{ needs.parse-json.outputs.action == 'add_package_release' && format('Version: {0}', fromJson(needs.parse-json.outputs.json_payload).release_tag) || '' }}
+            Issue: #${{ github.event.issue.number }}
+          branch: ${{ steps.branch-name.outputs.branch_name }}
           add_options: '--all'
           file_pattern: 'package_db/* registry/*'
+          
+      - name: Create pull request
+        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add_package'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          REPO_NAME=$(echo "${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}" | sed -E 's|.*github.com/([^/]+/[^/]+).*|\1|' | sed 's|.git$||')
+          PR_TITLE="Add package: $REPO_NAME"
+          PR_BODY="Adds package from ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}\n\nResolves #${{ github.event.issue.number }}"
+          
+          gh pr create \
+            --title "$PR_TITLE" \
+            --body "$PR_BODY" \
+            --base main \
+            --head ${{ steps.branch-name.outputs.branch_name }}
       
-      - name: Post success results
+      - name: Post success results for add_package_release
         uses: peter-evans/create-or-update-comment@v4
-        if: steps.update-package-list.outputs.failed == 'false'
+        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add_package_release'
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Successfully added ${{ needs.parse-json.outputs.action == 'add_package_release' && 'release' || 'package' }} to package DB.
+            Successfully added release to package DB.
             ```
             ${{ steps.update-package-list.outputs.result }}
             ```
+            
+      - name: Post success results for add_package
+        uses: peter-evans/create-or-update-comment@v4
+        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add_package'
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Successfully processed package addition and created a pull request.
+            ```
+            ${{ steps.update-package-list.outputs.result }}
+            ```
+            The PR will be linked to this issue and will close it automatically when merged.
 
-      - name: Close Issue
-        if: steps.update-package-list.outputs.failed == 'false'
+      - name: Close Issue for release actions
+        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add_package_release'
         run: gh issue close "${{ github.event.issue.number }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
