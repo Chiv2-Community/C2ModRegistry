@@ -35,10 +35,10 @@ jobs:
       failed: ${{ steps.issue_json_payload.outputs.failed }}
       action: ${{ steps.validate_payload.outputs.action }}
     steps:
-      - name: Checkout db branch
+      - name: Checkout main branch
         uses: actions/checkout@v3
         with: 
-          ref: db
+          ref: main
           
       - name: Parse Json in Issue
         id: issue_json_payload
@@ -115,10 +115,10 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: "Successfully parsed issue body. Attempting to ${{ needs.parse-json.outputs.action }} to package DB."
 
-      - name: Checkout db branch
+      - name: Checkout main branch
         uses: actions/checkout@v3
         with: 
-          ref: db
+          ref: main
           
       - name: Process repository action
         id: update-package-list
