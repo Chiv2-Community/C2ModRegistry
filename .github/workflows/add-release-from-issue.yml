@@ -50,7 +50,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Post failure Results for JSON parsing
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         if: steps.issue_json_payload.outputs.failed == 'true'
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -96,7 +96,7 @@ jobs:
           fi
 
       - name: Post failure Results for invalid action
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         if: failure()
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -113,7 +113,7 @@ jobs:
       contents: write
     steps:
       - name: Confirmation Message
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
           body: "Successfully parsed issue body. Attempting to ${{ needs.parse-json.outputs.action }} to package DB."
@@ -135,7 +135,7 @@ jobs:
           log_level: INFO
 
       - name: Post failure Results 
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         if: steps.update-package-list.outputs.failed == 'true'
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -158,7 +158,7 @@ jobs:
           file_pattern: package_db
       
       - name: Post success results
-        uses: peter-evans/create-or-update-comment@v3
+        uses: peter-evans/create-or-update-comment@v4
         if: steps.update-package-list.outputs.failed == 'false'
         with:
           issue-number: ${{ github.event.issue.number }}
