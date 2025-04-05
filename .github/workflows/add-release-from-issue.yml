@@ -152,6 +152,7 @@ jobs:
         with:
           commit_message: Update package list
           branch: main
+          add_options: '--all'
           file_pattern: 'package_db/* registry/*'
       
       - name: Post success results
