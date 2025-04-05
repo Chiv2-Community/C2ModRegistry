@@ -148,11 +148,11 @@ jobs:
 
       - name: Commit changes
         if: steps.update-package-list.outputs.failed == 'false'
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update package list
-          branch: db
-          file_pattern: package_db
+          branch: main
+          file_pattern: 'package_db/* registry/*'
       
       - name: Post success results
         uses: peter-evans/create-or-update-comment@v4
