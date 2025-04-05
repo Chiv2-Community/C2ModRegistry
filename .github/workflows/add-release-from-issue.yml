@@ -180,7 +180,7 @@ jobs:
         run: |
           REPO_NAME=$(echo "${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}" | sed -E 's|.*github.com/([^/]+/[^/]+).*|\1|' | sed 's|.git$||')
           PR_TITLE="Add package: $REPO_NAME"
-          PR_BODY=$"Adds package from ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}\n\nResolves #${{ github.event.issue.number }}"
+          PR_BODY=$"Adds package from ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}, Resolves #${{ github.event.issue.number }}"
           
           gh pr create \
             --title "$PR_TITLE" \
