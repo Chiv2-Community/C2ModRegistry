@@ -150,7 +150,10 @@ jobs:
         if: steps.update-package-list.outputs.failed == 'false'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Update package list
+          commit_message: |
+            ${{ needs.parse-json.outputs.action == 'add_package_release' && 'Add release' || 'Add package' }} for ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}
+            ${{ needs.parse-json.outputs.action == 'add_package_release' && format('Version: {0}', fromJson(needs.parse-json.outputs.json_payload).release_tag) || '' }}
+            Issue: #${{ github.event.issue.number }}
           branch: main
           add_options: '--all'
           file_pattern: 'package_db/* registry/*'
