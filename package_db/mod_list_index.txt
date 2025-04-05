@@ -1,3 +1,5 @@
+ARoese/C2WeaponLength
+ARoese/C2Showroom
 Chiv2-Community/SimpleMap
 Chiv2-Community/healthCharger
 Chiv2-Community/Unchained-Mods
@@ -10,5 +12,3 @@ Chiv2-Community/Sharingan
 Knutschbert/NightLife
 Knutschbert/FFA_stronghold_cy
 Knutschbert/BigNumbers
-ARoese/C2WeaponLength
-ARoese/C2Showroom
