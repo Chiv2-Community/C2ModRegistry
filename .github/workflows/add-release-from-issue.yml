@@ -20,7 +20,7 @@ jobs:
 
           if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
             if [[ "${{ github.event.comment.body }}" != "retry" ]]; then
-              echo "should_execute=false" >> $GITHUB_OUTPUT
+              SHOULD_EXECUTE=false
             fi
           fi
 
