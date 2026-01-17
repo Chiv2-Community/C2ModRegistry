@@ -1,1 +1,1007 @@
-{"latest_manifest": {"repo_url": "https://github.com/Knutschbert/NightLife", "name": "NightLife", "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night.\nPageUp/PageDown - adjust fog height (Hold Shift for larger increments)", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "releases": [{"tag": "v0.0.6", "hash": "2bb1f837eb20f8e98e2cec4171ff01601529b1e6cffa1241f1454fa83ab051a22ee8be96336f9db3d43f75bf3cc54f2518ab5cb9f30ae61cc11b2d6800784474", "pak_file_name": "xNightLife.pak", "release_date": "2025-03-13T16:54:34", "manifest": {"repo_url": "https://github.com/Knutschbert/NightLife", "name": "NightLife", "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night.\nPageUp/PageDown - adjust fog height (Hold Shift for larger increments)", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "Does not remove the initial flashbang when joining"}, {"tag": "v0.0.5", "hash": "557aa9f2c01efc3320e11277f89a97a00edc99b4db20c7748e97eff97f09fe58a66ad43c8b2013409c16774705121c2ce21bb872d9daea0112e82e687a80ffd6", "pak_file_name": "xNightLife.pak", "release_date": "2025-03-12T17:16:38", "manifest": {"repo_url": "https://github.com/Knutschbert/NightLife", "name": "NightLife", "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night.\nPageUp/PageDown - adjust fog height (Hold Shift for larger increments)", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "- new skybox\r\n- darker environment\r\n- preserves particle effects\r\n- F8 (switching to day) disabled"}, {"tag": "v0.0.4", "hash": "7e701999bbea49dc20c08e4f24009b96508603ddaf9c6ca64812e60a2e43c4cbb8fd8fe560f88bf70ae6f8a2a3a8c102cb30836261a2abe4aa25a521a6a00c68", "pak_file_name": "NightLife.pak", "release_date": "2025-01-22T14:21:59", "manifest": {"repo_url": "https://github.com/Knutschbert/NightLife", "name": "NightLife", "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night\nPageUp/PageDown - more/less fog (also in day level)", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "- First F8 use will properly switch to day\r\n- PageUp/PageDown will adjust the fog in day/night versions instantly"}, {"tag": "v0.0.3", "hash": "e688d0036479be0a4d93f4a0033f83a6b56d502199b521b786c53388a357c482cf8edd089292e8c2aeda0adb2c3fae06c1df9d3320901867cbbe62f5481664a3", "pak_file_name": "NightLife.pak", "release_date": "2025-01-16T20:47:38", "manifest": {"repo_url": "https://github.com/Knutschbert/NightLife", "name": "NightLife", "description": "Enables night sky on all official maps.", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "- toggling between day/night with F8\r\n- new maps (now covering all):\r\n  ```\r\n  TDM_Galencourt\r\n  TDM_Falmire\r\n  FFA_Falmire\r\n  TDM_FrozenWreck\r\n  FFA_FrozenWreck\r\n  TO_Citadel\r\n  TO_Montcrux\r\n  FFA_Bazaar\r\n  FFA_Duelyard\r\n  ```\r\n- minor fog adjustments (Stronghold and other)\r\n- added loading widget\r\n- maps will not be unloaded anymore, only made invisible\r\n- PageUp/PageDn (+Shift) (fog rising) updated\r\n\r\nKnown issues: \r\n- Citadel: not all fires inside the city are shown\r\n- Duelyard: brightness too high during warmup\r\n- Bridgetown: Smoke behind initial tenosia spawn not transparent when switching back to day"}, {"tag": "v0.0.2", "hash": "62ddde52e763f3a74682a68d0c88b1c36562d7cb28d2bc08879dbf0bac8a43398219121b3ce17e88aa1328da5caac4d4c97f91dc9813860f7ae9ada35d417240", "pak_file_name": "NightLife.pak", "release_date": "2024-12-04T19:48:47", "manifest": {"repo_url": "https://github.com/Knutschbert/NightLife", "name": "NightLife", "description": "Enables night sky on all official maps.", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": null}, {"tag": "v0.0.1", "hash": "5f8a47d637684de9091a2e9c0bd586ae7dbfc072eabf7ba701d1d9935f20aa76a085f2398fe92758d89030422656db0614ed934d5d4e122eaf03321618f444a9", "pak_file_name": "NightLife.pak", "release_date": "2023-11-17T12:18:11", "manifest": {"repo_url": "https://github.com/Knutschbert/NightLife", "name": "NightLife", "description": "Enables night sky on all official maps.", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": null}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Knutschbert/NightLife", 
+        "name": "NightLife", 
+        "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night.\nPageUp/PageDown - adjust fog height (Hold Shift for larger increments)", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "Nihi"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                "version": ">=0.0.1"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.6", 
+            "hash": "2bb1f837eb20f8e98e2cec4171ff01601529b1e6cffa1241f1454fa83ab051a22ee8be96336f9db3d43f75bf3cc54f2518ab5cb9f30ae61cc11b2d6800784474", 
+            "pak_file_name": "xNightLife.pak", 
+            "release_date": "2025-03-13T16:54:34", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/NightLife", 
+                "name": "NightLife", 
+                "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night.\nPageUp/PageDown - adjust fog height (Hold Shift for larger increments)", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "Does not remove the initial flashbang when joining", 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_Marker.uasset", 
+                        "hash": "d994fec15ce2abb54d09c36d0ef5121f6244156ee5e9723c8333fe4abe2f6958ccf40598ca2969623c05b60bf068c80dea2ef0cb8c2a4a2ff103ec01554bcaab", 
+                        "object_class": "DA_ModMarker_C", 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset", 
+                        "hash": "c34e727bc7a2569cd4b3624f0e2b4a2cf694bcb20c0d3b0f4c8f03b07817acf2db87eddbcf190320975fc9572d6ccf75335e357ed5f9617aafda2d0fe96aeacb", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "e6a24412cb1b5bb90dc7f0d7c9c936682d261c28a6123bd6b97382a1fefbd86cbf5e9d5d180be30d223f1fc2c3c12eba7b799720376b2466932c71db3cbb1a0c", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": true
+                    }
+                ], 
+                "maps": [
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics.umap", 
+                        "hash": "85d469d537c2310242869f467f104792a2ab7cd28b18a17e6435a9a31a7f3d08915ab156bf0553d562573db368e127e9a967d116edcd4f3e8a470ae4dad4cd5a", 
+                        "object_class": "TBLMapSummary", 
+                        "gamemode": null
+                    }
+                ], 
+                "replacements": [
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics.umap", 
+                        "hash": "85d469d537c2310242869f467f104792a2ab7cd28b18a17e6435a9a31a7f3d08915ab156bf0553d562573db368e127e9a967d116edcd4f3e8a470ae4dad4cd5a", 
+                        "object_class": "TBLMapSummary"
+                    }, 
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics_BuiltData.uasset", 
+                        "hash": "02fa30a6490ff3ed3b134becf7bf350b5467ff9d58961ec36d6ddd6f8e15754267e139b05cb63ea37814caa0ca2f1c271061cb28acbe62111d18aa7caca7852a", 
+                        "object_class": "MapBuildDataRegistry"
+                    }, 
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics2_BuiltData.uasset", 
+                        "hash": "e275a91984c251223192ce6d2224a243d1d0c0b0219e5272b8ff3766d476e83693a489f5f994e07c0230a6d94eeec8c2811b1dccf499201a9d241e490a7febe6", 
+                        "object_class": "MapBuildDataRegistry"
+                    }
+                ], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/basic_skybox_3d_flip.uasset", 
+                        "hash": "015034df8184c068ad6481d50761c8ff0232c2dfd5ad02fad651cbdea291e406cce97140321761d6afc93d556a0c35f9fa3f9955875aa6f89d326432960a710a", 
+                        "object_class": "StaticMesh", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/M_Fire_Background_Sky_Inst.uasset", 
+                        "hash": "e9e722c6ec8f72d6a210255489ed67a89432bb7fbee94d7c73c862da8a6bf740f5d31b11a632ba18cb48db44394d04c896a2020bc802e3a98ffa9ca453989e8b", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat.uasset", 
+                        "hash": "077054e58f49a56c98bb76764ea346a25fbf18a2afeb07d652f284da186eff01437f3ff71af22955a62e7c1936f5d46ba44da402cdd79a44874b7d8517d67805", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/4k_ceres_fictional.uasset", 
+                        "hash": "84c82f7177914b904d351d101a4acdc706c4756af0c5b920aa32517f0b37c9c743c379cfde960c9fc77c74564dacf21b94359c628c63dfbea7b78b5207cc1068", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Ceres.uasset", 
+                        "hash": "34c95524e6646da49307dee8a26b25f22fd169648d0f63705b721666c750813d4119c1a29c6a10371d042a973d5eb29c2afbb0954e6adc29c1cdd79b6016e84c", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman_Mat.uasset", 
+                        "hash": "44c1ac35e17f60888f8523eb56fd7e14376940327b3ddbd2ecfaf95ec4f8d5267e6342069def65284c717dbfd3ca13e4948af9711cdd759954a9bcc3bb2fd771", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon.uasset", 
+                        "hash": "531754084bc0211850990365180e5f84453653b2be632e1840388ccd18ffab8e5a5144dd8f3b80b06a44b71d3e4b6e3062e210600b6bdb44992c4509a553e0f4", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/Freemoon.uasset", 
+                        "hash": "b9e415862f2ce67b59bc1fb64a72b0434b2087ab133381bb97d8e99b29d1d131a0d6da78054b05626f29a2c9729f6489bfb55e4ac2f0d17929cb6ecd2ac5d2dd", 
+                        "object_class": "Actor", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/MI_Desert_Sky01A1.uasset", 
+                        "hash": "75d1016ad3e542ed7196c5c1f1e6db8c5f01a355928b9906d92ff5889898f1df6ab71d014107c96d6c35ab1487fd6d8ea5b1dcf5aeb270daacb34b3069d5c6bc", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon_Mat.uasset", 
+                        "hash": "5c55c0f44fb174e7353fbd3b177198fe316491f01185156e934f7769b5bbef93de6ee66f6f327263d705144cf4ca83e3a6536e0ceb64e95452fc5a062c9de71b", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLifeLoadingWidget.uasset", 
+                        "hash": "acdf48abd2d46e6001bf5573e1241cacd08f9d3b61775fdf7722f9b96a115428dae1f06ab38eda9465cc27b646e2e2c7493e5720d974321b1454705ec64aed17", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Inst.uasset", 
+                        "hash": "b838b5dea0ec1d359b8a05c4774f03ac73c85444b046ec83fe662e5168d03879b2b6d21a37916aa7b375307ef08399d591993bfa57d1c2c5529f54d8fb2a7405", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "e6a24412cb1b5bb90dc7f0d7c9c936682d261c28a6123bd6b97382a1fefbd86cbf5e9d5d180be30d223f1fc2c3c12eba7b799720376b2466932c71db3cbb1a0c", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Globe.uasset", 
+                        "hash": "1137471f65998f9bd1a087a45a36d48f54d2785f8f6fe16fdd01fd68a00d8cc81fedb518753b7d7b36877f2b29a203a7a360045ff3b23c9ccf501faf1f5ae0de", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/BlankWidget.uasset", 
+                        "hash": "e836d2bf2fb8f2fe4d8a82c943fcef1ef7be2b90eebaa31668eb317ae08b5e7aec1e66d5241f29498af91139cab0d1a1da8066cfb411d97e1b8a04ac878de571", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/RandomizedSkymap_t5_08192x04096.uasset", 
+                        "hash": "fa7bd1a78a4b0f8afa7a70deddfc95f3ef80e64db7afaf4733cdc1699d701e9a1044819f047de3f3aa347ed6e9269633c265c4f49a2def0e8d8e5e781b84fa55", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman.uasset", 
+                        "hash": "f9ec6b96bb9dafb3d7ef5b3db6668372ea94a85bcd5b1ca27d817d78f51b7bc24cb9205b765f82c35f0ec5c9e5625e2287e266825c9b486b2b5576a4a19642b6", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/M_Fire_Background_Sky.uasset", 
+                        "hash": "8eb409cca52d535ad757d06d39b26ec21e3373b7782e52921682f8c339e8f675aa94ca7a8093fb6f4b35d459a699f9edd35e97f8215e386db2c0c8e947110c4c", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/MoonMaterial.uasset", 
+                        "hash": "52ec603de1937e3554a3dfaf14bba1341f390f04e0261c7edf2f847baebfa457519eb93ba845c5eb550cc61b1405ae422ea2ef50ea1ba2fd1efb537f28099626", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/2k_earth_daymap.uasset", 
+                        "hash": "5cccab064ffabb4413c45a95844d9877c4bcd11c78037b32a60a4226b3e03c4a907bd42f1636bd4787d9bbc21d2bfba4f1702eb86f036d7c15fba6fcc4df91df", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.5", 
+            "hash": "557aa9f2c01efc3320e11277f89a97a00edc99b4db20c7748e97eff97f09fe58a66ad43c8b2013409c16774705121c2ce21bb872d9daea0112e82e687a80ffd6", 
+            "pak_file_name": "xNightLife.pak", 
+            "release_date": "2025-03-12T17:16:38", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/NightLife", 
+                "name": "NightLife", 
+                "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night.\nPageUp/PageDown - adjust fog height (Hold Shift for larger increments)", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "- new skybox\r\n- darker environment\r\n- preserves particle effects\r\n- F8 (switching to day) disabled", 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_Marker.uasset", 
+                        "hash": "d994fec15ce2abb54d09c36d0ef5121f6244156ee5e9723c8333fe4abe2f6958ccf40598ca2969623c05b60bf068c80dea2ef0cb8c2a4a2ff103ec01554bcaab", 
+                        "object_class": "DA_ModMarker_C", 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset", 
+                        "hash": "fc43f075f895e184af7946712e9bfe67c8b7b7e52d4025d46f3d785889b80e44204cebf464690934f105ca11dd92a6b58048501ef3e8b53858d8e7d29b7f09c5", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "e6a24412cb1b5bb90dc7f0d7c9c936682d261c28a6123bd6b97382a1fefbd86cbf5e9d5d180be30d223f1fc2c3c12eba7b799720376b2466932c71db3cbb1a0c", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": true
+                    }
+                ], 
+                "maps": [
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics.umap", 
+                        "hash": "85d469d537c2310242869f467f104792a2ab7cd28b18a17e6435a9a31a7f3d08915ab156bf0553d562573db368e127e9a967d116edcd4f3e8a470ae4dad4cd5a", 
+                        "object_class": "TBLMapSummary", 
+                        "gamemode": null
+                    }
+                ], 
+                "replacements": [
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics.umap", 
+                        "hash": "85d469d537c2310242869f467f104792a2ab7cd28b18a17e6435a9a31a7f3d08915ab156bf0553d562573db368e127e9a967d116edcd4f3e8a470ae4dad4cd5a", 
+                        "object_class": "TBLMapSummary"
+                    }, 
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics2_BuiltData.uasset", 
+                        "hash": "e275a91984c251223192ce6d2224a243d1d0c0b0219e5272b8ff3766d476e83693a489f5f994e07c0230a6d94eeec8c2811b1dccf499201a9d241e490a7febe6", 
+                        "object_class": "MapBuildDataRegistry"
+                    }, 
+                    {
+                        "path": "TBL/Content/MapsTest/base-atmostpherics_BuiltData.uasset", 
+                        "hash": "02fa30a6490ff3ed3b134becf7bf350b5467ff9d58961ec36d6ddd6f8e15754267e139b05cb63ea37814caa0ca2f1c271061cb28acbe62111d18aa7caca7852a", 
+                        "object_class": "MapBuildDataRegistry"
+                    }
+                ], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Ceres.uasset", 
+                        "hash": "34c95524e6646da49307dee8a26b25f22fd169648d0f63705b721666c750813d4119c1a29c6a10371d042a973d5eb29c2afbb0954e6adc29c1cdd79b6016e84c", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat.uasset", 
+                        "hash": "077054e58f49a56c98bb76764ea346a25fbf18a2afeb07d652f284da186eff01437f3ff71af22955a62e7c1936f5d46ba44da402cdd79a44874b7d8517d67805", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/Freemoon.uasset", 
+                        "hash": "b9e415862f2ce67b59bc1fb64a72b0434b2087ab133381bb97d8e99b29d1d131a0d6da78054b05626f29a2c9729f6489bfb55e4ac2f0d17929cb6ecd2ac5d2dd", 
+                        "object_class": "Actor", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/RandomizedSkymap_t5_08192x04096.uasset", 
+                        "hash": "fa7bd1a78a4b0f8afa7a70deddfc95f3ef80e64db7afaf4733cdc1699d701e9a1044819f047de3f3aa347ed6e9269633c265c4f49a2def0e8d8e5e781b84fa55", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "e6a24412cb1b5bb90dc7f0d7c9c936682d261c28a6123bd6b97382a1fefbd86cbf5e9d5d180be30d223f1fc2c3c12eba7b799720376b2466932c71db3cbb1a0c", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon.uasset", 
+                        "hash": "531754084bc0211850990365180e5f84453653b2be632e1840388ccd18ffab8e5a5144dd8f3b80b06a44b71d3e4b6e3062e210600b6bdb44992c4509a553e0f4", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/BlankWidget.uasset", 
+                        "hash": "e836d2bf2fb8f2fe4d8a82c943fcef1ef7be2b90eebaa31668eb317ae08b5e7aec1e66d5241f29498af91139cab0d1a1da8066cfb411d97e1b8a04ac878de571", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLifeLoadingWidget.uasset", 
+                        "hash": "acdf48abd2d46e6001bf5573e1241cacd08f9d3b61775fdf7722f9b96a115428dae1f06ab38eda9465cc27b646e2e2c7493e5720d974321b1454705ec64aed17", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Inst.uasset", 
+                        "hash": "b838b5dea0ec1d359b8a05c4774f03ac73c85444b046ec83fe662e5168d03879b2b6d21a37916aa7b375307ef08399d591993bfa57d1c2c5529f54d8fb2a7405", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/M_Fire_Background_Sky.uasset", 
+                        "hash": "8eb409cca52d535ad757d06d39b26ec21e3373b7782e52921682f8c339e8f675aa94ca7a8093fb6f4b35d459a699f9edd35e97f8215e386db2c0c8e947110c4c", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/2k_earth_daymap.uasset", 
+                        "hash": "5cccab064ffabb4413c45a95844d9877c4bcd11c78037b32a60a4226b3e03c4a907bd42f1636bd4787d9bbc21d2bfba4f1702eb86f036d7c15fba6fcc4df91df", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon_Mat.uasset", 
+                        "hash": "5c55c0f44fb174e7353fbd3b177198fe316491f01185156e934f7769b5bbef93de6ee66f6f327263d705144cf4ca83e3a6536e0ceb64e95452fc5a062c9de71b", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman_Mat.uasset", 
+                        "hash": "44c1ac35e17f60888f8523eb56fd7e14376940327b3ddbd2ecfaf95ec4f8d5267e6342069def65284c717dbfd3ca13e4948af9711cdd759954a9bcc3bb2fd771", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/basic_skybox_3d_flip.uasset", 
+                        "hash": "015034df8184c068ad6481d50761c8ff0232c2dfd5ad02fad651cbdea291e406cce97140321761d6afc93d556a0c35f9fa3f9955875aa6f89d326432960a710a", 
+                        "object_class": "StaticMesh", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/4k_ceres_fictional.uasset", 
+                        "hash": "84c82f7177914b904d351d101a4acdc706c4756af0c5b920aa32517f0b37c9c743c379cfde960c9fc77c74564dacf21b94359c628c63dfbea7b78b5207cc1068", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/MoonMaterial.uasset", 
+                        "hash": "52ec603de1937e3554a3dfaf14bba1341f390f04e0261c7edf2f847baebfa457519eb93ba845c5eb550cc61b1405ae422ea2ef50ea1ba2fd1efb537f28099626", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Globe.uasset", 
+                        "hash": "1137471f65998f9bd1a087a45a36d48f54d2785f8f6fe16fdd01fd68a00d8cc81fedb518753b7d7b36877f2b29a203a7a360045ff3b23c9ccf501faf1f5ae0de", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/M_Fire_Background_Sky_Inst.uasset", 
+                        "hash": "e9e722c6ec8f72d6a210255489ed67a89432bb7fbee94d7c73c862da8a6bf740f5d31b11a632ba18cb48db44394d04c896a2020bc802e3a98ffa9ca453989e8b", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman.uasset", 
+                        "hash": "f9ec6b96bb9dafb3d7ef5b3db6668372ea94a85bcd5b1ca27d817d78f51b7bc24cb9205b765f82c35f0ec5c9e5625e2287e266825c9b486b2b5576a4a19642b6", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/MI_Desert_Sky01A1.uasset", 
+                        "hash": "75d1016ad3e542ed7196c5c1f1e6db8c5f01a355928b9906d92ff5889898f1df6ab71d014107c96d6c35ab1487fd6d8ea5b1dcf5aeb270daacb34b3069d5c6bc", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.4", 
+            "hash": "7e701999bbea49dc20c08e4f24009b96508603ddaf9c6ca64812e60a2e43c4cbb8fd8fe560f88bf70ae6f8a2a3a8c102cb30836261a2abe4aa25a521a6a00c68", 
+            "pak_file_name": "NightLife.pak", 
+            "release_date": "2025-01-22T14:21:59", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/NightLife", 
+                "name": "NightLife", 
+                "description": "Enables night sky on all official maps.\n\nF8 - toggle day/night\nPageUp/PageDown - more/less fog (also in day level)", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "- First F8 use will properly switch to day\r\n- PageUp/PageDown will adjust the fog in day/night versions instantly", 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_Marker.uasset", 
+                        "hash": "9806aead5cd3357ea0588534e49b361dfb8ccfde5600d80684ae2e705c7d3e4240e71841499a7a10341f389d260feb95c0b6e15ce9b3ba909949ab80b3d0d360", 
+                        "object_class": "DA_ModMarker_C", 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset", 
+                        "hash": "86220673affa05fca8fd654488bfe0fcdcc8d7ee3a389aa716986685a6c50551cb7ce3d8744e84adf7b7e4d704b0753671b32399e3ea29908e884534aa73378c", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "02f4bee66c0401cdd8c40a213538c7f5fe780492d3b1597fac721d810adae8c39d2e51de296a2b9d582872534053ecf5f7b6858d6b70a6679854343657897dea", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": true
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "02f4bee66c0401cdd8c40a213538c7f5fe780492d3b1597fac721d810adae8c39d2e51de296a2b9d582872534053ecf5f7b6858d6b70a6679854343657897dea", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/Freemoon.uasset", 
+                        "hash": "2457139d20e9a91002caa7f61cb0a00b0bdefa3805ebe7367700e792e368b28d3d9a16951fd4f8ced1ea9959c856e8ca1389bbf7cc1bf3aa6bc53391b92f6dfc", 
+                        "object_class": "Actor", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Inst.uasset", 
+                        "hash": "7785a8145e45fc4cd947708884548cd00737ea5c6e0e7a08b7c4a67eb05847838fe56de4e3b8889af878afe5d251978b74e33e2c8439014df9cb75493fd5bced", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman_Mat.uasset", 
+                        "hash": "576ad28cb5b2fb5bbafe48769d2ba7d8e3bd83a790c2e732f80f5f601ba6c4dca9d5ba2be63683806f2811cd83e2d3400a733284066290536cd8928383f09709", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat.uasset", 
+                        "hash": "53ed56d611e827f66cb891ed913921fdb99d798d45ff0d60759c047999cc7d0e411d412b6ff2d3c1519b00d5ff8cc8138cec0dc3e0e393b4627b7cc2b9e1a789", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon_Mat.uasset", 
+                        "hash": "2e529d2200b7b9144f26a143298b4ed3d76727f1023b2ea65c839340539505bb2a2bd594655f930b8e3bce26376b5924f09814d366a54991152c6a03b8ee33b6", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman.uasset", 
+                        "hash": "ed4f772085bbdbdc70c8f701e4dcd594c32b0788d5cd3ea5802df0853022b0d9a20cdbd07d529d138b40b260ab4a1150a3d4adfd45f65bd11d946cbe27f667d8", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon.uasset", 
+                        "hash": "caccd62856eb0c21853968a2b64829dbf4ea2c9c7d327cbcf5801f7ece26fbbbfa18b8988c4c5d80641e2c0627044a404a910bc702f9044407f121b034082319", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/MoonMaterial.uasset", 
+                        "hash": "d5366c064ee9a1f09ddb47451ea986f6d6c13725fbb04777290e45865ac7b77b8cd0a86ebb9aaf7164c1c4cc0c714b9ad8152c51948ba946f7c1b6109607005e", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLifeLoadingWidget.uasset", 
+                        "hash": "c5de648b8c72a53947d8389811c6a15d95df7bed59519496260e12e814558c4ed66ca2c9e99841c508d4a12afffde722d552ffb357d2100fafca76254d37b3f3", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/2k_earth_daymap.uasset", 
+                        "hash": "787403d030edc00b2bacdbfe1da57465403ebc47023067ee214f2b615a1263fec8e9d0e58da76db27e569408561d9aefe6680236f3bf5490c99613517da1765d", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/BlankWidget.uasset", 
+                        "hash": "fdc4675a784a3cab9c8613f01bd1aceabe2ffadcd1dcf53e2cb8cd6f1fcca9f4b73648389aeb069c9a13fbf344a9bc475a60287bf7d989bcfda9ab33fa2ce8e4", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Ceres.uasset", 
+                        "hash": "a1540e5488122941e869dd78501922e5cc9b6b0837c99099c82983b0c1ec07c2e3e177c49ad653ac2af3c99d10cc14bd6779b9c6f9dc6bc283f113c68a5a290a", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Globe.uasset", 
+                        "hash": "93ac9c3af2fe59c9468b2de1903091d6800d524269fc873276cee07fb20f8d53f593b83913c9d449d2c13ed11ae3584ef76fb7efed3e727be39bffe7bf219d0b", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/4k_ceres_fictional.uasset", 
+                        "hash": "e83f76bd5166e69b0525c1a020be48e22700015ce0d8b5805543cfe01a988a512a44500c55437ef3931b6c261348a5bffdc60e3ae1cb250000492ee2406e7ec5", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.3", 
+            "hash": "e688d0036479be0a4d93f4a0033f83a6b56d502199b521b786c53388a357c482cf8edd089292e8c2aeda0adb2c3fae06c1df9d3320901867cbbe62f5481664a3", 
+            "pak_file_name": "NightLife.pak", 
+            "release_date": "2025-01-16T20:47:38", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/NightLife", 
+                "name": "NightLife", 
+                "description": "Enables night sky on all official maps.", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "- toggling between day/night with F8\r\n- new maps (now covering all):\r\n  ```\r\n  TDM_Galencourt\r\n  TDM_Falmire\r\n  FFA_Falmire\r\n  TDM_FrozenWreck\r\n  FFA_FrozenWreck\r\n  TO_Citadel\r\n  TO_Montcrux\r\n  FFA_Bazaar\r\n  FFA_Duelyard\r\n  ```\r\n- minor fog adjustments (Stronghold and other)\r\n- added loading widget\r\n- maps will not be unloaded anymore, only made invisible\r\n- PageUp/PageDn (+Shift) (fog rising) updated\r\n\r\nKnown issues: \r\n- Citadel: not all fires inside the city are shown\r\n- Duelyard: brightness too high during warmup\r\n- Bridgetown: Smoke behind initial tenosia spawn not transparent when switching back to day", 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_Marker.uasset", 
+                        "hash": "9806aead5cd3357ea0588534e49b361dfb8ccfde5600d80684ae2e705c7d3e4240e71841499a7a10341f389d260feb95c0b6e15ce9b3ba909949ab80b3d0d360", 
+                        "object_class": "DA_ModMarker_C", 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset", 
+                        "hash": "5cdf40002d013ad0cb16ec0b35deec3182ea28b64a34625b2e666786c5717894f11e75a9275924180f004f639630a355e3e463b979ce8c887e62e39a1096222f", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "02f4bee66c0401cdd8c40a213538c7f5fe780492d3b1597fac721d810adae8c39d2e51de296a2b9d582872534053ecf5f7b6858d6b70a6679854343657897dea", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": true
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_old.uasset", 
+                        "hash": "02f4bee66c0401cdd8c40a213538c7f5fe780492d3b1597fac721d810adae8c39d2e51de296a2b9d582872534053ecf5f7b6858d6b70a6679854343657897dea", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLifeLoadingWidget.uasset", 
+                        "hash": "c5de648b8c72a53947d8389811c6a15d95df7bed59519496260e12e814558c4ed66ca2c9e99841c508d4a12afffde722d552ffb357d2100fafca76254d37b3f3", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/BlankWidget.uasset", 
+                        "hash": "b14efcdd22c68eb321197a0d36b8ca352243b655dcc62015897b2f85ccb8b2f094a4630fd4b48552a157cd018f0c38c816db6ca63e74600669d626ffdd488fe1", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/Freemoon.uasset", 
+                        "hash": "2457139d20e9a91002caa7f61cb0a00b0bdefa3805ebe7367700e792e368b28d3d9a16951fd4f8ced1ea9959c856e8ca1389bbf7cc1bf3aa6bc53391b92f6dfc", 
+                        "object_class": "Actor", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/4k_ceres_fictional.uasset", 
+                        "hash": "e83f76bd5166e69b0525c1a020be48e22700015ce0d8b5805543cfe01a988a512a44500c55437ef3931b6c261348a5bffdc60e3ae1cb250000492ee2406e7ec5", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat.uasset", 
+                        "hash": "7dfa2eaeb80f4ab883907a0fa395381b97b0e8f9832d22c6a6d485acfa27c1ed30eca6bdabadc7db6e672610dbf9a4de08ad2ed77db68ba8f125161bbabb86a7", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/2k_earth_daymap.uasset", 
+                        "hash": "787403d030edc00b2bacdbfe1da57465403ebc47023067ee214f2b615a1263fec8e9d0e58da76db27e569408561d9aefe6680236f3bf5490c99613517da1765d", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Inst.uasset", 
+                        "hash": "fc02abd08fcd9108ea294b8c30cd3ba406562c6caee6e292ae280559b5302bc05971ca30b6928406c05de170d91aab3fccb93688c24b5accd59efa74e65c8d3a", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/MoonMaterial.uasset", 
+                        "hash": "d5366c064ee9a1f09ddb47451ea986f6d6c13725fbb04777290e45865ac7b77b8cd0a86ebb9aaf7164c1c4cc0c714b9ad8152c51948ba946f7c1b6109607005e", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon_Mat.uasset", 
+                        "hash": "2e529d2200b7b9144f26a143298b4ed3d76727f1023b2ea65c839340539505bb2a2bd594655f930b8e3bce26376b5924f09814d366a54991152c6a03b8ee33b6", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon.uasset", 
+                        "hash": "caccd62856eb0c21853968a2b64829dbf4ea2c9c7d327cbcf5801f7ece26fbbbfa18b8988c4c5d80641e2c0627044a404a910bc702f9044407f121b034082319", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman.uasset", 
+                        "hash": "ed4f772085bbdbdc70c8f701e4dcd594c32b0788d5cd3ea5802df0853022b0d9a20cdbd07d529d138b40b260ab4a1150a3d4adfd45f65bd11d946cbe27f667d8", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman_Mat.uasset", 
+                        "hash": "576ad28cb5b2fb5bbafe48769d2ba7d8e3bd83a790c2e732f80f5f601ba6c4dca9d5ba2be63683806f2811cd83e2d3400a733284066290536cd8928383f09709", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.2", 
+            "hash": "62ddde52e763f3a74682a68d0c88b1c36562d7cb28d2bc08879dbf0bac8a43398219121b3ce17e88aa1328da5caac4d4c97f91dc9813860f7ae9ada35d417240", 
+            "pak_file_name": "NightLife.pak", 
+            "release_date": "2024-12-04T19:48:47", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/NightLife", 
+                "name": "NightLife", 
+                "description": "Enables night sky on all official maps.", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife_Marker.uasset", 
+                        "hash": "9806aead5cd3357ea0588534e49b361dfb8ccfde5600d80684ae2e705c7d3e4240e71841499a7a10341f389d260feb95c0b6e15ce9b3ba909949ab80b3d0d360", 
+                        "object_class": "DA_ModMarker_C", 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset", 
+                        "hash": "9bb4413b99c008aa242d03f94cef11d1bfe1123d8626f561c269bfcdb17471531ff9bd29052c8c4e07caaa031925d033816444b51b998bc3cb69744127e46e0d", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Inst.uasset", 
+                        "hash": "fc02abd08fcd9108ea294b8c30cd3ba406562c6caee6e292ae280559b5302bc05971ca30b6928406c05de170d91aab3fccb93688c24b5accd59efa74e65c8d3a", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat.uasset", 
+                        "hash": "7dfa2eaeb80f4ab883907a0fa395381b97b0e8f9832d22c6a6d485acfa27c1ed30eca6bdabadc7db6e672610dbf9a4de08ad2ed77db68ba8f125161bbabb86a7", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/4k_ceres_fictional.uasset", 
+                        "hash": "e83f76bd5166e69b0525c1a020be48e22700015ce0d8b5805543cfe01a988a512a44500c55437ef3931b6c261348a5bffdc60e3ae1cb250000492ee2406e7ec5", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon_Mat.uasset", 
+                        "hash": "2e529d2200b7b9144f26a143298b4ed3d76727f1023b2ea65c839340539505bb2a2bd594655f930b8e3bce26376b5924f09814d366a54991152c6a03b8ee33b6", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman_Mat.uasset", 
+                        "hash": "576ad28cb5b2fb5bbafe48769d2ba7d8e3bd83a790c2e732f80f5f601ba6c4dca9d5ba2be63683806f2811cd83e2d3400a733284066290536cd8928383f09709", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon.uasset", 
+                        "hash": "caccd62856eb0c21853968a2b64829dbf4ea2c9c7d327cbcf5801f7ece26fbbbfa18b8988c4c5d80641e2c0627044a404a910bc702f9044407f121b034082319", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman.uasset", 
+                        "hash": "ed4f772085bbdbdc70c8f701e4dcd594c32b0788d5cd3ea5802df0853022b0d9a20cdbd07d529d138b40b260ab4a1150a3d4adfd45f65bd11d946cbe27f667d8", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/2k_earth_daymap.uasset", 
+                        "hash": "787403d030edc00b2bacdbfe1da57465403ebc47023067ee214f2b615a1263fec8e9d0e58da76db27e569408561d9aefe6680236f3bf5490c99613517da1765d", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/Freemoon.uasset", 
+                        "hash": "2457139d20e9a91002caa7f61cb0a00b0bdefa3805ebe7367700e792e368b28d3d9a16951fd4f8ced1ea9959c856e8ca1389bbf7cc1bf3aa6bc53391b92f6dfc", 
+                        "object_class": "Actor", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/MoonMaterial.uasset", 
+                        "hash": "d5366c064ee9a1f09ddb47451ea986f6d6c13725fbb04777290e45865ac7b77b8cd0a86ebb9aaf7164c1c4cc0c714b9ad8152c51948ba946f7c1b6109607005e", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.1", 
+            "hash": "5f8a47d637684de9091a2e9c0bd586ae7dbfc072eabf7ba701d1d9935f20aa76a085f2398fe92758d89030422656db0614ed934d5d4e122eaf03321618f444a9", 
+            "pak_file_name": "NightLife.pak", 
+            "release_date": "2023-11-17T12:18:11", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/NightLife", 
+                "name": "NightLife", 
+                "description": "Enables night sky on all official maps.", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset", 
+                        "hash": "3072dc6139472e5e63b1275b7c06a562d872002a54f02abfa6162b043c6e0d743409ec2f4b89efe9b43bb78738e58241f35736564e6c3201d9d936d08014cb36", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "(K)night Life", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman.uasset", 
+                        "hash": "bedc495b587950d54bcc03e0518e72f70940e4cd99cdc73bd7e24dd529214abc11be5a24b7db45c0b12b0b164baba5239945597a9ea48785029df26680e45feb", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/2k_earth_daymap.uasset", 
+                        "hash": "bc867f66157c3029f4b751ccf43fb96c8391a431ec1340f068ca04b7cf903ec2ce2aa74805c4e40dcc13d10d6e851d15cfebed1123c928aecb305e5e98515b44", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/NightLife.uasset", 
+                        "hash": "3072dc6139472e5e63b1275b7c06a562d872002a54f02abfa6162b043c6e0d743409ec2f4b89efe9b43bb78738e58241f35736564e6c3201d9d936d08014cb36", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat_Inst.uasset", 
+                        "hash": "072d16536974313ed4753c7d5a7b865515e660540e629b6d4a12ecfa7833d65abd59b13cfc9e96e7f736f3c112d09cf3d5d17edc7acd22edd1fd5cac46d86068", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/Freemoon.uasset", 
+                        "hash": "ab3d17dce5dfcb513088f184db7f66c3f1f6341404a007cab9056405cd209e894e966d305129d0979025a1ac18dfc3452f194ce6f139b2721003aeff5e2abab4", 
+                        "object_class": "Actor", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon.uasset", 
+                        "hash": "de5129b0451fc5acfe64bb4a1222f8007772f7a86a276be90fe240e9af3a7ca78c0c63a4c6c84d5dcba6bd0d46ba98870f40e82c1637f1edb8020ec8a5b28f79", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/freeman_Mat.uasset", 
+                        "hash": "bf9ef127d481a3e36a10475bf2bfbe04ba85f95f80f1804569840ee77603a409f5c5ed094c2371a6ce866afbefa221d8cd40969f6df4e02ee84a31b82fe5b84b", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/MoonMaterial.uasset", 
+                        "hash": "9b19f86f9c2f6b595275dd30ace2834ed4c498a4b7765a0f5b3aede887bcd7e61a70fa3499b1fe0b8e95f62c18aeb911a59cb4825651c9da0ce6547c8bec9cbf", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/EarthMat.uasset", 
+                        "hash": "b340b7e3ac7c404bdb76cb7990ed6d7277d89795752b1c6026ee723dd64db4adbeae4e67872f64590d0335777ececf76ea6ed22b28b78f3cb0df467eb222cb60", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/4k_ceres_fictional.uasset", 
+                        "hash": "9f2ee8a303479e8173e4e9cfd02ef49ed56fdcf9fca023468896f2142f0a90ddc7e98136fdf4b160b35efd92cfef280b7ee68596e3adbdcc337d7e084f3885a9", 
+                        "object_class": "Texture2D", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/NightLife/Moonshine/8k_moon_Mat.uasset", 
+                        "hash": "87d38c089358b36185ae6c754fd976e1d9aa9da7f45f086f437c568925753ff8585187ea140591d597a553776e118f153ca5662eed5462090012f3bd853ec1d5", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

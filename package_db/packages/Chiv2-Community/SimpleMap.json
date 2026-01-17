@@ -1,1 +1,82 @@
-{"latest_manifest": {"repo_url": "https://github.com/Chiv2-Community/SimpleMap", "name": "SimpleMap", "description": "A simple map that depends on the health charger\n\nExample Usage: open agmods?map=simplemap", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/healthCharger", "version": ">=1.0.0"}], "tags": ["Map"], "ag_mod": false}, "releases": [{"tag": "v1.0.0", "hash": "d0708eac01d11e346cabcb08203eb5f9b510312c27814433928d1e61c5512edb2c357518dd6b2b09b2819d12fb57f5d9e0a49da2e2fa614d8e5255bcf08c5269", "pak_file_name": "SimpleMap.pak", "release_date": "2023-09-12T01:40:03", "manifest": {"repo_url": "https://github.com/Chiv2-Community/SimpleMap", "name": "SimpleMap", "description": "A simple map that depends on the health charger\n\nExample Usage: open agmods?map=simplemap", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/healthCharger", "version": ">=1.0.0"}], "tags": ["Map"], "ag_mod": false}, "release_notes_markdown": "Cooked files added to a compressed pak file.\r\n\r\n# installation:\r\nDrag pak file into the TBL/Content/Paks folder in chivalry 2 root, or use the C2GUILauncher.\r\n\r\n# usage:\r\nThis map depends on the HealthCharger mod. If that mods is not installed, then the asset will not appear in this map when it should."}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Chiv2-Community/SimpleMap", 
+        "name": "SimpleMap", 
+        "description": "A simple map that depends on the health charger\n\nExample Usage: open agmods?map=simplemap", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "DrLong"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/healthCharger", 
+                "version": ">=1.0.0"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v1.0.0", 
+            "hash": "d0708eac01d11e346cabcb08203eb5f9b510312c27814433928d1e61c5512edb2c357518dd6b2b09b2819d12fb57f5d9e0a49da2e2fa614d8e5255bcf08c5269", 
+            "pak_file_name": "SimpleMap.pak", 
+            "release_date": "2023-09-12T01:40:03", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/SimpleMap", 
+                "name": "SimpleMap", 
+                "description": "A simple map that depends on the health charger\n\nExample Usage: open agmods?map=simplemap", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/healthCharger", 
+                        "version": ">=1.0.0"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "Cooked files added to a compressed pak file.\r\n\r\n# installation:\r\nDrag pak file into the TBL/Content/Paks folder in chivalry 2 root, or use the C2GUILauncher.\r\n\r\n# usage:\r\nThis map depends on the HealthCharger mod. If that mods is not installed, then the asset will not appear in this map when it should.", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [], 
+                "maps": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/SimpleMap/SimpleMap.umap", 
+                        "hash": "bf0690cdc969121db432617a0b87a510d9a45d895ba3043fb0ed401d33fa1a23826985374b1b9f6a5072f158b6e763075439324a08b4f18386236442160a8cb3", 
+                        "object_class": "TBLLevelScriptActor", 
+                        "gamemode": null
+                    }
+                ], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/SimpleMap/SimpleMap_BuiltData.uasset", 
+                        "hash": "4864c47005d98c82423e81cb715064c63572eb8e3b90ebf49fd1e25bb8ed7e66622a0acccb7a33f0d26cc5d90bea5354d0483c941ba7233660bdd212b32aa860", 
+                        "object_class": "MapBuildDataRegistry", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/SimpleMap/ButtonMaterial.uasset", 
+                        "hash": "08f7e83d08450003574a6ea5981a93132c1127d742d3a83ff5cfc49543539f077812857498eb5b93bfd88316d87b9a56d4847aab5d43708c1fef84597e9c3356", 
+                        "object_class": "Material", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/UI/FrontendZombieWidget.uasset", 
+                        "hash": "c87fcb1474c8261b3b967859e1f91875ae8a6cb2423567906b15c89442f31edec4e6919bbfabdf9afbe48528321a1eec8f9cf6b3622edf27283975b894cda8aa", 
+                        "object_class": "UserWidget", 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/SimpleMap/WarmupSequence.uasset", 
+                        "hash": "4967340d35a1fc2d39362dfc192e2459fcdc719d844f3b39f7b89865a760d8380da4090850d6ccb825f01b4db3b802d1888c2ef3a2ec087bb5a85562f357a0aa", 
+                        "object_class": "LevelSequence", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,1 +1,75 @@
-{"latest_manifest": {"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-ExampleMod", "name": "ArgonSDK: Example Mod", "description": "Example Mod", "mod_type": "Shared", "authors": ["Knutschbert"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "releases": [{"tag": "v0.0.1", "hash": "0e0660b60bca2243c86bef319d1d109a55838150185b2b07191626c3677301dcfdb1efc4755edc670fbbe0aa5431ea52f7774f0d1a401910fc032095f6bd5b8d", "pak_file_name": "ArgonSDK-ExampleMod.pak", "release_date": "2023-09-12T01:21:38", "manifest": {"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-ExampleMod", "name": "ArgonSDK: Example Mod", "description": "Example Mod", "mod_type": "Shared", "authors": ["Knutschbert"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "`open agmods?map=<map_name>?mods=ExampleMod`"}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-ExampleMod", 
+        "name": "ArgonSDK: Example Mod", 
+        "description": "Example Mod", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "Knutschbert"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                "version": ">=0.0.1"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.1", 
+            "hash": "0e0660b60bca2243c86bef319d1d109a55838150185b2b07191626c3677301dcfdb1efc4755edc670fbbe0aa5431ea52f7774f0d1a401910fc032095f6bd5b8d", 
+            "pak_file_name": "ArgonSDK-ExampleMod.pak", 
+            "release_date": "2023-09-12T01:21:38", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-ExampleMod", 
+                "name": "ArgonSDK: Example Mod", 
+                "description": "Example Mod", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Knutschbert"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "`open agmods?map=<map_name>?mods=ExampleMod`", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ExampleMod/ExampleMod.uasset", 
+                        "hash": "2084b9a65768acfc22ce29f7edfd1fff6e2788adcf6ad2610f7a266905b54781f1e83181463d8715a713bc83df9821253aa714f6dd374564ab2d4bb4a50b68e4", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": "Example Mod", 
+                        "version": "1.0.0", 
+                        "author": "", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ExampleMod/ExampleMod.uasset", 
+                        "hash": "2084b9a65768acfc22ce29f7edfd1fff6e2788adcf6ad2610f7a266905b54781f1e83181463d8715a713bc83df9821253aa714f6dd374564ab2d4bb4a50b68e4", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}
