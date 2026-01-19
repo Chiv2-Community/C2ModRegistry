@@ -1,1 +1,195 @@
-{"latest_manifest": {"repo_url": "https://github.com/ARoese/C2WeaponLength", "name": "WeaponLength", "description": "Test the length of weapons using continuous binary search", "mod_type": "Shared", "authors": ["DrLong", "JayKobe6k"], "dependencies": [], "tags": ["Map"], "ag_mod": false}, "releases": [{"tag": "v2.0.1", "hash": "4c53a6f0030f563bf76720fb6da7cca63fb981cee3c30d361b66dc985cff69bce30e964f60fef634a2ba13ffb0b3f77e99ae60c369562a557ff45517fa619296", "pak_file_name": "weaponLength.pak", "release_date": "2025-01-29T21:51:16", "manifest": {"repo_url": "https://github.com/ARoese/C2WeaponLength", "name": "WeaponLength", "description": "Test the length of weapons using continuous binary search", "mod_type": "Shared", "authors": ["DrLong", "JayKobe6k"], "dependencies": [], "tags": ["Map"], "ag_mod": false}, "release_notes_markdown": "There was some extra metadata in the pak (because of tedious manual paking) which caused issues with customization. This has been removed"}, {"tag": "v2.0.0", "hash": "9e5f0006a0e6c61f4f9a34274e473eb57fe8b6df9e6744686c804cfdac3ebedb64d581bae0d28b304e7ee6b005c120b8dd330e5cf58c79b1fb63de2aeb33df73", "pak_file_name": "weaponLength.pak", "release_date": "2024-11-07T20:59:11", "manifest": {"repo_url": "https://github.com/ARoese/C2WeaponLength", "name": "WeaponLength", "description": "Test the length of weapons using continuous binary search", "mod_type": "Shared", "authors": ["DrLong", "JayKobe6k"], "dependencies": [], "tags": ["Map"], "ag_mod": false}, "release_notes_markdown": "functionality update by Jacoby"}, {"tag": "v1.0.0", "hash": "8b9b42c32860f99d4f2cf08fff805a22a019726295c5384d2770853056351cddc197ccf9630e6b2198bc71b58e8aed10e9a8f653e438f4014ae73b98b06e9b69", "pak_file_name": "weaponLength.pak", "release_date": "2023-10-06T04:29:10", "manifest": {"repo_url": "https://github.com/ARoese/C2WeaponLength", "name": "WeaponLength", "description": "Test the length of weapons using continuous binary search", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [], "tags": ["Map"], "ag_mod": false}, "release_notes_markdown": null}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/ARoese/C2WeaponLength", 
+        "name": "WeaponLength", 
+        "description": "Test the length of weapons using continuous binary search", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "DrLong", 
+            "JayKobe6k"
+        ], 
+        "dependencies": []
+    }, 
+    "releases": [
+        {
+            "tag": "v2.0.1", 
+            "hash": "4c53a6f0030f563bf76720fb6da7cca63fb981cee3c30d361b66dc985cff69bce30e964f60fef634a2ba13ffb0b3f77e99ae60c369562a557ff45517fa619296", 
+            "pak_file_name": "weaponLength.pak", 
+            "release_date": "2025-01-29T21:51:16", 
+            "info": {
+                "repo_url": "https://github.com/ARoese/C2WeaponLength", 
+                "name": "WeaponLength", 
+                "description": "Test the length of weapons using continuous binary search", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong", 
+                    "JayKobe6k"
+                ], 
+                "dependencies": []
+            }, 
+            "release_notes_markdown": "There was some extra metadata in the pak (because of tedious manual paking) which caused issues with customization. This has been removed", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [], 
+                "maps": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength.umap", 
+                        "hash": "84bf474fe91993e6897db36e9df52b84af6d6d4fde46beb58412b3c1a850bbbc7cdc74f99033f10664a075b518f92dfa6d1dd81de3620c46987f25eebd6354f3", 
+                        "object_class": "TBLLevelScriptActor", 
+                        "class_path": null, 
+                        "game_mode": "Mode_FFA_C", 
+                        "map_name": "Example map", 
+                        "defending_faction": "EFaction::FFA", 
+                        "attacking_faction": null, 
+                        "game_mode_type": "EGameModeType::FreeForAll"
+                    }
+                ], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength_BuiltData.uasset", 
+                        "hash": "b623e2d92f20dc98d7952b9f4768d46ab2b03998f70e06d6304c180b549344c4485a21946a7cb58f179ebc0b13c99674817ac52cef0ddce344dbcf3f19277a8c", 
+                        "object_class": "MapBuildDataRegistry", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset", 
+                        "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/WeaponData.uasset", 
+                        "hash": "227385a3f7c388980f58d043c81c84efd4ad745073bc06451090fdc089f008b18f34c8c0cf2687147d6d3f37750b2fdc6a5d33c21f7ae5916c10ae05358aa840", 
+                        "object_class": "SaveGame", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset", 
+                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v2.0.0", 
+            "hash": "9e5f0006a0e6c61f4f9a34274e473eb57fe8b6df9e6744686c804cfdac3ebedb64d581bae0d28b304e7ee6b005c120b8dd330e5cf58c79b1fb63de2aeb33df73", 
+            "pak_file_name": "weaponLength.pak", 
+            "release_date": "2024-11-07T20:59:11", 
+            "info": {
+                "repo_url": "https://github.com/ARoese/C2WeaponLength", 
+                "name": "WeaponLength", 
+                "description": "Test the length of weapons using continuous binary search", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong", 
+                    "JayKobe6k"
+                ], 
+                "dependencies": []
+            }, 
+            "release_notes_markdown": "functionality update by Jacoby", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [], 
+                "maps": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength.umap", 
+                        "hash": "84bf474fe91993e6897db36e9df52b84af6d6d4fde46beb58412b3c1a850bbbc7cdc74f99033f10664a075b518f92dfa6d1dd81de3620c46987f25eebd6354f3", 
+                        "object_class": "TBLLevelScriptActor", 
+                        "class_path": null, 
+                        "game_mode": "Mode_FFA_C", 
+                        "map_name": "Example map", 
+                        "defending_faction": "EFaction::FFA", 
+                        "attacking_faction": null, 
+                        "game_mode_type": "EGameModeType::FreeForAll"
+                    }
+                ], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset", 
+                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/WeaponData.uasset", 
+                        "hash": "227385a3f7c388980f58d043c81c84efd4ad745073bc06451090fdc089f008b18f34c8c0cf2687147d6d3f37750b2fdc6a5d33c21f7ae5916c10ae05358aa840", 
+                        "object_class": "SaveGame", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset", 
+                        "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength_BuiltData.uasset", 
+                        "hash": "b623e2d92f20dc98d7952b9f4768d46ab2b03998f70e06d6304c180b549344c4485a21946a7cb58f179ebc0b13c99674817ac52cef0ddce344dbcf3f19277a8c", 
+                        "object_class": "MapBuildDataRegistry", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v1.0.0", 
+            "hash": "8b9b42c32860f99d4f2cf08fff805a22a019726295c5384d2770853056351cddc197ccf9630e6b2198bc71b58e8aed10e9a8f653e438f4014ae73b98b06e9b69", 
+            "pak_file_name": "weaponLength.pak", 
+            "release_date": "2023-10-06T04:29:10", 
+            "info": {
+                "repo_url": "https://github.com/ARoese/C2WeaponLength", 
+                "name": "WeaponLength", 
+                "description": "Test the length of weapons using continuous binary search", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": []
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [], 
+                "maps": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/WeaponLength.umap", 
+                        "hash": "cc161fc2b3e7a455801ea7fcdccdcabbf83ce2f92dc9a3ecc4c1acdffb5852875983fc32e69dacd221adcfe610e7d2556aa1219e8869cca8cb98dd30028cea72", 
+                        "object_class": "TBLLevelScriptActor", 
+                        "class_path": null, 
+                        "game_mode": "Mode_FFA_C", 
+                        "map_name": "Example map", 
+                        "defending_faction": "EFaction::FFA", 
+                        "attacking_faction": null, 
+                        "game_mode_type": "EGameModeType::FreeForAll"
+                    }
+                ], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset", 
+                        "hash": "02a1728ba56af453d5e5792326600fd0d11ffb9797246a1e4ac5572d7e60232fc09f2aaa5222b038215de74a5969ec730003666ee1fe871e82a2d5004d76c87c", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -34,3 +34,22 @@ jobs:
           fi
 
           echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
+
+      - name: Checkout main
+        uses: actions/checkout@v3
+
+      - name: Update Registry
+        id: update-registry
+        uses: Chiv2-Community/zero-infra-mod-registry@main
+        with:
+          command: procress-registry-updates
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: DEBUG
+
+      - name: Commit changes
+        if: steps.update-registry.outputs.failed == 'false'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          branch: ${{ steps.branch-name.outputs.branch_name }}
+          add_options: '--all'
+          file_pattern: 'package_db/* registry/*'

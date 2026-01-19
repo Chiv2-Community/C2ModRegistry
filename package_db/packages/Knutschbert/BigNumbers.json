@@ -1,1 +1,181 @@
-{"latest_manifest": {"repo_url": "https://github.com/Knutschbert/BigNumbers", "name": "BigNumbers", "description": "Adds detailed damage breakdown\nto the default Class Selection UI", "mod_type": "Shared", "authors": ["Knutschbert"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "releases": [{"tag": "v0.0.2", "hash": "db251fff4df084cca305ed7003b85cc61d43f5476bab209c3c18dca35321b68ab68d116f5834ba0729e7462ff38d43a7c7b7ec7037f272d49d759050d0063378", "pak_file_name": "BigNumbers.pak", "release_date": "2024-12-04T19:47:45", "manifest": {"repo_url": "https://github.com/Knutschbert/BigNumbers", "name": "BigNumbers", "description": "Adds detailed damage breakdown\nto the default Class Selection UI", "mod_type": "Shared", "authors": ["Knutschbert"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": null}, {"tag": "v0.0.1-alpha", "hash": "e7b9849d8c38d9f58a555b3a1a3c2ab52d064b6d292dab297f57e43ee5d19b6e60e45259b7108c946f2b660f20875a3ddf3d7c8021ad4b51c50d3ac867d06401", "pak_file_name": "BigNumbers.pak", "release_date": "2023-12-04T21:30:56", "manifest": {"repo_url": "https://github.com/Knutschbert/BigNumbers", "name": "BigNumbers", "description": "Adds detailed damage breakdown\nto the default Class Selection UI", "mod_type": "Shared", "authors": ["Knutschbert"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "To use this version, launch Chivalry 2 in offline mode\r\nCurrently the mod is not triggered automatically. This will be changed in the future\r\nTo activate Bignumbers:\r\n  1. Open and close Class selection (\"M\")\r\n  2. Flourish\r\n  3. Open it again"}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Knutschbert/BigNumbers", 
+        "name": "BigNumbers", 
+        "description": "Adds detailed damage breakdown\nto the default Class Selection UI", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "Knutschbert"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                "version": ">=0.0.1"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.2", 
+            "hash": "db251fff4df084cca305ed7003b85cc61d43f5476bab209c3c18dca35321b68ab68d116f5834ba0729e7462ff38d43a7c7b7ec7037f272d49d759050d0063378", 
+            "pak_file_name": "BigNumbers.pak", 
+            "release_date": "2024-12-04T19:47:45", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/BigNumbers", 
+                "name": "BigNumbers", 
+                "description": "Adds detailed damage breakdown\nto the default Class Selection UI", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Knutschbert"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers_Marker.uasset", 
+                        "hash": "c3035fc9af32eea73c4787f21b474793c9061c14866c8c65094a4464b4f209a8b3a0bc07276bbaea48f795ad94859846dcaff42c3d3882b8d431a6a6466e6a67", 
+                        "object_class": "DA_ModMarker_C", 
+                        "class_path": null, 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset", 
+                        "hash": "e241c6e5f3dd3b056aaa553ced03bba2d95c0d681e62ee77b486c37b3d9255364e75524dffa3229f3452c16b39a981aa4893a0e5be83b030d4573e284ce56909", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": "/Game/Mods/AgMods/BigNumbers/BigNumbers.BigNumbers_C", 
+                        "mod_name": "BigNumbers", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbersLoadoutMod.uasset", 
+                        "hash": "dbebdbd58428ad02e7ece212faec5c8e265a187e841cff511532ccd4a86959ea5f3aef162d6b7590a5ea700cde7d5b2032ac41c68bdc669cadbdd045c612aeb6", 
+                        "object_class": "IngameModMenuBaseWidget_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BN_DamageEntry.uasset", 
+                        "hash": "960a96e3faa234b80dcbccc0b2ae2db05874461250084cc4bac4d1e96d9c084fe8d4e624f95f8306dfeb2f495179b2536abdee8f241eeb4e54baa86e210b4ae4", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbersWidget.uasset", 
+                        "hash": "0122240bd96b82299ba343a8a52e4f38e4e0d788b72315f8f0a85568efbb08edb69392567a6b361277ff08c6089d84f6e01dc723b69f115bfe011fba37706a67", 
+                        "object_class": "IngameModMenuBaseWidget_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.1-alpha", 
+            "hash": "e7b9849d8c38d9f58a555b3a1a3c2ab52d064b6d292dab297f57e43ee5d19b6e60e45259b7108c946f2b660f20875a3ddf3d7c8021ad4b51c50d3ac867d06401", 
+            "pak_file_name": "BigNumbers.pak", 
+            "release_date": "2023-12-04T21:30:56", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/BigNumbers", 
+                "name": "BigNumbers", 
+                "description": "Adds detailed damage breakdown\nto the default Class Selection UI", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Knutschbert"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "To use this version, launch Chivalry 2 in offline mode\r\nCurrently the mod is not triggered automatically. This will be changed in the future\r\nTo activate Bignumbers:\r\n  1. Open and close Class selection (\"M\")\r\n  2. Flourish\r\n  3. Open it again", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset", 
+                        "hash": "910c1b07ae5d87a6c386ae76443344fc7be724a94df8bec49ef7c6533943e38ed6598fab9aa942719f7ccd06a702a2b8425ee40c8c26ed4c27ba5b8232814337", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "BigNumbers", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset", 
+                        "hash": "910c1b07ae5d87a6c386ae76443344fc7be724a94df8bec49ef7c6533943e38ed6598fab9aa942719f7ccd06a702a2b8425ee40c8c26ed4c27ba5b8232814337", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbersLoadoutMod.uasset", 
+                        "hash": "43e1a7bd830273bae4c8d2df307b8b0f34dec01e71038915d51900f0b758470349df969924c517d05b616b44348ae9d73ab9a42e6dfc1f22eb8fc37f057b4120", 
+                        "object_class": "IngameModMenuBaseWidget_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BN_DamageEntry.uasset", 
+                        "hash": "fa9a8e3d8d055c674bcbf98bd2e734245835a5214bcb8bbcf452fec17c12fd38a045c938530f39fd9645dc2f2959dec267de31e9a7f23533be1ba6d0b45e7b72", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbersWidget.uasset", 
+                        "hash": "f10e3dc90c9c473fcad05f48d05613dfb070d4f9669a9902b6f73dc8c70567a647a8c2597f3df3ce700f907fdcadbf8093c197afb85956b4aaf29bc26ad4f80a", 
+                        "object_class": "IngameModMenuBaseWidget_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,1 +1,443 @@
-{"latest_manifest": {"repo_url": "https://github.com/ARoese/C2Showroom", "name": "showroom", "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "releases": [{"tag": "v0.0.4", "hash": "f19969829b1034ef086c0772fcf4f01aa6ca08658b40550beae43c895057851322ad16efc74e6f86006b25e57f7c489bb70de67fc35a446e06efeb58364ba440", "pak_file_name": "showroom.pak", "release_date": "2023-10-31T01:11:24", "manifest": {"repo_url": "https://github.com/ARoese/C2Showroom", "name": "showroom", "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "make showrooms replicate."}, {"tag": "v0.0.3", "hash": "c58113bfeb2ef5a504d3c8618ab718bacf5c871c70ba7b8372ba74da0326ca1443bac7448009ec5a65ec6b923e6a341619605d36f70606abe212823814c05c60", "pak_file_name": "showroom.pak", "release_date": "2023-10-30T16:06:16", "manifest": {"repo_url": "https://github.com/ARoese/C2Showroom", "name": "showroom", "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "Add agmod metadata tag so it displays in main menu"}, {"tag": "v0.0.2", "hash": "c58113bfeb2ef5a504d3c8618ab718bacf5c871c70ba7b8372ba74da0326ca1443bac7448009ec5a65ec6b923e6a341619605d36f70606abe212823814c05c60", "pak_file_name": "showroom.pak", "release_date": "2023-10-30T02:30:30", "manifest": {"repo_url": "https://github.com/ARoese/C2Showroom", "name": "showroom", "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": false}, "release_notes_markdown": null}, {"tag": "v0.0.1", "hash": "c58113bfeb2ef5a504d3c8618ab718bacf5c871c70ba7b8372ba74da0326ca1443bac7448009ec5a65ec6b923e6a341619605d36f70606abe212823814c05c60", "pak_file_name": "showroom.pak", "release_date": "2023-10-30T02:05:16", "manifest": {"repo_url": "https://github.com/ARoese/C2Showroom", "name": "showroom", "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [], "tags": ["Mutator"], "ag_mod": false}, "release_notes_markdown": "initial release. Use number keys 7, 8, and 9 to spawn green, blue, and red screens respectively"}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/ARoese/C2Showroom", 
+        "name": "showroom", 
+        "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "DrLong"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                "version": ">=0.0.1"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.4", 
+            "hash": "f19969829b1034ef086c0772fcf4f01aa6ca08658b40550beae43c895057851322ad16efc74e6f86006b25e57f7c489bb70de67fc35a446e06efeb58364ba440", 
+            "pak_file_name": "showroom.pak", 
+            "release_date": "2023-10-31T01:11:24", 
+            "info": {
+                "repo_url": "https://github.com/ARoese/C2Showroom", 
+                "name": "showroom", 
+                "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "make showrooms replicate.", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "569eb848aaeb98c2cb80a4ac5afb0d51f210f454978f9b648914e4dac8de185b9d301d53c0eae81e7cf6a33eeb0042172967d23bfebae925b4c329cd9adab753", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "showroom", 
+                        "version": "1.0.0", 
+                        "author": "DrLong", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "569eb848aaeb98c2cb80a4ac5afb0d51f210f454978f9b648914e4dac8de185b9d301d53c0eae81e7cf6a33eeb0042172967d23bfebae925b4c329cd9adab753", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset", 
+                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset", 
+                        "hash": "df152494e9c928e25336dac83fdbebefd018b8b5ad03885cf392fd868ca05758c0a551de07cbbbd4f9a67b0ecc34a5b5df4a00eb1a9b4d335e7c9e613c979b93", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset", 
+                        "hash": "02768fc3a07accc67f792aec726ffb46ecacf0231a1f8a9cb5df25dc6ea6fd8071b9dbf0332d1b3310be87c8a6567dd8b6089f1d2d915774ddb684ac69f9b80d", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_green.uasset", 
+                        "hash": "2751d827d51b795d26ac91443845935ecb3c3db3eeacd3c67458b9b792a14c90450118cd82bd01a40893e458535a11a2fe25111603367d4b4fb13e335e3bf6c8", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset", 
+                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset", 
+                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset", 
+                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.3", 
+            "hash": "c58113bfeb2ef5a504d3c8618ab718bacf5c871c70ba7b8372ba74da0326ca1443bac7448009ec5a65ec6b923e6a341619605d36f70606abe212823814c05c60", 
+            "pak_file_name": "showroom.pak", 
+            "release_date": "2023-10-30T16:06:16", 
+            "info": {
+                "repo_url": "https://github.com/ARoese/C2Showroom", 
+                "name": "showroom", 
+                "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "Add agmod metadata tag so it displays in main menu", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "showroom", 
+                        "version": "1.0.0", 
+                        "author": "DrLong", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset", 
+                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset", 
+                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset", 
+                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset", 
+                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset", 
+                        "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_green.uasset", 
+                        "hash": "ea5424d9f3c8b65efde307bef38cda1d09e1444630f544f474cd6c3a4298d5f57fb54b5f21508d27c69680053fd679746b72ec7e3579323814cb073abb9b419f", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset", 
+                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.2", 
+            "hash": "c58113bfeb2ef5a504d3c8618ab718bacf5c871c70ba7b8372ba74da0326ca1443bac7448009ec5a65ec6b923e6a341619605d36f70606abe212823814c05c60", 
+            "pak_file_name": "showroom.pak", 
+            "release_date": "2023-10-30T02:30:30", 
+            "info": {
+                "repo_url": "https://github.com/ARoese/C2Showroom", 
+                "name": "showroom", 
+                "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "showroom", 
+                        "version": "1.0.0", 
+                        "author": "DrLong", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset", 
+                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_green.uasset", 
+                        "hash": "ea5424d9f3c8b65efde307bef38cda1d09e1444630f544f474cd6c3a4298d5f57fb54b5f21508d27c69680053fd679746b72ec7e3579323814cb073abb9b419f", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset", 
+                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset", 
+                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset", 
+                        "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset", 
+                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset", 
+                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.1", 
+            "hash": "c58113bfeb2ef5a504d3c8618ab718bacf5c871c70ba7b8372ba74da0326ca1443bac7448009ec5a65ec6b923e6a341619605d36f70606abe212823814c05c60", 
+            "pak_file_name": "showroom.pak", 
+            "release_date": "2023-10-30T02:05:16", 
+            "info": {
+                "repo_url": "https://github.com/ARoese/C2Showroom", 
+                "name": "showroom", 
+                "description": "spawn showroom assets (green screens) of different colors using number keys 7, 8, 9", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": []
+            }, 
+            "release_notes_markdown": "initial release. Use number keys 7, 8, and 9 to spawn green, blue, and red screens respectively", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "showroom", 
+                        "version": "1.0.0", 
+                        "author": "DrLong", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset", 
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset", 
+                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset", 
+                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset", 
+                        "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset", 
+                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset", 
+                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_green.uasset", 
+                        "hash": "ea5424d9f3c8b65efde307bef38cda1d09e1444630f544f474cd6c3a4298d5f57fb54b5f21508d27c69680053fd679746b72ec7e3579323814cb073abb9b419f", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset", 
+                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,1 +1,97 @@
-{"latest_manifest": {"repo_url": "https://github.com/Chiv2-Community/healthCharger", "name": "Health Charger", "description": "An asset for a health charger", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [], "tags": ["Doodad"], "ag_mod": false}, "releases": [{"tag": "v1.0.1", "hash": "53c2d12380e2554ce77f91124f337abe7f4cdb6868a79563894b2eb816ceb04d16fe973607028753f663390c327b46c40ce7093ba9d8e7f9b515888205c98267", "pak_file_name": "healthCharger.pak", "release_date": "2023-09-12T01:28:14", "manifest": {"repo_url": "https://github.com/Chiv2-Community/healthCharger", "name": "Health Charger", "description": "An asset for a health charger", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [], "tags": ["Doodad"], "ag_mod": false}, "release_notes_markdown": "Cooked files added to a compressed pak file.\r\n\r\n# installation:\r\nDrag pak file into the TBL/Content/Paks folder in chivalry 2 root, or use the C2GUILauncher.\r\n"}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Chiv2-Community/healthCharger", 
+        "name": "Health Charger", 
+        "description": "An asset for a health charger", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "DrLong"
+        ], 
+        "dependencies": []
+    }, 
+    "releases": [
+        {
+            "tag": "v1.0.1", 
+            "hash": "53c2d12380e2554ce77f91124f337abe7f4cdb6868a79563894b2eb816ceb04d16fe973607028753f663390c327b46c40ce7093ba9d8e7f9b515888205c98267", 
+            "pak_file_name": "healthCharger.pak", 
+            "release_date": "2023-09-12T01:28:14", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/healthCharger", 
+                "name": "Health Charger", 
+                "description": "An asset for a health charger", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": []
+            }, 
+            "release_notes_markdown": "Cooked files added to a compressed pak file.\r\n\r\n# installation:\r\nDrag pak file into the TBL/Content/Paks folder in chivalry 2 root, or use the C2GUILauncher.\r\n", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/healthcharger_end.uasset", 
+                        "hash": "ab16072385682c4cd755abcc4a9c264066dae94854161b84d7ff33dc7feef845b07d3886f52de8190e7ec08947d3579f772206c542dfdaeb08ad7ce7805f9cb1", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/M_healthcharger_face.uasset", 
+                        "hash": "9167c679657192ef7c32d5a3459e7aef3cb07d43401d04a80b9397c64e3fac14f290266c7ca319f02991af22351f435cf4d01f335d198ad6821cb473fa327d91", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/healthcharger.uasset", 
+                        "hash": "ce18bb14764366599b21cf6f6b1b5c1e9d5ed81b35b6b116fbe1d7fcbc476ee36db6cf4ab771d7e8c7df3ad917216b8b438f7fbfcbe68ba9bd8ec3ca403bf1f5", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/healthcharger_loop.uasset", 
+                        "hash": "198555212b37df321f0f1aa4b9423dc9609ca11f36976906abb6586cb0a0a9ba50792d53d9e92259aa8f2f8242f745387c89dfa09fbbc31874de48b13d6983b1", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/healthchargerface.uasset", 
+                        "hash": "727730c40714c89ce769426115333e2d3655aac490151eff4454919048d6e3a04fe015c4b2253f6322870b7f790ccd773dd9fa7fb34878d3fe50851b69644c30", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/HealthChargerAttenuation.uasset", 
+                        "hash": "0dbee0c128a9922dbe081a1b45be47a15e11d0cb825997af6dcfdf1706ad1c25df33900fabee1fa090a74f3f3de66495b52a16bab2090363afe9784cceb4696c", 
+                        "object_class": "SoundAttenuation", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/M_healthcharger_border.uasset", 
+                        "hash": "fcd40183934919ba3c464278d84314e48d13816f308810760551793a67e1db8af624bcecf9889478e2da0538d08dd21063b3e4d8dc5f668a11530eef5630feb7", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/healthCharger/healthcharger_start.uasset", 
+                        "hash": "93bc79155d0e8b06b9253f13b02e18bd1d01e5d41b40e2400883cef033ac68196e1ad2d9b9f827f627af665d4b0c55393e5a3475316152994b57bcac1ece9cef", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

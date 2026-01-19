@@ -1,1 +1,152 @@
-{"latest_manifest": {"repo_url": "https://github.com/Chiv2-Community/ManlyMen", "name": "ManlyMen", "description": "Someone stole your clothes.", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "releases": [{"tag": "v0.0.2", "hash": "53d2c1aba32d0949eb44153feb4e6588b80b3f69e6cf5d9a20911b489d949f889b0c7a6bc999a7e4c620275bad92a18469ef66b6fb71a43e25d9daab2d5e67eb", "pak_file_name": "ManlyMen.pak", "release_date": "2024-12-04T19:47:27", "manifest": {"repo_url": "https://github.com/Chiv2-Community/ManlyMen", "name": "ManlyMen", "description": "Someone stole your clothes.", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": null}, {"tag": "v0.0.1", "hash": "02de89eb439da314af0501f1b2eb6c0efb84b67c711e02a87e59f46d1e7ad13c61f09abe41055f7330a2751f4c16a1c4191e4db0947665e8247dbcb1e96c1985", "pak_file_name": "ManlyMen.pak", "release_date": "2023-10-06T23:31:30", "manifest": {"repo_url": "https://github.com/Chiv2-Community/ManlyMen", "name": "ManlyMen", "description": "Someone stole your clothes.", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "Known Bug: sometimes you spawn with your normal gear"}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Chiv2-Community/ManlyMen", 
+        "name": "ManlyMen", 
+        "description": "Someone stole your clothes.", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "Nihi"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                "version": ">=0.0.1"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.2", 
+            "hash": "53d2c1aba32d0949eb44153feb4e6588b80b3f69e6cf5d9a20911b489d949f889b0c7a6bc999a7e4c620275bad92a18469ef66b6fb71a43e25d9daab2d5e67eb", 
+            "pak_file_name": "ManlyMen.pak", 
+            "release_date": "2024-12-04T19:47:27", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/ManlyMen", 
+                "name": "ManlyMen", 
+                "description": "Someone stole your clothes.", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ManlyMen/ManlyMen_Marker.uasset", 
+                        "hash": "892170cad2f7fef1d73846b9bc7833e542bfe588afabacf3616d9c05eb51902a50038ce3df9945f237cd7c75e167982ebcb9061901399c58aa3cda04f86628f5", 
+                        "object_class": "DA_ModMarker_C", 
+                        "class_path": null, 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/ManlyMen/ManlyMen.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ManlyMen/ManlyMen.uasset", 
+                        "hash": "dae91b74b271ac92c2e190978355b12e17aaf04161b902db5b37dae4e0943f94aa1812cc592c71aee771bcd835694c7f38ddc2ba6275e02822ced6e2aa2bcb1d", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": "/Game/Mods/AgMods/ManlyMen/ManlyMen.ManlyMen_C", 
+                        "mod_name": "ManlyMen", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": []
+            }
+        }, 
+        {
+            "tag": "v0.0.1", 
+            "hash": "02de89eb439da314af0501f1b2eb6c0efb84b67c711e02a87e59f46d1e7ad13c61f09abe41055f7330a2751f4c16a1c4191e4db0947665e8247dbcb1e96c1985", 
+            "pak_file_name": "ManlyMen.pak", 
+            "release_date": "2023-10-06T23:31:30", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/ManlyMen", 
+                "name": "ManlyMen", 
+                "description": "Someone stole your clothes.", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "Known Bug: sometimes you spawn with your normal gear", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ManlyMen/ManlyMen.uasset", 
+                        "hash": "98af3497b08a492a505401347a19c038d54dca422a95cd1b175e7780e137a5c5ccce28833551e4a3dba02e225e9487d6e18ce6ea54302e8f2b98d8f924a5942f", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "ManlyMen", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ManlyMen/ManlyMen.uasset", 
+                        "hash": "98af3497b08a492a505401347a19c038d54dca422a95cd1b175e7780e137a5c5ccce28833551e4a3dba02e225e9487d6e18ce6ea54302e8f2b98d8f924a5942f", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ManlyMen/Mason_Vanguard_Stronghold_Leg_T4.uasset", 
+                        "hash": "c167f4da917c9327b0941bd17d8589cbb80db95e004ef6505a8e5b115bcaede24db6b879c751c669bd3c3110ae34ba96e125a081cafa94c25d0361954ef96c9d", 
+                        "object_class": "CTLeg", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/ManlyMen/Mason_Vanguard_Stronghold_Torso_T4.uasset", 
+                        "hash": "bec99435a264f8745a99407d8ee3a1f6855a5e018c7703ffa92b7b4eef85ed9869b109f6a7e7baf4b9cca06de78afc73f9877d7f8d1a66c4155655dbab9be91d", 
+                        "object_class": "CTTorso", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}
