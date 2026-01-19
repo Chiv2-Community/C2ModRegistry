@@ -45,6 +45,7 @@
                         "path": "TBL/Content/Mods/AgMods/ExampleMod/ExampleMod.uasset", 
                         "hash": "2084b9a65768acfc22ce29f7edfd1fff6e2788adcf6ad2610f7a266905b54781f1e83181463d8715a713bc83df9821253aa714f6dd374564ab2d4bb4a50b68e4", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "Example Mod", 
                         "version": "1.0.0", 
                         "author": "", 
@@ -52,6 +53,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -66,6 +68,7 @@
                         "path": "TBL/Content/Mods/AgMods/ExampleMod/ExampleMod.uasset", 
                         "hash": "2084b9a65768acfc22ce29f7edfd1fff6e2788adcf6ad2610f7a266905b54781f1e83181463d8715a713bc83df9821253aa714f6dd374564ab2d4bb4a50b68e4", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]

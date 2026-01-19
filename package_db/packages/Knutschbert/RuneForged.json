@@ -46,6 +46,7 @@
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/xx-Runescape-last_Marker.uasset", 
                         "hash": "304b0f45d10a7bfcae511cde3220359039a7c07aa87abb31c696a587ca104fcad8abc54e76c6454bd697fd2ae0a3024f2ed83413aee7a2effd81eb98b5d3d4de", 
                         "object_class": "DA_ModMarker_C", 
+                        "class_path": null, 
                         "associated_blueprints": [
                             "TBL/Content/Mods/AgMods/xx-Runescape-last/xx-Runescape-last.uasset"
                         ]
@@ -56,6 +57,7 @@
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/xx-Runescape-last.uasset", 
                         "hash": "74b635ef4f293320b05f84476232f8a132e4e10db511648467fd2ff1fcd257c5c2bc03740a1752d939202aebf35b097a16264654e068e84daf8e1b87ef54506a", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": "/Game/Mods/AgMods/xx-Runescape-last/xx-Runescape-last.xx-Runescape-last_C", 
                         "mod_name": "Runescape Frontend", 
                         "version": "1.0.0", 
                         "author": "Nihi", 
@@ -63,6 +65,7 @@
                         "mod_repo_url": "", 
                         "silent_load": true, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -73,1237 +76,1459 @@
                 "maps": [], 
                 "replacements": [
                     {
-                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_ShortSpear_T2.uasset", 
-                        "hash": "591e4a27cf6388e738dc93708f6c568812cdd82ce03fa21d30433848491dc586c743e09b432a6fa012babffd650a49e108227783de28716a1854bfa2fe44823d", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Khanjar_Tier_4.uasset", 
-                        "hash": "ae2440160e6ee69c077698713110a34b7f95390b4a34a502960926a3126a474f405122e7c029aad6a266e33147629f2f3845b722f0ef4778aec4fce91632ef0b", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Jambiya_Tier_1.uasset", 
-                        "hash": "e9615ca8b085911f07da1a8a1b9c8b0c3ea0c13356e1f3081fdf53bf9d12bec37ed44dc1653b67ca39ea34d6816b7da28f9350908c2ad3f5facabd597ffe5ae0", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Axe/CT_WeaponAxe_HorseMansAxe_Tier1.uasset", 
-                        "hash": "b15ff4a53fdadd982e456e0ff0162976ad5efbe39d0483fe610dbd0698452896fdc99c1d6a70691c4243d9edd160d523471b626c772660f2309ac8188bb278e1", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Cudgel/CT_WeaponCudgel_HolyWaterSprinkler_Tier1.uasset", 
-                        "hash": "bcc47097f6148243d700d1f3bcfb50f162c674d0e66f5bf476162d87c0c771e02ddd88415881e1068229892e87934885fc8ea118aa356d30524795a46abf0baf", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/DaneAxe/CT_WeaponDaneAxe_HeadsMan_Tier1.uasset", 
-                        "hash": "78e14464d1d4bf05dfbe1b4cc69d8b5c1cc41042ec1356653fa5b122563e6414f647c231f11c0d84646421aa8791352bcb7c1e372adfee8b6b4516688e042dbe", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ExecutionersAxe/CT_WeaponExecutionersAxe_BeheaderAxe_Tier3.uasset", 
-                        "hash": "5e70dc1742fbc7bfc3e818e85d2de3762ab30112b153758c50a2e0fbb5987765c90b29deed9da07f5c238c292b786f4c2e452b0ccfe4d952676cb06b566bb995", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Khanjar_Tier_1.uasset", 
-                        "hash": "f5ff29ce4ee1f6fac7232d27c1de04e358b86b6b8a5c85553336bd7b21f43499a9d5fb71e3bdae20118d009605e46de1a19bb2a4f1531d8c2aa4731df95b5880", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_WingedAxe_Tier2.uasset", 
-                        "hash": "e0c12b70b091a8cafac87cccd3add6ba7f54babb281672fe13123440e63599678f74a98acb5aab62b2b09751345c7c1f552848267a119579be5db737ceb18efc", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Cudgel/CT_WeaponCudgel_WarClub_Tier1.uasset", 
-                        "hash": "37571fef7b6feb7edd15dd5f7d76292ef1920955159d722dd8f8142cc53887740461ecbccc20abdbf1ee70029ccd9d207c16a39671ef96478cf53144eb7a0e1a", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingMallet/CT_WeaponThrowingMallet_CarversMallet_Tier3.uasset", 
-                        "hash": "c6a70b5f91a6af8de6e945c39b77a43a0a7a1f16f916fe7f5d6e3c3bcc1b509df3adbef60188c737c042b0236acd16f54c588d62186cf6838ffdba6f1504c9fa", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_BilHook_Tier1.uasset", 
-                        "hash": "5774f00ee03fd3cd8c6812f14784e8a9b2bbecdb3d46d1095ed7a84f21290326fe42cc696be5834e0da9fc9d3028632d5fb483a5cef4bcb54f768ce410ab2722", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Messer/CT_WeaponMesser_KriegsMesser_Tier3.uasset", 
-                        "hash": "f10bedb93e27fadfe32151c7042d9272ced43dc05005f64e28bd6b3019b3b68400d10aa3978d2d77df8fe896d403b808cfcf651cabaa50d7f682380c427b3f64", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_Longsword_Tier1.uasset", 
-                        "hash": "b34717eb78fd1f3719e8216fd6c21ca00bd828fbfac11c39535a61e626b4cd410809844c36c5a4b87a4f779515eb795dc607c53d5be0b9e97aedee5a6017dfdc", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/HighlandSword/CT_HighlandSword_GIantClaymore_Tier1.uasset", 
-                        "hash": "9a320223cdfb5655a26ba7a46b14aa2ba8c913fe6500a4cedbd2083741fec8526290c50f8048320bee1705fcff1c19f8690936fed80f3b62eaf5ba9cfedd17ba", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponShortSword_Falchion_Tier3.uasset", 
-                        "hash": "e1caa63b7882b47b1bbbf62fbcafbe71a12efaf0343e1c880ab0f4e78fff80a9bd43818003c3c1615aba974b79e42406d6500a9d816f4e82a6ed50bd71c13da2", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Khanjar_Tier_2.uasset", 
-                        "hash": "731d1c585c63b70a8216802cd6cc67069435c67227e6080a453a12875c40d7a76cadbb5607ce8a124f786515885ef416a701c923d96aa750f3ec34e75a39bb45", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingMallet/CT_WeaponThrowingMallet_Mallet_Tier2.uasset", 
-                        "hash": "6d391d247ec791ec0ab8592a2973874f486e678e3cee428636591ebb9dd6df1645e1b51b91b0be3870e5a3f609dc1e807fff4fef75cfed2e773de012085eabd3", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/sword/old_CT_WeaponSword_CrossHiltSword_Tier4.uasset", 
-                        "hash": "207f70c369b7c9b847da7faa26d6b6de71fe8ca29b6ae439087690c808c4176ff53192fc9d1c32f5d44a9d37ca004471727f60a63050d7c51d077b66bc5e97cb", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Partisan_Tier2.uasset", 
-                        "hash": "db54550d19c9f0e9ae25caaff4d4cf21cb7fdfd41d757f9c7700707d280301ce6c570e7ffe5155030ebc0fcdbe430387b13033ea962cced5217873087b03a845", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Shovel/CT_WeaponShovel_Shovel_Tier1.uasset", 
-                        "hash": "428239ce17aa2556fbb17dd58d632a46d0aad41f599b85a3f1170911c5615d8692dff542903dd2dea2b4d5634fa615f739f5145661a2f16d8c6e8c99c5aefb86", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Bardiche_Tier3.uasset", 
-                        "hash": "6f9b9dffb28e53710df2694a2f32b8a03ae16b1f0341e25914a6996cc117e611dbc008568d78b6cfc36c8240c4167c3734af3c8ddb7ac03a8832f34a125c30d8", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Maul/CT_Maul_Maulnir_Tier2.uasset", 
-                        "hash": "12534fa4eb8e9dae4f6248a40860920394326b408b248327f358acaac0aa2480ca4d96eabc4033eb37bb40e9a2d589b6c68211c151a642377d2eb423f391019b", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Knife/CT_WeaponKnife_HuntingKnife_Tier2.uasset", 
-                        "hash": "c0aa8e24fdddb95859cc45e58c15410a8de36b27a33a21c2570bf4637b8bcdc22e561abaa6582bec0ff1194fd5da073a79982c103842dd534e3f0e87525ed48c", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponShortSword_Falchion_Tier2.uasset", 
-                        "hash": "eb4cdce7bee251f41c8a8ba0bf5c4edf335de3a44e458716f4c6a32f1933ad51f53bae01ac234c687ba11e00bcb9ec2257c1e7bac11ab2b0e87d8e1f812d65eb", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_LeafSpear_T3.uasset", 
-                        "hash": "86bc11b002ff44c02eb7791c724dbc71d3e1c63a4536fd2d5460537773bc1aadc0b1f7fff40bfaf0a047c61ea8dc5cbf5847b92b3589c28a7e446d47198c2278", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/WarClub/CT_WeaponWarClub_BluntClub_Tier5.uasset", 
-                        "hash": "fd3e9c55c42bf941158606050b635cd5b90d4d018946426ed6c9fa591742588e217d05422cccd232cbecbecef69b891e087e9da26a717dad2e0ec4debbdf2b47", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_Community_CrescentBat_Tier4.uasset", 
-                        "hash": "00f701578ef300ec01e1c234f5f8d157ff29c9ce55829f366c9affa46bb7ecd78a9022d63177132589a8c17a4172deece943a28db3d88a9c54c1c1c60cacccb1", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_SingleEdge_Tier2.uasset", 
-                        "hash": "d3b1e583f91b88ceaeab21afbb9f60c83cbc249c31d66f67e6c622661fb82d4f4bdedf1cc3dc215b11fbc4ffe675aaa505de7034aa3c2f109cb8c9a7befebf29", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Hurlbat_Tier1.uasset", 
-                        "hash": "edf4c9becac9ca875b4256525371a63851f28cf907ce620f8ea5d73fbfcec56227fbd59cd3383362862187fd8fe6fa33d617ffa419e16bc849caac7f8cd61684", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ST_Cust_Weapons.uasset", 
-                        "hash": "01bc7545e71de12f64797367bdf6748f93da19472b27a8ce5abda373350afa5d7b620445b023fbb6bc4c0c96fdc4c29852a5a7d95e2b415ad40930aea7aea393", 
-                        "object_class": "StringTable"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Sledgehammer/CT_WeaponSledgehammer_SledgeHammer_Tier1.uasset", 
-                        "hash": "01e569932e0af4375c544bf53d76bf96351618ce4007ad6e7bb908916ddaef38fefcfada27a787e430ad735f8aea0f5cff1294cd340d0d80df51817a38658109", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_CupHiltRapier_Tier4.uasset", 
-                        "hash": "d6f80df13d65c1f822013f3aa42beb5234cd760972785efa7790d4f40594dfba92e2a811bef5643c685cf6beafe6622d338616ac4b8d852ad6924b22471f0a98", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Bardiche_Tier2.uasset", 
-                        "hash": "6dbee1b6bbace35411723011c47724284f33167c2798aa72c259a28b156b7c8b2936c6643fa2994ec59b45598476b55c77760ea9224d0fa20266a7bbf80f0bad", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
                         "path": "TBL/Content/Customization/Assets_Weapons/Pickaxe/CT_WeaponPickaxe_Mattock_Tier1.uasset", 
                         "hash": "1016c7c6e35fcc360334fcbe31bc2a737eaef43b4a79c34b46ed4e55578465ff7c9e287c0a95757b50aa27a42f33e25f9d7ef49f09744bd77cf1df1b32c9e562", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Mace/CT_WeaponMace_FlangedMace_Tier2.uasset", 
-                        "hash": "47f460378355d7055aa349ea4845bcd6c40d97bd38835b6e5947d792234cdf47bd653cf4435e040c4edfdc6c1376dc9408965da7722d891d51f847fcb4397c41", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_ArgonsSword_Tier3.uasset", 
-                        "hash": "e9559fb0cb5096059085e4e31c3739f1f78ab18ec15d332d42ca70015ae59a6b01d01d09e09d6bf934c1c3ba73bb6755a969f14f923003339318106370dce4ca", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/HeavyMace/CT_HeavyMace_GrandMace_Tier3.uasset", 
-                        "hash": "4d62eef9aec71f3fbc6573532490a59f5aa2390c756277bc61a8ce863f108d04db8ea935e3d1f091fa8001e6074fbb2a9ff46c6dee30f50a9eff1263f411a38e", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/GreatSword/CT_WeaponGreatSword_GreatSword_Tier1.uasset", 
-                        "hash": "04d653fddf275aceb5b8d3a9fe3082ef5a97735f1c3abf97e098473a8964b00aa9b972918b6d9d87f1a5087fc093f9bca3ceece302282ba4b63c6c877208fe64", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponShortSword_Falchion_Tier1.uasset", 
-                        "hash": "43087b4364f75a9dd6cf5628f8545e3ce9a6250778733cebdc083c6bfa2efe669780a597a47e634865b6fb2471411f3a0f263d295d52065da9208a2f381fb7d3", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_SwissBaselard_Tier2.uasset", 
-                        "hash": "d7fb7660611d0d27449e72386280ba1fb913813fe4344bdcd32c96dd1d8ac936eef75793901dd296f47f100d212c4de23a4ec687e47dbbd481b1837f3d33fd68", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_WingedAxe_Tier1.uasset", 
-                        "hash": "8e434a2fd30de44c4e248777ede2cf13615664bc01bc038bb19b5ea17f23e0868f23b87218e160f46d52934e70f610eed342bc101552cea096fd4cc5ba5a1201", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_DoubleEdge_Tier2.uasset", 
-                        "hash": "e16349c2ae5dccceebc199878fc9fd23ce1ab34de267c6cb23177ab98fffef8b95fe353adc6bb034446614d427d76de38859829f884d085a52dc89d65b0b1c77", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_BroadSword_Tier2.uasset", 
-                        "hash": "2bf0b167db3136ce5e5863011c9f1c0cd8ddcc24462ae1c3339860686aa031f6f3be6f416f2eb5c83c2d5426fdc48f1497e1a139f76ffbaea44ac8ad25551b46", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Sledgehammer/CT_WeaponSledgehammer_SledgeHammer_Tier2.uasset", 
-                        "hash": "01fda4e55baaba9031299c3970423b4d17d586e9da2b2eca4bf8d245c4594ee74cf7c0a558706e49d569de1fbd5b0f5cc1d9e8c04d9dc5ced3bd59e58d58122e", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/PoleHammer/CT_WeaponPoleHammer_DoubleSidedHammer_Tier3.uasset", 
-                        "hash": "a8dfd423a70270d2e0401fea9948ebcc6b500aa98873aa24a5e5b8327e08e1a3188fef1a83a4912b9c420adf6644a9d144a60bb62bc3c15aaf4109713c8016ee", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Maul/CT_Maul_Maulnir_Tier1.uasset", 
-                        "hash": "17dc7302ec87020da67e9d0178c0b1b141feefeb6fa8de027271cd8848fc336da5b91edf71fed35626e55221f826bb31a5e69a7b6674c008674549ed3d2723f0", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Katars/CT_WeaponKatars_Katars_Tier1.uasset", 
-                        "hash": "b6bafca5500e5fe75f022798a57ccb1712d6c94d7db6c7b0241c10ad9902c8773e245b7ab19d057def288b98730093d6c75fd43172449b7dcb377d0cedc3e6fc", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponFalchion_Cleaver_Tier3.uasset", 
-                        "hash": "531a70a3f4958379b5ec197268ad40b9cac00a78adb53fa9fd974b1b50048452beef7e883846153317b83b5ab6a48962316a4d890ef8e647eb3cc3c6cb391bb5", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_LeafSpear_T2.uasset", 
-                        "hash": "7957ba3852953e91b587b78ac1ae87657b891a61651e33d8e17d67b3c9f924fd7519c3b37d00b118c72d06610840c4eca2bef263c3f67a92bc49e7c8e4af0eb9", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/TwoHandedHammer/CT_WeaponTwoHandedHammer_Nadziak_Tier2.uasset", 
-                        "hash": "89e3f7b2691b63a49eb96901ff439f32036b40286070926175c95d647b227b9712e2f29ed51653159b6c8fd921ce7157f522ea3fda5a434f5abbb7f2d3c1b49f", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_SingleEdge_Tier1.uasset", 
-                        "hash": "6fbacdb86dc392995f32543aa97115e8fd54370d95406a2f9d26ee57ca5abf60e01fe8a296294af0205b15ee7a500334ec837829dcd085b30d9ba49cc90e5399", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Francisca_Tier2.uasset", 
-                        "hash": "7d0feea46f99c0821a84cc049d31af01541e096469241402fe779789229eb0369c8d38d3ffbcfcaa12d8fdfca9121d9040f6a578d9e32adc09675b145d6fb145", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_BroadSword_Tier3.uasset", 
-                        "hash": "23593e2dac971b0ef5b9d5c4a7634dce8a7aa78799ecd66d7a488d0003ef7423d66c91cb147be90eb5fa20c757304d0d57f10ead44935162655098682fbaa9ca", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Earspoon_Tier3.uasset", 
-                        "hash": "d9c8861ba34dd84d5a068d74bad1c832575b3b6ee136032f639e35778c73fab09e26bd22eb8e1e712b1d2c15c4c3505ab8d1228df8c31ddbfb5de1802b895676", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Earspoon_Tier1.uasset", 
-                        "hash": "40e4599b7119a241ca34ec98517a5f75937c4bc52e2f67577cfb4e2765a9df820007334a25b2bdee8093b64e741d1706e0aa3e2557fa6ebb1f08b2f641cf6c22", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ShortSword/CT_WeaponShortSword_Carolingian_Tier1.uasset", 
-                        "hash": "62565d07c64552fae6fd87b5577742582da8a483e70e79890c294160b751564da8bc209be77066666f1c05ace77b9fd56d78d7f10c1aa512eadd50ffcbde2dc1", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Quarterstaff/CT_Quarterstaff_Quarterstaff_Tier1.uasset", 
-                        "hash": "e72cbc2e7e45382f578241be0240fe544e0fefd1062ddbbc0834fd930de48d9631adcd9f0fd88d4082e39db64392ff811707bae6774c9cb9abfea5ac818efc8a", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Bardiche_Tier1.uasset", 
-                        "hash": "36fe9a699521798e115ef4e7f2028dfc85f1e79a85cc20eb3e1f7b154e3fc2402f1b8cf6d3b1c1de5668dcaa13232cddc0d467b8a7c24558d1375de9e3d3aee6", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Pickaxe/CT_WeaponPickaxe_Pickaxe_Tier2.uasset", 
-                        "hash": "ad2d356e61ff03e4e0ec3eeaba7aeb2f1d449cc4d654c7e6541173a4007b05ef10a4cdf411322d52e8bd852979ed6bb5f5050d8af1ae1cf9838c9d054122ecd0", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_Longsword_Tier3.uasset", 
-                        "hash": "ce77cb97a1fac073bb58a845737a6903ed089a8c41fac560050bf69f98b35d8f25992626719cee919acb4cf684c14aca70b4db70a6cd7cc10b130e09eb4ac2ec", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_BastardSword_Tier2.uasset", 
-                        "hash": "78c2a7fb804582414e8a318c4a8cb1052ff25c080ef1f76cbc479945b5977118e37695629f43a3965b86701f872f55a7d1581899e55174f64c30a1123a8edad7", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/HeavyMace/CT_HeavyMace_GrandMace_Tier2.uasset", 
-                        "hash": "920673030d91f5b17956c5a8ab9eb146a1d87975b26a9584cace99f7ce6306bf29a617e5c4eff553afb251bcad09b508ba05531231add7add64a997b7258c8fb", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/GreatSword/CT_WeaponGreatSword_Claymore_Tier4.uasset", 
-                        "hash": "c06e42de7dd1ce72893b3ccede0dab32280eba7817e92559b2330103818c2c20f4ee0ee822fc67151bac93ffa5c22fd375647655d95241bbe392d8c88fb3fa1f", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponFalchion_Shamshir_Tier_1.uasset", 
-                        "hash": "7970182ee261dd4edb942d04d1dee659dcf8212045973c628b5275bc16e687048fdcf74ce8c9c22d825a741fc91891b588bb3175316b11579ef729ec9662d287", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/BattleAxe/CT_WeaponBattleAxe_DoubleAxe_Tier2.uasset", 
-                        "hash": "44f2c506a7c4acc4dd9ba94af409bc228695f680ab769b1f238c47890f8c3d3e86c8300acc2411a7b7e7ace43132775ed372e915d2a50809faa2e8a3b1ef0817", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/WarClub/CT_WeaponWarClub_BluntClub_Tier6.uasset", 
-                        "hash": "cb17173c9e9622737a017c27c3c016854cb8748b0212a2ed6eed586dc74688df7011abafca56055e736820e826c9debb1b4f7c04392522ab00f9285ba78256d3", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingSpear/CT_WeaponThrowingSpear_Javelin_Tier2.uasset", 
-                        "hash": "7789314daca9eebfc2498c3759c8839f2d8afac1f34ad41999db119bcce3544eba7e2320e5db56dc4c19cc170a9991eea1cbf522e13ce586c9eed914465beb17", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Francisca_Tier3.uasset", 
-                        "hash": "23c09a6fbce464a0233ee168a250ebd9cc0016b5ab65c4ba48cd2eb0e50805b74267347c575e77d5602e4bac463be1f574e96a65752116b52310e4def0d2a516", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_ArmingSword_Tier4.uasset", 
-                        "hash": "70aacf7730f1e453ab8a90aa4d1e631cdc3d06df1b3ae44fcc1125e17da0fdcd781d84a4e35213c19efd3134e766087c024ec7a7517e34ae85468ba9c83a5a76", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_RingedRapier_Tier4.uasset", 
-                        "hash": "cca73ad0b232ccc90c0a645bdfda742833751c6d696283a6fd54b7eae8907911bdedabc84a5092da8f02da6a5f81a6754a7badf8995ae274035cc4ba8f62213e", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/PoleAxe/CT_WeaponPoleAxe_PoleAxe_Tier01.uasset", 
-                        "hash": "e0ed33c2c0b1255aba7292fb78de66b4da99364279e0265e037fe2ded82cf0c41338989eed9401cf13c1b93420e5ed4c2f914156f2eef9fb638cfd3f49165f5a", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/MorningStar/CT_WeaponMorningStar_MorningStar_Tier2.uasset", 
-                        "hash": "e0ed7e4e4303c949ea7a43d88f1a90dae182ca59e6a723c8f967ed081c889b33383cf30bb76c402d20722ba564784529d64403fb9781720a2d5d0297cc8ee10a", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_BastardSword_Tier3.uasset", 
-                        "hash": "6309a04a7bdfcdb84e8d7b70bc75b42ba95d4bbda1dede7f2ffbef479942098d7890a6c722f6456a5944adea52503a4b585d337879a7199cf2070d58a767c8be", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Hatchet/CT_WeaponHatchet_HuntingHatchet_Tier3.uasset", 
-                        "hash": "dceeb93fdfcb0c903c81530799db5f6e9bdf004b1cc01b82a1863b19562d46445e7e43c0ad4c7cb01842b93244426ebf75218efe8ce62ba25629123a5d02305b", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponFalchion_Cleaver_Tier2.uasset", 
-                        "hash": "6d011659c86c41c4e37dd9cbaf461148a3acd46de86edd2b51b7d4d6263683765b00f7f109e222c07d748a5afda47bdca26f41a55d9823562bdce0da0aa47a5a", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_LeafSpear_T1.uasset", 
-                        "hash": "17c24989494129761b4c134cb77ddc2073aa4ca01375c3a05c43f3ffd1dfa29ee155f0538a80d54dfd61811df550b98f81f8b7a34ca244b855debbe15bf5393b", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/WarHammer/CT_WeaponWarHammer_Crusader_Tier2.uasset", 
-                        "hash": "4571746ea6ed069ef8559659d5ee05ae47f8a5340d5997478d7a4bc99fd85821361300e881e728fc3d5874a07d8dda2f6297f841c1500d293fecb18c8f31b8d1", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_WingedAxe_Tier3.uasset", 
-                        "hash": "e87552058d57e6334d91bf65ec49041d115dfb3a697204f85709c34810fda0e5ee0f7faa889a79d19177cc5dd5587fe7782c1d3bf0ca71a6f412d222f1907300", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingSpear/CT_WeaponThrowingSpear_Pilum_Tier1.uasset", 
-                        "hash": "d8dde8b4326e2321fdd0efe9b3231a9591f57ccad9f6aa80de48f7ca921769f40dead378e2e70c43f35569426740cb233dc52dced48e29d3c2b4d2407c988438", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_DoubleEdge_Tier3.uasset", 
-                        "hash": "58b4f7c06d7f362c70c0c89539557811f825524bd9b64dc2cb187cb6c2c00bcf180fe8bdb59e797f502111af2b4b7fae5e5d125ba4e1aaa34bfd3d53a906ae41", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_DoubleEdge_Tier1.uasset", 
-                        "hash": "632c4365383fc5f840b7f17b5265ec9639cc50ac5d06e1a7ab4521ffa7f9226b31c583bd28a2ba277b2a8455e027d3aed623cd67f6235d1d61e35e47ce6527ba", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Francisca_Tier1.uasset", 
-                        "hash": "6de9a00f32da32af6d9fd7bfa4a851f4f255968ab6710e210201e2eb7f029670f955f3ba0cd17f1fce2f5a93268cafd9df172d70b1a1331f2c027cad43b85357", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_HeavyCavalrySword_Tier1.uasset", 
-                        "hash": "380697de58b3fc766b63dd43f1e4fdef25213b50e77fade6af407ff84ea0a9fac1bd56955a3e3f54f932017c0a8aa45cd1cde7258ebfcc38bd97644520134ebb", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_BroadSword_Tier1.uasset", 
-                        "hash": "defeadf025e609a5b414bffd604088b3b1a3a9e550772c7c70c3612122226183b649f0e01fd24356fe3df47878fcde25b32363e2067ffe28c01a901a12fe917c", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Earspoon_Tier2.uasset", 
-                        "hash": "9d23efda756c3e3cc0ef5da5bea8b6fa7964765bae24c6c9a17262db51c70f40b6cbbdf9f4877db2694642aaab57ee7e6e7474b15c8b6efc188c2fc3680e8331", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Sledgehammer/CT_WeaponSledgehammer_SledgeHammer_Tier3.uasset", 
-                        "hash": "b53553082231c2500e8ecd8652018f6b8be4326d81fb856ac6af87308968ccfb285ea4b1673e4dcd9b962d1cea93080a226b2c3a9970c846380299718b5ad723", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_CupHiltRapier_Tier5.uasset", 
-                        "hash": "db99a08027e75c4470408d39db3be16e03dda4dd61707a84af72a74fcdfbb8a2fb90c8ebe5ba8fa8cf854eb3bfa37326cd42c0d58f782107efa27d379b0b4075", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_CupHiltRapier_Tier2.uasset", 
-                        "hash": "faada09a12ee4fd6a5020f24e683a33ed60ca1f598c37c850a147923025550bed26673a0eabaaa7a7a526d57f6c799eb6afb5cea52479b6755a6454391bbef41", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Halberd_Tier1.uasset", 
-                        "hash": "008726dc85d68d12dee402d398f2cfcff9da9ffe59b7f1721a7f391ad6ecafc4a0a4c4a719f4edbe57cc15733e9060088edf7391e13bfa981f50ed616d182b28", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Pickaxe/CT_WeaponPickaxe_Pickaxe_Tier3.uasset", 
-                        "hash": "a162b50b336f0e0b84ab018e93b2cb558a2990fa95c74bb7f1838ef92240741e375bebbac5b93b364f286c4a204480b4e257cf35a675d7ec01588f66aee8a7a8", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Pickaxe/CT_WeaponPickaxe_Pickaxe_Tier1.uasset", 
-                        "hash": "b5417be48017e8b5b7b11b8f6cdd5e6c8d31c910e2d8fdd745eed5a2d5bd7e833ceeccced88a5306248f4887cdee9d9b00031f93de130b85f8a5dbe04c904bcf", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Mace/CT_WeaponMace_FlangedMace_Tier3.uasset", 
-                        "hash": "fbc0df02897923b881ee1bfbdf3e196d53a78871e196cf22f313e5f256e466518b785ddc62d8d431a14ae8b493ba0664892d0bebd73ae373a906eba3f32106ee", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_Longsword_Tier2.uasset", 
-                        "hash": "eaa3fd7a71f0b74b88d54ae6c2bd932fede9e9007930edb08fbf211515cbd93a7bb93b986bece9332b33975cccb89ed96b0c780d026a05853d51bb5e46630527", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Knife/CT_WeaponKnife_HuntingKnife_Tier3.uasset", 
-                        "hash": "550eaaa6fb1384a4f49318f990af4357af9019dec27bffa09e26bed0bf431ac1bf59fac6218ffd6660e472a5f9730d0d814e12bb643dbde2ec159eeac6e6cd27", 
-                        "object_class": "CTWeapon"
-                    }, 
-                    {
-                        "path": "TBL/Content/Customization/Assets_Weapons/HeavyMace/CT_HeavyMace_GrandMace_Tier1.uasset", 
-                        "hash": "049f97fa0f4d273c063cc033e492b0aed83e94324e05216a591da14a5876132c1083127e4033892722697388d8af5ecd3412e13da56e7cf982c5674fa47f9c18", 
-                        "object_class": "CTWeapon"
+                        "object_class": "CTWeapon", 
+                        "class_path": null
                     }, 
                     {
                         "path": "TBL/Content/Customization/Assets_Weapons/Goedendag/CT_Weapon_Goedendag_Tier1.uasset", 
                         "hash": "c1c7d44ed748e79370f80fa7add695c037e7cc0be49d751cfcd399aa4ac2ad35263113904ade9c6e3f11e389c46e9299362db2e3d7eb036db8f1006bcab0a0ff", 
-                        "object_class": "CTWeapon"
+                        "object_class": "CTWeapon", 
+                        "class_path": null
                     }, 
                     {
-                        "path": "TBL/Content/Customization/Assets_Weapons/Glaive/CT_WeaponGlaive_Fauchard_Tier1.uasset", 
-                        "hash": "41a5ab13c494261b74c819a508773a92a5479174331a46e03a2d51bd441d37bc93e86c89df4addd954eb9425de7c812889cf53c418763a2014e56a24f8c14740", 
-                        "object_class": "CTWeapon"
+                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Khanjar_Tier_1.uasset", 
+                        "hash": "f5ff29ce4ee1f6fac7232d27c1de04e358b86b6b8a5c85553336bd7b21f43499a9d5fb71e3bdae20118d009605e46de1a19bb2a4f1531d8c2aa4731df95b5880", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Partisan_Tier2.uasset", 
+                        "hash": "db54550d19c9f0e9ae25caaff4d4cf21cb7fdfd41d757f9c7700707d280301ce6c570e7ffe5155030ebc0fcdbe430387b13033ea962cced5217873087b03a845", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Sledgehammer/CT_WeaponSledgehammer_SledgeHammer_Tier3.uasset", 
+                        "hash": "b53553082231c2500e8ecd8652018f6b8be4326d81fb856ac6af87308968ccfb285ea4b1673e4dcd9b962d1cea93080a226b2c3a9970c846380299718b5ad723", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ShortSword/CT_WeaponShortSword_Carolingian_Tier1.uasset", 
+                        "hash": "62565d07c64552fae6fd87b5577742582da8a483e70e79890c294160b751564da8bc209be77066666f1c05ace77b9fd56d78d7f10c1aa512eadd50ffcbde2dc1", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/PoleAxe/CT_WeaponPoleAxe_PoleAxe_Tier01.uasset", 
+                        "hash": "e0ed33c2c0b1255aba7292fb78de66b4da99364279e0265e037fe2ded82cf0c41338989eed9401cf13c1b93420e5ed4c2f914156f2eef9fb638cfd3f49165f5a", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Maul/CT_Maul_Maulnir_Tier2.uasset", 
+                        "hash": "12534fa4eb8e9dae4f6248a40860920394326b408b248327f358acaac0aa2480ca4d96eabc4033eb37bb40e9a2d589b6c68211c151a642377d2eb423f391019b", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Mace/CT_WeaponMace_FlangedMace_Tier2.uasset", 
+                        "hash": "47f460378355d7055aa349ea4845bcd6c40d97bd38835b6e5947d792234cdf47bd653cf4435e040c4edfdc6c1376dc9408965da7722d891d51f847fcb4397c41", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Hatchet/CT_WeaponHatchet_HuntingHatchet_Tier3.uasset", 
+                        "hash": "dceeb93fdfcb0c903c81530799db5f6e9bdf004b1cc01b82a1863b19562d46445e7e43c0ad4c7cb01842b93244426ebf75218efe8ce62ba25629123a5d02305b", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_SwissBaselard_Tier2.uasset", 
+                        "hash": "d7fb7660611d0d27449e72386280ba1fb913813fe4344bdcd32c96dd1d8ac936eef75793901dd296f47f100d212c4de23a4ec687e47dbbd481b1837f3d33fd68", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_DoubleEdge_Tier1.uasset", 
+                        "hash": "632c4365383fc5f840b7f17b5265ec9639cc50ac5d06e1a7ab4521ffa7f9226b31c583bd28a2ba277b2a8455e027d3aed623cd67f6235d1d61e35e47ce6527ba", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_ArmingSword_Tier4.uasset", 
+                        "hash": "70aacf7730f1e453ab8a90aa4d1e631cdc3d06df1b3ae44fcc1125e17da0fdcd781d84a4e35213c19efd3134e766087c024ec7a7517e34ae85468ba9c83a5a76", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Maul/CT_Maul_Maulnir_Tier1.uasset", 
+                        "hash": "17dc7302ec87020da67e9d0178c0b1b141feefeb6fa8de027271cd8848fc336da5b91edf71fed35626e55221f826bb31a5e69a7b6674c008674549ed3d2723f0", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Knife/CT_WeaponKnife_HuntingKnife_Tier2.uasset", 
+                        "hash": "c0aa8e24fdddb95859cc45e58c15410a8de36b27a33a21c2570bf4637b8bcdc22e561abaa6582bec0ff1194fd5da073a79982c103842dd534e3f0e87525ed48c", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/DaneAxe/CT_WeaponDaneAxe_HeadsMan_Tier1.uasset", 
+                        "hash": "78e14464d1d4bf05dfbe1b4cc69d8b5c1cc41042ec1356653fa5b122563e6414f647c231f11c0d84646421aa8791352bcb7c1e372adfee8b6b4516688e042dbe", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/WarClub/CT_WeaponWarClub_BluntClub_Tier5.uasset", 
+                        "hash": "fd3e9c55c42bf941158606050b635cd5b90d4d018946426ed6c9fa591742588e217d05422cccd232cbecbecef69b891e087e9da26a717dad2e0ec4debbdf2b47", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/TwoHandedHammer/CT_WeaponTwoHandedHammer_Nadziak_Tier2.uasset", 
+                        "hash": "89e3f7b2691b63a49eb96901ff439f32036b40286070926175c95d647b227b9712e2f29ed51653159b6c8fd921ce7157f522ea3fda5a434f5abbb7f2d3c1b49f", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_SingleEdge_Tier2.uasset", 
+                        "hash": "d3b1e583f91b88ceaeab21afbb9f60c83cbc249c31d66f67e6c622661fb82d4f4bdedf1cc3dc215b11fbc4ffe675aaa505de7034aa3c2f109cb8c9a7befebf29", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Francisca_Tier1.uasset", 
+                        "hash": "6de9a00f32da32af6d9fd7bfa4a851f4f255968ab6710e210201e2eb7f029670f955f3ba0cd17f1fce2f5a93268cafd9df172d70b1a1331f2c027cad43b85357", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_RingedRapier_Tier4.uasset", 
+                        "hash": "cca73ad0b232ccc90c0a645bdfda742833751c6d696283a6fd54b7eae8907911bdedabc84a5092da8f02da6a5f81a6754a7badf8995ae274035cc4ba8f62213e", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Quarterstaff/CT_Quarterstaff_Quarterstaff_Tier1.uasset", 
+                        "hash": "e72cbc2e7e45382f578241be0240fe544e0fefd1062ddbbc0834fd930de48d9631adcd9f0fd88d4082e39db64392ff811707bae6774c9cb9abfea5ac818efc8a", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_BilHook_Tier1.uasset", 
+                        "hash": "5774f00ee03fd3cd8c6812f14784e8a9b2bbecdb3d46d1095ed7a84f21290326fe42cc696be5834e0da9fc9d3028632d5fb483a5cef4bcb54f768ce410ab2722", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Bardiche_Tier2.uasset", 
+                        "hash": "6dbee1b6bbace35411723011c47724284f33167c2798aa72c259a28b156b7c8b2936c6643fa2994ec59b45598476b55c77760ea9224d0fa20266a7bbf80f0bad", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/HeavyMace/CT_HeavyMace_GrandMace_Tier3.uasset", 
+                        "hash": "4d62eef9aec71f3fbc6573532490a59f5aa2390c756277bc61a8ce863f108d04db8ea935e3d1f091fa8001e6074fbb2a9ff46c6dee30f50a9eff1263f411a38e", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
                     }, 
                     {
                         "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponFalchion_Cleaver_Tier1.uasset", 
                         "hash": "74d37ab802231de2ad619672984b674160f462a0441f8006cc1df8d0814664d9995696d852d42826d9d495dc6ee697f3e0828f9caf5da907f1bee636f518ad7e", 
-                        "object_class": "CTWeapon"
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_LeafSpear_T3.uasset", 
+                        "hash": "86bc11b002ff44c02eb7791c724dbc71d3e1c63a4536fd2d5460537773bc1aadc0b1f7fff40bfaf0a047c61ea8dc5cbf5847b92b3589c28a7e446d47198c2278", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/sword/old_CT_WeaponSword_CrossHiltSword_Tier4.uasset", 
+                        "hash": "207f70c369b7c9b847da7faa26d6b6de71fe8ca29b6ae439087690c808c4176ff53192fc9d1c32f5d44a9d37ca004471727f60a63050d7c51d077b66bc5e97cb", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Earspoon_Tier3.uasset", 
+                        "hash": "d9c8861ba34dd84d5a068d74bad1c832575b3b6ee136032f639e35778c73fab09e26bd22eb8e1e712b1d2c15c4c3505ab8d1228df8c31ddbfb5de1802b895676", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Bardiche_Tier1.uasset", 
+                        "hash": "36fe9a699521798e115ef4e7f2028dfc85f1e79a85cc20eb3e1f7b154e3fc2402f1b8cf6d3b1c1de5668dcaa13232cddc0d467b8a7c24558d1375de9e3d3aee6", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponFalchion_Shamshir_Tier_1.uasset", 
+                        "hash": "7970182ee261dd4edb942d04d1dee659dcf8212045973c628b5275bc16e687048fdcf74ce8c9c22d825a741fc91891b588bb3175316b11579ef729ec9662d287", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/BattleAxe/CT_WeaponBattleAxe_DoubleAxe_Tier2.uasset", 
+                        "hash": "44f2c506a7c4acc4dd9ba94af409bc228695f680ab769b1f238c47890f8c3d3e86c8300acc2411a7b7e7ace43132775ed372e915d2a50809faa2e8a3b1ef0817", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_WingedAxe_Tier1.uasset", 
+                        "hash": "8e434a2fd30de44c4e248777ede2cf13615664bc01bc038bb19b5ea17f23e0868f23b87218e160f46d52934e70f610eed342bc101552cea096fd4cc5ba5a1201", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingMallet/CT_WeaponThrowingMallet_CarversMallet_Tier3.uasset", 
+                        "hash": "c6a70b5f91a6af8de6e945c39b77a43a0a7a1f16f916fe7f5d6e3c3bcc1b509df3adbef60188c737c042b0236acd16f54c588d62186cf6838ffdba6f1504c9fa", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_Longsword_Tier3.uasset", 
+                        "hash": "ce77cb97a1fac073bb58a845737a6903ed089a8c41fac560050bf69f98b35d8f25992626719cee919acb4cf684c14aca70b4db70a6cd7cc10b130e09eb4ac2ec", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_BastardSword_Tier3.uasset", 
+                        "hash": "6309a04a7bdfcdb84e8d7b70bc75b42ba95d4bbda1dede7f2ffbef479942098d7890a6c722f6456a5944adea52503a4b585d337879a7199cf2070d58a767c8be", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponFalchion_Cleaver_Tier3.uasset", 
+                        "hash": "531a70a3f4958379b5ec197268ad40b9cac00a78adb53fa9fd974b1b50048452beef7e883846153317b83b5ab6a48962316a4d890ef8e647eb3cc3c6cb391bb5", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
                     }, 
                     {
                         "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Khanjar_Tier_3.uasset", 
                         "hash": "2ad61d0e8d2c01e651d03fc41316c33878a16443ac986fbb454ac82d793f76aae909721f2ba203871305513c77670592966dd00c169163d3093b0b87348817f9", 
-                        "object_class": "CTWeapon"
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/WarHammer/CT_WeaponWarHammer_Crusader_Tier2.uasset", 
+                        "hash": "4571746ea6ed069ef8559659d5ee05ae47f8a5340d5997478d7a4bc99fd85821361300e881e728fc3d5874a07d8dda2f6297f841c1500d293fecb18c8f31b8d1", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingSpear/CT_WeaponThrowingSpear_Pilum_Tier1.uasset", 
+                        "hash": "d8dde8b4326e2321fdd0efe9b3231a9591f57ccad9f6aa80de48f7ca921769f40dead378e2e70c43f35569426740cb233dc52dced48e29d3c2b4d2407c988438", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Hurlbat_Tier1.uasset", 
+                        "hash": "edf4c9becac9ca875b4256525371a63851f28cf907ce620f8ea5d73fbfcec56227fbd59cd3383362862187fd8fe6fa33d617ffa419e16bc849caac7f8cd61684", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_Longsword_Tier2.uasset", 
+                        "hash": "eaa3fd7a71f0b74b88d54ae6c2bd932fede9e9007930edb08fbf211515cbd93a7bb93b986bece9332b33975cccb89ed96b0c780d026a05853d51bb5e46630527", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Katars/CT_WeaponKatars_Katars_Tier1.uasset", 
+                        "hash": "b6bafca5500e5fe75f022798a57ccb1712d6c94d7db6c7b0241c10ad9902c8773e245b7ab19d057def288b98730093d6c75fd43172449b7dcb377d0cedc3e6fc", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Khanjar_Tier_4.uasset", 
+                        "hash": "ae2440160e6ee69c077698713110a34b7f95390b4a34a502960926a3126a474f405122e7c029aad6a266e33147629f2f3845b722f0ef4778aec4fce91632ef0b", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/WarClub/CT_WeaponWarClub_BluntClub_Tier6.uasset", 
+                        "hash": "cb17173c9e9622737a017c27c3c016854cb8748b0212a2ed6eed586dc74688df7011abafca56055e736820e826c9debb1b4f7c04392522ab00f9285ba78256d3", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_Community_CrescentBat_Tier4.uasset", 
+                        "hash": "00f701578ef300ec01e1c234f5f8d157ff29c9ce55829f366c9affa46bb7ecd78a9022d63177132589a8c17a4172deece943a28db3d88a9c54c1c1c60cacccb1", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingSpear/CT_WeaponThrowingSpear_Javelin_Tier2.uasset", 
+                        "hash": "7789314daca9eebfc2498c3759c8839f2d8afac1f34ad41999db119bcce3544eba7e2320e5db56dc4c19cc170a9991eea1cbf522e13ce586c9eed914465beb17", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_SingleEdge_Tier1.uasset", 
+                        "hash": "6fbacdb86dc392995f32543aa97115e8fd54370d95406a2f9d26ee57ca5abf60e01fe8a296294af0205b15ee7a500334ec837829dcd085b30d9ba49cc90e5399", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Francisca_Tier3.uasset", 
+                        "hash": "23c09a6fbce464a0233ee168a250ebd9cc0016b5ab65c4ba48cd2eb0e50805b74267347c575e77d5602e4bac463be1f574e96a65752116b52310e4def0d2a516", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Mace/CT_WeaponMace_FlangedMace_Tier3.uasset", 
+                        "hash": "fbc0df02897923b881ee1bfbdf3e196d53a78871e196cf22f313e5f256e466518b785ddc62d8d431a14ae8b493ba0664892d0bebd73ae373a906eba3f32106ee", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Knife/CT_WeaponKnife_HuntingKnife_Tier3.uasset", 
+                        "hash": "550eaaa6fb1384a4f49318f990af4357af9019dec27bffa09e26bed0bf431ac1bf59fac6218ffd6660e472a5f9730d0d814e12bb643dbde2ec159eeac6e6cd27", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/HeavyMace/CT_HeavyMace_GrandMace_Tier1.uasset", 
+                        "hash": "049f97fa0f4d273c063cc033e492b0aed83e94324e05216a591da14a5876132c1083127e4033892722697388d8af5ecd3412e13da56e7cf982c5674fa47f9c18", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_ShortSpear_T2.uasset", 
+                        "hash": "591e4a27cf6388e738dc93708f6c568812cdd82ce03fa21d30433848491dc586c743e09b432a6fa012babffd650a49e108227783de28716a1854bfa2fe44823d", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingAxe/CT_WeaponThrowingAxe_Francisca_Tier2.uasset", 
+                        "hash": "7d0feea46f99c0821a84cc049d31af01541e096469241402fe779789229eb0369c8d38d3ffbcfcaa12d8fdfca9121d9040f6a578d9e32adc09675b145d6fb145", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Shovel/CT_WeaponShovel_Shovel_Tier1.uasset", 
+                        "hash": "428239ce17aa2556fbb17dd58d632a46d0aad41f599b85a3f1170911c5615d8692dff542903dd2dea2b4d5634fa615f739f5145661a2f16d8c6e8c99c5aefb86", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/PoleHammer/CT_WeaponPoleHammer_DoubleSidedHammer_Tier3.uasset", 
+                        "hash": "a8dfd423a70270d2e0401fea9948ebcc6b500aa98873aa24a5e5b8327e08e1a3188fef1a83a4912b9c420adf6644a9d144a60bb62bc3c15aaf4109713c8016ee", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Bardiche_Tier3.uasset", 
+                        "hash": "6f9b9dffb28e53710df2694a2f32b8a03ae16b1f0341e25914a6996cc117e611dbc008568d78b6cfc36c8240c4167c3734af3c8ddb7ac03a8832f34a125c30d8", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_ArgonsSword_Tier3.uasset", 
+                        "hash": "e9559fb0cb5096059085e4e31c3739f1f78ab18ec15d332d42ca70015ae59a6b01d01d09e09d6bf934c1c3ba73bb6755a969f14f923003339318106370dce4ca", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/HighlandSword/CT_HighlandSword_GIantClaymore_Tier1.uasset", 
+                        "hash": "9a320223cdfb5655a26ba7a46b14aa2ba8c913fe6500a4cedbd2083741fec8526290c50f8048320bee1705fcff1c19f8690936fed80f3b62eaf5ba9cfedd17ba", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Khanjar_Tier_2.uasset", 
+                        "hash": "731d1c585c63b70a8216802cd6cc67069435c67227e6080a453a12875c40d7a76cadbb5607ce8a124f786515885ef416a701c923d96aa750f3ec34e75a39bb45", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_BroadSword_Tier2.uasset", 
+                        "hash": "2bf0b167db3136ce5e5863011c9f1c0cd8ddcc24462ae1c3339860686aa031f6f3be6f416f2eb5c83c2d5426fdc48f1497e1a139f76ffbaea44ac8ad25551b46", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Sledgehammer/CT_WeaponSledgehammer_SledgeHammer_Tier2.uasset", 
+                        "hash": "01fda4e55baaba9031299c3970423b4d17d586e9da2b2eca4bf8d245c4594ee74cf7c0a558706e49d569de1fbd5b0f5cc1d9e8c04d9dc5ced3bd59e58d58122e", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_CupHiltRapier_Tier2.uasset", 
+                        "hash": "faada09a12ee4fd6a5020f24e683a33ed60ca1f598c37c850a147923025550bed26673a0eabaaa7a7a526d57f6c799eb6afb5cea52479b6755a6454391bbef41", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Pickaxe/CT_WeaponPickaxe_Pickaxe_Tier2.uasset", 
+                        "hash": "ad2d356e61ff03e4e0ec3eeaba7aeb2f1d449cc4d654c7e6541173a4007b05ef10a4cdf411322d52e8bd852979ed6bb5f5050d8af1ae1cf9838c9d054122ecd0", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/GreatSword/CT_WeaponGreatSword_GreatSword_Tier1.uasset", 
+                        "hash": "04d653fddf275aceb5b8d3a9fe3082ef5a97735f1c3abf97e098473a8964b00aa9b972918b6d9d87f1a5087fc093f9bca3ceece302282ba4b63c6c877208fe64", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_LeafSpear_T2.uasset", 
+                        "hash": "7957ba3852953e91b587b78ac1ae87657b891a61651e33d8e17d67b3c9f924fd7519c3b37d00b118c72d06610840c4eca2bef263c3f67a92bc49e7c8e4af0eb9", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_WingedAxe_Tier2.uasset", 
+                        "hash": "e0c12b70b091a8cafac87cccd3add6ba7f54babb281672fe13123440e63599678f74a98acb5aab62b2b09751345c7c1f552848267a119579be5db737ceb18efc", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_BroadSword_Tier1.uasset", 
+                        "hash": "defeadf025e609a5b414bffd604088b3b1a3a9e550772c7c70c3612122226183b649f0e01fd24356fe3df47878fcde25b32363e2067ffe28c01a901a12fe917c", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_CupHiltRapier_Tier5.uasset", 
+                        "hash": "db99a08027e75c4470408d39db3be16e03dda4dd61707a84af72a74fcdfbb8a2fb90c8ebe5ba8fa8cf854eb3bfa37326cd42c0d58f782107efa27d379b0b4075", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Pickaxe/CT_WeaponPickaxe_Pickaxe_Tier1.uasset", 
+                        "hash": "b5417be48017e8b5b7b11b8f6cdd5e6c8d31c910e2d8fdd745eed5a2d5bd7e833ceeccced88a5306248f4887cdee9d9b00031f93de130b85f8a5dbe04c904bcf", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/GreatSword/CT_WeaponGreatSword_Claymore_Tier4.uasset", 
+                        "hash": "c06e42de7dd1ce72893b3ccede0dab32280eba7817e92559b2330103818c2c20f4ee0ee822fc67151bac93ffa5c22fd375647655d95241bbe392d8c88fb3fa1f", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Dagger/CT_WeaponDagger_Jambiya_Tier_1.uasset", 
+                        "hash": "e9615ca8b085911f07da1a8a1b9c8b0c3ea0c13356e1f3081fdf53bf9d12bec37ed44dc1653b67ca39ea34d6816b7da28f9350908c2ad3f5facabd597ffe5ae0", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_Longsword_Tier1.uasset", 
+                        "hash": "b34717eb78fd1f3719e8216fd6c21ca00bd828fbfac11c39535a61e626b4cd410809844c36c5a4b87a4f779515eb795dc607c53d5be0b9e97aedee5a6017dfdc", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponShortSword_Falchion_Tier3.uasset", 
+                        "hash": "e1caa63b7882b47b1bbbf62fbcafbe71a12efaf0343e1c880ab0f4e78fff80a9bd43818003c3c1615aba974b79e42406d6500a9d816f4e82a6ed50bd71c13da2", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ExecutionersAxe/CT_WeaponExecutionersAxe_BeheaderAxe_Tier3.uasset", 
+                        "hash": "5e70dc1742fbc7bfc3e818e85d2de3762ab30112b153758c50a2e0fbb5987765c90b29deed9da07f5c238c292b786f4c2e452b0ccfe4d952676cb06b566bb995", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/WarAxe/CT_WeaponWarAxe_WingedAxe_Tier3.uasset", 
+                        "hash": "e87552058d57e6334d91bf65ec49041d115dfb3a697204f85709c34810fda0e5ee0f7faa889a79d19177cc5dd5587fe7782c1d3bf0ca71a6f412d222f1907300", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_DoubleEdge_Tier3.uasset", 
+                        "hash": "58b4f7c06d7f362c70c0c89539557811f825524bd9b64dc2cb187cb6c2c00bcf180fe8bdb59e797f502111af2b4b7fae5e5d125ba4e1aaa34bfd3d53a906ae41", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingKnife/CT_WeaponThrowingKnife_DoubleEdge_Tier2.uasset", 
+                        "hash": "e16349c2ae5dccceebc199878fc9fd23ce1ab34de267c6cb23177ab98fffef8b95fe353adc6bb034446614d427d76de38859829f884d085a52dc89d65b0b1c77", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_BroadSword_Tier3.uasset", 
+                        "hash": "23593e2dac971b0ef5b9d5c4a7634dce8a7aa78799ecd66d7a488d0003ef7423d66c91cb147be90eb5fa20c757304d0d57f10ead44935162655098682fbaa9ca", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Earspoon_Tier1.uasset", 
+                        "hash": "40e4599b7119a241ca34ec98517a5f75937c4bc52e2f67577cfb4e2765a9df820007334a25b2bdee8093b64e741d1706e0aa3e2557fa6ebb1f08b2f641cf6c22", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/PoleArm/CT_WeaponPoleArm_Halberd_Tier1.uasset", 
+                        "hash": "008726dc85d68d12dee402d398f2cfcff9da9ffe59b7f1721a7f391ad6ecafc4a0a4c4a719f4edbe57cc15733e9060088edf7391e13bfa981f50ed616d182b28", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/LongSword/CT_Longsword_BastardSword_Tier2.uasset", 
+                        "hash": "78c2a7fb804582414e8a318c4a8cb1052ff25c080ef1f76cbc479945b5977118e37695629f43a3965b86701f872f55a7d1581899e55174f64c30a1123a8edad7", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Glaive/CT_WeaponGlaive_Fauchard_Tier1.uasset", 
+                        "hash": "41a5ab13c494261b74c819a508773a92a5479174331a46e03a2d51bd441d37bc93e86c89df4addd954eb9425de7c812889cf53c418763a2014e56a24f8c14740", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponFalchion_Cleaver_Tier2.uasset", 
+                        "hash": "6d011659c86c41c4e37dd9cbaf461148a3acd46de86edd2b51b7d4d6263683765b00f7f109e222c07d748a5afda47bdca26f41a55d9823562bdce0da0aa47a5a", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Axe/CT_WeaponAxe_HorseMansAxe_Tier1.uasset", 
+                        "hash": "b15ff4a53fdadd982e456e0ff0162976ad5efbe39d0483fe610dbd0698452896fdc99c1d6a70691c4243d9edd160d523471b626c772660f2309ac8188bb278e1", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/sword/CT_WeaponSword_HeavyCavalrySword_Tier1.uasset", 
+                        "hash": "380697de58b3fc766b63dd43f1e4fdef25213b50e77fade6af407ff84ea0a9fac1bd56955a3e3f54f932017c0a8aa45cd1cde7258ebfcc38bd97644520134ebb", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Spear/CT_WeaponSpear_Earspoon_Tier2.uasset", 
+                        "hash": "9d23efda756c3e3cc0ef5da5bea8b6fa7964765bae24c6c9a17262db51c70f40b6cbbdf9f4877db2694642aaab57ee7e6e7474b15c8b6efc188c2fc3680e8331", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Sledgehammer/CT_WeaponSledgehammer_SledgeHammer_Tier1.uasset", 
+                        "hash": "01e569932e0af4375c544bf53d76bf96351618ce4007ad6e7bb908916ddaef38fefcfada27a787e430ad735f8aea0f5cff1294cd340d0d80df51817a38658109", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Rapier/CT_Rapier_CupHiltRapier_Tier4.uasset", 
+                        "hash": "d6f80df13d65c1f822013f3aa42beb5234cd760972785efa7790d4f40594dfba92e2a811bef5643c685cf6beafe6622d338616ac4b8d852ad6924b22471f0a98", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Pickaxe/CT_WeaponPickaxe_Pickaxe_Tier3.uasset", 
+                        "hash": "a162b50b336f0e0b84ab018e93b2cb558a2990fa95c74bb7f1838ef92240741e375bebbac5b93b364f286c4a204480b4e257cf35a675d7ec01588f66aee8a7a8", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/MorningStar/CT_WeaponMorningStar_MorningStar_Tier2.uasset", 
+                        "hash": "e0ed7e4e4303c949ea7a43d88f1a90dae182ca59e6a723c8f967ed081c889b33383cf30bb76c402d20722ba564784529d64403fb9781720a2d5d0297cc8ee10a", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponShortSword_Falchion_Tier2.uasset", 
+                        "hash": "eb4cdce7bee251f41c8a8ba0bf5c4edf335de3a44e458716f4c6a32f1933ad51f53bae01ac234c687ba11e00bcb9ec2257c1e7bac11ab2b0e87d8e1f812d65eb", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/1HSpear/CT_1HSpear_LeafSpear_T1.uasset", 
+                        "hash": "17c24989494129761b4c134cb77ddc2073aa4ca01375c3a05c43f3ffd1dfa29ee155f0538a80d54dfd61811df550b98f81f8b7a34ca244b855debbe15bf5393b", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ThrowingMallet/CT_WeaponThrowingMallet_Mallet_Tier2.uasset", 
+                        "hash": "6d391d247ec791ec0ab8592a2973874f486e678e3cee428636591ebb9dd6df1645e1b51b91b0be3870e5a3f609dc1e807fff4fef75cfed2e773de012085eabd3", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Falchion/CT_WeaponShortSword_Falchion_Tier1.uasset", 
+                        "hash": "43087b4364f75a9dd6cf5628f8545e3ce9a6250778733cebdc083c6bfa2efe669780a597a47e634865b6fb2471411f3a0f263d295d52065da9208a2f381fb7d3", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Cudgel/CT_WeaponCudgel_HolyWaterSprinkler_Tier1.uasset", 
+                        "hash": "bcc47097f6148243d700d1f3bcfb50f162c674d0e66f5bf476162d87c0c771e02ddd88415881e1068229892e87934885fc8ea118aa356d30524795a46abf0baf", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/ST_Cust_Weapons.uasset", 
+                        "hash": "01bc7545e71de12f64797367bdf6748f93da19472b27a8ce5abda373350afa5d7b620445b023fbb6bc4c0c96fdc4c29852a5a7d95e2b415ad40930aea7aea393", 
+                        "object_class": "StringTable", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Messer/CT_WeaponMesser_KriegsMesser_Tier3.uasset", 
+                        "hash": "f10bedb93e27fadfe32151c7042d9272ced43dc05005f64e28bd6b3019b3b68400d10aa3978d2d77df8fe896d403b808cfcf651cabaa50d7f682380c427b3f64", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/HeavyMace/CT_HeavyMace_GrandMace_Tier2.uasset", 
+                        "hash": "920673030d91f5b17956c5a8ab9eb146a1d87975b26a9584cace99f7ce6306bf29a617e5c4eff553afb251bcad09b508ba05531231add7add64a997b7258c8fb", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Customization/Assets_Weapons/Cudgel/CT_WeaponCudgel_WarClub_Tier1.uasset", 
+                        "hash": "37571fef7b6feb7edd15dd5f7d76292ef1920955159d722dd8f8142cc53887740461ecbccc20abdbf1ee70029ccd9d207c16a39671ef96478cf53144eb7a0e1a", 
+                        "object_class": "CTWeapon", 
+                        "class_path": null
                     }
                 ], 
                 "arbitrary": [
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/T_Dagger_Jambiya_T4_U.uasset", 
-                        "hash": "753e08548437ee37b38daa0802c7463d692276cf54106f8ad6febec2ce12c04bed1dce691cd43e5dc22a4ac7bd6491d0aee838deb6dd6bc9bf81340cded8e112", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Sword/ArmingSword/SM_Sword_ArmingSword_model4_Player_plombmachine_2025-01-01_23-43-57.uasset", 
-                        "hash": "6a9beb6cba282e7a3255b15fac3b6a12131e382ee129df3b5fc20db3a10c08adca7f0937be8232f8b0e158ca081fad1d470d6b73017a6327e3a80521187c46d4", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Claymore/SM_Greatsword_Claymore_T4_Player_DemonEmperor_2025-01-21_17-48-59_001.uasset", 
-                        "hash": "ba9c8264a3c8c2c55d73487f34532c0332609aeaa5dec6990896617bea2360de4d4a20a2c763a850384a26c57ff29b0a9ec4944dab430534241f1f65c3213787", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Rapier/CupHiltRapier/SM_Rapier_CupHiltRapier_T4.uasset", 
-                        "hash": "d6fbbe2f4f20625697fe54db5b935048cbb0d0b20c8db882abef9ef4b6b0f1fb01f3b76a66d95fdef5ccfe2b44abe2a768ac7412004daeb101513e5554dd0b9b", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Main_Textures/T_Dagger_Jambiya_T4_C.uasset", 
-                        "hash": "b9b2fd5754222eef9d1e3fa28396485444ea0f377b915168636adb34c3dd6032f5e40d0f726efb09effc9e09216d79563b10df128370c2178b3312135c2e51c6", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Dagger/Jambiya/dragondagger_Dragon_Dagger_001.uasset", 
-                        "hash": "cd8f2450c322910df805630aa47d58a4210a3edb956ea52688445f8cc606ae489ebdecb82cecf743cb5aa90a3e6c24eebd25158459dc124e59335af0d09d0ee3", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/Mithril_Felling_Axe_Felling_Axe.uasset", 
-                        "hash": "37aec8ead072ba0755a36f121b6479a574144d85f5a5118a3adb92ef47ce3182a1152c6f8c14a566155b171487692730edb4b1cbfa69579b9eb7741bac28d4ae", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Spear/Guthan_s_WarSpear_Player_RSbad_2025-04-28_00-45-07.uasset", 
-                        "hash": "387f0ecde4b46b968740b4d174394266269cbb52ce3766f57946ed2aa9606ee621e8c349a85a04bc68c2ccb9f8b7e4730019a77ca0ecf0226e9a43120242a3b4", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Mithril_Throwing_Dart_Dart.uasset", 
-                        "hash": "e709188ab15e4421bc213cbe9d473e552ff491ffc993348370acff6acad31b310cd41527ebd51cc022dfc7fbbe0dc02b2c9676f58534f2d376ce35ab96ee7440", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Bronze_ThrowingAxe_Throwing_Axe.uasset", 
-                        "hash": "27857e7ccd413e50dfba304bacbf6bcbdd943e232d76ea6bbbc808e543ff85a272f1ef65eee6c58594ab282e8a960bf5849b48c3313c47739c2163fe0570c166", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Polehammer/DoubleSidedHammer/SM_Polehammer_DoubleSidedHammer_T3_Player_DemonEmperor_2025-01-16_18-19-50.uasset", 
-                        "hash": "3a0354f298f40d55d701339b9e0b7a8b336c76a52b15c9e11c9f8f7058c9c3449755608c555a9cd3557c5abad23d2467e7c9c581efc6b9ed00510c839268f9ac", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Rapier/CupHiltRapier/SM_Rapier_CupHiltRapier_T5.uasset", 
-                        "hash": "05978e7cf0d74bbe531c821193def8d00bbb7fafc1a7b83559938a03f70054cf7ac4a867531b64302111fb54c0007410c237e5ae4f74a114f1cf4b32d2dae040", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/HeavySword/HeavyCavalrySword/SM_HeavySword_Cavalry_T1_Player_WhiteZinnia_2025-01-01_23-22-30.uasset", 
-                        "hash": "41ba36346e6817017e0e0693b616348119a8070d2a3b7ab8fd3cf8244e231e772dac75b0c62590cabda4ba1ad36d0efc4247cc186320c34d6e8de0830c9dbcdd", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/MI_RunescapeWeapon_v3_2.uasset", 
-                        "hash": "cd8312247ab1de594af3895e03601654b7864eebb8224b8e2936b45de2c9d12e1729dab2c6ccebedbbb7942cd1b1fe8b4530ca1357c73996fdc1b9b0213d3306", 
-                        "object_class": "MaterialInstanceConstant", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Mithril_2h_Mithril2H.uasset", 
-                        "hash": "70bc6a4b2a42b115fc4b9acf88ddbe3b1efcf006849416867de16bbe98c107b40c63a70d5faecf427d14b4199a438dfa92a542e62040f338ecfdda3f8b6f7d0a", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Bronze_Throwing_Dart_Dart.uasset", 
-                        "hash": "f6aa5286faf9ee400a239bb23d7c25efcf489b6d8e81615eaabf11ee4120bd2646a0356bdc9eab0745238e280fcdf93c0634564696e5ca5b0bde80cc62ac70de", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Pickaxe/Rune_Pickaxe_Player_RSbad_2025-05-03_01-44-01.uasset", 
-                        "hash": "44652b27bd2a536360848173df6b8360248ec8a3394268ffde5d19e0beaa29a9c4af235ada9a81590e2fab900bf9c86d0ce2860eb9c477471f3bbde328755f2f", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Sword/ArmingSword/SM_Sword_ArmingSword_model4.uasset", 
-                        "hash": "073f23865e8b02fb21d5574f8e75f731b722802e38bb414da035d02982c6fb4162219667f92a8148dfd0d81f3c762d9b7c6682b293688a6cc5c7487cc86d324d", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ShortSword/Carolingian/SM_Shortsword_Carolingian_T3_Player_DemonEmperor_2025-01-09_11-32-09.uasset", 
-                        "hash": "e1c53a2c4afdd3273966e354d91664155ae6b96bc7bb87f858062f46fae006e9b4f269b378b0edbc68439c2c5e9113c2951b7e54821ee389b3786614e179637f", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Greatsword/Zweihander/SM_GreatSword_Zweihander_Tier2_Player_RSgood_2025-01-03_23-40-17_004.uasset", 
-                        "hash": "8e11efa88b6f2cfdc93ca95c4f0cbd74d3e8d37c4cbd6b377436e2ef261b85285291dc9fda684cae4ac65d33580e57262dd7e899ba4573b834c17acd2ac8af96", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/Black_Felling_Axe_Felling_Axe.uasset", 
-                        "hash": "1bbb6634fb1d6af265299aa59f6281afbc90101bcff3ff78bbbd02e7f45bd6818a3c609f532296757aa9b196715673257e5f75c5c5001cda0a774c84cf0d8823", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Mallet/banana_Item_Banana_2025-04-28_01-10-27.uasset", 
-                        "hash": "77263b9c140b2f03027eb72d15800f751207617ae1027e4b6946c55c1078ba915be8f6fa15749eeb4de414039c9f8006899ee2c44f8acbbbe09f26a7ce64a887", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sword/Rune_Longsword_Player_RSbad_2025-03-05_17-27-29.uasset", 
-                        "hash": "fd936eeba1ba9a3d2917a41381c01872932beb3af72d344c6d8bfd699a062ce536b10d83734388c6939fb6fe6091a3fee8365bdf8e06dfd1dad198d5a6c469e0", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/Zamorakian_Spear.uasset", 
-                        "hash": "a24e603528f74fa582a5139a7aa66de102a0a6ac2b91b4390340a5be46b0a18396e538b5d0fba74586994981ea77f049c1c0146ad2a5b46191e17e04f20e240e", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/T_Dagger_Jambiya_T4_C.uasset", 
-                        "hash": "f657c32b01067c9b304b3768f931cf9c7517d392d26ca36b06c1e0a2617d5ba6b6b3ed2c97dfc8069728ceaa6797a46983c81751557bae537a6d96da8c9f3312", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Goedendag/SM_Goedendag_T1_Player_DemonEmperor_2025-01-16_18-19-34.uasset", 
-                        "hash": "59c0012ae7a117564c7207e740eca1c69e8320425fb93d37b58d6f2057d1625dc57e0987e5c35125794a696ceeeb3c878af752dd37fb4fcb3a93bed88b5cffb7", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Pickaxe/Pickaxe/SM_Pickaxe_Pickaxe_T2_Player_Beurre_2025-01-01_21-19-55.uasset", 
-                        "hash": "bd9dcc22a58c8b7517e4c443c9ad98ec264c96dc2dbcf4aa098410a6b6b8eaa52866c0a7a6b73a0cd84e45dbd6e35eb0c41b80ab4d04762e223e071770fb6533", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Cudgel/Warclub/SM_Cudgel_WarClub.uasset", 
-                        "hash": "c175059ed1575faa35a2e4f0b4276abefee43b165ad668367afb1e38750c7914a9d06c7514078a4ce88f7894c05d120b2bfd83ef7d4475e1dacff78130ea5298", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Dragon_2h_Player_RSbad_2025-05-03_01-45-40.uasset", 
-                        "hash": "30cbec9ed7b1fb1e6b2f85e02c9c63d69abfde507119965c10e684d500989d10fa0cf2702ae4ff2981b511fce9adbe41ee0f4f7f689cbd9b7bfd41b43c05d378", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Rapier/Osmumten_s_fang_Player_RSbad_2025-04-27_17-39-25.uasset", 
-                        "hash": "1676110d29550e8b355d82e4747a9ef57fc2452655f744a5bd788b9ee83e40f138c5e83f93b5e6f7c50fa085a72caaafeec9ada565171e114fc770a04964b185", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Bone_Halberd.uasset", 
-                        "hash": "4156c5fc44d0be19b7145309554cdc95adefe4cfad299c46792f36cdac89f20455d04cb1189acd4beaf8b8dedda97fdcef2b85e97885d3f1506c8e4d21ffb2e2", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/runescape_flat_normal.uasset", 
-                        "hash": "6d1671441f1305d29167cc6587790a2f619df1660e086ce018815162e87b5c8eccc3fcdf31da90c085cd47b726e8a887fd0ed0adc43e5fc5ca4b1625ed57abeb", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ThrowingKnife/DoubleEdgedKnife/SM_ThrowingKnife_DoubleEdge_T3_Player_J49_1_2025-01-01_21-39-32_001.uasset", 
-                        "hash": "c759c7599c09d0e6610a381a81dbe8b5dfd918da4528cf5af173952fbb8f1da3a159524fdecdc00c1a78d8727a5ec325334b391c549772719fe9388ed9a6fd0b", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/HighlandSword/ExecutionerSword/SM_GiantSword_ExecutionerSword_T4_NPC_Justiciar_Zachariah___level-348__2025-01-04_17-00-59.uasset", 
-                        "hash": "266d124c683b4a843459e319ea6764d0851954639115b1c59675dee75a1e8e9b4d06970e34adddcbcb64a117713ddeafcad63bc4067a9c88d5c52609d5d95cb1", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/WarClub/PugelMason.uasset", 
-                        "hash": "9b1907e8c345023fde325d04481c11e113264ca9dc76cd876d0c0d1e06a83ecad02052d92d6eddead0dd4fba181d9af3f44f491846aca738adc460b25fa258a0", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Spear/IronSpear_Player_RSbad_2025-05-03_01-53-22.uasset", 
-                        "hash": "2f72372c3054022a059f2d8d7abe4c27f67d0ac3d1025c43b9045f0a2d9655c3f1fb2dac9f1f533c11e69b2b2210b9b942db487e9b565c6bbb8bf6d1ab807b86", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sword/Mithril_Longsword_Player_RSbad_2025-03-05_17-27-29.uasset", 
-                        "hash": "529ae62196c0dd53a4b2ec403c933bef8cfbc6b187efe0b2b80601c476ec0ce8ccbef8f152b35e99b0f74b0e8525af26aea42913a0134d44f34f78a027abffcf", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/image_wannabe_arm_grn_Kopie.uasset", 
-                        "hash": "3e69293f0650d41cb9776f03c060a0d9a6591d961e3540ae60969b6e00057814ceaed5b92686c579e3ba8583e64000bbe29fbf151caade24ccc134d99c4b2c2f", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Claymore/Godsword2__1_.uasset", 
-                        "hash": "2d9a80544709a509ed6b67b41f4e36003f50204f91debaa43c397e7ab9faee0c0f8de2305d41eadaea6da557e2aa4bf9f380b30abd1273867d39a55e0cf58e7b", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/arm_mask.uasset", 
-                        "hash": "05ec33850a6e588564b45ccdee93c46fd9efee23ff2c9ba7813b78c86e21c71bc970bbeb0bd983bde4f3af5c1857e82f38b42fa0372ca25a17be0dd5fab8c727", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/T_Dagger_Jambiya_T4_C.uasset", 
-                        "hash": "fb5297563bab4ec831db0641570eb1661fb0d7247d028d8330451d2cc0ed0260691653563297970547bfc463ac10b90714c2b89e47e95b787893da221179de12", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/ThrowingMallet/Mallet/MI_ThrowingMallet_Mallet_T2_Player_DemonEmperor_2025-01-16_18-23-34.uasset", 
-                        "hash": "2b84d8360007372f1e0acfe76b9758715d32c34a9e228f19bf85eec8cac28a978c0d5be8c6f854ca4d3735ba6d7e5bf6168e308975ea16e39d1fa9c4b866b62c", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Axe/HorsemansAxe/SM_Axe_HorsemansAxe_T2.uasset", 
-                        "hash": "7b28004ba83147e7cd3f2241258094b032bf884ccec0f110d2fef6ae1c695f23e2f57fbede8f9f69d0e20db5b14215cf085f54c00b882022f16e497dfec1a0d4", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Polearm/BilHook/Bilhook_Halbeard_Player_DemonEmperor_2025-01-09_11-23-03.uasset", 
-                        "hash": "80176feb04e7eb570e338eb1c884b8ad3ffbf3da3e2fe6d020e5a00b2fc2ae9a3ee3fab38b4d0b9875d1d6c361865c86513a744406360321641b4f01d8262067", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Main_Textures/T_Dagger_Jambiya_T4_U.uasset", 
-                        "hash": "5ed393a5e6700e7537d88395fe6affbfd487e7bc4ba284d4251d3f7d2617f4979ea41d2bfaddb0a0cde5d1c772d2547935af24ec9f8d62190f0806478730ec5a", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Glaive/StraightFauchard/SM_Glaive_StraightFauchard_T5_Player_RSbad_2025-01-06_18-15-01_001.uasset", 
-                        "hash": "7a270983450de6bba77233bcf10ff6943c5f3ce35262d39bea6c20caad6b6eed05481ce38d8cac310f0ea51256731775548e079f2342a8ccc9045ee50772ede5", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/old_tex/T_Dagger_Jambiya_T4_C.uasset", 
-                        "hash": "71e7e535a8ee8887015adc7610183d282d55efa1eaafa0bd2df5497d7764ddc1afae8c9280a1f39db1d38532b8aa32e6e578e1bedf746160b0e6f3ef834d2ed8", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/daxe.uasset", 
-                        "hash": "00dd29eac6ad0ff0f7773693c9325f959ad8d660445b2168d04231a0919db05abac6fb44f1cac382512dded2055f573e58e0c2e14781e90893dab8a2c0f0f9b1", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Rune_2h_Rune2h.uasset", 
-                        "hash": "bc52efe50cdad7379a275ac2b8cbf4e349b7817327a6a14962ba89563702077c4c0a824772bd06b2126b50c4619992084ceb5955e8a5cf6efd8e91f9ad616a13", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Spear/Pitchfork_Player_RSbad_2025-04-24_07-18-34.uasset", 
-                        "hash": "ba94d727dd43a33c2285bea40c53772a8dd1ad5ce17a185ea30d72ce087cde840b7ba7d9e04b1144ab1f6f6193f52b1537c9284e87ac2416bfedf7886d6849a4", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Dragon_ThrowingAxe_DragonThrowingAxe.uasset", 
-                        "hash": "a026f0863a15504f0fa98931d0fdb5738cf49ff087ce74087b19c25f51d5fe80131978d97eabb63a0b217c2ec59dff2a8f920e65893a3934ec38e9d698d7b025", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Pickaxe/Steel_Pickaxe_Player_RSbad_2025-05-03_01-44-01.uasset", 
-                        "hash": "fa044fd1a813c0c1208cfca120ded853e6c3c4ae998dba23461bc500878c73cc7dfb278fd5ef23408985e039cb1adae09cefe4dde5d6ba3c1b385a968d62a93f", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/RuneHasta.uasset", 
-                        "hash": "4c33fa0c11c34e5451e264340dc6f750b0b7a42527354aa6b45ef7098c0a260c1a4a55087722f88b41e063b7813fc7de1bf7ee9c8238ab1313a550fdf3ce3673", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Heavy_Mace/Adamant_HeavyMace.uasset", 
-                        "hash": "57ba753f7c661f6106144f9da9037929e334b7768d3fd051613be974f86f41dc0e3f2389d3bffa3599fdbe076c3f5dc8916950cfc925c63078d3c114f8f5df53", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/T_Dagger_Jambiya_T4_C_1.uasset", 
-                        "hash": "2ecca01fbb59e29d2091eb60c252fba6d3b3bab661ed1fbebe2802985288ac7541bef9fae12e6daf304b1fb363bb0a1baf3825ae1637ec8bec17d89888924860", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Hatchet/HuntingHatchet/SM_Hatchet_HuntingHatchet_T3_Player_DemonEmperor_2025-01-16_18-18-35.uasset", 
-                        "hash": "e2f8fcc795abaa65b0e0731a6620b34bb2a63959ebd0690ef0eeb878a55fbb6ae1c4619fae0b1468ab34d0ecc521cd9190e76a5161a11c7da01a7f68b75de8e1", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Shovel/Shovel/SM_Shovel_Shovel_T2_Player_Need_Spade_2025-01-01_23-19-58.uasset", 
-                        "hash": "5f74ee598a0c53a28a6bad0f218f41a8c700c0eb67363d0636c027d7cf3449afd0247d00437c61b2872aeb14cfbedf0926da410bd5799a23f0aa7a0aacbcefc1", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Falchion/Shamshir/SKM_Falchion_Shashmir_T2_Player_RSbad_2025-01-06_18-14-39_001.uasset", 
-                        "hash": "6792ee5d1cbc1f6182c6434074796d15ac232b08b59ebd7178730cbb48f7450cf5b101ac18613887a4a08ec1f42c0cedab65a4f0286d719f58014a58c999dc2e", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/Adamanat_Felling_Axe_Felling_Axe.uasset", 
-                        "hash": "4d95e2a0f671733c1854e85c2c823d116fd3f7a379ba5197729122bf9f5d6bf229a42923d05d0ddcc4dc4c95bd347ae4f1c57deace14b234cfa85bc86c2e52a1", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Steel_Throwing_Dart_Dart.uasset", 
-                        "hash": "6e4fb29b511543d444ef4b96bd54cbc1e57246ae481f247521d11c9a46c9c9f426f36fc3e69fac49839fedc137d9f7301f67e52a0e13c0524f2d030f894859c1", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Pickaxe/Bronze_Pickaxe_Player_RSbad_2025-05-03_01-44-01.uasset", 
-                        "hash": "df259847a4c22af1924967809103bb5ef320663e196583cc89b0b957001a3f2a52694c66a68014ce3aa5189619a2fa6f05160a7bfbaa9d154a917c87408f7d5a", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Messer/Dragon_Curved_Sword.uasset", 
-                        "hash": "5da7b8aba9b7142b8cf5c2b43de4a94d56006d67aab9daad755495e27268edc2efffb03ea213f71c3f72317089aef3f5a074152b1e25d6fb9b1cea6283098ef6", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Steel_Halberd.uasset", 
-                        "hash": "b495f2e31e16ef2dcdd7d695bcee38ce19b1ea8b461c18d135acc72545217b819e9854d1f9104fdc795527b3c44d75cb92348ffa6a12900a0227ad7ca1de1d50", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/image_Kopie.uasset", 
-                        "hash": "9eb179a41d2a58023d2eb40351ff870b1fab8ce52b904206d7b3a582ebfe52fb90b64ebecf732fe0fe72b06f02c9f9a8f63b67d6e677fc48bdd8180f8c409734", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/RunescapeTestMat_Inst.uasset", 
-                        "hash": "282845b06381c421cf9f7ef0c61c74297a25d2c8baf0df86cbc0281cbf36b9c7c6d82ef0cd4e542a67c84d07154c474f0afbbf2209910eb9f0fd0cd550281854", 
-                        "object_class": "MaterialInstanceConstant", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ThrowingAxes/Francisca/SM_ThrowingAxe_FranciscaT1_Player_DemonEmperor_2025-01-09_11-48-14.uasset", 
-                        "hash": "9c95e4f7d41b24dc1f6983814a82da3f77f110d02482868232a4f66f8bf2b3467ab04b342ae9af65ea337c5046d70a36ad582f274629ca67fd3a17d397e6c22d", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Hammer/Hill_Giants_Club_Hill_Giants_Club.uasset", 
-                        "hash": "3d9097ebc4f78232d224fabb71faed9b05dcdd37fe96cb03034e61a6ae8d1729465130dc36a2ea076482adca9fd8e9f327051031a53b3161b7264a940b78a293", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Rune_ThrowingAxe_Throwing_Axe.uasset", 
-                        "hash": "a4057a3b90f4f24d1ed30c729d3f15f3a13b0b6a97ced0aa73fb70d351135cd2ab9032fc28ec3a8e0c086a30b80da665bb65763d654dac75632535215af40ffb", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sledge_Hammer/Hammer_Hammer.uasset", 
-                        "hash": "27fa8eeb242dc33f3ecae1052a6998d25396a2de08316755184d70502cc0aaba84e8d1f86e36c5cdd482e5e215dccae0d820863f901972e90d95620e45550de3", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Maul/Anchor_Maul_Skin.uasset", 
-                        "hash": "a475129b530efb9e97ff6aee3c7f4a30871ebc9a95d7a644430397ae88eeffdcde1b020b74dffdeb38502d9172ab0962ef7cfcb6fcfd1ea80a0f0a7827972d25", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/US_Rune_Scimitar.uasset", 
-                        "hash": "23a23e4b8e94907ef9a856c8ece7b587823bf54356aee707a3659c74702ec9839d014e8c8d6db07c44ae5589aee97cc369914337fe63bd32ee8983e37b531732", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/Jade_Machete.uasset", 
-                        "hash": "83d937e4fb6d042276c2a175bd6888685e48e9b302234d30c584557a0151253773d6fcad1b9c2289e6fe553f795a097869499f4af64836fbecd72b1ae60eed19", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/RunescapeTestMat.uasset", 
-                        "hash": "73b6460c7bde4eeeec1920c911704ebe1b00f3229f960cb9e0e786517da7d282c41f852f34165551c7b0e34f8afc5339ead2f37d2e08d07cf32da7ac16c0f819", 
-                        "object_class": "Material", 
-                        "mod_name": null
-                    }, 
-                    {
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Cudgel/WarClub/SM_Cudgel_WarClubT2_Player_DemonEmperor_2025-01-16_18-08-28.uasset", 
                         "hash": "4404de842436dffdbb48ed5353997f1d9383a03e7604b77db6d723760c8f38bcf5e4412d66efafac3e0e231d1b032e793a5df0cc3142149cf2a22ea87fc08bfd", 
                         "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Quarterstaff/SM_Quarterstaff_T2.uasset", 
-                        "hash": "1bb4d5453b3f60b44f7c4ac587c23d7e4356fdf29cd44c56ec95b0e57f32d6f0345d5421fa227e705d9aadaa14401fd492d5022d7b09624bd6978c9f004dcba9", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Greatsword/Zweihander/Saradomin_Sword.uasset", 
-                        "hash": "704c43d82cfe094af5b98708b1d36fd428b6f562b5b36bc6584a55a0ed84d86c2330e34d718c03500ea750c2fc6cc148a4170e9dbff5294919931cdf68022332", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/WarClub/PugelAgatha.uasset", 
-                        "hash": "45a74612612c73f7fda12f2e904c9c5753193d156a6c85bcd038d7326c1eac6f0f0330451beb56ac5714c46f26ded654db6fe4457b5aa21421236d8e23e88b29", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Argons_2h_Argon2h.uasset", 
-                        "hash": "0f75223a864823f62b8b91474f7c98791a1f1b93340aa0d3d7224ffded91f27e789e17af26b2c8f6a5b1905e7110ac300b8e422e78021540ea83cfb1b1c3bc28", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sword/Adamant_Longsword_Player_RSbad_2025-03-05_17-27-29.uasset", 
-                        "hash": "b0f865a053e5a470bd863bc1279ab1f5b7211564390f84f379343d98ab6d3207a711fdcc71facda35411d4ce0de227513f83090fcb6c4f81797a317e31549675", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Mace/Baguette.uasset", 
-                        "hash": "89a0182b322a70797184f12f999f19f3232f021f909cbb621d8ee9dfeff2b8e4c1f39f81b8999fe2e85c19f49ca0f26f360fc51e34b978e8bf972f0e3145aa17", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Black_Halberd.uasset", 
-                        "hash": "712043bdec026883cc6c4d473bec313712a7099cf2ada1e02a6187e7ba9a0ff3c9fd425f23df7c4333fa8f1bc428a1965ef9b51878c27720cb0e1ce13b419e5d", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Black_Scimitar.uasset", 
-                        "hash": "886630515a63de8bcc75968f955839cc80421a837fb9770275d2ebc5be7c74f65eff7fb9c0a132b3fee573bdc2fd3e3948b69421002c5dc0af8b97a8e3a59db5", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/SM_ExecutionersAxe_BeheaderAxe_T3_Player_DemonEmperor_2025-01-27_03-33-33.uasset", 
-                        "hash": "b1a984814d56aa3c04c78ee7ab8e782ca4e537e2ecc423d05a16c395b5890852cba1449e2ff775842d5dc90db06885ad541980ae9930a6f04988d276810cafe2", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ThrowingSpear/Pilum/SM_ThrowingSpear_Pilum_T3.uasset", 
-                        "hash": "0dcd22b1f89e982eb0db7cbbda218936126199f821f519be879fa60ca8d07aa78a0e60ab590e3cbbdc176e0f3933d250cf0b1bcdecf44f5e52511f8d4480db08", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Maul/Maulnir/SKM_Maul_Maulnir_Player_WhiteZinnia_2024-12-31_20-39-34.uasset", 
-                        "hash": "06b2e89a20d60fe98de0fa875acf42e28b32c20be029176afc7fa6fd28559dd8d66069a37fee99d55be9b39c472775b71cef7a09261eae8ad893135657136cfa", 
-                        "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/White_Knight_s_Felling_Axe_Felling_Axe.uasset", 
                         "hash": "58b2b3d1c116c51bff3df99f634a629061c54fc11b64f4ad8e2a0a992f8d56e2fa59c9f7097c41b6f8fa039a1ef3416b2bf3077ec823d365e91ef43c63d2c4cf", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Spear/BlackSpear_Player_RSbad_2025-05-03_01-53-22.uasset", 
-                        "hash": "fb22ca5497f27828a3271d3fe48c9929b6135d5ec9ed56e94dcbba1735053d4acf3dcba797d8a1f1fcc13ad43963f3ddb41e982725e49eb2dd6bb8a1149d8558", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Black_Halberd.uasset", 
+                        "hash": "712043bdec026883cc6c4d473bec313712a7099cf2ada1e02a6187e7ba9a0ff3c9fd425f23df7c4333fa8f1bc428a1965ef9b51878c27720cb0e1ce13b419e5d", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sledge_Hammer/Goblin_Hammer_Hammer.uasset", 
-                        "hash": "4f61d976b9197d8db788bf076f1309d641e8a464874bd7bf8d346dfe6c6f38e19e825583492b95f6f489a40870955b830081fa06ab5c1bdf1d68cc623f05b073", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Greatsword/Zweihander/SM_GreatSword_Zweihander_Tier2_Player_RSgood_2025-01-03_23-40-17_004.uasset", 
+                        "hash": "8e11efa88b6f2cfdc93ca95c4f0cbd74d3e8d37c4cbd6b377436e2ef261b85285291dc9fda684cae4ac65d33580e57262dd7e899ba4573b834c17acd2ac8af96", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Mace/Bone_Club.uasset", 
-                        "hash": "08ec3df994aad67758d64f467df4955b159dcefef945ca2bf3200a9b0921593595479d29d1fe74973144fa9e3fd1419d6ec327d26a44a6b41dc1aa99a4741753", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/daxe.uasset", 
+                        "hash": "00dd29eac6ad0ff0f7773693c9325f959ad8d660445b2168d04231a0919db05abac6fb44f1cac382512dded2055f573e58e0c2e14781e90893dab8a2c0f0f9b1", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Rune_Scimitar.uasset", 
-                        "hash": "1b514349ce41e1e9f693df9804dffb01822aeb94646848cf3117574bc1bc686ff36530a0d6162f9dc6d938f4a94568bc83c65639f0fab3e6bcd5dffd8e608090", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/BoneDagger.uasset", 
-                        "hash": "a6693001db7873d209af95f0eb36a9024c0e91828f37b8f6697c5b91707379dae511ac249b193ef704cfe50114329164135f1ae61c0236dd0ece33036e641a91", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/image.uasset", 
-                        "hash": "297d95b47724d2a5bf9d59c5186c5bc82dd18f48ba7532ec9ee88cad80dd6db9315ab74c0b202e193b9cdcd2f1fa76b719fe10a0c260291253b89830f7e97a1f", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/image_wannabe_arm_grn_Kopie.uasset", 
+                        "hash": "3e69293f0650d41cb9776f03c060a0d9a6591d961e3540ae60969b6e00057814ceaed5b92686c579e3ba8583e64000bbe29fbf151caade24ccc134d99c4b2c2f", 
                         "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/DaneAxe/HeadsMan/DaneAxe_HeadsMan_T3_Player_DemonEmperor_2025-01-27_03-05-43.uasset", 
-                        "hash": "dd9e226a6c5bee9fe2465eb793258508567d0afaa1ad0e1461acd73b5e2f40ce4c03a429339bd326078ad4ef41c8f6d05ef449c0773721b0854a804b798853f4", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Katar/Rare/SM_Katar_Rare_T3.uasset", 
-                        "hash": "96cf96b3261b86a5fbc9a9e7d8ce691f20a9aee3ee75c757e526b674ed25b17308f7e8d8e3da2fd9ef182068f7ea39a7db57e129349f57d70c293dda72c5ec91", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/MI_RunescapeWeapon_v3.uasset", 
-                        "hash": "4cad6406c8c86e2abe75c5a2af4b4a9461f40664bd8e9cf12ec95fd1569ba4328bd5ba434667a55c64dfe18260fe4bf3d7c9b046afec31fd39d969e48d171c66", 
-                        "object_class": "MaterialInstanceConstant", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Black_2h_Black_2h.uasset", 
-                        "hash": "7f087cb2a49a55384fc39ecf83aeba9b8a4d56845fdc391fbbc306b7b918dda4038002a123782005fb805833e2c236efb5a6449bbff639dc94bebbb90354628b", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Rapier/PropSword_PropSword.uasset", 
-                        "hash": "d15a3c5d16fee479c543c6acbf90096855156cf5e7321e3cc54bbb29a909405ccf480bc8664da1ff99019a0291e51629715d3dd539ffe23748bed30a02356f22", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/BlackHasta.uasset", 
-                        "hash": "37058a492c33f57173c298bf76af2e956756f54f90c7199ec37836d586d3d5a2c80b70360c414a6d5a6ab708d3e91e7ab00a320d5be438892815a98dda48cc09", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Heavy_Mace/Steel_HeavyMace.uasset", 
-                        "hash": "88241795abfd4fa64ef61f5b43f04cab2ceb88ce725fae184604e38f8db1db6498f0590305f9094c762fdc408a3964fa826a36c2e56dbc88ba2699d1b9bd7ec1", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Iron_Scimitar.uasset", 
-                        "hash": "454c5a2f9ab98da361a5abd24ddaa8df60492d62f6275203c5c93b04f76176f3d5046225e71ece6a02aa5e1997c099727c0d7ae406b442c55245c8085b0dba6f", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/Topaz_Machete.uasset", 
-                        "hash": "5e532c6403cd49f3f9923b76d8ccf737e011e1538cac5146b333a971e88d574043fba3ad731a670b820fdfee77ba4a8755d7019aeb3d798fa732887f326c73dd", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Claymore/SM_Greatsword_Claymore_T4_Player_DemonEmperor_2025-01-21_17-48-59.uasset", 
-                        "hash": "6343e7ad2ca1cbfc6d29bddaa52225d6814540c1796d6093f5c56d62869e92f1cfddcb6f5fc0a189305607e0f17ae8406d154bd9b561839eff90003a3018148d", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/HeavyAxe/CurvedPollAxe/SM_HeavyAxe_CurvedPollAxe_T2_Player_DemonEmperor_2025-01-11_14-06-19_004.uasset", 
-                        "hash": "40b83690eb080218a8217f58144f23d1dc26b8732e82ea3c8072adc1a2cee1a1c18443d96b4caeaa3a45bf7ba673554f873dbecc9f74be7477fa2565da6bfa4f", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/old_tex/T_Dagger_Jambiya_T4_U.uasset", 
-                        "hash": "79d7865cfaf612299bc6424875f738826f68863b510a17c7f7b5d62c6e17b89818fa14ed93008b80a6be055d2b0ad53ce7b228fab75fb48c418025d5cea160a5", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/T_Dagger_Jambiya_T4_C.uasset", 
+                        "hash": "f657c32b01067c9b304b3768f931cf9c7517d392d26ca36b06c1e0a2617d5ba6b6b3ed2c97dfc8069728ceaa6797a46983c81751557bae537a6d96da8c9f3312", 
                         "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/White_2h_White_2h.uasset", 
-                        "hash": "b9f8d90db90a152d96718a25d55af21455aad77abcccf5ca1445d29e2bebdd9c427a0701febf703fbb741b049f4c5cfe6830309d0eb828de5e72cddb8968ed9c", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/WarClub/PugelAgatha.uasset", 
+                        "hash": "45a74612612c73f7fda12f2e904c9c5753193d156a6c85bcd038d7326c1eac6f0f0330451beb56ac5714c46f26ded654db6fe4457b5aa21421236d8e23e88b29", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Toktz-xil-ul_Player_RSbad_2025-02-13_02-40-02_001.uasset", 
-                        "hash": "2b178f13f029d2c465f2f84b82bd62f3de3447a0bbb38464ea6b24bc7541f7a41ea8d3beb572c0798af1cbc83bba1bc09afd71b7d50c208a38a632fdc2c21f1e", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Pickaxe/Steel_Pickaxe_Player_RSbad_2025-05-03_01-44-01.uasset", 
+                        "hash": "fa044fd1a813c0c1208cfca120ded853e6c3c4ae998dba23461bc500878c73cc7dfb278fd5ef23408985e039cb1adae09cefe4dde5d6ba3c1b385a968d62a93f", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Iron_ThrowingAxe_Throwing_Axe.uasset", 
-                        "hash": "e0e6c3fd4e8bf5786d697ed275f83fd902d4bd2be181affb93bdfc5fcbca45319fe32db22687ed554f38e00e173b0946fe70817a4ee2d7d6b92037eb31010aa8", 
-                        "object_class": "StaticMesh", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/T_Dagger_Jambiya_T4_U.uasset", 
+                        "hash": "753e08548437ee37b38daa0802c7463d692276cf54106f8ad6febec2ce12c04bed1dce691cd43e5dc22a4ac7bd6491d0aee838deb6dd6bc9bf81340cded8e112", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sledge_Hammer/Adamant_Hammer_Hammer.uasset", 
-                        "hash": "dfcc4060f8427b12f4b73a8b1defa03646e3ca9d3cd6191aa4c6e3a1efd0613dc78a1b0c507a8e82d02c2621b8fc06af3d6553ad715d225f529643c895681030", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Sword/ArmingSword/SM_Sword_ArmingSword_model4.uasset", 
+                        "hash": "073f23865e8b02fb21d5574f8e75f731b722802e38bb414da035d02982c6fb4162219667f92a8148dfd0d81f3c762d9b7c6682b293688a6cc5c7487cc86d324d", 
                         "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/MithrilHasta.uasset", 
-                        "hash": "27e3a51d5573403ee10d8dce5b26705b3244633cbf585765da4f0594f9d036821f0090919734cd4e9a793f6bf0c8e17ad7acded1935d06b3631c325640a33722", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Knife/ShadowBane.uasset", 
-                        "hash": "54c16b86d7c341679c6b99526dc798773629c378a828ada69113c5d76443cd45a33633e12498707bc62c36573a924839bc20a32039ee1208ee44147f8b19ca66", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Iron_Halberd.uasset", 
-                        "hash": "4b1ca9a040d4128872acf456c31e428690cf8d0330e8227e85191515a9b205863075cba53492a16a25cf2f6ab3edaf7a17a4e3c7c9fa6a2d5acdb6f9204df86c", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Bronze_Scimitar.uasset", 
-                        "hash": "bde1b804316f3580371ce5b788e881fcb23b3d4bd27e59d8516e944ef86093680927111dd768a1ce814a3af2bb316e4b7d49eaf7a26950bc138de2c73da462be", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/Opal_Machete.uasset", 
-                        "hash": "db19bdb02ec04ae3bc7a8cb2e87ffc50b46df2ad61e96c520a37ef3093aae243ae77151078318cfee0da1c44cdc7c191554102128a9823947b277c327905157f", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/WarHammer/CrusaderWarHammer/SM_WarHammer_Crusader_T2_props.uasset", 
-                        "hash": "9bea3a79b13b4801052437be8548f1999f12d4f4045b26284c2cb2c7c0abee3f3865d6ec0c275ccb15b04a5397c1fd40841451de72d9fac292221939b620d24b", 
-                        "object_class": "StaticMesh", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/ExecutionersAxe/BeheaderAxe/SM_ExecutionersAxe_BeheaderAxe_T3_Player_DemonEmperor_2025-01-27_03-33-33.uasset", 
-                        "hash": "31fba7dac238685a246871582fecaa59c2763c569083624b697a4ebdc7d02ea9b58b6a1f77c36fbe63096e6cc4cacdc1049f2507e9ccc4913a69f71963dcbdb0", 
-                        "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Spear/Earspoon/SM_Spear_Earspoon_Tier2_Player_Amy_B_Bad_2024-12-31_20-22-15_001.uasset", 
                         "hash": "d64fb7683941c7e1015e3b6d62128c0ee3e184515505493370a98e72a6d19265d341b9bed193b8e4db6addf0ce2e85a1b7cc9d08f68c4ff701702d2053963715", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/MorningStar/Dragon_Mace_FBX.uasset", 
-                        "hash": "fb962db9b972bc1a8bb2c5905d59f876b7a63840bc886d3b0402038400b909bc8d0af4240bad981c4063ce2f0363b707d8f05746ecd293075f51bbaab0990b27", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/Black_Felling_Axe_Felling_Axe.uasset", 
+                        "hash": "1bbb6634fb1d6af265299aa59f6281afbc90101bcff3ff78bbbd02e7f45bd6818a3c609f532296757aa9b196715673257e5f75c5c5001cda0a774c84cf0d8823", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Knife/WolfBane.uasset", 
-                        "hash": "9187ea10b494bdee99ee09c6b86df15c38babcfb776c66c317cbbbf8456329cf3c33a397c3ec773d7cdd7e9d3ffa126c36b0bb5d29bd46f07119f6be53a2d858", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Iron_Halberd.uasset", 
+                        "hash": "4b1ca9a040d4128872acf456c31e428690cf8d0330e8227e85191515a9b205863075cba53492a16a25cf2f6ab3edaf7a17a4e3c7c9fa6a2d5acdb6f9204df86c", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Heavy_Mace/Bronze_HeavyMace.uasset", 
-                        "hash": "a28cfd74f3f7878862fe075308a5cc279ba3cd65d63a757d0bc9f8d228ce4b08a6e3a73245f1e416f1ca363ee5f34741830abae8ef9897057113cb7213d2698e", 
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/WarHammer/CrusaderWarHammer/SM_WarHammer_Crusader_T2_props.uasset", 
+                        "hash": "9bea3a79b13b4801052437be8548f1999f12d4f4045b26284c2cb2c7c0abee3f3865d6ec0c275ccb15b04a5397c1fd40841451de72d9fac292221939b620d24b", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/DaneAxe/HeadsMan/DaneAxe_HeadsMan_T3_Player_DemonEmperor_2025-01-27_03-05-43.uasset", 
+                        "hash": "dd9e226a6c5bee9fe2465eb793258508567d0afaa1ad0e1461acd73b5e2f40ce4c03a429339bd326078ad4ef41c8f6d05ef449c0773721b0854a804b798853f4", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Falchion/Shamshir/SKM_Falchion_Shashmir_T2_Player_RSbad_2025-01-06_18-14-39_001.uasset", 
+                        "hash": "6792ee5d1cbc1f6182c6434074796d15ac232b08b59ebd7178730cbb48f7450cf5b101ac18613887a4a08ec1f42c0cedab65a4f0286d719f58014a58c999dc2e", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Cudgel/Warclub/SM_Cudgel_WarClub.uasset", 
+                        "hash": "c175059ed1575faa35a2e4f0b4276abefee43b165ad668367afb1e38750c7914a9d06c7514078a4ce88f7894c05d120b2bfd83ef7d4475e1dacff78130ea5298", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/Adamanat_Felling_Axe_Felling_Axe.uasset", 
+                        "hash": "4d95e2a0f671733c1854e85c2c823d116fd3f7a379ba5197729122bf9f5d6bf229a42923d05d0ddcc4dc4c95bd347ae4f1c57deace14b234cfa85bc86c2e52a1", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Bronze_Throwing_Dart_Dart.uasset", 
+                        "hash": "f6aa5286faf9ee400a239bb23d7c25efcf489b6d8e81615eaabf11ee4120bd2646a0356bdc9eab0745238e280fcdf93c0634564696e5ca5b0bde80cc62ac70de", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ThrowingAxes/Francisca/SM_ThrowingAxe_FranciscaT1_Player_DemonEmperor_2025-01-09_11-48-14.uasset", 
+                        "hash": "9c95e4f7d41b24dc1f6983814a82da3f77f110d02482868232a4f66f8bf2b3467ab04b342ae9af65ea337c5046d70a36ad582f274629ca67fd3a17d397e6c22d", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Glaive/StraightFauchard/SM_Glaive_StraightFauchard_T5_Player_RSbad_2025-01-06_18-15-01_001.uasset", 
+                        "hash": "7a270983450de6bba77233bcf10ff6943c5f3ce35262d39bea6c20caad6b6eed05481ce38d8cac310f0ea51256731775548e079f2342a8ccc9045ee50772ede5", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Spear/Guthan_s_WarSpear_Player_RSbad_2025-04-28_00-45-07.uasset", 
+                        "hash": "387f0ecde4b46b968740b4d174394266269cbb52ce3766f57946ed2aa9606ee621e8c349a85a04bc68c2ccb9f8b7e4730019a77ca0ecf0226e9a43120242a3b4", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/BoneDagger.uasset", 
+                        "hash": "a6693001db7873d209af95f0eb36a9024c0e91828f37b8f6697c5b91707379dae511ac249b193ef704cfe50114329164135f1ae61c0236dd0ece33036e641a91", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/image.uasset", 
+                        "hash": "297d95b47724d2a5bf9d59c5186c5bc82dd18f48ba7532ec9ee88cad80dd6db9315ab74c0b202e193b9cdcd2f1fa76b719fe10a0c260291253b89830f7e97a1f", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Goedendag/SM_Goedendag_T1_Player_DemonEmperor_2025-01-16_18-19-34.uasset", 
+                        "hash": "59c0012ae7a117564c7207e740eca1c69e8320425fb93d37b58d6f2057d1625dc57e0987e5c35125794a696ceeeb3c878af752dd37fb4fcb3a93bed88b5cffb7", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Axe/HorsemansAxe/SM_Axe_HorsemansAxe_T2.uasset", 
+                        "hash": "7b28004ba83147e7cd3f2241258094b032bf884ccec0f110d2fef6ae1c695f23e2f57fbede8f9f69d0e20db5b14215cf085f54c00b882022f16e497dfec1a0d4", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Main_Textures/T_Dagger_Jambiya_T4_C.uasset", 
+                        "hash": "b9b2fd5754222eef9d1e3fa28396485444ea0f377b915168636adb34c3dd6032f5e40d0f726efb09effc9e09216d79563b10df128370c2178b3312135c2e51c6", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/HeavySword/HeavyCavalrySword/SM_HeavySword_Cavalry_T1_Player_WhiteZinnia_2025-01-01_23-22-30.uasset", 
+                        "hash": "41ba36346e6817017e0e0693b616348119a8070d2a3b7ab8fd3cf8244e231e772dac75b0c62590cabda4ba1ad36d0efc4247cc186320c34d6e8de0830c9dbcdd", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Hammer/Hill_Giants_Club_Hill_Giants_Club.uasset", 
+                        "hash": "3d9097ebc4f78232d224fabb71faed9b05dcdd37fe96cb03034e61a6ae8d1729465130dc36a2ea076482adca9fd8e9f327051031a53b3161b7264a940b78a293", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Bronze_Scimitar.uasset", 
+                        "hash": "bde1b804316f3580371ce5b788e881fcb23b3d4bd27e59d8516e944ef86093680927111dd768a1ce814a3af2bb316e4b7d49eaf7a26950bc138de2c73da462be", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/RunescapeTestMat_Inst.uasset", 
+                        "hash": "282845b06381c421cf9f7ef0c61c74297a25d2c8baf0df86cbc0281cbf36b9c7c6d82ef0cd4e542a67c84d07154c474f0afbbf2209910eb9f0fd0cd550281854", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Polehammer/DoubleSidedHammer/SM_Polehammer_DoubleSidedHammer_T3_Player_DemonEmperor_2025-01-16_18-19-50.uasset", 
+                        "hash": "3a0354f298f40d55d701339b9e0b7a8b336c76a52b15c9e11c9f8f7058c9c3449755608c555a9cd3557c5abad23d2467e7c9c581efc6b9ed00510c839268f9ac", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Claymore/Godsword2__1_.uasset", 
+                        "hash": "2d9a80544709a509ed6b67b41f4e36003f50204f91debaa43c397e7ab9faee0c0f8de2305d41eadaea6da557e2aa4bf9f380b30abd1273867d39a55e0cf58e7b", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/WarClub/PugelMason.uasset", 
+                        "hash": "9b1907e8c345023fde325d04481c11e113264ca9dc76cd876d0c0d1e06a83ecad02052d92d6eddead0dd4fba181d9af3f44f491846aca738adc460b25fa258a0", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Spear/Pitchfork_Player_RSbad_2025-04-24_07-18-34.uasset", 
+                        "hash": "ba94d727dd43a33c2285bea40c53772a8dd1ad5ce17a185ea30d72ce087cde840b7ba7d9e04b1144ab1f6f6193f52b1537c9284e87ac2416bfedf7886d6849a4", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Steel_Throwing_Dart_Dart.uasset", 
+                        "hash": "6e4fb29b511543d444ef4b96bd54cbc1e57246ae481f247521d11c9a46c9c9f426f36fc3e69fac49839fedc137d9f7301f67e52a0e13c0524f2d030f894859c1", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/RunescapeTestMat.uasset", 
+                        "hash": "73b6460c7bde4eeeec1920c911704ebe1b00f3229f960cb9e0e786517da7d282c41f852f34165551c7b0e34f8afc5339ead2f37d2e08d07cf32da7ac16c0f819", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Claymore/SM_Greatsword_Claymore_T4_Player_DemonEmperor_2025-01-21_17-48-59.uasset", 
+                        "hash": "6343e7ad2ca1cbfc6d29bddaa52225d6814540c1796d6093f5c56d62869e92f1cfddcb6f5fc0a189305607e0f17ae8406d154bd9b561839eff90003a3018148d", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ShortSword/Carolingian/SM_Shortsword_Carolingian_T3_Player_DemonEmperor_2025-01-09_11-32-09.uasset", 
+                        "hash": "e1c53a2c4afdd3273966e354d91664155ae6b96bc7bb87f858062f46fae006e9b4f269b378b0edbc68439c2c5e9113c2951b7e54821ee389b3786614e179637f", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Pickaxe/Pickaxe/SM_Pickaxe_Pickaxe_T2_Player_Beurre_2025-01-01_21-19-55.uasset", 
+                        "hash": "bd9dcc22a58c8b7517e4c443c9ad98ec264c96dc2dbcf4aa098410a6b6b8eaa52866c0a7a6b73a0cd84e45dbd6e35eb0c41b80ab4d04762e223e071770fb6533", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Dagger/Jambiya/dragondagger_Dragon_Dagger_001.uasset", 
+                        "hash": "cd8f2450c322910df805630aa47d58a4210a3edb956ea52688445f8cc606ae489ebdecb82cecf743cb5aa90a3e6c24eebd25158459dc124e59335af0d09d0ee3", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/White_2h_White_2h.uasset", 
+                        "hash": "b9f8d90db90a152d96718a25d55af21455aad77abcccf5ca1445d29e2bebdd9c427a0701febf703fbb741b049f4c5cfe6830309d0eb828de5e72cddb8968ed9c", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Spear/BlackSpear_Player_RSbad_2025-05-03_01-53-22.uasset", 
+                        "hash": "fb22ca5497f27828a3271d3fe48c9929b6135d5ec9ed56e94dcbba1735053d4acf3dcba797d8a1f1fcc13ad43963f3ddb41e982725e49eb2dd6bb8a1149d8558", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Toktz-xil-ul_Player_RSbad_2025-02-13_02-40-02_001.uasset", 
+                        "hash": "2b178f13f029d2c465f2f84b82bd62f3de3447a0bbb38464ea6b24bc7541f7a41ea8d3beb572c0798af1cbc83bba1bc09afd71b7d50c208a38a632fdc2c21f1e", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Mithril_Scimitar.uasset", 
                         "hash": "24095bffe5f0c798a03c944262238dd9f37d83c1834e117fc4a4b4878eb774093fda11dc8d0def5e92cec528742422533cd3bc10bf73b67251fd654d1d098ddd", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/ThrowingMallet/Mallet/MI_ThrowingMallet_Mallet_T2_Player_DemonEmperor_2025-01-16_18-23-34.uasset", 
+                        "hash": "2b84d8360007372f1e0acfe76b9758715d32c34a9e228f19bf85eec8cac28a978c0d5be8c6f854ca4d3735ba6d7e5bf6168e308975ea16e39d1fa9c4b866b62c", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Claymore/SM_Greatsword_Claymore_T4_Player_DemonEmperor_2025-01-21_17-48-59_001.uasset", 
+                        "hash": "ba9c8264a3c8c2c55d73487f34532c0332609aeaa5dec6990896617bea2360de4d4a20a2c763a850384a26c57ff29b0a9ec4944dab430534241f1f65c3213787", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/HighlandSword/ExecutionerSword/SM_GiantSword_ExecutionerSword_T4_NPC_Justiciar_Zachariah___level-348__2025-01-04_17-00-59.uasset", 
+                        "hash": "266d124c683b4a843459e319ea6764d0851954639115b1c59675dee75a1e8e9b4d06970e34adddcbcb64a117713ddeafcad63bc4067a9c88d5c52609d5d95cb1", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/old_tex/T_Dagger_Jambiya_T4_U.uasset", 
+                        "hash": "79d7865cfaf612299bc6424875f738826f68863b510a17c7f7b5d62c6e17b89818fa14ed93008b80a6be055d2b0ad53ce7b228fab75fb48c418025d5cea160a5", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Spear/IronSpear_Player_RSbad_2025-05-03_01-53-22.uasset", 
+                        "hash": "2f72372c3054022a059f2d8d7abe4c27f67d0ac3d1025c43b9045f0a2d9655c3f1fb2dac9f1f533c11e69b2b2210b9b942db487e9b565c6bbb8bf6d1ab807b86", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Dragon_ThrowingAxe_DragonThrowingAxe.uasset", 
+                        "hash": "a026f0863a15504f0fa98931d0fdb5738cf49ff087ce74087b19c25f51d5fe80131978d97eabb63a0b217c2ec59dff2a8f920e65893a3934ec38e9d698d7b025", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sledge_Hammer/Adamant_Hammer_Hammer.uasset", 
+                        "hash": "dfcc4060f8427b12f4b73a8b1defa03646e3ca9d3cd6191aa4c6e3a1efd0613dc78a1b0c507a8e82d02c2621b8fc06af3d6553ad715d225f529643c895681030", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/image_Kopie.uasset", 
+                        "hash": "9eb179a41d2a58023d2eb40351ff870b1fab8ce52b904206d7b3a582ebfe52fb90b64ebecf732fe0fe72b06f02c9f9a8f63b67d6e677fc48bdd8180f8c409734", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Quarterstaff/SM_Quarterstaff_T2.uasset", 
+                        "hash": "1bb4d5453b3f60b44f7c4ac587c23d7e4356fdf29cd44c56ec95b0e57f32d6f0345d5421fa227e705d9aadaa14401fd492d5022d7b09624bd6978c9f004dcba9", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Maul/Maulnir/SKM_Maul_Maulnir_Player_WhiteZinnia_2024-12-31_20-39-34.uasset", 
+                        "hash": "06b2e89a20d60fe98de0fa875acf42e28b32c20be029176afc7fa6fd28559dd8d66069a37fee99d55be9b39c472775b71cef7a09261eae8ad893135657136cfa", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Mithril_2h_Mithril2H.uasset", 
+                        "hash": "70bc6a4b2a42b115fc4b9acf88ddbe3b1efcf006849416867de16bbe98c107b40c63a70d5faecf427d14b4199a438dfa92a542e62040f338ecfdda3f8b6f7d0a", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Knife/Mithril_Throwing_Dart_Dart.uasset", 
+                        "hash": "e709188ab15e4421bc213cbe9d473e552ff491ffc993348370acff6acad31b310cd41527ebd51cc022dfc7fbbe0dc02b2c9676f58534f2d376ce35ab96ee7440", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Bronze_ThrowingAxe_Throwing_Axe.uasset", 
+                        "hash": "27857e7ccd413e50dfba304bacbf6bcbdd943e232d76ea6bbbc808e543ff85a272f1ef65eee6c58594ab282e8a960bf5849b48c3313c47739c2163fe0570c166", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Black_Scimitar.uasset", 
+                        "hash": "886630515a63de8bcc75968f955839cc80421a837fb9770275d2ebc5be7c74f65eff7fb9c0a132b3fee573bdc2fd3e3948b69421002c5dc0af8b97a8e3a59db5", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/runescape_flat_normal.uasset", 
+                        "hash": "6d1671441f1305d29167cc6587790a2f619df1660e086ce018815162e87b5c8eccc3fcdf31da90c085cd47b726e8a887fd0ed0adc43e5fc5ca4b1625ed57abeb", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/ExecutionersAxe/BeheaderAxe/SM_ExecutionersAxe_BeheaderAxe_T3_Player_DemonEmperor_2025-01-27_03-33-33.uasset", 
+                        "hash": "31fba7dac238685a246871582fecaa59c2763c569083624b697a4ebdc7d02ea9b58b6a1f77c36fbe63096e6cc4cacdc1049f2507e9ccc4913a69f71963dcbdb0", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Rapier/CupHiltRapier/SM_Rapier_CupHiltRapier_T4.uasset", 
+                        "hash": "d6fbbe2f4f20625697fe54db5b935048cbb0d0b20c8db882abef9ef4b6b0f1fb01f3b76a66d95fdef5ccfe2b44abe2a768ac7412004daeb101513e5554dd0b9b", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Black_2h_Black_2h.uasset", 
+                        "hash": "7f087cb2a49a55384fc39ecf83aeba9b8a4d56845fdc391fbbc306b7b918dda4038002a123782005fb805833e2c236efb5a6449bbff639dc94bebbb90354628b", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Mallet/banana_Item_Banana_2025-04-28_01-10-27.uasset", 
+                        "hash": "77263b9c140b2f03027eb72d15800f751207617ae1027e4b6946c55c1078ba915be8f6fa15749eeb4de414039c9f8006899ee2c44f8acbbbe09f26a7ce64a887", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Rune_ThrowingAxe_Throwing_Axe.uasset", 
+                        "hash": "a4057a3b90f4f24d1ed30c729d3f15f3a13b0b6a97ced0aa73fb70d351135cd2ab9032fc28ec3a8e0c086a30b80da665bb65763d654dac75632535215af40ffb", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sledge_Hammer/Hammer_Hammer.uasset", 
+                        "hash": "27fa8eeb242dc33f3ecae1052a6998d25396a2de08316755184d70502cc0aaba84e8d1f86e36c5cdd482e5e215dccae0d820863f901972e90d95620e45550de3", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/arm_mask.uasset", 
+                        "hash": "05ec33850a6e588564b45ccdee93c46fd9efee23ff2c9ba7813b78c86e21c71bc970bbeb0bd983bde4f3af5c1857e82f38b42fa0372ca25a17be0dd5fab8c727", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/upscaled/T_Dagger_Jambiya_T4_C_1.uasset", 
+                        "hash": "2ecca01fbb59e29d2091eb60c252fba6d3b3bab661ed1fbebe2802985288ac7541bef9fae12e6daf304b1fb363bb0a1baf3825ae1637ec8bec17d89888924860", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/SM_ExecutionersAxe_BeheaderAxe_T3_Player_DemonEmperor_2025-01-27_03-33-33.uasset", 
+                        "hash": "b1a984814d56aa3c04c78ee7ab8e782ca4e537e2ecc423d05a16c395b5890852cba1449e2ff775842d5dc90db06885ad541980ae9930a6f04988d276810cafe2", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Shovel/Shovel/SM_Shovel_Shovel_T2_Player_Need_Spade_2025-01-01_23-19-58.uasset", 
+                        "hash": "5f74ee598a0c53a28a6bad0f218f41a8c700c0eb67363d0636c027d7cf3449afd0247d00437c61b2872aeb14cfbedf0926da410bd5799a23f0aa7a0aacbcefc1", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Polearm/BilHook/Bilhook_Halbeard_Player_DemonEmperor_2025-01-09_11-23-03.uasset", 
+                        "hash": "80176feb04e7eb570e338eb1c884b8ad3ffbf3da3e2fe6d020e5a00b2fc2ae9a3ee3fab38b4d0b9875d1d6c361865c86513a744406360321641b4f01d8262067", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/War-Axe/Mithril_Felling_Axe_Felling_Axe.uasset", 
+                        "hash": "37aec8ead072ba0755a36f121b6479a574144d85f5a5118a3adb92ef47ce3182a1152c6f8c14a566155b171487692730edb4b1cbfa69579b9eb7741bac28d4ae", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sword/Mithril_Longsword_Player_RSbad_2025-03-05_17-27-29.uasset", 
+                        "hash": "529ae62196c0dd53a4b2ec403c933bef8cfbc6b187efe0b2b80601c476ec0ce8ccbef8f152b35e99b0f74b0e8525af26aea42913a0134d44f34f78a027abffcf", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sledge_Hammer/Goblin_Hammer_Hammer.uasset", 
+                        "hash": "4f61d976b9197d8db788bf076f1309d641e8a464874bd7bf8d346dfe6c6f38e19e825583492b95f6f489a40870955b830081fa06ab5c1bdf1d68cc623f05b073", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/Topaz_Machete.uasset", 
+                        "hash": "5e532c6403cd49f3f9923b76d8ccf737e011e1538cac5146b333a971e88d574043fba3ad731a670b820fdfee77ba4a8755d7019aeb3d798fa732887f326c73dd", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Hatchet/HuntingHatchet/SM_Hatchet_HuntingHatchet_T3_Player_DemonEmperor_2025-01-16_18-18-35.uasset", 
+                        "hash": "e2f8fcc795abaa65b0e0731a6620b34bb2a63959ebd0690ef0eeb878a55fbb6ae1c4619fae0b1468ab34d0ecc521cd9190e76a5161a11c7da01a7f68b75de8e1", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ThrowingKnife/DoubleEdgedKnife/SM_ThrowingKnife_DoubleEdge_T3_Player_J49_1_2025-01-01_21-39-32_001.uasset", 
+                        "hash": "c759c7599c09d0e6610a381a81dbe8b5dfd918da4528cf5af173952fbb8f1da3a159524fdecdc00c1a78d8727a5ec325334b391c549772719fe9388ed9a6fd0b", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Rapier/CupHiltRapier/SM_Rapier_CupHiltRapier_T5.uasset", 
+                        "hash": "05978e7cf0d74bbe531c821193def8d00bbb7fafc1a7b83559938a03f70054cf7ac4a867531b64302111fb54c0007410c237e5ae4f74a114f1cf4b32d2dae040", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Main_Textures/T_Dagger_Jambiya_T4_U.uasset", 
+                        "hash": "5ed393a5e6700e7537d88395fe6affbfd487e7bc4ba284d4251d3f7d2617f4979ea41d2bfaddb0a0cde5d1c772d2547935af24ec9f8d62190f0806478730ec5a", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Greatsword/Zweihander/Saradomin_Sword.uasset", 
+                        "hash": "704c43d82cfe094af5b98708b1d36fd428b6f562b5b36bc6584a55a0ed84d86c2330e34d718c03500ea750c2fc6cc148a4170e9dbff5294919931cdf68022332", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/old_tex/T_Dagger_Jambiya_T4_C.uasset", 
+                        "hash": "71e7e535a8ee8887015adc7610183d282d55efa1eaafa0bd2df5497d7764ddc1afae8c9280a1f39db1d38532b8aa32e6e578e1bedf746160b0e6f3ef834d2ed8", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Dragon_2h_Player_RSbad_2025-05-03_01-45-40.uasset", 
+                        "hash": "30cbec9ed7b1fb1e6b2f85e02c9c63d69abfde507119965c10e684d500989d10fa0cf2702ae4ff2981b511fce9adbe41ee0f4f7f689cbd9b7bfd41b43c05d378", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Rapier/Osmumten_s_fang_Player_RSbad_2025-04-27_17-39-25.uasset", 
+                        "hash": "1676110d29550e8b355d82e4747a9ef57fc2452655f744a5bd788b9ee83e40f138c5e83f93b5e6f7c50fa085a72caaafeec9ada565171e114fc770a04964b185", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Pickaxe/Bronze_Pickaxe_Player_RSbad_2025-05-03_01-44-01.uasset", 
+                        "hash": "df259847a4c22af1924967809103bb5ef320663e196583cc89b0b957001a3f2a52694c66a68014ce3aa5189619a2fa6f05160a7bfbaa9d154a917c87408f7d5a", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/MorningStar/Dragon_Mace_FBX.uasset", 
+                        "hash": "fb962db9b972bc1a8bb2c5905d59f876b7a63840bc886d3b0402038400b909bc8d0af4240bad981c4063ce2f0363b707d8f05746ecd293075f51bbaab0990b27", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Mace/Baguette.uasset", 
+                        "hash": "89a0182b322a70797184f12f999f19f3232f021f909cbb621d8ee9dfeff2b8e4c1f39f81b8999fe2e85c19f49ca0f26f360fc51e34b978e8bf972f0e3145aa17", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Heavy_Mace/Steel_HeavyMace.uasset", 
+                        "hash": "88241795abfd4fa64ef61f5b43f04cab2ceb88ce725fae184604e38f8db1db6498f0590305f9094c762fdc408a3964fa826a36c2e56dbc88ba2699d1b9bd7ec1", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Steel_Halberd.uasset", 
+                        "hash": "b495f2e31e16ef2dcdd7d695bcee38ce19b1ea8b461c18d135acc72545217b819e9854d1f9104fdc795527b3c44d75cb92348ffa6a12900a0227ad7ca1de1d50", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Rune_Scimitar.uasset", 
+                        "hash": "1b514349ce41e1e9f693df9804dffb01822aeb94646848cf3117574bc1bc686ff36530a0d6162f9dc6d938f4a94568bc83c65639f0fab3e6bcd5dffd8e608090", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/Opal_Machete.uasset", 
+                        "hash": "db19bdb02ec04ae3bc7a8cb2e87ffc50b46df2ad61e96c520a37ef3093aae243ae77151078318cfee0da1c44cdc7c191554102128a9823947b277c327905157f", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak2/Sword/ArmingSword/SM_Sword_ArmingSword_model4_Player_plombmachine_2025-01-01_23-43-57.uasset", 
+                        "hash": "6a9beb6cba282e7a3255b15fac3b6a12131e382ee129df3b5fc20db3a10c08adca7f0937be8232f8b0e158ca081fad1d470d6b73017a6327e3a80521187c46d4", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/HeavyAxe/CurvedPollAxe/SM_HeavyAxe_CurvedPollAxe_T2_Player_DemonEmperor_2025-01-11_14-06-19_004.uasset", 
+                        "hash": "40b83690eb080218a8217f58144f23d1dc26b8732e82ea3c8072adc1a2cee1a1c18443d96b4caeaa3a45bf7ba673554f873dbecc9f74be7477fa2565da6bfa4f", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/MI_RunescapeWeapon_v3.uasset", 
+                        "hash": "4cad6406c8c86e2abe75c5a2af4b4a9461f40664bd8e9cf12ec95fd1569ba4328bd5ba434667a55c64dfe18260fe4bf3d7c9b046afec31fd39d969e48d171c66", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Rune_2h_Rune2h.uasset", 
+                        "hash": "bc52efe50cdad7379a275ac2b8cbf4e349b7817327a6a14962ba89563702077c4c0a824772bd06b2126b50c4619992084ceb5955e8a5cf6efd8e91f9ad616a13", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Throwing_Axe/Iron_ThrowingAxe_Throwing_Axe.uasset", 
+                        "hash": "e0e6c3fd4e8bf5786d697ed275f83fd902d4bd2be181affb93bdfc5fcbca45319fe32db22687ed554f38e00e173b0946fe70817a4ee2d7d6b92037eb31010aa8", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sword/Rune_Longsword_Player_RSbad_2025-03-05_17-27-29.uasset", 
+                        "hash": "fd936eeba1ba9a3d2917a41381c01872932beb3af72d344c6d8bfd699a062ce536b10d83734388c6939fb6fe6091a3fee8365bdf8e06dfd1dad198d5a6c469e0", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Sword/Adamant_Longsword_Player_RSbad_2025-03-05_17-27-29.uasset", 
+                        "hash": "b0f865a053e5a470bd863bc1279ab1f5b7211564390f84f379343d98ab6d3207a711fdcc71facda35411d4ce0de227513f83090fcb6c4f81797a317e31549675", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Rapier/PropSword_PropSword.uasset", 
+                        "hash": "d15a3c5d16fee479c543c6acbf90096855156cf5e7321e3cc54bbb29a909405ccf480bc8664da1ff99019a0291e51629715d3dd539ffe23748bed30a02356f22", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/Zamorakian_Spear.uasset", 
+                        "hash": "a24e603528f74fa582a5139a7aa66de102a0a6ac2b91b4390340a5be46b0a18396e538b5d0fba74586994981ea77f049c1c0146ad2a5b46191e17e04f20e240e", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/MithrilHasta.uasset", 
+                        "hash": "27e3a51d5573403ee10d8dce5b26705b3244633cbf585765da4f0594f9d036821f0090919734cd4e9a793f6bf0c8e17ad7acded1935d06b3631c325640a33722", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Messer/Dragon_Curved_Sword.uasset", 
+                        "hash": "5da7b8aba9b7142b8cf5c2b43de4a94d56006d67aab9daad755495e27268edc2efffb03ea213f71c3f72317089aef3f5a074152b1e25d6fb9b1cea6283098ef6", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Mace/Bone_Club.uasset", 
+                        "hash": "08ec3df994aad67758d64f467df4955b159dcefef945ca2bf3200a9b0921593595479d29d1fe74973144fa9e3fd1419d6ec327d26a44a6b41dc1aa99a4741753", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Knife/ShadowBane.uasset", 
+                        "hash": "54c16b86d7c341679c6b99526dc798773629c378a828ada69113c5d76443cd45a33633e12498707bc62c36573a924839bc20a32039ee1208ee44147f8b19ca66", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Heavy_Mace/Adamant_HeavyMace.uasset", 
+                        "hash": "57ba753f7c661f6106144f9da9037929e334b7768d3fd051613be974f86f41dc0e3f2389d3bffa3599fdbe076c3f5dc8916950cfc925c63078d3c114f8f5df53", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Halberd/Bone_Halberd.uasset", 
+                        "hash": "4156c5fc44d0be19b7145309554cdc95adefe4cfad299c46792f36cdac89f20455d04cb1189acd4beaf8b8dedda97fdcef2b85e97885d3f1506c8e4d21ffb2e2", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Iron_Scimitar.uasset", 
+                        "hash": "454c5a2f9ab98da361a5abd24ddaa8df60492d62f6275203c5c93b04f76176f3d5046225e71ece6a02aa5e1997c099727c0d7ae406b442c55245c8085b0dba6f", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/Jade_Machete.uasset", 
+                        "hash": "83d937e4fb6d042276c2a175bd6888685e48e9b302234d30c584557a0151253773d6fcad1b9c2289e6fe553f795a097869499f4af64836fbecd72b1ae60eed19", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/T_Dagger_Jambiya_T4_C.uasset", 
+                        "hash": "fb5297563bab4ec831db0641570eb1661fb0d7247d028d8330451d2cc0ed0260691653563297970547bfc463ac10b90714c2b89e47e95b787893da221179de12", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/ThrowingSpear/Pilum/SM_ThrowingSpear_Pilum_T3.uasset", 
+                        "hash": "0dcd22b1f89e982eb0db7cbbda218936126199f821f519be879fa60ca8d07aa78a0e60ab590e3cbbdc176e0f3933d250cf0b1bcdecf44f5e52511f8d4480db08", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/pak1/Weapons/Katar/Rare/SM_Katar_Rare_T3.uasset", 
+                        "hash": "96cf96b3261b86a5fbc9a9e7d8ce691f20a9aee3ee75c757e526b674ed25b17308f7e8d8e3da2fd9ef182068f7ea39a7db57e129349f57d70c293dda72c5ec91", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/MI_RunescapeWeapon_v3_2.uasset", 
+                        "hash": "cd8312247ab1de594af3895e03601654b7864eebb8224b8e2936b45de2c9d12e1729dab2c6ccebedbbb7942cd1b1fe8b4530ca1357c73996fdc1b9b0213d3306", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Two-Handed-Sword/Argons_2h_Argon2h.uasset", 
+                        "hash": "0f75223a864823f62b8b91474f7c98791a1f1b93340aa0d3d7224ffded91f27e789e17af26b2c8f6a5b1905e7110ac300b8e422e78021540ea83cfb1b1c3bc28", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Pickaxe/Rune_Pickaxe_Player_RSbad_2025-05-03_01-44-01.uasset", 
+                        "hash": "44652b27bd2a536360848173df6b8360248ec8a3394268ffde5d19e0beaa29a9c4af235ada9a81590e2fab900bf9c86d0ce2860eb9c477471f3bbde328755f2f", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/RuneHasta.uasset", 
+                        "hash": "4c33fa0c11c34e5451e264340dc6f750b0b7a42527354aa6b45ef7098c0a260c1a4a55087722f88b41e063b7813fc7de1bf7ee9c8238ab1313a550fdf3ce3673", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/One-Handed-Spear/BlackHasta.uasset", 
+                        "hash": "37058a492c33f57173c298bf76af2e956756f54f90c7199ec37836d586d3d5a2c80b70360c414a6d5a6ab708d3e91e7ab00a320d5be438892815a98dda48cc09", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Maul/Anchor_Maul_Skin.uasset", 
+                        "hash": "a475129b530efb9e97ff6aee3c7f4a30871ebc9a95d7a644430397ae88eeffdcde1b020b74dffdeb38502d9172ab0962ef7cfcb6fcfd1ea80a0f0a7827972d25", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Knife/WolfBane.uasset", 
+                        "hash": "9187ea10b494bdee99ee09c6b86df15c38babcfb776c66c317cbbbf8456329cf3c33a397c3ec773d7cdd7e9d3ffa126c36b0bb5d29bd46f07119f6be53a2d858", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Heavy_Mace/Bronze_HeavyMace.uasset", 
+                        "hash": "a28cfd74f3f7878862fe075308a5cc279ba3cd65d63a757d0bc9f8d228ce4b08a6e3a73245f1e416f1ca363ee5f34741830abae8ef9897057113cb7213d2698e", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/US_Rune_Scimitar.uasset", 
+                        "hash": "23a23e4b8e94907ef9a856c8ece7b587823bf54356aee707a3659c74702ec9839d014e8c8d6db07c44ae5589aee97cc369914337fe63bd32ee8983e37b531732", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Falchion/Blurite_Scimitar.uasset", 
                         "hash": "20e861e9ddd4d82f55218001ef3e3d79ca2b38877ff4c9926acc2fe972c5f0dc380a82fb2a480d8ff37a861e3b4a691e3e0c7e7b4f4b67c49abbaeaa25b80adf", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/xx-Runescape-last/Meshes/Dagger/Machete.uasset", 
                         "hash": "3371a4c8b804dde8027eaed90d3604c75a33d7bd926fbc3ae610a6f343092568beb70b643ea8922403f1e1fa659fb904aae60f8ff3e3bfd2c57495d49cef3a11", 
                         "object_class": "StaticMesh", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]

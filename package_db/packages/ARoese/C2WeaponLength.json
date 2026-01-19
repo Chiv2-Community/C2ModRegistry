@@ -38,33 +38,42 @@
                         "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength.umap", 
                         "hash": "84bf474fe91993e6897db36e9df52b84af6d6d4fde46beb58412b3c1a850bbbc7cdc74f99033f10664a075b518f92dfa6d1dd81de3620c46987f25eebd6354f3", 
                         "object_class": "TBLLevelScriptActor", 
-                        "gamemode": null
+                        "class_path": null, 
+                        "game_mode": "Mode_FFA_C", 
+                        "map_name": "Example map", 
+                        "defending_faction": "EFaction::FFA", 
+                        "attacking_faction": null, 
+                        "game_mode_type": "EGameModeType::FreeForAll"
                     }
                 ], 
                 "replacements": [], 
                 "arbitrary": [
                     {
-                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset", 
-                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc", 
-                        "object_class": "Actor", 
+                        "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength_BuiltData.uasset", 
+                        "hash": "b623e2d92f20dc98d7952b9f4768d46ab2b03998f70e06d6304c180b549344c4485a21946a7cb58f179ebc0b13c99674817ac52cef0ddce344dbcf3f19277a8c", 
+                        "object_class": "MapBuildDataRegistry", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset", 
                         "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9", 
                         "object_class": "Actor", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength_BuiltData.uasset", 
-                        "hash": "b623e2d92f20dc98d7952b9f4768d46ab2b03998f70e06d6304c180b549344c4485a21946a7cb58f179ebc0b13c99674817ac52cef0ddce344dbcf3f19277a8c", 
-                        "object_class": "MapBuildDataRegistry", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/Maps/weaponLength/WeaponData.uasset", 
                         "hash": "227385a3f7c388980f58d043c81c84efd4ad745073bc06451090fdc089f008b18f34c8c0cf2687147d6d3f37750b2fdc6a5d33c21f7ae5916c10ae05358aa840", 
                         "object_class": "SaveGame", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset", 
+                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -96,33 +105,42 @@
                         "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength.umap", 
                         "hash": "84bf474fe91993e6897db36e9df52b84af6d6d4fde46beb58412b3c1a850bbbc7cdc74f99033f10664a075b518f92dfa6d1dd81de3620c46987f25eebd6354f3", 
                         "object_class": "TBLLevelScriptActor", 
-                        "gamemode": null
+                        "class_path": null, 
+                        "game_mode": "Mode_FFA_C", 
+                        "map_name": "Example map", 
+                        "defending_faction": "EFaction::FFA", 
+                        "attacking_faction": null, 
+                        "game_mode_type": "EGameModeType::FreeForAll"
                     }
                 ], 
                 "replacements": [], 
                 "arbitrary": [
                     {
-                        "path": "TBL/Content/Mods/Maps/weaponLength/WeaponData.uasset", 
-                        "hash": "227385a3f7c388980f58d043c81c84efd4ad745073bc06451090fdc089f008b18f34c8c0cf2687147d6d3f37750b2fdc6a5d33c21f7ae5916c10ae05358aa840", 
-                        "object_class": "SaveGame", 
-                        "mod_name": null
-                    }, 
-                    {
                         "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset", 
                         "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc", 
                         "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/Maps/weaponLength/WeaponData.uasset", 
+                        "hash": "227385a3f7c388980f58d043c81c84efd4ad745073bc06451090fdc089f008b18f34c8c0cf2687147d6d3f37750b2fdc6a5d33c21f7ae5916c10ae05358aa840", 
+                        "object_class": "SaveGame", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset", 
                         "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9", 
                         "object_class": "Actor", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/Maps/weaponLength/FFA_WeaponLength_BuiltData.uasset", 
                         "hash": "b623e2d92f20dc98d7952b9f4768d46ab2b03998f70e06d6304c180b549344c4485a21946a7cb58f179ebc0b13c99674817ac52cef0ddce344dbcf3f19277a8c", 
                         "object_class": "MapBuildDataRegistry", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -153,7 +171,12 @@
                         "path": "TBL/Content/Mods/Maps/weaponLength/WeaponLength.umap", 
                         "hash": "cc161fc2b3e7a455801ea7fcdccdcabbf83ce2f92dc9a3ecc4c1acdffb5852875983fc32e69dacd221adcfe610e7d2556aa1219e8869cca8cb98dd30028cea72", 
                         "object_class": "TBLLevelScriptActor", 
-                        "gamemode": null
+                        "class_path": null, 
+                        "game_mode": "Mode_FFA_C", 
+                        "map_name": "Example map", 
+                        "defending_faction": "EFaction::FFA", 
+                        "attacking_faction": null, 
+                        "game_mode_type": "EGameModeType::FreeForAll"
                     }
                 ], 
                 "replacements": [], 
@@ -162,6 +185,7 @@
                         "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset", 
                         "hash": "02a1728ba56af453d5e5792326600fd0d11ffb9797246a1e4ac5572d7e60232fc09f2aaa5222b038215de74a5969ec730003666ee1fe871e82a2d5004d76c87c", 
                         "object_class": "Actor", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]

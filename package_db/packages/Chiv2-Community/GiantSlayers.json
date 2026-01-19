@@ -44,6 +44,7 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers_Marker.uasset", 
                         "hash": "c20fd3795177d1a0e8ecf8e523062d45585e50e4133353ba21dd7d2c859133986c20f6d8536e0f1dd88357067822bf405b8f1924a05c46b927adcc3968e8dea7", 
                         "object_class": "DA_ModMarker_C", 
+                        "class_path": null, 
                         "associated_blueprints": [
                             "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset"
                         ]
@@ -54,6 +55,7 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
                         "hash": "4b3dfff617261602f95e10335440699466730c3526728ab8b03d390f8c686709e95ef23234babaa8398b0632234005503ee3f81e42f017ac5bfa66dd7d25ec87", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": "/Game/Mods/AgMods/GiantSlayers/GiantSlayers.GiantSlayers_C", 
                         "mod_name": "GiantSlayers", 
                         "version": "1.0.0", 
                         "author": "Nihi for ArgonSDK", 
@@ -61,6 +63,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -72,147 +75,171 @@
                 "replacements": [], 
                 "arbitrary": [
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
-                        "hash": "f346e10b72abdc74c7b481b483f01413eb9a7f2170ca22fd73f4c3aa1dbd664e5c0f2680e4c70453ee5a236937eddc150a9023f3222018555f92c6b3958a3be1", 
-                        "object_class": "Carryable_Trumpet_C", 
-                        "mod_name": null
-                    }, 
-                    {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactABL.uasset", 
                         "hash": "deed2e0d44d122a8cedc063a65454dfd3a1d145a649a003717a9ead1f189b88b98ab717df29588f5b0d21da4db87fd2abcd6faaa01b1fe2c018740935e05653a", 
                         "object_class": "BaseSpecialItemAbility_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_WorldInteractionComponent.uasset", 
-                        "hash": "246b3fdfd9e98e8f18b34588ef97420715494997e3de321ca9a41f8b60b551e40d3bee0960a22fd59286eb175a2e09f56081fb8b4aea4ffdd9faa4e3e47cc2a7", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
-                        "hash": "0cbdc36b0c98dea01c8710374212afaf47d3f0d5c97ff0f4c48ebdd39b5fee8efa1faf6dee66fb429a7a83ddc20bd791faed4641987a469eb347c0b007001d30", 
-                        "object_class": "Carryable_Warhorn_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_HealthBarComponent.uasset", 
-                        "hash": "4016816333f789130823ba3da4fbf44a7298c0390c22422ad5de07755c0353ede49d6b79e2ae3b36d71201c754b63a2f140da5c0bb73b59705ea0aa9e7990aab", 
-                        "object_class": "WidgetComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
-                        "hash": "eddd5eb2238e346368abc2049f5260ce302872845b15444c7adfbd15a5f3b05134e47f0005cf27f3c345c6ad8a9bf417d3ebc0cd48e5d6cce5f40eed22178528", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_GiantHealthBar.uasset", 
-                        "hash": "7d4ac826526487e8eeb3527d46387db2ddcd245c46311066cca417d8785edc3d305f28438d2dfa83b703bd27366dca3fda1f00cc79ed173f43ca3e4ada324209", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
-                        "hash": "61f181f2fc4622332cbb3a4f40f4e16d33291ca4aee87899d03b1b297a22c90cea2879410ee4c20047e0bbcc2ac7864ee04159dcfd07fce02b4dd2b34584dbdc", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
-                        "hash": "e529f05600e896f03a10369852e2d25d5f58694999c5acf97c0e16ee5fd4f38be8a434659ae940f3c30619e27926df2a6aff628e0bd11f2c16707f106a432df7", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
-                        "hash": "691d7e210d5fc4a7f6a4a49abc11375317b7e8658131c8be1ce14ed76c7c6224b032d0c0cd805bf4cb628d648dab6caee962e69485fe343927bce02aaa7a2e61", 
-                        "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
                         "hash": "f19188d9b40634736925cc8152d33bc917911f8815450fbe4e2045e64358eeae43096c541e3bd93dad620591b9e3bfe672fce803c103a8c1bd1d78fe169d94c4", 
                         "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
-                        "hash": "02077101ee65e580dfc5439f0805212d7051ae44392ecea479b61b54f679ee466dd31ce456f64367ae090acd2c3cb05fd73ce84aef61b281a6c1016092080195", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
-                        "hash": "33a50c2cf4f8d2c75cca3bbe5ab1107c97d1090a351de17c292b90e51cfce94ff57fb4313719d1618b525fd93380c1d947f6a57c47ccb5244f34191f752c9849", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
-                        "hash": "5df2fabaecc1c3fab261e4b24aefc669b8a81d4019d12d30931ba799bf5f41ccde95c522e2327189123d228e153f3ae9dc21f1c35af130dbfce56761d27f4a8e", 
-                        "object_class": "RadialForceActor", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
-                        "hash": "af90c1f04bfd8a4a911a479c21a943d9143fe4be0d970ec543a84c59dcc73d166da96ecdc09e41f6818775c46ee165b12b8429d229706854b7dff49577eeeb90", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
-                        "hash": "489b60d5ad56889c9e835b246b33f6bb2ae14f63e079ba1841fee5174978c72304cf252292a6a517fe6b5929018dad5f4f26957196770daff53b61129029b39e", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
-                        "hash": "73e0ea1955ce69053706b950e3a383c33357ba77c4009cbf91002ec7c2c455eb0a6ab5d0860cbe5f421f4b3e0da57dca9d2c9ef9ae51e77a150535c1f7273710", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
-                        "hash": "b50ef23650b351d1ae9b9ac0af631d54ec4945e7071f35ac61603ab6a2b3f96620821c74136495802567dadb0c19cba5df0da5ae22d09c3a8c3601aab48246bb", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
-                        "hash": "7c1c7733e6fcebc165d83a23c21d459b9156481804d3214cca55f292240e5335bcf860f2d455ce7b6a88aaea22d104dc544810361e672c742462fbead30876b8", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
-                        "hash": "676a2746583f4e933db5c5e0bf318119e7ba2701dfb4bef9c113b5f22b9039f9fbfa1a5f36452fa51d8eada0808affc3df6042f70c6cb5609be061cc125519eb", 
-                        "object_class": "StringTable", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
-                        "hash": "5775b8bee7b1b56df240a84f207ab878c4904bf833c5fb5c0c019fbcb407cc6b7d3f773b89adf80a453b60713169e92fb3ed3fac42d3480cc45b83fb71997dc3", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
-                        "hash": "5c373dd710c3e583c5181e8c24e51898990b24ec70811d877fa32b54c23f5ad772595367527ace53cc4cb42042c6b39e343e5fe738c70cfad2d2e81a4ea5ce35", 
-                        "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
                         "hash": "1bec132cd29a8cda656c8635e4e3f5d0d26d5c5e3c5276806adbdc97064a985960fa3a611245d2b115069a860e74d3937d10dddf0a1b3eefdf1d22d56561bcfb", 
                         "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
+                        "hash": "f346e10b72abdc74c7b481b483f01413eb9a7f2170ca22fd73f4c3aa1dbd664e5c0f2680e4c70453ee5a236937eddc150a9023f3222018555f92c6b3958a3be1", 
+                        "object_class": "Carryable_Trumpet_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
+                        "hash": "0cbdc36b0c98dea01c8710374212afaf47d3f0d5c97ff0f4c48ebdd39b5fee8efa1faf6dee66fb429a7a83ddc20bd791faed4641987a469eb347c0b007001d30", 
+                        "object_class": "Carryable_Warhorn_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
+                        "hash": "5c373dd710c3e583c5181e8c24e51898990b24ec70811d877fa32b54c23f5ad772595367527ace53cc4cb42042c6b39e343e5fe738c70cfad2d2e81a4ea5ce35", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
+                        "hash": "61f181f2fc4622332cbb3a4f40f4e16d33291ca4aee87899d03b1b297a22c90cea2879410ee4c20047e0bbcc2ac7864ee04159dcfd07fce02b4dd2b34584dbdc", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
+                        "hash": "e529f05600e896f03a10369852e2d25d5f58694999c5acf97c0e16ee5fd4f38be8a434659ae940f3c30619e27926df2a6aff628e0bd11f2c16707f106a432df7", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
+                        "hash": "33a50c2cf4f8d2c75cca3bbe5ab1107c97d1090a351de17c292b90e51cfce94ff57fb4313719d1618b525fd93380c1d947f6a57c47ccb5244f34191f752c9849", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
+                        "hash": "489b60d5ad56889c9e835b246b33f6bb2ae14f63e079ba1841fee5174978c72304cf252292a6a517fe6b5929018dad5f4f26957196770daff53b61129029b39e", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
+                        "hash": "af90c1f04bfd8a4a911a479c21a943d9143fe4be0d970ec543a84c59dcc73d166da96ecdc09e41f6818775c46ee165b12b8429d229706854b7dff49577eeeb90", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
+                        "hash": "676a2746583f4e933db5c5e0bf318119e7ba2701dfb4bef9c113b5f22b9039f9fbfa1a5f36452fa51d8eada0808affc3df6042f70c6cb5609be061cc125519eb", 
+                        "object_class": "StringTable", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
+                        "hash": "7c1c7733e6fcebc165d83a23c21d459b9156481804d3214cca55f292240e5335bcf860f2d455ce7b6a88aaea22d104dc544810361e672c742462fbead30876b8", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/BPF_GiantSlayers.uasset", 
                         "hash": "d9ae49c6e8e19d1185ce48377300b042820a172569bb650447f2a4b61e418c0143aa3a290aa05c28efe5ff8f72a0436f09ca06be69b8d4637c7763fc2405b299", 
                         "object_class": "BlueprintFunctionLibrary", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_WorldInteractionComponent.uasset", 
+                        "hash": "246b3fdfd9e98e8f18b34588ef97420715494997e3de321ca9a41f8b60b551e40d3bee0960a22fd59286eb175a2e09f56081fb8b4aea4ffdd9faa4e3e47cc2a7", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
+                        "hash": "691d7e210d5fc4a7f6a4a49abc11375317b7e8658131c8be1ce14ed76c7c6224b032d0c0cd805bf4cb628d648dab6caee962e69485fe343927bce02aaa7a2e61", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
+                        "hash": "73e0ea1955ce69053706b950e3a383c33357ba77c4009cbf91002ec7c2c455eb0a6ab5d0860cbe5f421f4b3e0da57dca9d2c9ef9ae51e77a150535c1f7273710", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
+                        "hash": "5775b8bee7b1b56df240a84f207ab878c4904bf833c5fb5c0c019fbcb407cc6b7d3f773b89adf80a453b60713169e92fb3ed3fac42d3480cc45b83fb71997dc3", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_HealthBarComponent.uasset", 
+                        "hash": "4016816333f789130823ba3da4fbf44a7298c0390c22422ad5de07755c0353ede49d6b79e2ae3b36d71201c754b63a2f140da5c0bb73b59705ea0aa9e7990aab", 
+                        "object_class": "WidgetComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
+                        "hash": "eddd5eb2238e346368abc2049f5260ce302872845b15444c7adfbd15a5f3b05134e47f0005cf27f3c345c6ad8a9bf417d3ebc0cd48e5d6cce5f40eed22178528", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
+                        "hash": "5df2fabaecc1c3fab261e4b24aefc669b8a81d4019d12d30931ba799bf5f41ccde95c522e2327189123d228e153f3ae9dc21f1c35af130dbfce56761d27f4a8e", 
+                        "object_class": "RadialForceActor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
+                        "hash": "b50ef23650b351d1ae9b9ac0af631d54ec4945e7071f35ac61603ab6a2b3f96620821c74136495802567dadb0c19cba5df0da5ae22d09c3a8c3601aab48246bb", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_GiantHealthBar.uasset", 
+                        "hash": "7d4ac826526487e8eeb3527d46387db2ddcd245c46311066cca417d8785edc3d305f28438d2dfa83b703bd27366dca3fda1f00cc79ed173f43ca3e4ada324209", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
+                        "hash": "02077101ee65e580dfc5439f0805212d7051ae44392ecea479b61b54f679ee466dd31ce456f64367ae090acd2c3cb05fd73ce84aef61b281a6c1016092080195", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -247,6 +274,7 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
                         "hash": "bf2c9fcb35c2d0a512891c33b3b721ca040ccac060252e335bcac502bb8fe494fe378b7644d9499561a55f197a7c5b0e76ba2965612cf68b38457f40f177aea5", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "GiantSlayers", 
                         "version": "1.0.0", 
                         "author": "Nihi for ArgonSDK", 
@@ -254,6 +282,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -265,153 +294,178 @@
                 "replacements": [], 
                 "arbitrary": [
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
-                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactABL.uasset", 
                         "hash": "acd0fd5ccfdaa553600f82a0f6b554fd4c724e071b82d394a75d749bc658a2193ed55d4220409f7b6b9471999edfe4bd58b18893ca7454415c6dcdbe9d1c8d32", 
                         "object_class": "BaseSpecialItemAbility_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
-                        "hash": "9988c1592229a8536560dcb5bbd42ffce0c88877ecff74ee6b5a747b3ce0f924a5fff97eb1db4421b580eef4ca8ba50e1c5e473256db9ca085ba9c91a8d1621c", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
-                        "hash": "5e153082f315f16bda96f998da816113d8f7b16695b8d20a1dcffa33751cb46a0f8fb31148d144faf440f727c8d4bf164bd0a8a10f021da31817c715bf21ab0b", 
-                        "object_class": "Carryable_Trumpet_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_GiantHealthBar.uasset", 
-                        "hash": "a5d952c4ae43188ac87b92ab6b41654106dad94df6e431dbfdc219a4e02ffba7f20b3246146b52ba4a3014997dee1995a74948642c0907c98a57bb5c601d3f91", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
-                        "hash": "4310edde9ff499f918dd8ccf70e0d8fbcd2c1e2e2ea6c4afc03034100e7f53d31fff3748ff564fa222501416fb747add58749826510c9a71f6b006be605fe107", 
-                        "object_class": "Carryable_Warhorn_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
-                        "hash": "53f4d80432d18665df2a93a442dc7432d1d509c626374cc102a7dedef5a9aaff2ca9f016fd66dd97caa1fce19d0693f992358673a45ebab28046cc5684a7a3d5", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_WorldInteractionComponent.uasset", 
-                        "hash": "c21aaab2b39d4f063a8eb4c7419b5ace5b83d77fba2bcb5cb4ea7ab14b65eabd9cc3a32ecbea80c6d34460139744aad20d90c22f19d2dcffdbb0634347b3e354", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
-                        "hash": "7a9e1df8e036ff08be1520808820ce02b048d9eaf68b1c8e41b4ecc5e048a45197b7107a75737a0057992848ae44ed810203120f3a0495b51ef1d0665f9621e1", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
-                        "hash": "bf2c9fcb35c2d0a512891c33b3b721ca040ccac060252e335bcac502bb8fe494fe378b7644d9499561a55f197a7c5b0e76ba2965612cf68b38457f40f177aea5", 
-                        "object_class": "ArgonSDKModBase_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
-                        "hash": "146ebac33dfa63317d975b40231e7a4a8eb0c45b7d8574c9cedab87488da5e276d2d6216a7e807f1fb5ef624c44f823edda12c796598ce61c7021474171f90de", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_HealthBarComponent.uasset", 
-                        "hash": "0b8383f33b96d6984a27f614ba2e8046748975c6bb0cb34d1d55faad5885a994b0730ec92f9ebb66ab4fca2459ed163273cee51da46b6ba410cc2edea8a591c4", 
-                        "object_class": "WidgetComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
-                        "hash": "9647528a09614b6389a26bf13822a7653a1d39085871a98e00bc69883b7d6327ec3e216c325c8f9046e2b4d1520fdc6b16e50fc4ba0a149f7a7341bfcd93ed14", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
-                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
-                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
-                        "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
-                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/BPF_GiantSlayers.uasset", 
-                        "hash": "63f09235c0ed477d3e600757b7ac2a8be123095bc9b653eec6d132aab0e6dd436cca5bc69b68e7babe62b256d762b8f38a722f53b938893de713645503fbc906", 
-                        "object_class": "BlueprintFunctionLibrary", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
                         "hash": "7fade9bb393e8269cf0115911fb530750c44afdcf5c627675ce63a1ff32c824f1f8474ca4e60075d152e4fbf13799e303b579a2fbf76bdb17936943102d149cc", 
                         "object_class": "UserWidget", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
-                        "hash": "d4db3f055d922b2eda5ed242c0eabc9998987ffe408f3e03c8cb1cf90e1d96ea1d055a428527d9bfd4323949384698124ac25ecf573cf4e8865e24866620948f", 
-                        "object_class": "CurveFloat", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
+                        "hash": "5e153082f315f16bda96f998da816113d8f7b16695b8d20a1dcffa33751cb46a0f8fb31148d144faf440f727c8d4bf164bd0a8a10f021da31817c715bf21ab0b", 
+                        "object_class": "Carryable_Trumpet_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
-                        "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
-                        "object_class": "CurveFloat", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
+                        "hash": "bf2c9fcb35c2d0a512891c33b3b721ca040ccac060252e335bcac502bb8fe494fe378b7644d9499561a55f197a7c5b0e76ba2965612cf68b38457f40f177aea5", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
-                        "hash": "59ceb9bae594ec880257c4e86200547dc7d73271654b1581fbe26ef696f07d63ee2a933e998963b1b5124ea4e19609985743f9d2bf917b92256d4402638c619a", 
-                        "object_class": "ActorComponent", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
+                        "hash": "4310edde9ff499f918dd8ccf70e0d8fbcd2c1e2e2ea6c4afc03034100e7f53d31fff3748ff564fa222501416fb747add58749826510c9a71f6b006be605fe107", 
+                        "object_class": "Carryable_Warhorn_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_HealthBarComponent.uasset", 
+                        "hash": "0b8383f33b96d6984a27f614ba2e8046748975c6bb0cb34d1d55faad5885a994b0730ec92f9ebb66ab4fca2459ed163273cee51da46b6ba410cc2edea8a591c4", 
+                        "object_class": "WidgetComponent", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
                         "hash": "55a71700a31cab5e4e2ccfc1f8d4334320f38b9d256e5661820f3b1744e0247e7114936e36b06ea141c870ed6945939caf2fc1dce11d822d17f286f4c956caea", 
                         "object_class": "SoundWave", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
-                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
-                        "object_class": "StringTable", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
+                        "hash": "7a9e1df8e036ff08be1520808820ce02b048d9eaf68b1c8e41b4ecc5e048a45197b7107a75737a0057992848ae44ed810203120f3a0495b51ef1d0665f9621e1", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
+                        "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
+                        "hash": "146ebac33dfa63317d975b40231e7a4a8eb0c45b7d8574c9cedab87488da5e276d2d6216a7e807f1fb5ef624c44f823edda12c796598ce61c7021474171f90de", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
+                        "hash": "59ceb9bae594ec880257c4e86200547dc7d73271654b1581fbe26ef696f07d63ee2a933e998963b1b5124ea4e19609985743f9d2bf917b92256d4402638c619a", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
+                        "hash": "53f4d80432d18665df2a93a442dc7432d1d509c626374cc102a7dedef5a9aaff2ca9f016fd66dd97caa1fce19d0693f992358673a45ebab28046cc5684a7a3d5", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_WorldInteractionComponent.uasset", 
+                        "hash": "c21aaab2b39d4f063a8eb4c7419b5ace5b83d77fba2bcb5cb4ea7ab14b65eabd9cc3a32ecbea80c6d34460139744aad20d90c22f19d2dcffdbb0634347b3e354", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
+                        "hash": "d4db3f055d922b2eda5ed242c0eabc9998987ffe408f3e03c8cb1cf90e1d96ea1d055a428527d9bfd4323949384698124ac25ecf573cf4e8865e24866620948f", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
+                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
+                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
+                        "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
+                        "hash": "9988c1592229a8536560dcb5bbd42ffce0c88877ecff74ee6b5a747b3ce0f924a5fff97eb1db4421b580eef4ca8ba50e1c5e473256db9ca085ba9c91a8d1621c", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
                         "hash": "667032f220ac8d72ff10b5f6b6859e2c62efea14b9acfae4143a69667998b8197918c49d01e5cfaf30addca3c7130b2f009a7f830f08cb7944a7358b9cdcdc55", 
                         "object_class": "RadialForceActor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/BPF_GiantSlayers.uasset", 
+                        "hash": "63f09235c0ed477d3e600757b7ac2a8be123095bc9b653eec6d132aab0e6dd436cca5bc69b68e7babe62b256d762b8f38a722f53b938893de713645503fbc906", 
+                        "object_class": "BlueprintFunctionLibrary", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
+                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
+                        "hash": "9647528a09614b6389a26bf13822a7653a1d39085871a98e00bc69883b7d6327ec3e216c325c8f9046e2b4d1520fdc6b16e50fc4ba0a149f7a7341bfcd93ed14", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
+                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
+                        "object_class": "StringTable", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_GiantHealthBar.uasset", 
+                        "hash": "a5d952c4ae43188ac87b92ab6b41654106dad94df6e431dbfdc219a4e02ffba7f20b3246146b52ba4a3014997dee1995a74948642c0907c98a57bb5c601d3f91", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
+                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -446,6 +500,7 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
                         "hash": "487d68ddb2be10d72760dc12b04ea4c77025e6ea32716839eddd9212ad8a8dd7da98882ba1d2a6eb7fa8f6db6a185fe402278a093a6ce10873a60a58b1bb9a95", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "GiantSlayers", 
                         "version": "1.0.0", 
                         "author": "Nihi for ArgonSDK", 
@@ -453,6 +508,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -467,150 +523,175 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
                         "hash": "5e153082f315f16bda96f998da816113d8f7b16695b8d20a1dcffa33751cb46a0f8fb31148d144faf440f727c8d4bf164bd0a8a10f021da31817c715bf21ab0b", 
                         "object_class": "Carryable_Trumpet_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactABL.uasset", 
-                        "hash": "acd0fd5ccfdaa553600f82a0f6b554fd4c724e071b82d394a75d749bc658a2193ed55d4220409f7b6b9471999edfe4bd58b18893ca7454415c6dcdbe9d1c8d32", 
-                        "object_class": "BaseSpecialItemAbility_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
-                        "hash": "4310edde9ff499f918dd8ccf70e0d8fbcd2c1e2e2ea6c4afc03034100e7f53d31fff3748ff564fa222501416fb747add58749826510c9a71f6b006be605fe107", 
-                        "object_class": "Carryable_Warhorn_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
-                        "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
-                        "hash": "487d68ddb2be10d72760dc12b04ea4c77025e6ea32716839eddd9212ad8a8dd7da98882ba1d2a6eb7fa8f6db6a185fe402278a093a6ce10873a60a58b1bb9a95", 
-                        "object_class": "ArgonSDKModBase_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
-                        "hash": "146ebac33dfa63317d975b40231e7a4a8eb0c45b7d8574c9cedab87488da5e276d2d6216a7e807f1fb5ef624c44f823edda12c796598ce61c7021474171f90de", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
-                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
-                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
-                        "object_class": "StringTable", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
-                        "hash": "59ceb9bae594ec880257c4e86200547dc7d73271654b1581fbe26ef696f07d63ee2a933e998963b1b5124ea4e19609985743f9d2bf917b92256d4402638c619a", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
-                        "hash": "667032f220ac8d72ff10b5f6b6859e2c62efea14b9acfae4143a69667998b8197918c49d01e5cfaf30addca3c7130b2f009a7f830f08cb7944a7358b9cdcdc55", 
-                        "object_class": "RadialForceActor", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/BPF_GiantSlayers.uasset", 
-                        "hash": "63f09235c0ed477d3e600757b7ac2a8be123095bc9b653eec6d132aab0e6dd436cca5bc69b68e7babe62b256d762b8f38a722f53b938893de713645503fbc906", 
-                        "object_class": "BlueprintFunctionLibrary", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_HealthBarComponent.uasset", 
-                        "hash": "0b8383f33b96d6984a27f614ba2e8046748975c6bb0cb34d1d55faad5885a994b0730ec92f9ebb66ab4fca2459ed163273cee51da46b6ba410cc2edea8a591c4", 
-                        "object_class": "WidgetComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
-                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
-                        "hash": "7fade9bb393e8269cf0115911fb530750c44afdcf5c627675ce63a1ff32c824f1f8474ca4e60075d152e4fbf13799e303b579a2fbf76bdb17936943102d149cc", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
-                        "hash": "7a9e1df8e036ff08be1520808820ce02b048d9eaf68b1c8e41b4ecc5e048a45197b7107a75737a0057992848ae44ed810203120f3a0495b51ef1d0665f9621e1", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
-                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
-                        "hash": "d4db3f055d922b2eda5ed242c0eabc9998987ffe408f3e03c8cb1cf90e1d96ea1d055a428527d9bfd4323949384698124ac25ecf573cf4e8865e24866620948f", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_WorldInteractionComponent.uasset", 
-                        "hash": "c21aaab2b39d4f063a8eb4c7419b5ace5b83d77fba2bcb5cb4ea7ab14b65eabd9cc3a32ecbea80c6d34460139744aad20d90c22f19d2dcffdbb0634347b3e354", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
-                        "hash": "53f4d80432d18665df2a93a442dc7432d1d509c626374cc102a7dedef5a9aaff2ca9f016fd66dd97caa1fce19d0693f992358673a45ebab28046cc5684a7a3d5", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
-                        "hash": "9647528a09614b6389a26bf13822a7653a1d39085871a98e00bc69883b7d6327ec3e216c325c8f9046e2b4d1520fdc6b16e50fc4ba0a149f7a7341bfcd93ed14", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_GiantHealthBar.uasset", 
-                        "hash": "a5d952c4ae43188ac87b92ab6b41654106dad94df6e431dbfdc219a4e02ffba7f20b3246146b52ba4a3014997dee1995a74948642c0907c98a57bb5c601d3f91", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
-                        "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
-                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
-                        "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
                         "hash": "9988c1592229a8536560dcb5bbd42ffce0c88877ecff74ee6b5a747b3ce0f924a5fff97eb1db4421b580eef4ca8ba50e1c5e473256db9ca085ba9c91a8d1621c", 
                         "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
+                        "hash": "d4db3f055d922b2eda5ed242c0eabc9998987ffe408f3e03c8cb1cf90e1d96ea1d055a428527d9bfd4323949384698124ac25ecf573cf4e8865e24866620948f", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
+                        "hash": "9647528a09614b6389a26bf13822a7653a1d39085871a98e00bc69883b7d6327ec3e216c325c8f9046e2b4d1520fdc6b16e50fc4ba0a149f7a7341bfcd93ed14", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
+                        "hash": "4310edde9ff499f918dd8ccf70e0d8fbcd2c1e2e2ea6c4afc03034100e7f53d31fff3748ff564fa222501416fb747add58749826510c9a71f6b006be605fe107", 
+                        "object_class": "Carryable_Warhorn_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_HealthBarComponent.uasset", 
+                        "hash": "0b8383f33b96d6984a27f614ba2e8046748975c6bb0cb34d1d55faad5885a994b0730ec92f9ebb66ab4fca2459ed163273cee51da46b6ba410cc2edea8a591c4", 
+                        "object_class": "WidgetComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_GiantHealthBar.uasset", 
+                        "hash": "a5d952c4ae43188ac87b92ab6b41654106dad94df6e431dbfdc219a4e02ffba7f20b3246146b52ba4a3014997dee1995a74948642c0907c98a57bb5c601d3f91", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
+                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/BPF_GiantSlayers.uasset", 
+                        "hash": "63f09235c0ed477d3e600757b7ac2a8be123095bc9b653eec6d132aab0e6dd436cca5bc69b68e7babe62b256d762b8f38a722f53b938893de713645503fbc906", 
+                        "object_class": "BlueprintFunctionLibrary", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
+                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
+                        "hash": "7a9e1df8e036ff08be1520808820ce02b048d9eaf68b1c8e41b4ecc5e048a45197b7107a75737a0057992848ae44ed810203120f3a0495b51ef1d0665f9621e1", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
+                        "hash": "146ebac33dfa63317d975b40231e7a4a8eb0c45b7d8574c9cedab87488da5e276d2d6216a7e807f1fb5ef624c44f823edda12c796598ce61c7021474171f90de", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
+                        "hash": "487d68ddb2be10d72760dc12b04ea4c77025e6ea32716839eddd9212ad8a8dd7da98882ba1d2a6eb7fa8f6db6a185fe402278a093a6ce10873a60a58b1bb9a95", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
+                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactABL.uasset", 
+                        "hash": "acd0fd5ccfdaa553600f82a0f6b554fd4c724e071b82d394a75d749bc658a2193ed55d4220409f7b6b9471999edfe4bd58b18893ca7454415c6dcdbe9d1c8d32", 
+                        "object_class": "BaseSpecialItemAbility_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
+                        "hash": "667032f220ac8d72ff10b5f6b6859e2c62efea14b9acfae4143a69667998b8197918c49d01e5cfaf30addca3c7130b2f009a7f830f08cb7944a7358b9cdcdc55", 
+                        "object_class": "RadialForceActor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
+                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
                         "hash": "55a71700a31cab5e4e2ccfc1f8d4334320f38b9d256e5661820f3b1744e0247e7114936e36b06ea141c870ed6945939caf2fc1dce11d822d17f286f4c956caea", 
                         "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_WorldInteractionComponent.uasset", 
+                        "hash": "c21aaab2b39d4f063a8eb4c7419b5ace5b83d77fba2bcb5cb4ea7ab14b65eabd9cc3a32ecbea80c6d34460139744aad20d90c22f19d2dcffdbb0634347b3e354", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
+                        "hash": "53f4d80432d18665df2a93a442dc7432d1d509c626374cc102a7dedef5a9aaff2ca9f016fd66dd97caa1fce19d0693f992358673a45ebab28046cc5684a7a3d5", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
+                        "hash": "59ceb9bae594ec880257c4e86200547dc7d73271654b1581fbe26ef696f07d63ee2a933e998963b1b5124ea4e19609985743f9d2bf917b92256d4402638c619a", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
+                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
+                        "object_class": "StringTable", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
+                        "hash": "7fade9bb393e8269cf0115911fb530750c44afdcf5c627675ce63a1ff32c824f1f8474ca4e60075d152e4fbf13799e303b579a2fbf76bdb17936943102d149cc", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
+                        "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
+                        "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -645,6 +726,7 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
                         "hash": "2edd7f4679dc3ad407e41f493d829a1aa21e0dcae7b0103128ada171099e58bac14280a4a8d4d573f60b0882088d2138c3ba8f9d52ed805785ba44d0f0928044", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "GiantSlayers", 
                         "version": "1.0.0", 
                         "author": "Nihi for ArgonSDK", 
@@ -652,6 +734,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -663,129 +746,150 @@
                 "replacements": [], 
                 "arbitrary": [
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
-                        "hash": "4310edde9ff499f918dd8ccf70e0d8fbcd2c1e2e2ea6c4afc03034100e7f53d31fff3748ff564fa222501416fb747add58749826510c9a71f6b006be605fe107", 
-                        "object_class": "Carryable_Warhorn_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
-                        "hash": "9988c1592229a8536560dcb5bbd42ffce0c88877ecff74ee6b5a747b3ce0f924a5fff97eb1db4421b580eef4ca8ba50e1c5e473256db9ca085ba9c91a8d1621c", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
-                        "hash": "56de10342fe620a3ce66c35b5da9cf4079a8825163e582fa8a44174d0df5bba971ccc4e82df013089f4f3ccabd3da92415d9d8137526424bb2b29d786f8e209f", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
-                        "hash": "327c2eff28d53b9d2a3f69d3718d1ab4e74969c8fc0103d8ff5dbdacfe2aa95309e6c85d234996973816dbbff3eaa19f0e65dcf45d77254ed3cccfef381cdeca", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
-                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
-                        "hash": "2edd7f4679dc3ad407e41f493d829a1aa21e0dcae7b0103128ada171099e58bac14280a4a8d4d573f60b0882088d2138c3ba8f9d52ed805785ba44d0f0928044", 
-                        "object_class": "ArgonSDKModBase_C", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
+                        "hash": "2dfa359339ae2aa268913b3c1eb7b79922d54a985ffa1c05fa2f36e6fd7a32953c31f43e489ddfd800c1bd593162463facbfbba221c5779888409c12254d6ed0", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
                         "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
                         "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
-                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
-                        "object_class": "UserWidget", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
+                        "hash": "9988c1592229a8536560dcb5bbd42ffce0c88877ecff74ee6b5a747b3ce0f924a5fff97eb1db4421b580eef4ca8ba50e1c5e473256db9ca085ba9c91a8d1621c", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
-                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
-                        "object_class": "StringTable", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
-                        "hash": "5e153082f315f16bda96f998da816113d8f7b16695b8d20a1dcffa33751cb46a0f8fb31148d144faf440f727c8d4bf164bd0a8a10f021da31817c715bf21ab0b", 
-                        "object_class": "Carryable_Trumpet_C", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
+                        "hash": "327c2eff28d53b9d2a3f69d3718d1ab4e74969c8fc0103d8ff5dbdacfe2aa95309e6c85d234996973816dbbff3eaa19f0e65dcf45d77254ed3cccfef381cdeca", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
                         "hash": "53f4d80432d18665df2a93a442dc7432d1d509c626374cc102a7dedef5a9aaff2ca9f016fd66dd97caa1fce19d0693f992358673a45ebab28046cc5684a7a3d5", 
                         "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
-                        "hash": "2dfa359339ae2aa268913b3c1eb7b79922d54a985ffa1c05fa2f36e6fd7a32953c31f43e489ddfd800c1bd593162463facbfbba221c5779888409c12254d6ed0", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
-                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
-                        "hash": "c999610ecd147601b0000035a4649ca26b1d69f5b93a9906746d5be476ecea04ec1ba91d160ab02b1a3fb7ba625f0b4b548af35c1e1eea9e8872ad585ab9175e", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
-                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
-                        "hash": "e1e1b61352095353d9c5a43a35a2e0da0868c6b24d94af7015466f2c8b927f32a22c649638092e5bfd0a75613b5ba04777481f1f0ec4d406bd5d72096f0e5168", 
-                        "object_class": "UserWidget", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
+                        "hash": "2edd7f4679dc3ad407e41f493d829a1aa21e0dcae7b0103128ada171099e58bac14280a4a8d4d573f60b0882088d2138c3ba8f9d52ed805785ba44d0f0928044", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
                         "hash": "667032f220ac8d72ff10b5f6b6859e2c62efea14b9acfae4143a69667998b8197918c49d01e5cfaf30addca3c7130b2f009a7f830f08cb7944a7358b9cdcdc55", 
                         "object_class": "RadialForceActor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
+                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
                         "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
                         "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
-                        "hash": "33bc074ad69d28032841eba9675410e9eca7e087fba44acf15ad06048feb94a962df27266728b435eaceaa089154bba61c4f815f4e17e9a7847e3aae15362d46", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
+                        "hash": "56de10342fe620a3ce66c35b5da9cf4079a8825163e582fa8a44174d0df5bba971ccc4e82df013089f4f3ccabd3da92415d9d8137526424bb2b29d786f8e209f", 
                         "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
+                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactABL.uasset", 
                         "hash": "bd3a4dc5966941d3b5f6d005e4bf5de147018913c027d650853180e87627701a86d504562a28fca0d9b4bd7e4f73072f294948c0055c3294ce510e524a0cbe4b", 
                         "object_class": "BaseSpecialItemAbility_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
+                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
+                        "hash": "33bc074ad69d28032841eba9675410e9eca7e087fba44acf15ad06048feb94a962df27266728b435eaceaa089154bba61c4f815f4e17e9a7847e3aae15362d46", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
                         "hash": "d4db3f055d922b2eda5ed242c0eabc9998987ffe408f3e03c8cb1cf90e1d96ea1d055a428527d9bfd4323949384698124ac25ecf573cf4e8865e24866620948f", 
                         "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
+                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
+                        "object_class": "StringTable", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
+                        "hash": "5e153082f315f16bda96f998da816113d8f7b16695b8d20a1dcffa33751cb46a0f8fb31148d144faf440f727c8d4bf164bd0a8a10f021da31817c715bf21ab0b", 
+                        "object_class": "Carryable_Trumpet_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
+                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
+                        "hash": "e1e1b61352095353d9c5a43a35a2e0da0868c6b24d94af7015466f2c8b927f32a22c649638092e5bfd0a75613b5ba04777481f1f0ec4d406bd5d72096f0e5168", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
+                        "hash": "4310edde9ff499f918dd8ccf70e0d8fbcd2c1e2e2ea6c4afc03034100e7f53d31fff3748ff564fa222501416fb747add58749826510c9a71f6b006be605fe107", 
+                        "object_class": "Carryable_Warhorn_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
+                        "hash": "c999610ecd147601b0000035a4649ca26b1d69f5b93a9906746d5be476ecea04ec1ba91d160ab02b1a3fb7ba625f0b4b548af35c1e1eea9e8872ad585ab9175e", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -820,6 +924,7 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
                         "hash": "77259bd10767922712917112128c5342d55c723cf18b0995d77b7eb6e20d3bd78df91bf7e095b916ddaa38caa25809c65a095764b195453cb1e9cc7a296c13e1", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "GiantSlayers", 
                         "version": "1.0.0", 
                         "author": "Nihi for ArgonSDK", 
@@ -827,6 +932,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -841,126 +947,147 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Trumpet.uasset", 
                         "hash": "5e153082f315f16bda96f998da816113d8f7b16695b8d20a1dcffa33751cb46a0f8fb31148d144faf440f727c8d4bf164bd0a8a10f021da31817c715bf21ab0b", 
                         "object_class": "Carryable_Trumpet_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
-                        "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
-                        "hash": "327c2eff28d53b9d2a3f69d3718d1ab4e74969c8fc0103d8ff5dbdacfe2aa95309e6c85d234996973816dbbff3eaa19f0e65dcf45d77254ed3cccfef381cdeca", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
-                        "hash": "d4db3f055d922b2eda5ed242c0eabc9998987ffe408f3e03c8cb1cf90e1d96ea1d055a428527d9bfd4323949384698124ac25ecf573cf4e8865e24866620948f", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
-                        "hash": "c999610ecd147601b0000035a4649ca26b1d69f5b93a9906746d5be476ecea04ec1ba91d160ab02b1a3fb7ba625f0b4b548af35c1e1eea9e8872ad585ab9175e", 
-                        "object_class": "ActorComponent", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
-                        "hash": "33bc074ad69d28032841eba9675410e9eca7e087fba44acf15ad06048feb94a962df27266728b435eaceaa089154bba61c4f815f4e17e9a7847e3aae15362d46", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
-                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
-                        "object_class": "StringTable", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
-                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
-                        "object_class": "UserWidget", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
-                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
-                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
-                        "hash": "56de10342fe620a3ce66c35b5da9cf4079a8825163e582fa8a44174d0df5bba971ccc4e82df013089f4f3ccabd3da92415d9d8137526424bb2b29d786f8e209f", 
-                        "object_class": "SoundWave", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
-                        "hash": "53f4d80432d18665df2a93a442dc7432d1d509c626374cc102a7dedef5a9aaff2ca9f016fd66dd97caa1fce19d0693f992358673a45ebab28046cc5684a7a3d5", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
-                        "hash": "9988c1592229a8536560dcb5bbd42ffce0c88877ecff74ee6b5a747b3ce0f924a5fff97eb1db4421b580eef4ca8ba50e1c5e473256db9ca085ba9c91a8d1621c", 
-                        "object_class": "Texture2D", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactABL.uasset", 
                         "hash": "bd3a4dc5966941d3b5f6d005e4bf5de147018913c027d650853180e87627701a86d504562a28fca0d9b4bd7e4f73072f294948c0055c3294ce510e524a0cbe4b", 
                         "object_class": "BaseSpecialItemAbility_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
                         "hash": "77259bd10767922712917112128c5342d55c723cf18b0995d77b7eb6e20d3bd78df91bf7e095b916ddaa38caa25809c65a095764b195453cb1e9cc7a296c13e1", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
-                        "hash": "2dfa359339ae2aa268913b3c1eb7b79922d54a985ffa1c05fa2f36e6fd7a32953c31f43e489ddfd800c1bd593162463facbfbba221c5779888409c12254d6ed0", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_AbilityComponent.uasset", 
+                        "hash": "c999610ecd147601b0000035a4649ca26b1d69f5b93a9906746d5be476ecea04ec1ba91d160ab02b1a3fb7ba625f0b4b548af35c1e1eea9e8872ad585ab9175e", 
                         "object_class": "ActorComponent", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
-                        "hash": "bd0c70d347b558555f8d22478d6cf952311a1c01abb6948207a9b46d1538a7bc6821fe76930c451c2ed37cd2ffb8ee06c8b5798d228a5ae33f4761baf0d4c6c5", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
+                        "hash": "c50b5b9ad0b8abbf156e979b2945d49fbecf2002bc7cf88d845ab0502c4a9a839159a7ac727b9b51f51a931e2d53cc206ea4c322ba69976340662b3efc2f22f5", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidgetBtn.uasset", 
+                        "hash": "36e71987c1289b27f7178e7f85b2b76c65dc25429e44612d9cd0551e8d3be488cd62a0099a5477ccd7fb3391474256fa8ddf8e5490bb3dbd615486dcde7026c6", 
                         "object_class": "UserWidget", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_Horn.uasset", 
                         "hash": "4310edde9ff499f918dd8ccf70e0d8fbcd2c1e2e2ea6c4afc03034100e7f53d31fff3748ff564fa222501416fb747add58749826510c9a71f6b006be605fe107", 
                         "object_class": "Carryable_Warhorn_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
-                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
-                        "object_class": "Texture2D", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
-                        "hash": "667032f220ac8d72ff10b5f6b6859e2c62efea14b9acfae4143a69667998b8197918c49d01e5cfaf30addca3c7130b2f009a7f830f08cb7944a7358b9cdcdc55", 
-                        "object_class": "RadialForceActor", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
+                        "hash": "2dfa359339ae2aa268913b3c1eb7b79922d54a985ffa1c05fa2f36e6fd7a32953c31f43e489ddfd800c1bd593162463facbfbba221c5779888409c12254d6ed0", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
                         "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
                         "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/GS_ImpactActor.uasset", 
+                        "hash": "667032f220ac8d72ff10b5f6b6859e2c62efea14b9acfae4143a69667998b8197918c49d01e5cfaf30addca3c7130b2f009a7f830f08cb7944a7358b9cdcdc55", 
+                        "object_class": "RadialForceActor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Adobe_20230725_143642.uasset", 
+                        "hash": "53f4d80432d18665df2a93a442dc7432d1d509c626374cc102a7dedef5a9aaff2ca9f016fd66dd97caa1fce19d0693f992358673a45ebab28046cc5684a7a3d5", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
+                        "hash": "327c2eff28d53b9d2a3f69d3718d1ab4e74969c8fc0103d8ff5dbdacfe2aa95309e6c85d234996973816dbbff3eaa19f0e65dcf45d77254ed3cccfef381cdeca", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleToLevelCurve.uasset", 
+                        "hash": "d4db3f055d922b2eda5ed242c0eabc9998987ffe408f3e03c8cb1cf90e1d96ea1d055a428527d9bfd4323949384698124ac25ecf573cf4e8865e24866620948f", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/uwu.uasset", 
+                        "hash": "7e63f3ce6bb1845052c6dfef6e6dd4b2fac389105c3f762c940cc057e02d79720aa19ac07feebfe5a64a9af1a00bfc13dd4940a816f1fa18f119cf57c22f8730", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
+                        "hash": "33bc074ad69d28032841eba9675410e9eca7e087fba44acf15ad06048feb94a962df27266728b435eaceaa089154bba61c4f815f4e17e9a7847e3aae15362d46", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_AbilityWidget.uasset", 
+                        "hash": "bd0c70d347b558555f8d22478d6cf952311a1c01abb6948207a9b46d1538a7bc6821fe76930c451c2ed37cd2ffb8ee06c8b5798d228a5ae33f4761baf0d4c6c5", 
+                        "object_class": "UserWidget", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Abilities/ST_GiantSlayers.uasset", 
+                        "hash": "e0c3f742a01cb1c50217eeef677e175bbbb1b9672adf3dd26a779780bcaa6587470f3ce0396e46b506ba7a878eedd8b2956157f32a0dc669972f760fe6952582", 
+                        "object_class": "StringTable", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/hq-explosion-6288.uasset", 
+                        "hash": "56de10342fe620a3ce66c35b5da9cf4079a8825163e582fa8a44174d0df5bba971ccc4e82df013089f4f3ccabd3da92415d9d8137526424bb2b29d786f8e209f", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
+                        "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/SquashIcon.uasset", 
+                        "hash": "9988c1592229a8536560dcb5bbd42ffce0c88877ecff74ee6b5a747b3ce0f924a5fff97eb1db4421b580eef4ca8ba50e1c5e473256db9ca085ba9c91a8d1621c", 
+                        "object_class": "Texture2D", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
+                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -995,6 +1122,7 @@
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
                         "hash": "0a1634f8e01ec5e51f07b643232f6f4c81a2b243f5181a6be53ab62d15614085e166de3c8946c741c565a06f2f609534c9ba460f63010047511e3dcdc3cdb306", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "GiantSlayers", 
                         "version": "1.0.0", 
                         "author": "Nihi for ArgonSDK", 
@@ -1002,6 +1130,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -1013,51 +1142,59 @@
                 "replacements": [], 
                 "arbitrary": [
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
-                        "hash": "0a1634f8e01ec5e51f07b643232f6f4c81a2b243f5181a6be53ab62d15614085e166de3c8946c741c565a06f2f609534c9ba460f63010047511e3dcdc3cdb306", 
-                        "object_class": "ArgonSDKModBase_C", 
-                        "mod_name": null
-                    }, 
-                    {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
-                        "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
-                        "object_class": "CurveFloat", 
-                        "mod_name": null
-                    }, 
-                    {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLerpCurve.uasset", 
                         "hash": "f5bf502e61ea8aefb1c4b738b9dfc73a040e43abaa312e63ca672bd6b99a971248270ef1d0f9a201e3754c7ba537650d8f692f2b48c9fe2aaff69f1f03970a68", 
                         "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
-                        "hash": "211784f6790ac9473e42b52277d3466d72fff85835ed515acea835875803892aa9e5baa034204dcdc284f0bec41da6e31cd147aee1f686763ed58efc7952390d", 
-                        "object_class": "ActorComponent", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GiantSlayers.uasset", 
+                        "hash": "0a1634f8e01ec5e51f07b643232f6f4c81a2b243f5181a6be53ab62d15614085e166de3c8946c741c565a06f2f609534c9ba460f63010047511e3dcdc3cdb306", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleLevelupCurve.uasset", 
                         "hash": "4a9d51b62c629ddf7099cf26394afbe15daffd96f0e1015e62407c429cc428365c5f7e3890257ac1cfcfd6e310b62b761aa0361a3ea78db4c6d4986ef3b47836", 
                         "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
-                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
-                        "object_class": "SoundWave", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Curves/GS_ScaleDiminishCurve.uasset", 
+                        "hash": "628e3944fd6b92db0b934b587edb356c531ff54a88bb9bccbcbf4de53a02aae6c109b484b6e4e9bdc14223429d84dc21137f9294a40fbfab009659aa25f0bb32", 
+                        "object_class": "CurveFloat", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
-                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
-                        "hash": "33bc074ad69d28032841eba9675410e9eca7e087fba44acf15ad06048feb94a962df27266728b435eaceaa089154bba61c4f815f4e17e9a7847e3aae15362d46", 
-                        "object_class": "SoundWave", 
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/GS_PlayerScaleHelper.uasset", 
+                        "hash": "211784f6790ac9473e42b52277d3466d72fff85835ed515acea835875803892aa9e5baa034204dcdc284f0bec41da6e31cd147aee1f686763ed58efc7952390d", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
                         "mod_name": null
                     }, 
                     {
                         "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/bass-dropmp3-14596.uasset", 
                         "hash": "327c2eff28d53b9d2a3f69d3718d1ab4e74969c8fc0103d8ff5dbdacfe2aa95309e6c85d234996973816dbbff3eaa19f0e65dcf45d77254ed3cccfef381cdeca", 
                         "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/cartoon-jump-6462.uasset", 
+                        "hash": "33bc074ad69d28032841eba9675410e9eca7e087fba44acf15ad06048feb94a962df27266728b435eaceaa089154bba61c4f815f4e17e9a7847e3aae15362d46", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/GiantSlayers/Audio/creepy-transition-140884.uasset", 
+                        "hash": "8c04e0d65e4438678116b0c0741f29364b609342710447e0a3395637629c8182136b9331309e482b4fa52242898d5a726a1ebe32e0dfc2312f489ee80a8a5868", 
+                        "object_class": "SoundWave", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]

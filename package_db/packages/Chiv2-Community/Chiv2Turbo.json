@@ -44,6 +44,7 @@
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo_Marker.uasset", 
                         "hash": "86638dfd423405125abc003ab29b8f0d6aed77757fabf4714d4f2c2361c0ce061e652b5d954aa1c742e6ede1b97a1e86162690dcd08dcebb02aadd4124ed0e6d", 
                         "object_class": "DA_ModMarker_C", 
+                        "class_path": null, 
                         "associated_blueprints": [
                             "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset"
                         ]
@@ -54,6 +55,7 @@
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset", 
                         "hash": "78ae01979a9028985a50dfe45a08b90b08531ea78205d35173e8eab9ce81f6948f11bb855d9ddf33003af5f2b6a3922ec716b1307e215e9e472ef8859536c6a2", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": "/Game/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.Chiv2Turbo_C", 
                         "mod_name": "Chivalry 2 Turbo", 
                         "version": "1.0.0", 
                         "author": "MochaPete and Nihi", 
@@ -61,6 +63,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -102,6 +105,7 @@
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset", 
                         "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "Chivalry 2 Turbo", 
                         "version": "1.0.0", 
                         "author": "MochaPete and Nihi", 
@@ -109,6 +113,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -123,6 +128,7 @@
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset", 
                         "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
@@ -157,6 +163,7 @@
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo.uasset", 
                         "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": "Chivalry 2 Turbo", 
                         "version": "1.0.0", 
                         "author": "MochaPete and Nihi", 
@@ -164,6 +171,7 @@
                         "mod_repo_url": "", 
                         "silent_load": false, 
                         "show_in_gui": false, 
+                        "enable_by_default": false, 
                         "is_client_side": false, 
                         "online_only": false, 
                         "host_only": false, 
@@ -178,6 +186,7 @@
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo.uasset", 
                         "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
                         "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
                         "mod_name": null
                     }
                 ]
