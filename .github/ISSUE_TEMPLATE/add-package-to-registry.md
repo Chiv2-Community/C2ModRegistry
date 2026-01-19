@@ -11,7 +11,7 @@ Hello, I would like to register a new mod called "MOD_NAME" in the registry.
 
 ```
 {
-  "action": "add_package",
+  "action": "add-package",
   "repo_url": "https://github.com/USERNAME/MOD_REPO_NAME"
 }
 ```
