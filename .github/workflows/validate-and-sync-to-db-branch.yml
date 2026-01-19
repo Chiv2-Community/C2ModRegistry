@@ -15,6 +15,14 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v3
 
+      - name: Validate Registry
+        uses: Chiv2-Community/zero-infra-mod-registry@main
+        with:
+          command: validate
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: INFO
+
+
       - name: Merge main into db
         uses: everlytic/branch-merge@1.1.5
         with:

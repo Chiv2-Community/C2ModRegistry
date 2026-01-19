@@ -34,3 +34,13 @@ jobs:
           fi
 
           echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
+
+      - name: Checkout main
+        uses: actions/checkout@v3
+
+      - name: Update Registry
+        uses: Chiv2-Community/zero-infra-mod-registry@main
+        with:
+          command: validate-registry-updates
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: DEBUG
