@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Validate Registry
-        uses: Chiv2-Community/zero-infra-mod-registry@5577c4c3f5870f192c4929eaecc11ae6d7becf77 # prepare-v1
+        uses: ./.github/actions/registry
         with:
           command: validate
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -139,7 +139,7 @@ jobs:
           
       - name: Process repository action
         id: update-package-list
-        uses: Chiv2-Community/zero-infra-mod-registry@5577c4c3f5870f192c4929eaecc11ae6d7becf77 # prepare-v1
+        uses: ./.github/actions/registry
         continue-on-error: true
         with:
           command: ${{ needs.parse-json.outputs.action }}
