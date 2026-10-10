@@ -13,3 +13,4 @@ Knutschbert/NightLife
 Knutschbert/FFA_stronghold_cy
 Knutschbert/BigNumbers
 Knutschbert/RuneForged
+Knutschbert/Hitboxes
