@@ -14,12 +14,14 @@ jobs:
     steps:
       - name: Check if this should execute
         id: check
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
         run: |
           shopt -s nocasematch
           SHOULD_EXECUTE=true
 
           if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
-            if [[ "${{ github.event.comment.body }}" != "retry" ]]; then
+            if [[ "$COMMENT_BODY" != "retry" ]]; then
               SHOULD_EXECUTE=false
             fi
           fi
@@ -36,7 +38,7 @@ jobs:
       action: ${{ steps.validate_payload.outputs.action }}
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with: 
           ref: main
           
@@ -126,7 +128,7 @@ jobs:
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
 
       - name: Checkout main branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with: 
           ref: main
           
@@ -137,7 +139,7 @@ jobs:
           
       - name: Process repository action
         id: update-package-list
-        uses: Chiv2-Community/zero-infra-mod-registry@main
+        uses: Chiv2-Community/zero-infra-mod-registry@5577c4c3f5870f192c4929eaecc11ae6d7becf77 # prepare-v1
         continue-on-error: true
         with:
           command: ${{ needs.parse-json.outputs.action }}

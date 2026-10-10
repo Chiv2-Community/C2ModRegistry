@@ -1,55 +1,44 @@
 name: Run tests
 
-on:  
+on:
   pull_request:
     types: [opened, synchronize, reopened]
     branches:
       - main
-  issue_comment:
-    types: [created]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
-jobs:  
+jobs:
   check-should-execute:
     runs-on: ubuntu-latest
-    # If the ref is main, this is an issue comment so do nothing. Otherwise its a PR
-    # If the event_name is pull_request, this is a PR event, so its valid
-    if: github.ref != 'refs/heads/main' || github.event_name == 'pull_request'
-    outputs:
-      should_execute: ${{ steps.check.outputs.should_execute }}
     steps:
-      - name: Check if this should execute
-        id: check
-        run: |
-          shopt -s nocasematch
-          SHOULD_EXECUTE=true
-
-          if [[ "${{ github.event_name }}" == "issue_comment" ]]; then
-            if [[ "${{ github.event.comment.body }}" != "retry" ]]; then
-              SHOULD_EXECUTE=false
-            fi
-          fi
-
-          echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
-
-      - name: Checkout main
-        uses: actions/checkout@v3
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.head_ref }}
 
       - name: Update Registry
         id: update-registry
-        uses: Chiv2-Community/zero-infra-mod-registry@main
+        uses: Chiv2-Community/zero-infra-mod-registry@5577c4c3f5870f192c4929eaecc11ae6d7becf77 # prepare-v1
         with:
-          command: procress-registry-updates
+          command: process-registry-updates
           github_token: ${{ secrets.GITHUB_TOKEN }}
           log_level: DEBUG
 
+      - name: Validate Registry
+        uses: Chiv2-Community/zero-infra-mod-registry@5577c4c3f5870f192c4929eaecc11ae6d7becf77 # prepare-v1
+        with:
+          command: validate
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: INFO
+
       - name: Commit changes
-        if: steps.update-registry.outputs.failed == 'false'
+        if: steps.update-registry.outputs.failed == 'false' && github.event.pull_request.head.repo.full_name == github.repository
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: ${{ steps.branch-name.outputs.branch_name }}
+          branch: ${{ github.head_ref }}
           add_options: '--all'
           file_pattern: 'package_db/* registry/*'
