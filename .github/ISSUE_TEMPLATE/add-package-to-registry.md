@@ -7,11 +7,19 @@ assignees: ''
 
 ---
 
-Hello, I would like to register a new mod called "MOD_NAME" in the registry.
+- Commit `mod.json` at the repository root before tagging the release.
+- Publish a GitHub release with a semantic version tag, such as `v1.0.0`.
+- Attach exactly one `.pak` file.
 
-```
+Replace `MOD_NAME` in the title and `USERNAME/MOD_REPO_NAME` below. Leave `action` unchanged.
+
+```json
 {
-  "action": "add_package",
+  "action": "add-package",
   "repo_url": "https://github.com/USERNAME/MOD_REPO_NAME"
 }
 ```
+
+The registry creates a pull request for approval by a registry admin. Your mod is added and this issue closes when that pull request is merged.
+
+If the request fails, fix the reported error and reply "retry".

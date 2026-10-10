@@ -1,0 +1,83 @@
+name: Registry
+description: Run the v1 registry tool without empty optional CLI arguments
+inputs:
+  command:
+    required: true
+    description: Registry command
+  github_token:
+    required: true
+    description: GitHub API token
+  repo_url:
+    default: ''
+    description: Repository URL
+  release_tag:
+    default: ''
+    description: Release tag
+  log_level:
+    default: INFO
+    description: Logging level
+outputs:
+  failed:
+    description: Whether the command failed
+    value: ${{ steps.run.outputs.failed }}
+  result:
+    description: Command output
+    value: ${{ steps.run.outputs.result }}
+runs:
+  using: composite
+  steps:
+    - name: Run registry tool
+      id: run
+      shell: bash
+      env:
+        COMMAND: ${{ inputs.command }}
+        GITHUB_TOKEN: ${{ inputs.github_token }}
+        REPO_URL: ${{ inputs.repo_url }}
+        RELEASE_TAG: ${{ inputs.release_tag }}
+        LOG_LEVEL: ${{ inputs.log_level }}
+        REGISTRY_ACTION_PATH: ${{ github.action_path }}
+      run: |
+        SOURCE="$RUNNER_TEMP/zero-infra-mod-registry"
+        REVISION=5577c4c3f5870f192c4929eaecc11ae6d7becf77
+        PATCH="$REGISTRY_ACTION_PATH/upstream.patch"
+        PATCH_HASH=$(sha256sum "$PATCH" | cut -d ' ' -f 1)
+        IMAGE="zero-infra-mod-registry:$REVISION-$PATCH_HASH"
+        if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
+          git init "$SOURCE"
+          git -C "$SOURCE" fetch --depth=1 https://github.com/Chiv2-Community/zero-infra-mod-registry.git "$REVISION"
+          git -C "$SOURCE" checkout --detach FETCH_HEAD
+          git -C "$SOURCE" apply --check "$PATCH"
+          git -C "$SOURCE" apply "$PATCH"
+          docker build --tag "$IMAGE" "$SOURCE"
+        fi
+
+        ARGS=("$COMMAND")
+        if [[ -n "$REPO_URL" ]]; then
+          ARGS+=("$REPO_URL")
+        fi
+        if [[ -n "$RELEASE_TAG" ]]; then
+          ARGS+=("$RELEASE_TAG")
+        fi
+
+        RESULT=$(mktemp "$RUNNER_TEMP/registry-result.XXXXXX")
+        set +e
+        docker run --rm \
+          --env GITHUB_TOKEN --env LOG_LEVEL \
+          --volume "$GITHUB_WORKSPACE:/github/workspace" \
+          --workdir /github/workspace \
+          "$IMAGE" "${ARGS[@]}" 2>&1 | tee "$RESULT"
+        EXIT_CODE=${PIPESTATUS[0]}
+        set -e
+
+        DELIMITER="registry-$(cat /proc/sys/kernel/random/uuid)"
+        {
+          echo "result<<$DELIMITER"
+          cat "$RESULT"
+          echo "$DELIMITER"
+          if [[ "$EXIT_CODE" -eq 0 ]]; then
+            echo "failed=false"
+          else
+            echo "failed=true"
+          fi
+        } >> "$GITHUB_OUTPUT"
+        exit "$EXIT_CODE"

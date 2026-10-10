@@ -13,7 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Validate Registry
+        uses: ./.github/actions/registry
+        with:
+          command: validate
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: INFO
+
 
       - name: Merge main into db
         uses: everlytic/branch-merge@1.1.5
