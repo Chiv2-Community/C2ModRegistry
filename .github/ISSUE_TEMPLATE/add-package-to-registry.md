@@ -20,4 +20,6 @@ Replace `MOD_NAME` in the title and `USERNAME/MOD_REPO_NAME` below. Leave `actio
 }
 ```
 
+The registry creates a pull request for maintainer approval. Your mod is added and this issue closes when that pull request is merged.
+
 If the request fails, fix the reported error and reply "retry".
