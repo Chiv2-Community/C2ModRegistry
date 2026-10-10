@@ -35,14 +35,19 @@ runs:
         REPO_URL: ${{ inputs.repo_url }}
         RELEASE_TAG: ${{ inputs.release_tag }}
         LOG_LEVEL: ${{ inputs.log_level }}
+        REGISTRY_ACTION_PATH: ${{ github.action_path }}
       run: |
         SOURCE="$RUNNER_TEMP/zero-infra-mod-registry"
         REVISION=5577c4c3f5870f192c4929eaecc11ae6d7becf77
-        IMAGE="zero-infra-mod-registry:$REVISION"
+        PATCH="$REGISTRY_ACTION_PATH/upstream.patch"
+        PATCH_HASH=$(sha256sum "$PATCH" | cut -d ' ' -f 1)
+        IMAGE="zero-infra-mod-registry:$REVISION-$PATCH_HASH"
         if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
           git init "$SOURCE"
           git -C "$SOURCE" fetch --depth=1 https://github.com/Chiv2-Community/zero-infra-mod-registry.git "$REVISION"
           git -C "$SOURCE" checkout --detach FETCH_HEAD
+          git -C "$SOURCE" apply --check "$PATCH"
+          git -C "$SOURCE" apply "$PATCH"
           docker build --tag "$IMAGE" "$SOURCE"
         fi
 

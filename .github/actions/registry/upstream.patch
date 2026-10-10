@@ -1,0 +1,87 @@
+diff --git a/src/zero_infra_mod_registry/main.py b/src/zero_infra_mod_registry/main.py
+--- a/src/zero_infra_mod_registry/main.py
++++ b/src/zero_infra_mod_registry/main.py
+@@ -101,7 +101,8 @@ def main() -> None:
+     )
+
+     if args.command == "process-registry-updates":
+-        registry.process_registry_updates(args.dry_run)
++        if not registry.process_registry_updates(args.dry_run):
++            exit(1)
+     elif args.command == "add-package":
+         [org, repoName] = args.repo_url.strip().split("/")[-2:]
+         num_added = registry.add_package([Repo(org, repoName)], args.dry_run)
+@@ -121,7 +122,8 @@ def main() -> None:
+         [org, repoName] = args.repo_url.strip().split("/")[-2:]
+         registry.remove_mods([Repo(org, repoName)], args.dry_run)
+     elif args.command == "validate":
+-        registry.validate_package_db([])
++        if not registry.validate_package_db([]):
++            exit(1)
+         logging.info("Validation complete!")
+     else:
+         logging.error("Unknown command.")
+diff --git a/src/zero_infra_mod_registry/registry/filesystem_package_registry.py b/src/zero_infra_mod_registry/registry/filesystem_package_registry.py
+--- a/src/zero_infra_mod_registry/registry/filesystem_package_registry.py
++++ b/src/zero_infra_mod_registry/registry/filesystem_package_registry.py
+@@ -73,6 +73,16 @@ class FilesystemPackageRegistry(PackageRegistry):
+         # Load redirect manager
+         self.redirect_manager = SimpleRedirectManager.from_file(self.redirects_path)
+
++    @staticmethod
++    def _append_index_entry(path: str, entry: str) -> None:
++        # Existing indexes may have an unterminated final line.
++        with open(path, "a+b") as file:
++            if file.tell() > 0:
++                file.seek(-1, os.SEEK_END)
++                if file.read(1) != b"\n":
++                    file.write(b"\n")
++            file.write((entry + "\n").encode("utf-8"))
++
+     def _load_package_list(self, path: str) -> List[str]:
+         """
+         Load a package list from a file.
+@@ -188,7 +198,8 @@ class FilesystemPackageRegistry(PackageRegistry):
+             try:
+                 split_entries = [entry.split("/") for entry in new_entries]
+                 repo_entries = [Repo(entry[0], entry[1]) for entry in split_entries]
+-                self.add_package(repo_entries, dry_run)
++                if self.add_package(repo_entries, dry_run) != len(repo_entries):
++                    failed = True
+             except Exception as e:
+                 # If we fail to initialize a repo, remove it from the package list
+                 logging.error(f"Failed to initialize repos: {e}\n")
+@@ -252,7 +263,8 @@ class FilesystemPackageRegistry(PackageRegistry):
+             )
+             return 0  # Return 0 for failure
+
+-        self.validate_package_db(filtered_mods)
++        if not self.validate_package_db(filtered_mods):
++            return 0
+
+         new_maps = []
+         new_blueprints = []
+@@ -385,11 +397,8 @@ class FilesystemPackageRegistry(PackageRegistry):
+
+             if not found:
+                 # Write the repository URL to the file
+-                with open(registry_org_index, "a") as f:
+-                    f.write(f"{repo_url}")
+-
+-                with open(self.mod_list_index_path, "a") as f:
+-                    f.write(f"{index_entry}")
++                self._append_index_entry(registry_org_index, repo_url)
++                self._append_index_entry(self.mod_list_index_path, index_entry)
+
+                 logging.info(
+                     f"Added {index_entry} to the registry index at {registry_org_index}"
+@@ -518,7 +527,8 @@ class FilesystemPackageRegistry(PackageRegistry):
+
+         updated_mod = self.mod_retriever.update_mod_with_release(mod, release)
+
+-        self.validate_package_db([updated_mod])
++        if not self.validate_package_db([updated_mod]):
++            return False
+
+         if dry_run:
+             logging.warning("Dry run; not writing to mod metadata.")

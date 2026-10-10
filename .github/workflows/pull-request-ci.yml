@@ -20,6 +20,9 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
 
+      - name: Registry integration regression tests
+        run: python3 -m unittest discover -s tests -v
+
       - name: Update Registry
         id: update-registry
         uses: ./.github/actions/registry
