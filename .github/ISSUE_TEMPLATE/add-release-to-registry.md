@@ -7,18 +7,13 @@ assignees: ''
 
 ---
 
-Hello, I have created a new mod release for "MOD_NAME" with version "MOD_VERSION"
+If your mod is not registered, use the "Add Package to Registry" template instead.
 
-**1. Pre-Release Checklist:**
-   - Ensure your mod is registered in the mod list. If it is not, create an issue using the "Add Package to Registry" template instead. That request processes your mod's releases and creates a pull request for approval.
-   - Commit `mod.json` at the root of your mod repository before creating the release tag.
-   - Create a GitHub release with a semantic version tag, such as `v1.1.0`.
-   - Attach a single `.pak` file to the release. The registry scans it to generate the asset manifest and file hash.
+- Commit `mod.json` at the repository root before tagging the release.
+- Publish a GitHub release with a semantic version tag, such as `v1.1.0`.
+- Attach exactly one `.pak` file.
 
-**2. Update Request:**
-   - Replace `MOD_NAME` and `MOD_VERSION` in the title and description with your mod name and exact release tag.
-   - Replace `USERNAME/MOD_REPO_NAME` below with your GitHub organization or username and repository name.
-   - Replace `MOD_VERSION` below with the exact release tag, such as `v1.1.0`. Leave `action` unchanged.
+Replace `MOD_NAME` in the title and `USERNAME/MOD_REPO_NAME` below. Replace `MOD_VERSION` in the title and JSON with the exact release tag. Leave `action` unchanged.
 
 ```json
 {
@@ -28,7 +23,4 @@ Hello, I have created a new mod release for "MOD_NAME" with version "MOD_VERSION
 }
 ```
 
-   - The registry processes the release and updates the package database. A successful request closes this issue automatically.
-
-**3. Troubleshooting:**
-   - If the request fails, check the error posted on this issue. After correcting the problem, reply "retry".
+If the request fails, fix the reported error and reply "retry".
