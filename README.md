@@ -43,7 +43,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 **1. Pre-Release Checklist:** 
    - Ensure you've completed the "Creating a Release" steps.
 
-**Using an Issue:**
+**2. Requesting Inclusion:**
    - Create an issue in this repository using the "Add Package to Registry" template.
    - Fill out the mod name and repository URL. The issue body must include the following JSON:
      ```json
@@ -54,24 +54,11 @@ A registry for available chivalry 2 mods.  People who create mods can register t
      ```
    - The registry processes the mod's releases and creates a pull request for approval.
 
-**Using a Pull Request:**
-
-**2. Fork the ModRegistry Repository:**
-   - Visit the ModRegistry repository and create a fork.
-
-**3. Register your Organization or Username:**
-   - In the `registry` directory, add or update a `.txt` file named after your organization or username, such as `Username.txt`.
-   - Add your mod's GitHub repository URL on its own line, such as `https://github.com/Username/Mod-Name`.
-
-**4. Commit and Update:**
-   - Save your changes locally and then push them to your forked ModRegistry repository.
-
-**5. Requesting Inclusion:**
-   - From your fork, submit a pull request to merge with the main ModRegistry repository.
-   - Inform the review team of your mod inclusion request.
-
-**6. Approval:**
+**3. Approval:**
    - Once approved, your mod's data will be integrated and updated in the main registry.
+
+**4. Troubleshooting:**
+   - If the request fails, check the error posted on the issue. After correcting the problem, reply "retry".
 
 ---
 

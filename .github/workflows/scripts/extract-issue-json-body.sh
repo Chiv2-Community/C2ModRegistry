@@ -5,7 +5,7 @@ ISSUE_NUMBER="$1"
 # Fetch issue body using GitHub CLI
 BODY_CONTENT=$(gh api "repos/${GITHUB_REPOSITORY}/issues/${ISSUE_NUMBER}" -q '.body')
 
-EXTRACTED_JSON=$(echo "$BODY_CONTENT" | awk '/^```/{flag=1; next} /^```/{flag=0} flag')
+EXTRACTED_JSON=$(echo "$BODY_CONTENT" | awk '/^```/{if (flag) exit; flag=1; next} flag')
 
 echo "$EXTRACTED_JSON" | jq empty
 
