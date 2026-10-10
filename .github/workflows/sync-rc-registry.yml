@@ -1,0 +1,28 @@
+name: Sync RC registry compatibility branch
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-rc-registry
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source snapshot
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      # Temporary: launcher RC users still read update-registry-format instead of main.
+      - name: Merge main snapshot into compatibility branch
+        run: bash .github/workflows/scripts/sync-rc-registry.sh
