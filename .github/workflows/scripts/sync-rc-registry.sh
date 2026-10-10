@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-source_commit=$(git rev-parse HEAD)
+export SOURCE_BRANCH=${SOURCE_BRANCH:-main}
+export SOURCE_SHA=${SOURCE_SHA:-$(git rev-parse HEAD)}
+[[ ${GITHUB_REF:-refs/heads/main} == refs/heads/main ]]
+bash "$(dirname "${BASH_SOURCE[0]}")/validate-rc-registry-source.sh"
+source_commit=$SOURCE_SHA
 destination=update-registry-format
 git fetch --no-tags origin "refs/heads/$destination:refs/remotes/origin/$destination"
 git checkout --detach "refs/remotes/origin/$destination"
