@@ -109,7 +109,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: parse-json
     if: needs.parse-json.outputs.failed == 'false'
-    permissions: write-all
+    permissions:
+      actions: write
+      contents: write
+      issues: write
+      pull-requests: write
     steps:
       - name: Confirmation Message
         uses: peter-evans/create-or-update-comment@v4
@@ -164,6 +168,7 @@ jobs:
             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
 
       - name: Commit changes
+        id: commit-registry
         if: steps.update-package-list.outputs.failed == 'false'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
@@ -174,6 +179,18 @@ jobs:
           branch: ${{ steps.branch-name.outputs.branch_name }}
           add_options: '--all'
           file_pattern: 'package_db/* registry/*'
+
+      # GITHUB_TOKEN pushes do not trigger the main push workflow.
+      - name: Dispatch RC sync after a release commit
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REGISTRY_ACTION: ${{ needs.parse-json.outputs.action }}
+          REGISTRY_FAILED: ${{ steps.update-package-list.outputs.failed }}
+          COMMIT_OUTCOME: ${{ steps.commit-registry.outcome }}
+          CHANGES_DETECTED: ${{ steps.commit-registry.outputs.changes_detected }}
+          SOURCE_BRANCH: ${{ steps.branch-name.outputs.branch_name }}
+          SOURCE_SHA: ${{ steps.commit-registry.outputs.commit_hash }}
+        run: bash .github/workflows/scripts/dispatch-rc-registry-sync.sh
           
       - name: Create pull request
         if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add-package'
