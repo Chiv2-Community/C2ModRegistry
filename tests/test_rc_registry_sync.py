@@ -4,6 +4,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest import mock
 
 
 SCRIPT = (
@@ -15,6 +16,10 @@ WORKFLOWS = SCRIPT.parent.parent
 
 class RcRegistrySyncTests(unittest.TestCase):
     def setUp(self):
+        # These local repositories model a main event, not the enclosing PR CI ref.
+        event = mock.patch.dict(os.environ, {"GITHUB_REF": "refs/heads/main"})
+        event.start()
+        self.addCleanup(event.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
