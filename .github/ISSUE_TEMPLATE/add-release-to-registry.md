@@ -10,7 +10,7 @@ assignees: ''
 Hello, I have created a new mod release for "MOD_NAME" with version "MOD_VERSION"
 
 **1. Pre-Release Checklist:**
-   - Ensure your mod is registered in the mod list.
+   - Ensure your mod is registered in the mod list. If it is not, create an issue using the "Add Package to Registry" template instead. That request processes your mod's releases and creates a pull request for approval.
    - Commit `mod.json` at the root of your mod repository before creating the release tag.
    - Create a GitHub release with a semantic version tag, such as `v1.1.0`.
    - Attach a single `.pak` file to the release. The registry scans it to generate the asset manifest and file hash.
