@@ -1,6 +1,7 @@
+*.so
+.idea
 .vscode
 .venv
 .env
 __pycache__
-*.so
-.idea
+.mypy_cache
