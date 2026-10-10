@@ -1,0 +1,200 @@
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Knutschbert/Hitboxes", 
+        "name": "Hitboxes", 
+        "description": "This mod makes weapon hitboxes visible. Shows:\n\n- normal hitboxes\n\n- world hitboxes\n\n- weapon phases.\n\n\n\nThis mod currently only works offline to ensure fair play.", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "Nihi"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/Unchained-Mods", 
+                "version": "0.1.0"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.1", 
+            "hash": "df6a62f2a5f4bbceeb48c09def98dbdd099b7b654620ec746f0cb55a040a6119abdb8a495a9d0949b920ecfb587ae54c1f0ffbbba423c02b54276f2e97397a45", 
+            "pak_file_name": "Hitboxes.pak", 
+            "release_date": "2026-10-10T14:21:38", 
+            "info": {
+                "repo_url": "https://github.com/Knutschbert/Hitboxes", 
+                "name": "Hitboxes", 
+                "description": "This mod makes weapon hitboxes visible. Shows:\n\n- normal hitboxes\n\n- world hitboxes\n\n- weapon phases.\n\n\n\nThis mod currently only works offline to ensure fair play.", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/Unchained-Mods", 
+                        "version": "0.1.0"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "Initial version.\r\n\r\n- offline only\r\n- shows world+regular hitboxes\r\n- shows weapon phases (color coded)\r\n  - \u2b1cidle\r\n  - \ud83d\udfe91. holding\r\n  - \ud83d\udfe82. windup\r\n  - \ud83d\udfe53. release\r\n  - \ud83d\udfe84. recovery", 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/NewDataAsset.uasset", 
+                        "hash": "e8c972e0a0654e6fee1160b4c4e2e1f0c8e58fdc5d9fafb7ec0534867aefe45e345b4857f41931e2e04eef7fa2538f8352e93a31bd01016c77c042a8fdeea74a", 
+                        "object_class": "DA_ModMarker_C", 
+                        "class_path": null, 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/Hitboxes/Hitboxes.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/Hitboxes.uasset", 
+                        "hash": "893ee7bf23e117dfc404d514bfe1c302871dfcd9f0aad51832594b9348f35ed49af55002445ba0a1a6c2abde3c6fb313f76176ad7a6058bc09056f377a9a29c5", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": "/Game/Mods/AgMods/Hitboxes/Hitboxes.Hitboxes_C", 
+                        "mod_name": "Hitboxes", 
+                        "version": "1.0.0", 
+                        "author": "Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/TracerTrail.uasset", 
+                        "hash": "49f5a57b79c595335edd0cff969f4c04935b24f169f07657976ef0b0ad55c804355dc277fd0eafaa4f869b8200c29feaf250fc6266e52e59b64ca5ad10e2f0cd", 
+                        "object_class": "NiagaraSystem", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/TracerOverrideScene.uasset", 
+                        "hash": "5d3289351717f5a5124f6b713a3f1038fc4e1b0ad49608c2b17ebc6e70cfb33eb3b724850ee0c0ac915d582829de3ac3989dc26e7c6aec0a5d11c63637f50b47", 
+                        "object_class": "SceneComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/TracerCube.uasset", 
+                        "hash": "49b2c7608b89a7ab915b781138d98ccc4f6196822b3e387e066c94afc3687595a5d8eafc30d587de064fb53e2a39b1aa551844bb11744f843d8fa5924726d3a0", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/TacerOverrideComp.uasset", 
+                        "hash": "3587365f0c9d693cd90399618368a485ed215cbf4f72c2160c974bb03e8c5a8c6f9f48d933d27a0e9fb496b93c861ffbdd1224cac9fa30493569bc0d20d33603", 
+                        "object_class": "ActorComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/niagara/weapon/SM_Glaive_WarScythe_T3_PhysicsAsset.uasset", 
+                        "hash": "1b6ef616e1768ea084e9afefea1cbb8666fe190756af18b43a7aceb6847b934cfc501d260836d1b8be8a0b36b14d9f6e0e1cc0b9b9870d7edb8aeec2a6ad7cc9", 
+                        "object_class": "PhysicsAsset", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/niagara/weapon/SM_Glaive_WarScythe_T3.uasset", 
+                        "hash": "69cf03ffbce0f18976190109d18f4c30b9582be365030c977fedffa88e85c52a31ba85912de3fd5c036cd6d1368056db1dca646fada0bbf61ca36cd558792780", 
+                        "object_class": "SkeletalMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/niagara/P_TestTrail.uasset", 
+                        "hash": "28fe49fe1c684af88f0bfd771478273f2bf6aa8ffadf8ab262d908c6a1dbd824eca51b6745f2ff7ec891c480d32b61bd4c2b4985169840b6e1b80600bf4a22a7", 
+                        "object_class": "ParticleSystem", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/MainTracerComponent.uasset", 
+                        "hash": "b41abfd4f80480fbcd8d6ec23d44e679af3138da49af4c6b6f96115a337b4635c1535e13a7b0971b3befed3c34f7d79dde97e0ce56705c9a242a71226cbfd3e8", 
+                        "object_class": "StaticMeshComponent", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/WorldHitTracersMat.uasset", 
+                        "hash": "ee7589a348b6907d21fbe93c1e7d1240bd9e81ef2fc28ea5c44f5a0a3cf56a4a80b02b40b06648a112b26b9686bbee2a95ee760c1067146732ac657e99da70d8", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/WeaponMeshMat.uasset", 
+                        "hash": "95df8be313495a480115af8aa3accc0af01a1385ec1a20d6b3bd76be021a51197943afce1168f9562698cbd2346c147511b8410af8985c9d9a664e77f4e49534", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/TracerFresnel.uasset", 
+                        "hash": "28ecea0467110ecd23ac54a1c8fc51e766ccc620eeaf6afa5832155a73ffd5c2353229b005e326db83f226af3e05e5d4bec11422362725319115ad984483edd2", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/ProjectileCollisionMat.uasset", 
+                        "hash": "2f7fe101282100f426ebd349e9a96f036496c1f15d4b82a1eb0a9f29129f8a8be1470afdbc14f2d7c8322f061785ed349f7f6154854ab290732d1ed17c7dcef4", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/niagara/weapon/SM_Glaive_WarScythe_T3_Skeleton.uasset", 
+                        "hash": "575eb883b68f726911113c6c3377229783099f71088dd0bb1750a10cdac1cbf68da1de461344e3b8cccec4b2f77f97089735eae66c487b3437fa192ca0e06749", 
+                        "object_class": "Skeleton", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/niagara/weapon/SM_Glaive_WarScythe_T3_Anim.uasset", 
+                        "hash": "9f1a1234c17945fb37993664bda535aa2573a3d03643aa84570dc2584718fb4c3ea56dd2c28b95363e2fe6181e17986c78b23a7817af7193ba76bc00ac261a2b", 
+                        "object_class": "AnimSequence", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/niagara/weapon/MI_Glaive_WarScythe_T3.uasset", 
+                        "hash": "c99395654cad288c6a560c5c402fb0f7e5a3030fa5180bbe6b72885e5eb54d4bdd656a0912e073d341dd481fbf1c159f777c130eca477f1e6a665c2cab57d9a2", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/niagara/M_testTrail.uasset", 
+                        "hash": "ab9a324bccb661d17a818095e8d129343bc77257e17e8afa312745754ce99e11a110ba039c752add54543e0d69d928703f90479b4259f3828e893fdac0301616", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Hitboxes/MainTracersMat.uasset", 
+                        "hash": "f83ecee45a3f5df4eec4b066d0bbed44208b8e55e8c67c181661288192443446f7baa7d34f284d7fe133e09a30ca25bb3b76510351c7b89ff4d74008aac7053f", 
+                        "object_class": "MaterialInstanceConstant", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

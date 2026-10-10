@@ -1,1 +1,196 @@
-{"latest_manifest": {"repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", "name": "Chiv2Turbo", "description": "15% speed boost (from default) for Chivalry 2 Unchained, in the style of Street Fighter 2 Turbo. \n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "releases": [{"tag": "v0.0.4", "hash": "c43806815364410a2c92f8eda169323bf49887b8f2f6884408a3cb32d14bb68bef1bddc3d4467176cf3e3952864dd93cb6fcc09ed8b8e34676a33ac9563b843a", "pak_file_name": "Chiv2Turbo.pak", "release_date": "2024-12-04T19:46:07", "manifest": {"repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", "name": "Chiv2Turbo", "description": "15% speed boost (from default) for Chivalry 2 Unchained, in the style of Street Fighter 2 Turbo. \n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": null}, {"tag": "v0.0.2-alpha", "hash": "1916e26797541a9070714646b1b214cb5059e45e5e75be0999b60ce419db9e9111b7ad1afcdbd27db46a51415b8c1026a6d78f2ad000d464ff674bfc39adab9c", "pak_file_name": "Chiv2Turbo.pak", "release_date": "2023-10-10T15:18:28", "manifest": {"repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", "name": "Chiv2Turbo", "description": "15% speed boost (from default) for Chivalry 2 Unchained\n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "Fixed file structure within pak."}, {"tag": "v0.0.1", "hash": "ab616e6af1e7086ed94f63b7eb6d2748caef2f1c61ca38a800ae4e904f1d94232192fafe862d46747292f30f12743524a82c2997c721314f67d686fbcc6c565e", "pak_file_name": "Chiv2Turbo.pak", "release_date": "2023-10-10T15:08:14", "manifest": {"repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", "name": "Chiv2Turbo", "description": "15% speed boost (from default) for Chivalry 2 Unchained\n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", "mod_type": "Shared", "authors": ["Nihi"], "dependencies": [{"repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", "version": ">=0.0.1"}], "tags": ["Mutator"], "ag_mod": true}, "release_notes_markdown": "Initial release for increasing game speed by 15% (from default) in the style of Street Fighter 2 Turbo."}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", 
+        "name": "Chiv2Turbo", 
+        "description": "15% speed boost (from default) for Chivalry 2 Unchained, in the style of Street Fighter 2 Turbo. \n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "Nihi"
+        ], 
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                "version": ">=0.0.1"
+            }
+        ]
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.4", 
+            "hash": "c43806815364410a2c92f8eda169323bf49887b8f2f6884408a3cb32d14bb68bef1bddc3d4467176cf3e3952864dd93cb6fcc09ed8b8e34676a33ac9563b843a", 
+            "pak_file_name": "Chiv2Turbo.pak", 
+            "release_date": "2024-12-04T19:46:07", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", 
+                "name": "Chiv2Turbo", 
+                "description": "15% speed boost (from default) for Chivalry 2 Unchained, in the style of Street Fighter 2 Turbo. \n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo_Marker.uasset", 
+                        "hash": "86638dfd423405125abc003ab29b8f0d6aed77757fabf4714d4f2c2361c0ce061e652b5d954aa1c742e6ede1b97a1e86162690dcd08dcebb02aadd4124ed0e6d", 
+                        "object_class": "DA_ModMarker_C", 
+                        "class_path": null, 
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset"
+                        ]
+                    }
+                ], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset", 
+                        "hash": "78ae01979a9028985a50dfe45a08b90b08531ea78205d35173e8eab9ce81f6948f11bb855d9ddf33003af5f2b6a3922ec716b1307e215e9e472ef8859536c6a2", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": "/Game/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.Chiv2Turbo_C", 
+                        "mod_name": "Chivalry 2 Turbo", 
+                        "version": "1.0.0", 
+                        "author": "MochaPete and Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": []
+            }
+        }, 
+        {
+            "tag": "v0.0.2-alpha", 
+            "hash": "1916e26797541a9070714646b1b214cb5059e45e5e75be0999b60ce419db9e9111b7ad1afcdbd27db46a51415b8c1026a6d78f2ad000d464ff674bfc39adab9c", 
+            "pak_file_name": "Chiv2Turbo.pak", 
+            "release_date": "2023-10-10T15:18:28", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", 
+                "name": "Chiv2Turbo", 
+                "description": "15% speed boost (from default) for Chivalry 2 Unchained\n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "Fixed file structure within pak.", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset", 
+                        "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "Chivalry 2 Turbo", 
+                        "version": "1.0.0", 
+                        "author": "MochaPete and Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset", 
+                        "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }, 
+        {
+            "tag": "v0.0.1", 
+            "hash": "ab616e6af1e7086ed94f63b7eb6d2748caef2f1c61ca38a800ae4e904f1d94232192fafe862d46747292f30f12743524a82c2997c721314f67d686fbcc6c565e", 
+            "pak_file_name": "Chiv2Turbo.pak", 
+            "release_date": "2023-10-10T15:08:14", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo", 
+                "name": "Chiv2Turbo", 
+                "description": "15% speed boost (from default) for Chivalry 2 Unchained\n\nUsage:\nopen agmods?map=to_stronghold?mods=Chiv2Turbo", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "Nihi"
+                ], 
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods", 
+                        "version": ">=0.0.1"
+                    }
+                ]
+            }, 
+            "release_notes_markdown": "Initial release for increasing game speed by 15% (from default) in the style of Street Fighter 2 Turbo.", 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Chiv2Turbo.uasset", 
+                        "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "Chivalry 2 Turbo", 
+                        "version": "1.0.0", 
+                        "author": "MochaPete and Nihi", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Chiv2Turbo.uasset", 
+                        "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}

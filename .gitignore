@@ -1,3 +1,5 @@
+*.so
+.idea
 .vscode
 .venv
 .env

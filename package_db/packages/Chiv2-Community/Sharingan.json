@@ -1,1 +1,89 @@
-{"latest_manifest": {"repo_url": "https://github.com/Chiv2-Community/Sharingan", "name": "Sharingan", "description": "Debug substitute for drawing invisible game objects", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [], "tags": ["Mutator"], "ag_mod": false}, "releases": [{"tag": "v0.0.0", "hash": "e7f1e9116e950d5b8cc758d3c0188aac6fb9bcce933fa593157e97b1ed50e204e828304650ae5743156c43ad07ba783cd6f9791887c262dd169f1c1301b9be09", "pak_file_name": "Sharingan.pak", "release_date": "2023-12-02T18:49:16", "manifest": {"repo_url": "https://github.com/Chiv2-Community/Sharingan", "name": "Sharingan", "description": "Debug substitute for drawing invisible game objects", "mod_type": "Shared", "authors": ["DrLong"], "dependencies": [], "tags": ["Mutator"], "ag_mod": false}, "release_notes_markdown": null}]}
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/Chiv2-Community/Sharingan", 
+        "name": "Sharingan", 
+        "description": "Debug substitute for drawing invisible game objects", 
+        "icon_url": null, 
+        "image_urls": [], 
+        "authors": [
+            "DrLong"
+        ], 
+        "dependencies": []
+    }, 
+    "releases": [
+        {
+            "tag": "v0.0.0", 
+            "hash": "e7f1e9116e950d5b8cc758d3c0188aac6fb9bcce933fa593157e97b1ed50e204e828304650ae5743156c43ad07ba783cd6f9791887c262dd169f1c1301b9be09", 
+            "pak_file_name": "Sharingan.pak", 
+            "release_date": "2023-12-02T18:49:16", 
+            "info": {
+                "repo_url": "https://github.com/Chiv2-Community/Sharingan", 
+                "name": "Sharingan", 
+                "description": "Debug substitute for drawing invisible game objects", 
+                "icon_url": null, 
+                "image_urls": [], 
+                "authors": [
+                    "DrLong"
+                ], 
+                "dependencies": []
+            }, 
+            "release_notes_markdown": null, 
+            "manifest": {
+                "markers": [], 
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Sharingan/Sharingan.uasset", 
+                        "hash": "9a3c7287af73926efd16883591991da8547ce6f942720d76dadb87876e9487566271063e0a62e11eb7204d125fdbb22de411698077a302dc593cf2a69d116022", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": "Sharingan", 
+                        "version": "1.0.0", 
+                        "author": "DrLong", 
+                        "mod_description": "", 
+                        "mod_repo_url": "", 
+                        "silent_load": false, 
+                        "show_in_gui": false, 
+                        "enable_by_default": false, 
+                        "is_client_side": false, 
+                        "online_only": false, 
+                        "host_only": false, 
+                        "allow_on_frontend": false, 
+                        "is_hidden": false
+                    }
+                ], 
+                "maps": [], 
+                "replacements": [], 
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Sharingan/debugBox.uasset", 
+                        "hash": "c4f59ac8f54cce781ef948203478437c89fa3808d774e93a042525508e64b90850c6496e44b07a56567ac374db8f5d3349a5c46d09e11a53eb75600794ee2ab8", 
+                        "object_class": "Actor", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Sharingan/translucentDebug.uasset", 
+                        "hash": "cb389d8b989f3415ce4e755fedd2a6aa002855c193388f0c86f6129abf1339a19a4c1c9310d18012460dfd2bb5d1ed68f3a1cd7cc1ed3ad77e65c3869be69ba9", 
+                        "object_class": "Material", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Sharingan/Sharingan.uasset", 
+                        "hash": "9a3c7287af73926efd16883591991da8547ce6f942720d76dadb87876e9487566271063e0a62e11eb7204d125fdbb22de411698077a302dc593cf2a69d116022", 
+                        "object_class": "ArgonSDKModBase_C", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }, 
+                    {
+                        "path": "TBL/Content/Mods/AgMods/Sharingan/Cube.uasset", 
+                        "hash": "80a3896523c86d16fe0c343df1fede890a702806ea51d5bcddf0c49c07cf5a9755ee380c2d2262ea4701795b1e94d3d3b2db3e22051985179c583ae837bd2756", 
+                        "object_class": "StaticMesh", 
+                        "class_path": null, 
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}
