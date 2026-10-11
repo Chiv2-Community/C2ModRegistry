@@ -16,6 +16,12 @@ inputs:
   log_level:
     default: INFO
     description: Logging level
+  verify_dll_downloads:
+    default: 'true'
+    description: Download DLLs and verify indexed hash and size during validation
+  dll_file:
+    default: ''
+    description: Exact DLL asset filename for add-dll-release
 outputs:
   failed:
     description: Whether the command failed
@@ -35,28 +41,31 @@ runs:
         REPO_URL: ${{ inputs.repo_url }}
         RELEASE_TAG: ${{ inputs.release_tag }}
         LOG_LEVEL: ${{ inputs.log_level }}
-        REGISTRY_ACTION_PATH: ${{ github.action_path }}
+        VERIFY_DLL_DOWNLOADS: ${{ inputs.verify_dll_downloads }}
+        DLL_FILE: ${{ inputs.dll_file }}
       run: |
         SOURCE="$RUNNER_TEMP/zero-infra-mod-registry"
-        REVISION=5577c4c3f5870f192c4929eaecc11ae6d7becf77
-        PATCH="$REGISTRY_ACTION_PATH/upstream.patch"
-        PATCH_HASH=$(sha256sum "$PATCH" | cut -d ' ' -f 1)
-        IMAGE="zero-infra-mod-registry:$REVISION-$PATCH_HASH"
+        REVISION=fc1ed0e7787adf5913b47c7c2160c004e4da8dd7
+        IMAGE="zero-infra-mod-registry:$REVISION"
         if ! docker image inspect "$IMAGE" >/dev/null 2>&1; then
           git init "$SOURCE"
           git -C "$SOURCE" fetch --depth=1 https://github.com/Chiv2-Community/zero-infra-mod-registry.git "$REVISION"
           git -C "$SOURCE" checkout --detach FETCH_HEAD
-          git -C "$SOURCE" apply --check "$PATCH"
-          git -C "$SOURCE" apply "$PATCH"
           docker build --tag "$IMAGE" "$SOURCE"
         fi
 
         ARGS=("$COMMAND")
+        if [[ "$COMMAND" == "validate" && "${VERIFY_DLL_DOWNLOADS:-true}" == "true" ]]; then
+          ARGS+=("--verify-dll-downloads")
+        fi
         if [[ -n "$REPO_URL" ]]; then
           ARGS+=("$REPO_URL")
         fi
         if [[ -n "$RELEASE_TAG" ]]; then
           ARGS+=("$RELEASE_TAG")
+        fi
+        if [[ "$COMMAND" == "add-dll-release" && -n "${DLL_FILE:-}" ]]; then
+          ARGS+=("--dll-file" "$DLL_FILE")
         fi
 
         RESULT=$(mktemp "$RUNNER_TEMP/registry-result.XXXXXX")
