@@ -6,5 +6,13 @@
     "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v0.5.0/UnchainedPlugin.dll",
     "sha256": "b2e852828ed0b67ae1d37bcb34c1558456b84c67653b139bae097b629b23cfea",
     "size": 3646464
+  },
+  {
+    "organization": "Chiv2-Community",
+    "name": "UnchainedPlugin",
+    "version": "1.0.0-RC2",
+    "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC2/UnchainedPlugin.dll",
+    "sha256": "fb8a576e48c910f340c9822210d0230eb458ae1d2b8a8800fd509422ae9d9e69",
+    "size": 23812608
   }
 ]
