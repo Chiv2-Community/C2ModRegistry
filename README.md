@@ -1,6 +1,53 @@
 # C2ModRegistry
 A registry for available chivalry 2 mods.  People who create mods can register them here, so that they show up in the mod browser.
 
+### DLL registry
+
+DLL plugins are separate from pak mods: `dll_db/index.json` is their index and
+contains one entry per organization/name/version, with an HTTPS download source,
+SHA-256 hash and byte size. Versions are immutable; submit a new version rather
+than replacing a published binary. The launcher only loads explicitly enabled
+DLL releases whose bytes match this metadata. UnchainedPlugin is enabled by default.
+
+To register a DLL, use the **Add DLL Release to Registry** issue template:
+
+```json
+{
+  "action": "add-dll-release",
+  "repo_url": "https://github.com/MyOrg/MyPlugin",
+  "release_tag": "v1.0.0"
+}
+```
+
+The existing registry tool's `add-dll-release` command downloads the release's
+selected DLL asset to calculate its hash and size. Organization and name come from
+the GitHub repository. The issue workflow opens a pull request for approval for
+every DLL version (including updates). The existing `validate` command validates
+DLL metadata too; `validate --verify-dll-downloads` also checks the binaries, as PR CI does.
+DLLs do not enter `package_db`, the mod index, or the Unreal asset scanner.
+
+Semantic-version prereleases such as `v1.0.0-RC2` can be registered with the same
+command and review process. To test a release without writing its metadata, run
+the pinned registry tool with the global dry-run option:
+
+```sh
+zero-infra-mod-registry --dry-run add-dll-release https://github.com/Chiv2-Community/UnchainedPlugin v1.0.0-RC2
+```
+
+Dry runs still fetch the release and download its DLL to calculate and validate
+integrity metadata, but leave the DLL index unchanged. Releases containing
+multiple DLL assets (for example, normal and debug builds) require an explicit
+`dll_file` in the issue JSON, or `--dll-file UnchainedPlugin.dll` on the CLI.
+The initial issue template omits this optional field. If automatic registration
+fails because multiple DLLs are present, a follow-up issue comment explains how
+to add the filename and reply `retry`; no PR is created until registration succeeds.
+The filename must match exactly (case-sensitive); missing or non-DLL assets are
+rejected, with no fallback. Without a filename, exactly one DLL asset is required.
+Each plugin/version still has one immutable registry entry. Tags must be valid semantic versions;
+historical tags such as `v0.0.1dev` are not accepted.
+Registry approval and hash checks establish provenance and integrity, not a
+sandbox or a guarantee that native code is safe. Only enable publishers you trust.
+
 ---
 
 ### Registering your mod

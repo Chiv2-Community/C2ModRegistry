@@ -1,4 +1,4 @@
-"""Exercise the patched Docker CLI and the exact composite action shell.
+"""Exercise the upstream Docker CLI and the exact composite action shell.
 
 Only remote metadata retrieval is replaced with deterministic fixtures; registry
 loading, validation, processing, index writes, CLI exits and Docker are real.
@@ -15,14 +15,12 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 ACTION = ROOT / ".github/actions/registry"
-REVISION = "5577c4c3f5870f192c4929eaecc11ae6d7becf77"
-IMAGE = f"zero-infra-mod-registry:{REVISION}-" + hashlib.sha256(
-    (ACTION / "upstream.patch").read_bytes()
-).hexdigest()
 # Extract rather than copy the production shell, so tests cannot drift from CI.
 ACTION_SHELL = textwrap.dedent(
     (ACTION / "action.yml").read_text().split("      run: |\n", 1)[1]
 )
+REVISION = ACTION_SHELL.split("REVISION=", 1)[1].splitlines()[0].strip()
+IMAGE = f"zero-infra-mod-registry:{REVISION}"
 
 
 def metadata(name, missing_dependency=False):
@@ -47,8 +45,19 @@ def metadata(name, missing_dependency=False):
 class RegistryIntegrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # Build through the production integration, including its pinned fetch,
-        # patch application and cache key (or reuse that exact patched image).
+        # Optional local dependency testing before the upstream SHA is pushed.
+        # Production always fetches the pinned commit directly, without patches.
+        source = os.environ.get("REGISTRY_TEST_SOURCE")
+        if source:
+            head = subprocess.check_output(["git", "-C", source, "rev-parse", "HEAD"], text=True).strip()
+            if head != REVISION:
+                raise RuntimeError("Local registry test source must match the pinned commit")
+            result = subprocess.run(["docker", "build", "--tag", IMAGE, source],
+                                    text=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+            if result.returncode != 0:
+                raise RuntimeError(result.stdout)
+        # Build through the production integration's pinned fetch, or reuse that
+        # exact image when testing a not-yet-published dependency locally.
         with tempfile.TemporaryDirectory(prefix="registry-build-") as directory:
             workspace = Path(directory)
             result, outputs = cls.action(workspace, "validate")
@@ -67,7 +76,7 @@ class RegistryIntegrationTests(unittest.TestCase):
         env = dict(os.environ, COMMAND=command, REPO_URL="", RELEASE_TAG="",
                    GITHUB_TOKEN="fixture-token", LOG_LEVEL="INFO",
                    RUNNER_TEMP=str(runner), GITHUB_WORKSPACE=str(workspace),
-                   GITHUB_OUTPUT=str(output), REGISTRY_ACTION_PATH=str(ACTION))
+                    GITHUB_OUTPUT=str(output))
         result = subprocess.run(["bash", "--noprofile", "--norc", "-e", "-o",
                                  "pipefail", "-c", ACTION_SHELL], env=env,
                                 text=True, stdout=subprocess.PIPE,
@@ -89,6 +98,9 @@ class RegistryIntegrationTests(unittest.TestCase):
         (support / "sitecustomize.py").write_text(textwrap.dedent('''
             import json
             from pathlib import Path
+            from types import SimpleNamespace
+            from github import Github
+            import requests
             from zero_infra_mod_registry.models import Mod, Release
             from zero_infra_mod_registry.retriever import GithubModMetadataRetriever
 
@@ -101,6 +113,23 @@ class RegistryIntegrationTests(unittest.TestCase):
 
             GithubModMetadataRetriever.fetch_repo_metadata = fetch_repo
             GithubModMetadataRetriever.fetch_release_metadata = fetch_release
+
+            def dll_repo(self, name):
+                data = json.loads(Path("fixtures/dll-release.json").read_text())
+                release = SimpleNamespace(**data)
+                release.get_assets = lambda: [SimpleNamespace(**asset) for asset in data["assets"]]
+                return SimpleNamespace(get_release=lambda tag: release)
+
+            class DllResponse:
+                url = "https://example.com/plugin.dll"
+                def __enter__(self): return self
+                def __exit__(self, *args): pass
+                def raise_for_status(self): pass
+                def iter_content(self, chunk_size):
+                    yield Path("fixtures/plugin.dll").read_bytes()
+
+            Github.get_repo = dll_repo
+            requests.get = lambda *args, **kwargs: DllResponse()
         '''))
         (self.workspace / "fixtures").mkdir()
 
@@ -114,7 +143,7 @@ class RegistryIntegrationTests(unittest.TestCase):
 
     def cli(self, *args):
         return subprocess.run([
-            "docker", "run", "--rm", "--env", "GITHUB_TOKEN=fixture-token",
+            "docker", "run", "--rm", "--user", f"{os.getuid()}:{os.getgid()}", "--env", "GITHUB_TOKEN=fixture-token",
             "--env", "LOG_LEVEL=INFO", "--env", "PYTHONPATH=/github/workspace/test_support",
             "--env", "PYTHONDONTWRITEBYTECODE=1",
             "--volume", f"{self.workspace}:/github/workspace",
@@ -211,6 +240,83 @@ class RegistryIntegrationTests(unittest.TestCase):
         self.assert_success(self.cli("add-package", "https://github.com/Test/New"))
         self.assertEqual(self.index.read_text().splitlines(), ["Test/Existing", "Test/New"])
         self.assert_success(self.cli("validate"))
+
+    def dll_fixture(self, version="v1.0.0", assets=1, draft=False):
+        binary = b"DLL fixture bytes"
+        (self.workspace / "fixtures/plugin.dll").write_bytes(binary)
+        (self.workspace / "fixtures/dll-release.json").write_text(json.dumps({
+            "tag_name": version, "draft": draft,
+            "assets": [{"name": f"Plugin{i}.dll", "browser_download_url": "https://example.com/plugin.dll",
+                        "size": len(binary)} for i in range(assets)]}))
+
+    def test_dll_registration_separate_index_and_duplicate_rejected(self):
+        self.dll_fixture()
+        args = ("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0")
+        self.assert_success(self.cli(*args))
+        path = self.workspace / "dll_db/index.json"
+        entries = json.loads(path.read_text())
+        self.assertEqual(entries[0], {
+            "organization": "Test", "name": "Plugin", "version": "1.0.0",
+            "download_url": "https://example.com/plugin.dll",
+            "size": len(b"DLL fixture bytes"), "sha256": hashlib.sha256(b"DLL fixture bytes").hexdigest()})
+        self.assertEqual(self.index.read_text(), "")
+        self.assertFalse((self.registry / "Test.txt").exists())
+        self.assert_success(self.cli("validate", "--verify-dll-downloads"))
+        before = path.read_bytes()
+        self.assertNotEqual(self.cli(*args).returncode, 0)
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_dll_invalid_releases_do_not_write_index(self):
+        for kwargs in ({"assets": 0}, {"assets": 2}, {"version": "latest"}, {"draft": True}):
+            with self.subTest(kwargs=kwargs):
+                self.dll_fixture(**kwargs)
+                self.assertNotEqual(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0").returncode, 0)
+                self.assertFalse((self.workspace / "dll_db/index.json").exists())
+
+    def test_dll_dry_run_does_not_write_index(self):
+        self.dll_fixture()
+        self.assert_success(self.cli("--dry-run", "add-dll-release", "https://github.com/Test/Plugin", "v1.0.0"))
+        self.assertFalse((self.workspace / "dll_db/index.json").exists())
+
+    def test_dll_multiple_assets_require_exact_selection(self):
+        self.dll_fixture(assets=2)
+        common = ("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0")
+        for filename in ("Missing.dll", "plugin0.dll", "*.dll", "Plugin0.pak"):
+            with self.subTest(filename=filename):
+                self.assertNotEqual(self.cli(*common, "--dll-file", filename).returncode, 0)
+                self.assertFalse((self.workspace / "dll_db/index.json").exists())
+        self.assert_success(self.cli("--dry-run", *common, "--dll-file", "Plugin1.dll"))
+        self.assertFalse((self.workspace / "dll_db/index.json").exists())
+        self.assert_success(self.cli(*common, "--dll-file", "Plugin1.dll"))
+        entries = json.loads((self.workspace / "dll_db/index.json").read_text())
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0]["sha256"], hashlib.sha256(b"DLL fixture bytes").hexdigest())
+
+    def test_dll_prerelease_dry_run_and_version_preservation(self):
+        for tag in ("v1.0.0-RC2", "v1.0.0-RC1", "v1.0.0-rc0"):
+            with self.subTest(tag=tag):
+                self.dll_fixture(version=tag)
+                before = (self.workspace / "dll_db/index.json").read_bytes() if (self.workspace / "dll_db/index.json").exists() else None
+                self.assert_success(self.cli("--dry-run", "add-dll-release", "https://github.com/Test/Plugin", tag))
+                after = (self.workspace / "dll_db/index.json").read_bytes() if (self.workspace / "dll_db/index.json").exists() else None
+                self.assertEqual(after, before)
+                self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", tag))
+                entries = json.loads((self.workspace / "dll_db/index.json").read_text())
+                self.assertEqual(entries[-1]["version"], tag.removeprefix("v"))
+
+    def test_dll_corrupt_metadata_and_download_fail_validation(self):
+        self.dll_fixture()
+        self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0"))
+        (self.workspace / "fixtures/plugin.dll").write_bytes(b"tampered")
+        self.assertNotEqual(self.cli("validate", "--verify-dll-downloads").returncode, 0)
+        path = self.workspace / "dll_db/index.json"
+        entries = json.loads(path.read_text())
+        for field, value in (("organization", "../escape"), ("version", "latest"), ("sha256", "bad"),
+                             ("size", 0), ("size", True), ("download_url", "http://example.com/a.dll")):
+            with self.subTest(field=field):
+                invalid = [dict(entries[0], **{field: value})]
+                path.write_text(json.dumps(invalid))
+                self.assertNotEqual(self.cli("validate").returncode, 0)
 
 
 if __name__ == "__main__":
