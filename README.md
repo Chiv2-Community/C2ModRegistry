@@ -84,7 +84,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 
 ---
 
-### Registering a DLL Plugin (Advanced Users):
+### Registering a DLL Plugin:
 
 Most mods use `.pak` files and should follow the steps above. This section is for advanced users publishing native DLL plugins. DLLs run native code; approval and hash checks do not make them safe. Only enable plugins from publishers you trust.
 
