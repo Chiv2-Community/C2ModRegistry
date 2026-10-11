@@ -161,6 +161,29 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           log_level: INFO
 
+      - name: Validate DLL registry downloads before committing
+        id: validate-dll-release
+        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add-dll-release'
+        uses: ./.github/actions/registry
+        continue-on-error: true
+        with:
+          command: validate
+          verify_dll_downloads: 'true'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          log_level: INFO
+
+      - name: Report DLL integrity validation failure
+        uses: peter-evans/create-or-update-comment@v4
+        if: needs.parse-json.outputs.action == 'add-dll-release' && steps.validate-dll-release.outputs.failed == 'true'
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            DLL download-integrity validation failed. No registry commit or pull request will be created. Resolve the failure, then reply **retry**.
+
+            ```
+            ${{ steps.validate-dll-release.outputs.result }}
+            ```
+
       - name: Post failure Results 
         uses: peter-evans/create-or-update-comment@v4
         if: steps.update-package-list.outputs.failed == 'true'
@@ -200,7 +223,7 @@ jobs:
 
       - name: Commit changes
         id: commit-registry
-        if: steps.update-package-list.outputs.failed == 'false'
+        if: steps.update-package-list.outputs.failed == 'false' && (needs.parse-json.outputs.action != 'add-dll-release' || steps.validate-dll-release.outputs.failed == 'false')
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: |
@@ -224,7 +247,7 @@ jobs:
         run: bash .github/workflows/scripts/dispatch-rc-registry-sync.sh
           
       - name: Create pull request
-        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action != 'add-package-release'
+        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action != 'add-package-release' && (needs.parse-json.outputs.action != 'add-dll-release' || steps.validate-dll-release.outputs.failed == 'false')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_URL: ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}
@@ -255,7 +278,7 @@ jobs:
             
       - name: Post success results for add-package
         uses: peter-evans/create-or-update-comment@v4
-        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action != 'add-package-release'
+        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action != 'add-package-release' && (needs.parse-json.outputs.action != 'add-dll-release' || steps.validate-dll-release.outputs.failed == 'false')
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |

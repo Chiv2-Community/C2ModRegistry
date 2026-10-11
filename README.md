@@ -23,7 +23,10 @@ The existing registry tool's `add-dll-release` command downloads the release's
 selected DLL asset to calculate its hash and size. Organization and name come from
 the GitHub repository. The issue workflow opens a pull request for approval for
 every DLL version (including updates). The existing `validate` command validates
-DLL metadata too; `validate --verify-dll-downloads` also checks the binaries, as PR CI does.
+DLL metadata too; `validate --verify-dll-downloads` also checks the binaries.
+The registry action enables download verification by default. Both PR CI and DLL
+issue processing explicitly require it; failed issue validation blocks commits
+and PR creation, and cannot be disabled through the issue JSON.
 DLLs do not enter `package_db`, the mod index, or the Unreal asset scanner.
 
 Semantic-version prereleases such as `v1.0.0-RC2` can be registered with the same

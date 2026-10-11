@@ -8,7 +8,9 @@ DLL support extends the upstream CLI, `FilesystemPackageRegistry`, and GitHub
 retriever, not a separate script. `add-dll-release REPO_URL TAG`
 writes the separate `dll_db/index.json`; `validate` checks its schema and
 `validate --verify-dll-downloads` checks downloaded bytes. The composite action
-exposes that option as `verify_dll_downloads: 'true'`.
+exposes that option as `verify_dll_downloads: 'true'` (the default). DLL issue
+processing explicitly requires download verification before committing registry
+changes or opening a PR; issue payloads cannot disable it.
 
 For releases with multiple DLL assets, set `dll_file: 'Plugin.dll'` to select an
 exact, case-sensitive filename. The action passes it as `--dll-file`; omission

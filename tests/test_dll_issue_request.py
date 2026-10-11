@@ -11,6 +11,38 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class DllIssueRequestTests(unittest.TestCase):
+    def test_dll_issue_integrity_validation_is_mandatory_before_publication(self):
+        workflow = (ROOT / '.github/workflows/add-release-from-issue.yml').read_text()
+        validation = workflow.split('      - name: Validate DLL registry downloads before committing\n', 1)[1].split('\n      - name:', 1)[0]
+        self.assertIn("verify_dll_downloads: 'true'", validation)
+        self.assertIn('command: validate', validation)
+        self.assertNotIn('json_payload', validation)
+        for name in ('Commit changes', 'Create pull request', 'Post success results for add-package'):
+            step = workflow.split('      - name: ' + name + '\n', 1)[1].split('\n      - name:', 1)[0]
+            condition = next(line for line in step.splitlines() if line.strip().startswith('if:'))
+            self.assertIn("steps.validate-dll-release.outputs.failed == 'false'", condition)
+
+    def test_wrapper_verifies_downloads_by_default(self):
+        action = (ROOT / '.github/actions/registry/action.yml').read_text()
+        self.assertIn("verify_dll_downloads:\n    default: 'true'", action)
+        script = textwrap.dedent(action.split('      run: |\n', 1)[1])
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)
+            docker = path / 'docker'
+            docker.write_text('#!/usr/bin/env python3\nimport json, os, sys\n'
+                              'if sys.argv[1] == "run":\n'
+                              '    open(os.environ["CAPTURE"], "w").write(json.dumps(sys.argv[2:]))\n')
+            docker.chmod(0o755)
+            env = dict(os.environ, PATH=directory + ':' + os.environ['PATH'],
+                       COMMAND='validate', REPO_URL='', RELEASE_TAG='',
+                       RUNNER_TEMP=directory, GITHUB_WORKSPACE=directory,
+                       GITHUB_OUTPUT=directory + '/output', CAPTURE=directory + '/args')
+            env.pop('VERIFY_DLL_DOWNLOADS', None)
+            result = subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', script], cwd=directory,
+                                    env=env, capture_output=True, text=True)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(json.loads((path / 'args').read_text())[-2:], ['validate', '--verify-dll-downloads'])
+
     def test_initial_template_omits_filename_and_failure_comment_explains_retry(self):
         template = (ROOT / '.github/ISSUE_TEMPLATE/add-dll-release.md').read_text()
         self.assertNotIn('dll_file', template)

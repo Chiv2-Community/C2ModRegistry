@@ -17,7 +17,7 @@ inputs:
     default: INFO
     description: Logging level
   verify_dll_downloads:
-    default: 'false'
+    default: 'true'
     description: Download DLLs and verify indexed hash and size during validation
   dll_file:
     default: ''
@@ -55,7 +55,7 @@ runs:
         fi
 
         ARGS=("$COMMAND")
-        if [[ "$COMMAND" == "validate" && "${VERIFY_DLL_DOWNLOADS:-false}" == "true" ]]; then
+        if [[ "$COMMAND" == "validate" && "${VERIFY_DLL_DOWNLOADS:-true}" == "true" ]]; then
           ARGS+=("--verify-dll-downloads")
         fi
         if [[ -n "$REPO_URL" ]]; then
