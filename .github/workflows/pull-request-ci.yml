@@ -35,6 +35,7 @@ jobs:
         uses: ./.github/actions/registry
         with:
           command: validate
+          verify_dll_downloads: 'true'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           log_level: INFO
 
@@ -44,4 +45,4 @@ jobs:
         with:
           branch: ${{ github.head_ref }}
           add_options: '--all'
-          file_pattern: 'package_db/* registry/*'
+          file_pattern: 'package_db/* registry/* dll_db/*'
