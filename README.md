@@ -16,7 +16,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
    - Find and click on "Create a new release", typically on the right-hand side.
    - Assign a name and a unique semantic version tag, such as `v1.0.0`, to your release.
    - Attach a single `.pak` file which contains your mod release.
-   - When the package or release is added to the registry, it downloads the `.pak` file and runs `UnchainedScanner` to generate the asset manifest and file hash. You do not need to submit a separate manifest.
+   - You do not need to submit a separate manifest.
 
 ---
 
@@ -60,7 +60,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
      }
      ```
      Replace placeholders with your mod details. Use the exact release tag, such as `v1.1.0`.
-   - The registry processes the release and updates the package database. A successful request closes the issue automatically.
+   - A successful request adds the release to the mod list and closes the issue automatically.
 
 **3. Troubleshooting:**
    - If the request fails, check the error posted on the issue. After correcting the problem, reply "retry".
@@ -87,9 +87,8 @@ Most mods use `.pak` files and should follow the steps above. This section is fo
      }
      ```
    - The registry downloads and verifies the DLL, then opens a pull request for approval. Every version requires approval, including updates.
-    - Approved entries go in `dll_db/packages/<organization>/<repository>.json`, listed in `dll_db/plugin_list_index.txt`, separate from pak mods. Published DLL versions cannot be replaced; create a new version instead.
+   - To update a published DLL, create a new version rather than replacing an existing release's DLL.
 
 **3. Troubleshooting:**
    - If the release has multiple DLLs, the bot will ask you to add `"dll_file": "Plugin-Name.dll"` to the issue JSON. Use the exact, case-sensitive asset filename, then reply "retry".
    - For other failures, check the error posted on the issue. After correcting the problem, reply "retry".
-   - DLL download verification is required in issue processing and PR checks. Failed issue validation blocks commits and PR creation.
