@@ -12,6 +12,8 @@ exposes that option as `verify_dll_downloads: 'true'` (the default). DLL issue
 processing explicitly requires download verification before committing registry
 changes or opening a PR; issue payloads cannot disable it.
 
+Pak registration uses `add-package-release REPO_URL TAG` for both first releases and updates. Only the requested tag is imported. The issue workflow validates every registration and creates or updates an issue branch pull request; it never commits directly to main. PR CI validates without changing registry data, and issues close only when their PR merges.
+
 For releases with multiple DLL assets, set `dll_file: 'Plugin.dll'` to select an
 exact, case-sensitive filename. The action passes it as `--dll-file`; omission
 requires exactly one DLL asset. Issue requests use the same `dll_file` field.

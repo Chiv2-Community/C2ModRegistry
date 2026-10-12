@@ -5,6 +5,10 @@ on:
   issue_comment:
     types: [created]
 
+concurrency:
+  group: register-release-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
 jobs:
   check-should-execute:
     runs-on: ubuntu-latest
@@ -26,7 +30,7 @@ jobs:
             fi
           fi
 
-          echo "should_execute=$SHOULD_EXECUTE" >> $GITHUB_OUTPUT
+          echo "should_execute=$SHOULD_EXECUTE" >> "$GITHUB_OUTPUT"
           
   parse-json:
     runs-on: ubuntu-latest
@@ -59,23 +63,24 @@ jobs:
             the issue description. Fill out the fields with the correct details. When complete, respond 
             to this issue thread with "retry"
 
-            For adding a new package:
-            ````
-            ```
-            {
-              "action": "add-package",
-              "repo_url": "https://github.com/Username/ExampleMod"
-            }
-            ```
-            ````
-
-            For adding a release to an existing package:
+            For adding a pak release (including a mod's first release):
             ````
             ```
             {
               "action": "add-package-release",
               "repo_url": "https://github.com/Username/ExampleMod",
-              "release_tag": "v0.0.1"
+              "release_tag": "v1.0.0"
+            }
+            ```
+            ````
+
+            For adding a DLL release:
+            ````
+            ```
+            {
+              "action": "add-dll-release",
+              "repo_url": "https://github.com/Username/ExamplePlugin",
+              "release_tag": "v1.0.0"
             }
             ```
             ````
@@ -88,6 +93,11 @@ jobs:
           PAYLOAD: ${{ steps.issue_json_payload.outputs.payload }}
         run: |
           ACTION=$(jq -r '.action' <<< "$PAYLOAD")
+          if ! jq -e 'type == "object" and (.repo_url | type == "string" and length > 0) and (.release_tag | type == "string" and length > 0)' <<< "$PAYLOAD" >/dev/null; then
+            echo "repo_url and release_tag must be nonempty strings" >> "$GITHUB_STEP_SUMMARY"
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
           if [[ "$ACTION" == "add-dll-release" ]]; then
             if ! jq -e 'if has("dll_file") then (.dll_file | type == "string" and length > 0) else true end' <<< "$PAYLOAD" >/dev/null; then
               echo "dll_file must be a nonempty string when supplied" >> "$GITHUB_STEP_SUMMARY"
@@ -95,12 +105,12 @@ jobs:
               exit 1
             fi
           fi
-          if [[ "$ACTION" != "add-package" && "$ACTION" != "add-package-release" && "$ACTION" != "add-dll-release" ]]; then
-            echo "Invalid action: $ACTION. Must be 'add-package', 'add-package-release' or 'add-dll-release'" >> $GITHUB_STEP_SUMMARY
-            echo "failed=true" >> $GITHUB_OUTPUT
+          if [[ "$ACTION" != "add-package-release" && "$ACTION" != "add-dll-release" ]]; then
+            echo "Invalid action: $ACTION. Must be 'add-package-release' or 'add-dll-release'" >> "$GITHUB_STEP_SUMMARY"
+            echo "failed=true" >> "$GITHUB_OUTPUT"
             exit 1
           else
-            echo "action=$ACTION" >> $GITHUB_OUTPUT
+            echo "action=$ACTION" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Post failure Results for invalid action
@@ -109,7 +119,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Failed to validate the JSON in the issue body. The `action` field must be `add-package`, `add-package-release` or `add-dll-release`. For DLL requests, `dll_file` must be a nonempty string when supplied.
+            Failed to validate the JSON in the issue body. The `action` field must be `add-package-release` or `add-dll-release`. Both require nonempty `repo_url` and `release_tag` strings. For DLL requests, `dll_file` must be a nonempty string when supplied.
 
             Check out the [Unchained Discord](https://discord.gg/chiv2unchained) for support.
              
@@ -118,7 +128,6 @@ jobs:
     needs: parse-json
     if: needs.parse-json.outputs.failed == 'false'
     permissions:
-      actions: write
       contents: write
       issues: write
       pull-requests: write
@@ -129,25 +138,10 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: "Successfully parsed issue body. Attempting to ${{ needs.parse-json.outputs.action }} to ${{ needs.parse-json.outputs.action == 'add-dll-release' && 'DLL DB' || 'package DB' }}."
 
-      - name: Generate branch name
-        id: branch-name
-        run: |
-          if [[ "${{ needs.parse-json.outputs.action }}" != "add-package-release" ]]; then
-            BRANCH_NAME="issue-${{ github.event.issue.number }}-${{ needs.parse-json.outputs.action }}"
-          else
-            BRANCH_NAME="main"
-          fi
-          echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-
       - name: Checkout main branch
         uses: actions/checkout@v4
         with: 
           ref: main
-          
-      - name: Create new branch for add-package
-        if: needs.parse-json.outputs.action != 'add-package-release'
-        run: |
-          git checkout -b ${{ steps.branch-name.outputs.branch_name }}
           
       - name: Process repository action
         id: update-package-list
@@ -156,14 +150,14 @@ jobs:
         with:
           command: ${{ needs.parse-json.outputs.action }}
           repo_url: ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}
-          release_tag: ${{ needs.parse-json.outputs.action != 'add-package' && fromJson(needs.parse-json.outputs.json_payload).release_tag || '' }}
+          release_tag: ${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}
           dll_file: ${{ needs.parse-json.outputs.action == 'add-dll-release' && fromJson(needs.parse-json.outputs.json_payload).dll_file || '' }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           log_level: INFO
 
-      - name: Validate DLL registry downloads before committing
-        id: validate-dll-release
-        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add-dll-release'
+      - name: Validate registry before creating a pull request
+        id: validate-release
+        if: steps.update-package-list.outputs.failed == 'false'
         uses: ./.github/actions/registry
         continue-on-error: true
         with:
@@ -172,16 +166,16 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           log_level: INFO
 
-      - name: Report DLL integrity validation failure
+      - name: Report registry validation failure
         uses: peter-evans/create-or-update-comment@v4
-        if: needs.parse-json.outputs.action == 'add-dll-release' && steps.validate-dll-release.outputs.failed == 'true'
+        if: steps.validate-release.outputs.failed == 'true'
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            DLL download-integrity validation failed. No registry commit or pull request will be created. Resolve the failure, then reply **retry**.
+            Registry validation failed. No registry commit or pull request will be created. Resolve the failure, then reply **retry**.
 
             ```
-            ${{ steps.validate-dll-release.outputs.result }}
+            ${{ steps.validate-release.outputs.result }}
             ```
 
       - name: Post failure Results 
@@ -221,75 +215,36 @@ jobs:
 
             Only the chosen DLL will be downloaded and validated. No registry changes or pull request were created by this failed attempt.
 
-      - name: Commit changes
-        id: commit-registry
-        if: steps.update-package-list.outputs.failed == 'false' && (needs.parse-json.outputs.action != 'add-dll-release' || steps.validate-dll-release.outputs.failed == 'false')
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: |
-            ${{ needs.parse-json.outputs.action == 'add-package-release' && 'Add release' || 'Add package' }} for ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}
-            ${{ needs.parse-json.outputs.action == 'add-package-release' && format('Version: {0}', fromJson(needs.parse-json.outputs.json_payload).release_tag) || '' }}
-            Issue: #${{ github.event.issue.number }}
-          branch: ${{ steps.branch-name.outputs.branch_name }}
-          add_options: '--all'
-          file_pattern: 'package_db/* registry/* dll_db/*'
-
-      # GITHUB_TOKEN pushes do not trigger the main push workflow.
-      - name: Dispatch RC sync after a release commit
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REGISTRY_ACTION: ${{ needs.parse-json.outputs.action }}
-          REGISTRY_FAILED: ${{ steps.update-package-list.outputs.failed }}
-          COMMIT_OUTCOME: ${{ steps.commit-registry.outcome }}
-          CHANGES_DETECTED: ${{ steps.commit-registry.outputs.changes_detected }}
-          SOURCE_BRANCH: ${{ steps.branch-name.outputs.branch_name }}
-          SOURCE_SHA: ${{ steps.commit-registry.outputs.commit_hash }}
-        run: bash .github/workflows/scripts/dispatch-rc-registry-sync.sh
-          
       - name: Create pull request
-        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action != 'add-package-release' && (needs.parse-json.outputs.action != 'add-dll-release' || steps.validate-dll-release.outputs.failed == 'false')
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_URL: ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}
-          REGISTRY_ACTION: ${{ needs.parse-json.outputs.action }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          BRANCH_NAME: ${{ steps.branch-name.outputs.branch_name }}
-        run: |
-          REPO_NAME=$(echo "$REPO_URL" | sed -E 's|.*github.com/([^/]+/[^/]+).*|\1|' | sed 's|.git$||')
-          PR_TITLE="$REGISTRY_ACTION: $REPO_NAME"
-          PR_BODY="Registers release/package from $REPO_URL, Resolves #$ISSUE_NUMBER"
-          
-          gh pr create \
-            --title "$PR_TITLE" \
-            --body "$PR_BODY" \
-            --base main \
-            --head "$BRANCH_NAME"
-      
-      - name: Post success results for add-package-release
+        id: release-pr
+        if: steps.update-package-list.outputs.failed == 'false' && steps.validate-release.outputs.failed == 'false'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          branch: issue-${{ github.event.issue.number }}-${{ needs.parse-json.outputs.action }}
+          add-paths: |
+            package_db/
+            registry/
+            dll_db/
+          commit-message: Register ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }} ${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}
+          title: '${{ needs.parse-json.outputs.action }}: ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }} ${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}'
+          body: |
+            Register `${{ fromJson(needs.parse-json.outputs.json_payload).release_tag }}` from ${{ fromJson(needs.parse-json.outputs.json_payload).repo_url }}.
+
+            Registry validation, including registered DLL download verification, passed. This release requires approval before merging.
+
+            Resolves #${{ github.event.issue.number }}
+
+      - name: Post success results
         uses: peter-evans/create-or-update-comment@v4
-        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add-package-release'
+        if: steps.release-pr.outputs.pull-request-number != ''
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Successfully added release to package DB.
-            ```
-            ${{ steps.update-package-list.outputs.result }}
-            ```
-            
-      - name: Post success results for add-package
-        uses: peter-evans/create-or-update-comment@v4
-        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action != 'add-package-release' && (needs.parse-json.outputs.action != 'add-dll-release' || steps.validate-dll-release.outputs.failed == 'false')
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            ${{ needs.parse-json.outputs.action == 'add-dll-release' && 'Successfully added release to DLL DB and created a pull request.' || 'Successfully processed package addition and created a pull request.' }}
+            ${{ needs.parse-json.outputs.action == 'add-dll-release' && 'Created a pull request for approval to add this release to DLL DB.' || 'Created a pull request for approval to add this release to package DB.' }}
+            ${{ steps.release-pr.outputs.pull-request-url }}
             ```
             ${{ steps.update-package-list.outputs.result }}
             ```
             The PR will be linked to this issue and will close it automatically when merged.
-
-      - name: Close Issue for release actions
-        if: steps.update-package-list.outputs.failed == 'false' && needs.parse-json.outputs.action == 'add-package-release'
-        run: gh issue close "${{ github.event.issue.number }}"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

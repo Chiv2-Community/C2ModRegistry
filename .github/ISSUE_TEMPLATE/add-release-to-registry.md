@@ -1,13 +1,13 @@
 ---
 name: Add Release to Registry
-about: Automatically add a release for a registered mod
+about: Request approval for a pak mod release, including a first release
 title: "[RELEASE] MOD_NAME Version MOD_VERSION"
 labels: 'mod-release'
 assignees: ''
 
 ---
 
-If your mod is not registered, use the "Add Package to Registry" template instead.
+Use this template for both your mod's first release and later versions. Each release requires approval by a registry admin through a generated pull request.
 
 - Commit `mod.json` at the repository root before tagging the release.
 - Use `mod_dependencies` for pak mods and `plugin_dependencies` for DLL plugins. Both use `repo_url` and `version`. Existing `dependencies` fields are read as `mod_dependencies`.

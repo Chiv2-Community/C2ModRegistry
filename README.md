@@ -21,51 +21,28 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 
 ---
 
-### Adding Your Mod to the Mod List:
+### Adding a Release to the Mod List:
 
 **1. Pre-Release Checklist:** 
    - Ensure you've completed the "Creating a Release" steps.
 
 **2. Requesting Inclusion:**
-   - Create an issue in this repository using the "Add Package to Registry" template.
-   - Fill out the mod name and repository URL. The issue body must include the following JSON:
-     ```json
-     {
-       "action": "add-package",
-       "repo_url": "https://github.com/Username/Mod-Name"
-     }
-     ```
-   - The registry processes the mod's releases and creates a pull request for approval.
-
-**3. Approval:**
-   - Once approved, your mod's data will be integrated and updated in the main registry.
-
-**4. Troubleshooting:**
-   - If the request fails, check the error posted on the issue. After correcting the problem, reply "retry".
-
----
-
-### Adding a New Release to the Mod List:
-
-**1. Release Creation:** 
-   - Ensure you have a fresh release following the earlier guidelines.
-
-**2. Update Request on ModRegistry:**
-   - Navigate to the main ModRegistry repository and create an issue using the "Add Release to Registry" template.
-   - Use the following generic JSON structure in the issue:
+   - Create an issue in this repository using the "Add Release to Registry" template for both your mod's first release and later versions.
+   - Fill out the mod name, repository URL and exact release tag. The issue body must include the following JSON:
      ```json
      {
        "action": "add-package-release",
-       "repo_url": "[Your-Repo-URL]",
-       "release_tag": "[Version-Tag]"
+       "repo_url": "https://github.com/Username/Mod-Name",
+       "release_tag": "v1.0.0"
      }
      ```
-     Replace placeholders with your mod details. Use the exact release tag, such as `v1.1.0`.
-   - A successful request adds the release to the mod list and closes the issue automatically.
+   - The registry processes only the requested release and creates a pull request for approval. Submit a separate request for each version.
 
-**3. Troubleshooting:**
+**3. Approval:**
+   - Every release requires approval, including updates. Your release is added to the mod list and the issue closes when its pull request is merged.
+
+**4. Troubleshooting:**
    - If the request fails, check the error posted on the issue. After correcting the problem, reply "retry".
-    - For any challenges or queries, consult with a community member. They'll likely be able to guide or assist you.
 
 ---
 
