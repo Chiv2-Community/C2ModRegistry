@@ -127,7 +127,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v4
         with:
           issue-number: ${{ github.event.issue.number }}
-          body: "Successfully parsed issue body. Attempting to ${{ needs.parse-json.outputs.action }} to package DB."
+          body: "Successfully parsed issue body. Attempting to ${{ needs.parse-json.outputs.action }} to ${{ needs.parse-json.outputs.action == 'add-dll-release' && 'DLL DB' || 'package DB' }}."
 
       - name: Generate branch name
         id: branch-name
@@ -190,7 +190,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Failed to add release to package DB. Please check the logs below for more details.
+            Failed to add release to ${{ needs.parse-json.outputs.action == 'add-dll-release' && 'DLL DB' || 'package DB' }}. Please check the logs below for more details.
             After addressing the errors, reply "retry"
 
             ```
@@ -282,7 +282,7 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            Successfully processed package addition and created a pull request.
+            ${{ needs.parse-json.outputs.action == 'add-dll-release' && 'Successfully added release to DLL DB and created a pull request.' || 'Successfully processed package addition and created a pull request.' }}
             ```
             ${{ steps.update-package-list.outputs.result }}
             ```

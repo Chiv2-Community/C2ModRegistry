@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
 import subprocess
 import tempfile
 import textwrap
@@ -93,12 +94,14 @@ class RegistryIntegrationTests(unittest.TestCase):
         self.registry.mkdir()
         self.index = self.db / "mod_list_index.txt"
         self.index.write_text("")
+        self._release_sequence = 0
         support = self.workspace / "test_support"
         support.mkdir()
         (support / "sitecustomize.py").write_text(textwrap.dedent('''
             import json
             from pathlib import Path
             from types import SimpleNamespace
+            from datetime import datetime
             from github import Github
             import requests
             from zero_infra_mod_registry.models import Mod, Release
@@ -117,6 +120,7 @@ class RegistryIntegrationTests(unittest.TestCase):
             def dll_repo(self, name):
                 data = json.loads(Path("fixtures/dll-release.json").read_text())
                 release = SimpleNamespace(**data)
+                release.published_at = datetime.fromisoformat(data["published_at"])
                 release.get_assets = lambda: [SimpleNamespace(**asset) for asset in data["assets"]]
                 return SimpleNamespace(get_release=lambda tag: release)
 
@@ -129,7 +133,17 @@ class RegistryIntegrationTests(unittest.TestCase):
                     yield Path("fixtures/plugin.dll").read_bytes()
 
             Github.get_repo = dll_repo
-            requests.get = lambda *args, **kwargs: DllResponse()
+            def get(url, *args, **kwargs):
+                response = DllResponse()
+                response.url = url
+                response.status_code = 200
+                response.text = ""
+                if url.endswith("/plugin.json") or url.endswith("/plugin-upload.json"):
+                    path = Path("fixtures/plugin-upload.json" if url.endswith("/plugin-upload.json") else "fixtures/plugin.json")
+                    response.status_code = 200 if path.exists() else 404
+                    response.text = path.read_text() if path.exists() else "missing"
+                return response
+            requests.get = get
         '''))
         (self.workspace / "fixtures").mkdir()
 
@@ -241,24 +255,48 @@ class RegistryIntegrationTests(unittest.TestCase):
         self.assertEqual(self.index.read_text().splitlines(), ["Test/Existing", "Test/New"])
         self.assert_success(self.cli("validate"))
 
-    def dll_fixture(self, version="v1.0.0", assets=1, draft=False):
+    def dll_fixture(self, version="v1.0.0", assets=1, draft=False, uploaded=False):
+        self._release_sequence += 1
         binary = b"DLL fixture bytes"
         (self.workspace / "fixtures/plugin.dll").write_bytes(binary)
+        (self.workspace / "fixtures/plugin.json").write_text(json.dumps({
+            "name": "Plugin", "description": "Fixture plugin", "authors": ["Author"], "target": "shared", "mod_dependencies": [], "plugin_dependencies": []}))
+        release_assets = [{"name": f"Plugin{i}.dll", "browser_download_url": "https://example.com/plugin.dll",
+                           "size": len(binary)} for i in range(assets)]
+        if uploaded:
+            (self.workspace / "fixtures/plugin-upload.json").write_text((self.workspace / "fixtures/plugin.json").read_text())
+            release_assets.append({"name": "plugin.json", "browser_download_url": "https://example.com/plugin-upload.json", "size": 100})
         (self.workspace / "fixtures/dll-release.json").write_text(json.dumps({
-            "tag_name": version, "draft": draft,
-            "assets": [{"name": f"Plugin{i}.dll", "browser_download_url": "https://example.com/plugin.dll",
-                        "size": len(binary)} for i in range(assets)]}))
+            "tag_name": version, "draft": draft, "body": "# Release notes\n\nPlugin changes.",
+            "published_at": (datetime(2023, 1, 1, tzinfo=timezone.utc) + timedelta(seconds=self._release_sequence)).isoformat(),
+            "assets": release_assets}))
+
+    @property
+    def plugin_path(self):
+        return self.workspace / "dll_db/packages/Test/Plugin.json"
+
+    def dll_entries(self):
+        package = json.loads(self.plugin_path.read_text())
+        return [{"organization": "Test", "name": "Plugin", "version": release["tag"].removeprefix("v"),
+                 "download_url": release["download_url"], "sha256": release["hash"], "size": release["size"], "info": release["info"]}
+                for release in package["releases"]]
 
     def test_dll_registration_separate_index_and_duplicate_rejected(self):
         self.dll_fixture()
         args = ("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0")
         self.assert_success(self.cli(*args))
-        path = self.workspace / "dll_db/index.json"
-        entries = json.loads(path.read_text())
+        path = self.plugin_path
+        entries = self.dll_entries()
         self.assertEqual(entries[0], {
             "organization": "Test", "name": "Plugin", "version": "1.0.0",
             "download_url": "https://example.com/plugin.dll",
-            "size": len(b"DLL fixture bytes"), "sha256": hashlib.sha256(b"DLL fixture bytes").hexdigest()})
+            "size": len(b"DLL fixture bytes"), "sha256": hashlib.sha256(b"DLL fixture bytes").hexdigest(),
+            "info": {"name": "Plugin", "description": "Fixture plugin", "authors": ["Author"], "target": "shared", "mod_dependencies": [], "plugin_dependencies": [], "repo_url": "https://github.com/Test/Plugin"}})
+        package = json.loads(path.read_text())
+        self.assertEqual(package["latest_release_info"], entries[0]["info"])
+        self.assertEqual(package["releases"][0]["release_notes_markdown"], "# Release notes\n\nPlugin changes.")
+        self.assertNotIn("manifest", package["releases"][0])
+        self.assertEqual((self.workspace / "dll_db/plugin_list_index.txt").read_text(), "Test/Plugin\n")
         self.assertEqual(self.index.read_text(), "")
         self.assertFalse((self.registry / "Test.txt").exists())
         self.assert_success(self.cli("validate", "--verify-dll-downloads"))
@@ -271,12 +309,12 @@ class RegistryIntegrationTests(unittest.TestCase):
             with self.subTest(kwargs=kwargs):
                 self.dll_fixture(**kwargs)
                 self.assertNotEqual(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0").returncode, 0)
-                self.assertFalse((self.workspace / "dll_db/index.json").exists())
+                self.assertFalse(self.plugin_path.exists())
 
     def test_dll_dry_run_does_not_write_index(self):
         self.dll_fixture()
         self.assert_success(self.cli("--dry-run", "add-dll-release", "https://github.com/Test/Plugin", "v1.0.0"))
-        self.assertFalse((self.workspace / "dll_db/index.json").exists())
+        self.assertFalse(self.plugin_path.exists())
 
     def test_dll_multiple_assets_require_exact_selection(self):
         self.dll_fixture(assets=2)
@@ -284,37 +322,113 @@ class RegistryIntegrationTests(unittest.TestCase):
         for filename in ("Missing.dll", "plugin0.dll", "*.dll", "Plugin0.pak"):
             with self.subTest(filename=filename):
                 self.assertNotEqual(self.cli(*common, "--dll-file", filename).returncode, 0)
-                self.assertFalse((self.workspace / "dll_db/index.json").exists())
+                self.assertFalse(self.plugin_path.exists())
         self.assert_success(self.cli("--dry-run", *common, "--dll-file", "Plugin1.dll"))
-        self.assertFalse((self.workspace / "dll_db/index.json").exists())
+        self.assertFalse(self.plugin_path.exists())
         self.assert_success(self.cli(*common, "--dll-file", "Plugin1.dll"))
-        entries = json.loads((self.workspace / "dll_db/index.json").read_text())
+        entries = self.dll_entries()
         self.assertEqual(len(entries), 1)
         self.assertEqual(entries[0]["sha256"], hashlib.sha256(b"DLL fixture bytes").hexdigest())
+
+    def test_dll_missing_plugin_json_and_dependencies_do_not_write_index(self):
+        self.dll_fixture()
+        path = self.workspace / "fixtures/plugin.json"
+        path.unlink()
+        common = ("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0")
+        self.assertNotEqual(self.cli(*common).returncode, 0)
+        self.assertFalse(self.plugin_path.exists())
+        info = {"name": "Plugin", "description": "Description", "authors": ["Author"],
+                "plugin_dependencies": [{"repo_url": "https://github.com/Test/Missing", "version": "1.0.0"}], "mod_dependencies": []}
+        path.write_text(json.dumps(info))
+        self.assertNotEqual(self.cli(*common).returncode, 0)
+        self.assertFalse(self.plugin_path.exists())
+
+    def test_plugin_icon_and_images_are_preserved(self):
+        self.dll_fixture()
+        path = self.workspace / "fixtures/plugin.json"
+        info = json.loads(path.read_text())
+        info.update(icon_url="https://example.com/icon.png", image_urls=["https://example.com/screenshot.png"])
+        path.write_text(json.dumps(info))
+        self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0"))
+        entries = self.dll_entries()
+        self.assertEqual(entries[0]["info"], dict(info, repo_url="https://github.com/Test/Plugin"))
+
+    def test_uploaded_plugin_metadata_takes_precedence(self):
+        self.dll_fixture(uploaded=True)
+        path = self.workspace / "fixtures/plugin-upload.json"
+        info = json.loads(path.read_text())
+        info.update(name="Uploaded plugin", description="Corrected description", target="server")
+        path.write_text(json.dumps(info))
+        self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0"))
+        self.assertEqual(self.dll_entries()[0]["info"], dict(info, repo_url="https://github.com/Test/Plugin"))
+        self.assert_success(self.cli("validate", "--verify-dll-downloads"))
+
+    def test_invalid_uploaded_metadata_does_not_fall_back_or_write(self):
+        self.dll_fixture(uploaded=True)
+        (self.workspace / "fixtures/plugin-upload.json").write_text("{}")
+        self.assertNotEqual(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0").returncode, 0)
+        self.assertFalse(self.plugin_path.exists())
+
+    def test_plugin_target_values_and_legacy_default(self):
+        for i, target in enumerate(("server", "client", "shared", None), start=1):
+            with self.subTest(target=target):
+                tag = f"v{i}.0.0"
+                self.dll_fixture(version=tag)
+                path = self.workspace / "fixtures/plugin.json"
+                info = json.loads(path.read_text())
+                if target is None:
+                    del info["target"]
+                else:
+                    info["target"] = target
+                path.write_text(json.dumps(info))
+                self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", tag))
+                self.assertEqual(self.dll_entries()[0]["info"]["target"], target or "shared")
+
+    def test_mod_and_plugin_dependencies_use_separate_indexes(self):
+        self.dll_fixture()
+        self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0"))
+        pak = metadata("Pak")
+        for info in [pak["latest_release_info"], pak["releases"][0]["info"]]:
+            info["mod_dependencies"] = []
+            info["plugin_dependencies"] = [{"repo_url": "https://github.com/Test/Plugin", "version": "1.0.0"}]
+        (self.workspace / "fixtures/Pak.json").write_text(json.dumps(pak))
+        self.assert_success(self.cli("add-package", "https://github.com/Test/Pak"))
+        self.dll_fixture(version="v2.0.0")
+        info = {"name": "Plugin", "description": "Description", "authors": ["Author"],
+                "mod_dependencies": [{"repo_url": "https://github.com/Test/Pak", "version": "1.0.0"}],
+                "plugin_dependencies": []}
+        (self.workspace / "fixtures/plugin.json").write_text(json.dumps(info))
+        self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v2.0.0"))
+        self.assert_success(self.cli("validate", "--verify-dll-downloads"))
+        # The DLL registry contains Test/Plugin, but the pak registry does not.
+        self.dll_fixture(version="v3.0.0")
+        info["mod_dependencies"] = [{"repo_url": "https://github.com/Test/Plugin", "version": "1.0.0"}]
+        (self.workspace / "fixtures/plugin.json").write_text(json.dumps(info))
+        self.assertNotEqual(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v3.0.0").returncode, 0)
 
     def test_dll_prerelease_dry_run_and_version_preservation(self):
         for tag in ("v1.0.0-RC2", "v1.0.0-RC1", "v1.0.0-rc0"):
             with self.subTest(tag=tag):
                 self.dll_fixture(version=tag)
-                before = (self.workspace / "dll_db/index.json").read_bytes() if (self.workspace / "dll_db/index.json").exists() else None
+                before = self.plugin_path.read_bytes() if self.plugin_path.exists() else None
                 self.assert_success(self.cli("--dry-run", "add-dll-release", "https://github.com/Test/Plugin", tag))
-                after = (self.workspace / "dll_db/index.json").read_bytes() if (self.workspace / "dll_db/index.json").exists() else None
+                after = self.plugin_path.read_bytes() if self.plugin_path.exists() else None
                 self.assertEqual(after, before)
                 self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", tag))
-                entries = json.loads((self.workspace / "dll_db/index.json").read_text())
-                self.assertEqual(entries[-1]["version"], tag.removeprefix("v"))
+                entries = self.dll_entries()
+                self.assertEqual(entries[0]["version"], tag.removeprefix("v"))
 
     def test_dll_corrupt_metadata_and_download_fail_validation(self):
         self.dll_fixture()
         self.assert_success(self.cli("add-dll-release", "https://github.com/Test/Plugin", "v1.0.0"))
         (self.workspace / "fixtures/plugin.dll").write_bytes(b"tampered")
         self.assertNotEqual(self.cli("validate", "--verify-dll-downloads").returncode, 0)
-        path = self.workspace / "dll_db/index.json"
-        entries = json.loads(path.read_text())
-        for field, value in (("organization", "../escape"), ("version", "latest"), ("sha256", "bad"),
+        path = self.plugin_path
+        package = json.loads(path.read_text())
+        for field, value in (("tag", "latest"), ("hash", "bad"),
                              ("size", 0), ("size", True), ("download_url", "http://example.com/a.dll")):
             with self.subTest(field=field):
-                invalid = [dict(entries[0], **{field: value})]
+                invalid = dict(package, releases=[dict(package["releases"][0], **{field: value})])
                 path.write_text(json.dumps(invalid))
                 self.assertNotEqual(self.cli("validate").returncode, 0)
 
