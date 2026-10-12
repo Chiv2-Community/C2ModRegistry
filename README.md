@@ -7,24 +7,9 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 
 **1. Setting up your `mod.json` file:**
    - Every mod requires a `mod.json` file, which should be located at the root of your mod repository.
-   - Here's a generic structure for the `mod.json`:
-     ```json
-     {
-       "name": "[Mod-Name]",
-       "description": "[Short-Description]",
-       "authors": [ "[Author-Name]" ],
-       "dependencies": [
-         {
-           "repo_url": "[Dependency-Repo-URL]",
-           "version": "[Version-Number]"
-         }
-       ]
-     }
-     ```
-   - Replace placeholders like `[Dependency-Repo-URL]`, `[Mod-Name]`, etc., with your actual data.
-   - Dependency URLs must point to the mod's GitHub repository. Use a version such as `1.0.0` or a version range such as `>=1.0.0`. If your mod has no dependencies, use `"dependencies": []`.
-   - You can also include `"icon_url": "[Icon-URL]"` and `"image_urls": [ "[Image-URL]" ]`. These fields are optional.
-   - Commit `mod.json` before creating the release tag. The registry reads it from that tag.
+   - Your `mod.json` must match the format described by the [mod.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/mod.schema.json). A schema lists the allowed fields, which are required, and what values they accept.
+   - To check your file, open the [online JSON Schema validator](https://json-schema.hyperjump.io/). Copy the linked schema's contents into **Schema** and your `mod.json` contents into **Instance**. Fix any reported errors before publishing.
+   - Commit `mod.json` before creating the release tag. If you forget to create or update it for a particular release, upload the corrected file to that release's assets.
 
 
 **2. Creating a Repository Release:**
@@ -32,7 +17,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
    - Find and click on "Create a new release", typically on the right-hand side.
    - Assign a name and a unique semantic version tag, such as `v1.0.0`, to your release.
    - Attach a single `.pak` file which contains your mod release.
-   - When the package or release is added to the registry, it downloads the `.pak` file and runs `UnchainedScanner` to generate the asset manifest and file hash. You do not need to submit a separate manifest.
+   - You do not need to submit a separate manifest.
 
 ---
 
@@ -76,7 +61,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
      }
      ```
      Replace placeholders with your mod details. Use the exact release tag, such as `v1.1.0`.
-   - The registry processes the release and updates the package database. A successful request closes the issue automatically.
+   - A successful request adds the release to the mod list and closes the issue automatically.
 
 **3. Troubleshooting:**
    - If the request fails, check the error posted on the issue. After correcting the problem, reply "retry".
@@ -90,7 +75,10 @@ Most mods use `.pak` files and should follow the steps above. This section is fo
 
 **1. Creating a Release:**
    - Create a GitHub release with a semantic version tag, such as `v1.0.0`. Prereleases such as `v1.0.0-RC2` are supported.
-   - Attach your `.dll` file. DLL plugins do not need a `mod.json` or a pak asset manifest.
+   - Your `plugin.json` must match the format described by the [plugin.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/plugin.schema.json). A schema lists the allowed fields, which are required, and what values they accept.
+   - To check your file, open the [online JSON Schema validator](https://json-schema.hyperjump.io/). Copy the linked schema's contents into **Schema** and your `plugin.json` contents into **Instance**. Fix any reported errors before publishing.
+   - Place `plugin.json` at the repository root before tagging the release. If you forget to create or update it for a particular release, upload the corrected file to that release's assets.
+   - Attach your `.dll` file.
 
 **2. Requesting Inclusion:**
    - Create an issue using the "Add DLL Release to Registry" template:
@@ -102,9 +90,8 @@ Most mods use `.pak` files and should follow the steps above. This section is fo
      }
      ```
    - The registry downloads and verifies the DLL, then opens a pull request for approval. Every version requires approval, including updates.
-   - Approved entries go in `dll_db/index.json`, separate from pak mods, with their download URL, SHA-256, size, and version. Published versions cannot be replaced; create a new version instead.
+   - To update a published DLL, create a new version rather than replacing an existing release's DLL.
 
 **3. Troubleshooting:**
    - If the release has multiple DLLs, the bot will ask you to add `"dll_file": "Plugin-Name.dll"` to the issue JSON. Use the exact, case-sensitive asset filename, then reply "retry".
    - For other failures, check the error posted on the issue. After correcting the problem, reply "retry".
-   - DLL download verification is required in issue processing and PR checks. Failed issue validation blocks commits and PR creation.

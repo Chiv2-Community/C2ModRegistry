@@ -1,0 +1,87 @@
+{
+  "latest_release_info": {
+    "name": "Unchained Core Plugin",
+    "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
+    "authors": [
+      "Dr Long",
+      "Jacoby6000",
+      "Nihilianth",
+      "Reciate"
+    ],
+    "plugin_dependencies": [],
+    "mod_dependencies": [],
+    "target": "shared",
+    "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
+  },
+  "releases": [
+    {
+      "tag": "v1.0.0-RC2",
+      "hash": "fb8a576e48c910f340c9822210d0230eb458ae1d2b8a8800fd509422ae9d9e69",
+      "dll_file_name": "UnchainedPlugin.dll",
+      "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC2/UnchainedPlugin.dll",
+      "size": 23812608,
+      "release_date": "2026-03-23T15:37:46+00:00",
+      "info": {
+        "name": "Unchained Core Plugin",
+        "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
+        "authors": [
+          "Dr Long",
+          "Jacoby6000",
+          "Nihilianth",
+          "Reciate"
+        ],
+        "plugin_dependencies": [],
+        "mod_dependencies": [],
+        "target": "shared",
+        "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
+      },
+      "release_notes_markdown": "* Fix map change events\r\n* Make chat commands case insensitive\r\n* Fix server console commands for non-unchained commands\r\n* Add Kill events and damage events to event log\r\n* Buffer event log to send up to 10 events at once to avoid ratelimiting\r\n\r\n**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/compare/v1.0.0-RC1...v1.0.0-RC2"
+    },
+    {
+      "tag": "v1.0.0-RC1",
+      "hash": "b91b30d8fff02f2e3da51c97bb3d00fd47c3487f1a92ef3dc3c64160723c9cde",
+      "dll_file_name": "UnchainedPlugin.dll",
+      "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC1/UnchainedPlugin.dll",
+      "size": 23660032,
+      "release_date": "2026-03-21T21:24:21+00:00",
+      "info": {
+        "name": "Unchained Core Plugin",
+        "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
+        "authors": [
+          "Dr Long",
+          "Jacoby6000",
+          "Nihilianth",
+          "Reciate"
+        ],
+        "plugin_dependencies": [],
+        "mod_dependencies": [],
+        "target": "shared",
+        "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
+      },
+      "release_notes_markdown": "## What's Changed\r\n\r\n* Rewritten events system\r\n  * Voting and other commands are no longer tied to the discord integration.\r\n  * Players in game can vote without the host having to set up discord\r\n* In-game chat now shows when players join and leave\r\n* Improved stability via safer access to critical game internals\r\n* Discord integration now gets an event log\r\n* Discord integration now tracks map changes and server starts\r\n* In-game server messages are now less obnoxious\r\n* Command improvements\r\n  * Commands now always accessible\r\n  * Type `!help` in game or in the related discord channel to see available commands\r\n* Voting improvements\r\n  * Vote speed \r\n    * Players can vote for game speed by entering `!vote speed <speed-in-percent>`. This allows users to switch to fast speed and slomo\r\n  * Vote restart-server\r\n    * Players can vote to restart the server if they are noticing degraded performance, or think things aren't working right\r\n    \r\n## PRs\r\n\r\n* Generalized event system by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/60\r\n* Fix player count by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/61\r\n* Leave events by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/62\r\n* Reconfigurable discord, event log subscriber, enhanced damage events, cleaned up discord cli args by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/63\r\n\r\n\r\n**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/compare/v1.0.0-rc0...v1.0.0-RC1"
+    },
+    {
+      "tag": "v0.5.0",
+      "hash": "b2e852828ed0b67ae1d37bcb34c1558456b84c67653b139bae097b629b23cfea",
+      "dll_file_name": "UnchainedPlugin.dll",
+      "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v0.5.0/UnchainedPlugin.dll",
+      "size": 3646464,
+      "release_date": "2025-06-19T21:48:29+00:00",
+      "info": {
+        "name": "Unchained Core Plugin",
+        "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
+        "authors": [
+          "Dr Long",
+          "Jacoby6000",
+          "Nihilianth",
+          "Reciate"
+        ],
+        "plugin_dependencies": [],
+        "mod_dependencies": [],
+        "target": "shared",
+        "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
+      },
+      "release_notes_markdown": "## What's Changed\n* [WIP] Small PR by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/17\n* Ownership overrides migration by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/18\n* Migrate adminControl.h hooks by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/19\n* Migrate asset_loading hooks by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/20\n* Migrate backend_hooks by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/21\n* Migrate etcHooks.h by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/22\n* Add scan only mode and scan for addresses by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/23\n* Remove legacy hook stuff by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/24\n* Add platform to build metadata by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/25\n* Support get current games via procedure call by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/26\n* Fix platform parsing, fix non-steam platform signature selection, ena\u2026 by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/28\n* Evaluate required properties first, don't fail when optionals are mis\u2026 by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/29\n* Update sigs by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/27\n* Fix motd - Apply Nihi fix by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/30\n* c_str in the FStr by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/31\n* store rcon port in uint16 by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/33\n* Remove CPP signature pieces. by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/36\n* fix servertravel (ExecuteConsoleCommand) by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/38\n* Change \"FunctionHookManager\" to \"PatchManager\", and associated changes by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/37\n* Use Patternsleuth as sig scanner by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/35\n* Create github workflow for creating releases by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/40\n* Fix release builds by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/41\n\n\n**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/compare/v0.4.6...v0.5.0"
+    }
+  ]
+}
