@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 - Commit `mod.json` at the repository root before tagging the release.
+- Use `mod_dependencies` for pak mods and `plugin_dependencies` for DLL plugins. Both use `repo_url` and `version`. Existing `dependencies` fields are read as `mod_dependencies`.
 - Publish a GitHub release with a semantic version tag, such as `v1.0.0`.
 - Attach exactly one `.pak` file.
 

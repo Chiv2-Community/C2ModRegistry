@@ -7,24 +7,8 @@ A registry for available chivalry 2 mods.  People who create mods can register t
 
 **1. Setting up your `mod.json` file:**
    - Every mod requires a `mod.json` file, which should be located at the root of your mod repository.
-   - Here's a generic structure for the `mod.json`:
-     ```json
-     {
-       "name": "[Mod-Name]",
-       "description": "[Short-Description]",
-       "authors": [ "[Author-Name]" ],
-       "dependencies": [
-         {
-           "repo_url": "[Dependency-Repo-URL]",
-           "version": "[Version-Number]"
-         }
-       ]
-     }
-     ```
-   - Replace placeholders like `[Dependency-Repo-URL]`, `[Mod-Name]`, etc., with your actual data.
-   - Dependency URLs must point to the mod's GitHub repository. Use a version such as `1.0.0` or a version range such as `>=1.0.0`. If your mod has no dependencies, use `"dependencies": []`.
-   - You can also include `"icon_url": "[Icon-URL]"` and `"image_urls": [ "[Image-URL]" ]`. These fields are optional.
-   - Commit `mod.json` before creating the release tag. The registry reads it from that tag.
+   - Use the [mod.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/mod.schema.json) for the file's structure, dependencies and optional fields.
+   - Commit `mod.json` before creating the release tag. If you forget to create or update it for a particular release, upload the corrected file to that release's assets. The file in the release assets takes precedence over the file in the repo.
 
 
 **2. Creating a Repository Release:**
@@ -90,7 +74,8 @@ Most mods use `.pak` files and should follow the steps above. This section is fo
 
 **1. Creating a Release:**
    - Create a GitHub release with a semantic version tag, such as `v1.0.0`. Prereleases such as `v1.0.0-RC2` are supported.
-   - Attach your `.dll` file. DLL plugins do not need a `mod.json` or a pak asset manifest.
+    - Place `plugin.json` at the repository root using the [plugin.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/plugin.schema.json), then tag the release. If you forget to create or update it for a particular release, upload the corrected file to that release's assets. The file in the release assets takes precedence over the file in the repo.
+   - Attach your `.dll` file.
 
 **2. Requesting Inclusion:**
    - Create an issue using the "Add DLL Release to Registry" template:
@@ -102,7 +87,7 @@ Most mods use `.pak` files and should follow the steps above. This section is fo
      }
      ```
    - The registry downloads and verifies the DLL, then opens a pull request for approval. Every version requires approval, including updates.
-   - Approved entries go in `dll_db/index.json`, separate from pak mods, with their download URL, SHA-256, size, and version. Published versions cannot be replaced; create a new version instead.
+    - Approved entries go in `dll_db/packages/<organization>/<repository>.json`, listed in `dll_db/plugin_list_index.txt`, separate from pak mods. Published DLL versions cannot be replaced; create a new version instead.
 
 **3. Troubleshooting:**
    - If the release has multiple DLLs, the bot will ask you to add `"dll_file": "Plugin-Name.dll"` to the issue JSON. Use the exact, case-sensitive asset filename, then reply "retry".
