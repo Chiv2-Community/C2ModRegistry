@@ -9,7 +9,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
    - Every mod requires a `mod.json` file, which should be located at the root of your mod repository.
    - Your `mod.json` must match the format described by the [mod.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/mod.schema.json). A schema lists the allowed fields, which are required, and what values they accept.
    - To check your file, open the [online JSON Schema validator](https://json-schema.hyperjump.io/). Copy the linked schema's contents into **Schema** and your `mod.json` contents into **Instance**. Fix any reported errors before publishing.
-   - Commit `mod.json` before creating the release tag. If you forget to create or update it for a particular release, upload the corrected file to that release's assets. The file in the release assets takes precedence over the file in the repo.
+   - Commit `mod.json` before creating the release tag. If you forget to create or update it for a particular release, upload the corrected file to that release's assets.
 
 
 **2. Creating a Repository Release:**
@@ -77,7 +77,7 @@ Most mods use `.pak` files and should follow the steps above. This section is fo
    - Create a GitHub release with a semantic version tag, such as `v1.0.0`. Prereleases such as `v1.0.0-RC2` are supported.
    - Your `plugin.json` must match the format described by the [plugin.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/plugin.schema.json). A schema lists the allowed fields, which are required, and what values they accept.
    - To check your file, open the [online JSON Schema validator](https://json-schema.hyperjump.io/). Copy the linked schema's contents into **Schema** and your `plugin.json` contents into **Instance**. Fix any reported errors before publishing.
-   - Place `plugin.json` at the repository root before tagging the release. If you forget to create or update it for a particular release, upload the corrected file to that release's assets. The file in the release assets takes precedence over the file in the repo.
+   - Place `plugin.json` at the repository root before tagging the release. If you forget to create or update it for a particular release, upload the corrected file to that release's assets.
    - Attach your `.dll` file.
 
 **2. Requesting Inclusion:**
