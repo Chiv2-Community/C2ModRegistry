@@ -60,4 +60,4 @@ class ReleaseApprovalTests(unittest.TestCase):
         self.assertIn('"action": "add-package-release"', template)
         readme = (ROOT / "README.md").read_text()
         self.assertNotIn('"action": "add-package"', readme)
-        self.assertIn("Every release requires approval, including updates.", readme)
+        self.assertIn("Every release requires approval.", readme)
