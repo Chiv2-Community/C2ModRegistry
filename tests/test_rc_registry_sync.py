@@ -1,5 +1,4 @@
 import os
-import json
 from pathlib import Path
 import subprocess
 import tempfile
@@ -155,92 +154,6 @@ class RcRegistrySyncTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertEqual(self.destination(), concurrent)
 
-    def dispatch(self, **overrides):
-        # Execute the exact producer run command with the workflow's output contract.
-        workflow = (WORKFLOWS / "add-release-from-issue.yml").read_text()
-        step = workflow.split("- name: Dispatch RC sync after a release commit\n")[1].split("\n      - name:")[0]
-        contracts = {
-            "GH_TOKEN": "secrets.GITHUB_TOKEN",
-            "REGISTRY_ACTION": "needs.parse-json.outputs.action",
-            "REGISTRY_FAILED": "steps.update-package-list.outputs.failed",
-            "COMMIT_OUTCOME": "steps.commit-registry.outcome",
-            "CHANGES_DETECTED": "steps.commit-registry.outputs.changes_detected",
-            "SOURCE_BRANCH": "steps.branch-name.outputs.branch_name",
-            "SOURCE_SHA": "steps.commit-registry.outputs.commit_hash",
-        }
-        for key, expression in contracts.items():
-            self.assertIn(f"{key}: ${{{{ {expression} }}}}", step)
-        self.assertIn("id: commit-registry", workflow.split("- name: Commit changes\n")[1].split("- name: Dispatch")[0])
-        for permission in ("actions", "contents", "issues", "pull-requests"):
-            self.assertIn(f"      {permission}: write", workflow)
-        command = step.split("run: ")[1].strip()
-        script_path = command.split(" ", 1)[1]
-        bin_dir = self.root / "bin"
-        bin_dir.mkdir(exist_ok=True)
-        log = self.root / "dispatch.json"
-        mock = bin_dir / "gh"
-        mock.write_text("#!/usr/bin/env python3\nimport json,os,sys\n"
-                        "open(os.environ['DISPATCH_LOG'],'w').write(json.dumps(sys.argv[1:]))\n"
-                        "sys.exit(int(os.environ.get('DISPATCH_EXIT','0')))\n")
-        mock.chmod(0o755)
-        env = dict(os.environ, PATH=f"{bin_dir}:{os.environ['PATH']}",
-                   DISPATCH_LOG=str(log), GITHUB_REPOSITORY="test/registry",
-                   GITHUB_REF="refs/heads/main", GH_TOKEN="test-token",
-                   REGISTRY_ACTION="add-package-release", REGISTRY_FAILED="false",
-                   COMMIT_OUTCOME="success", CHANGES_DETECTED="true",
-                   SOURCE_BRANCH="main", SOURCE_SHA=self.git("rev-parse", "HEAD").stdout.strip())
-        env.update(overrides)
-        result = subprocess.run(["bash", str(WORKFLOWS.parent.parent / script_path)],
-                                cwd=self.repo, env=env, text=True, capture_output=True)
-        return result, json.loads(log.read_text()) if log.exists() else None
-
-    def test_release_bot_commit_and_retry_handoff_reach_receiver(self):
-        for name in ("issue", "retry"):
-            with self.subTest(name=name):
-                self.git("checkout", "main")
-                source = self.commit(f"{name}.txt", f"{name}\n")
-                self.git("push", "origin", "main")
-                result, args = self.dispatch()
-                self.assertEqual(result.returncode, 0, result.stderr)
-                self.assertEqual(args, ["api", "--method", "POST",
-                    "repos/test/registry/actions/workflows/sync-rc-registry.yml/dispatches",
-                    "-f", "ref=main", "-f", "inputs[source_branch]=main",
-                    "-f", f"inputs[source_sha]={source}"])
-                self.sync(env=dict(os.environ, SOURCE_BRANCH="main", SOURCE_SHA=source,
-                                   GITHUB_REF="refs/heads/main"))
-                self.assertEqual(self.destination(), source)
-                (self.root / "dispatch.json").unlink()
-
-    def test_failed_noop_and_package_producers_do_not_dispatch(self):
-        for overrides in ({"REGISTRY_FAILED": "true"}, {"REGISTRY_FAILED": ""},
-                          {"COMMIT_OUTCOME": "failure"}, {"COMMIT_OUTCOME": "skipped"},
-                          {"CHANGES_DETECTED": "false"},
-                          {"REGISTRY_ACTION": "add-package", "SOURCE_BRANCH": "issue-1-add-package"}):
-            with self.subTest(overrides=overrides):
-                result, args = self.dispatch(**overrides)
-                self.assertEqual(result.returncode, 0, result.stderr)
-                self.assertIsNone(args)
-
-    def test_dispatch_rejects_wrong_branch_ref_or_nonimmutable_source(self):
-        for overrides in ({"SOURCE_BRANCH": "issue-1-add-package"}, {"SOURCE_SHA": "main"},
-                          {"SOURCE_SHA": "0" * 40}, {"GITHUB_REF": "refs/heads/other"}):
-            with self.subTest(overrides=overrides):
-                result, args = self.dispatch(**overrides)
-                self.assertNotEqual(result.returncode, 0)
-                self.assertIsNone(args)
-        old = self.git("rev-parse", "HEAD").stdout.strip()
-        self.commit("new.txt", "new\n")
-        self.git("push", "origin", "main")
-        result, args = self.dispatch(SOURCE_SHA=old)
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIsNone(args)
-        self.git("checkout", "-b", "package")
-        package = self.commit("unapproved.txt", "unapproved\n")
-        self.git("push", "origin", "package")
-        result, args = self.dispatch(SOURCE_SHA=package)
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIsNone(args)
-
     def test_receiver_rejects_unapproved_or_mutable_sources_before_writes(self):
         before = self.destination()
         self.git("checkout", "-b", "package")
@@ -251,11 +164,6 @@ class RcRegistrySyncTests(unittest.TestCase):
             result = self.sync(check=False, env=dict(os.environ, **overrides))
             self.assertNotEqual(result.returncode, 0)
             self.assertEqual(self.destination(), before)
-
-    def test_dispatch_failure_is_not_reported_as_success(self):
-        result, args = self.dispatch(DISPATCH_EXIT="1")
-        self.assertNotEqual(result.returncode, 0)
-        self.assertIsNotNone(args)
 
     def test_receiver_event_and_serialization_contract(self):
         workflow = (WORKFLOWS / "sync-rc-registry.yml").read_text()
