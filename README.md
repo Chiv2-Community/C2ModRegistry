@@ -27,7 +27,7 @@ A registry for available chivalry 2 mods.  People who create mods can register t
    - Ensure you've completed the "Creating a Release" steps.
 
 **2. Requesting Inclusion:**
-   - Create an issue in this repository using the "Add Release to Registry" template for both your mod's first release and later versions.
+   - Create an issue in this repository using the "Add Release to Registry" template to add your release to the registry.
    - Fill out the mod name, repository URL and exact release tag. The issue body must include the following JSON:
      ```json
      {
@@ -36,10 +36,10 @@ A registry for available chivalry 2 mods.  People who create mods can register t
        "release_tag": "v1.0.0"
      }
      ```
-   - The registry processes only the requested release and creates a pull request for approval. Submit a separate request for each version.
+   - The registry processes the requested release and creates a pull request for approval.
 
 **3. Approval:**
-   - Every release requires approval, including updates. Your release is added to the mod list and the issue closes when its pull request is merged.
+   - Every release requires approval. Your release is added to the mod list and the issue closes when its pull request is merged.
 
 **4. Troubleshooting:**
    - If the request fails, check the error posted on the issue. After correcting the problem, reply "retry".
