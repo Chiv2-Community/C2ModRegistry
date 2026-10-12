@@ -34,18 +34,19 @@ class DllIssueRequestTests(unittest.TestCase):
         for name in ('Confirmation Message', 'Post failure Results '):
             step = workflow.split('      - name: ' + name + '\n', 1)[1].split('\n      - name:', 1)[0]
             self.assertIn("outputs.action == 'add-dll-release' && 'DLL DB' || 'package DB'", step)
-        self.assertIn('Successfully added release to DLL DB and created a pull request.', workflow)
+        self.assertIn('Created a pull request for approval to add this release to DLL DB.', workflow)
 
     def test_dll_issue_integrity_validation_is_mandatory_before_publication(self):
         workflow = (ROOT / '.github/workflows/add-release-from-issue.yml').read_text()
-        validation = workflow.split('      - name: Validate DLL registry downloads before committing\n', 1)[1].split('\n      - name:', 1)[0]
+        validation = workflow.split('      - name: Validate registry before creating a pull request\n', 1)[1].split('\n      - name:', 1)[0]
         self.assertIn("verify_dll_downloads: 'true'", validation)
         self.assertIn('command: validate', validation)
         self.assertNotIn('json_payload', validation)
-        for name in ('Commit changes', 'Create pull request', 'Post success results for add-package'):
-            step = workflow.split('      - name: ' + name + '\n', 1)[1].split('\n      - name:', 1)[0]
-            condition = next(line for line in step.splitlines() if line.strip().startswith('if:'))
-            self.assertIn("steps.validate-dll-release.outputs.failed == 'false'", condition)
+        step = workflow.split('      - name: Create pull request\n', 1)[1].split('\n      - name:', 1)[0]
+        self.assertIn("steps.validate-release.outputs.failed == 'false'", step)
+        self.assertIn("steps.update-package-list.outputs.failed == 'false'", step)
+        self.assertIn('uses: peter-evans/create-pull-request@v7', step)
+        self.assertNotIn('git-auto-commit-action', workflow)
 
     def test_wrapper_verifies_downloads_by_default(self):
         action = (ROOT / '.github/actions/registry/action.yml').read_text()
@@ -95,7 +96,7 @@ class DllIssueRequestTests(unittest.TestCase):
                                   ({'dll_file': True}, False), ({'dll_file': ['Plugin.dll']}, False)):
                 with self.subTest(fields=fields):
                     result = subprocess.run(['bash', '-e', '-o', 'pipefail', '-c', script],
-                        env=dict(os.environ, PAYLOAD=json.dumps(dict(action='add-dll-release', **fields)),
+                        env=dict(os.environ, PAYLOAD=json.dumps(dict(action='add-dll-release', repo_url='https://github.com/Test/Plugin', release_tag='v1.0.0', **fields)),
                                  GITHUB_OUTPUT=directory + '/output', GITHUB_STEP_SUMMARY=directory + '/summary'),
                         capture_output=True, text=True)
                     self.assertEqual(result.returncode == 0, valid, result.stderr)

@@ -7,8 +7,7 @@ on:
       - main
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
   check-should-execute:
@@ -23,14 +22,6 @@ jobs:
       - name: Registry integration regression tests
         run: python3 -m unittest discover -s tests -v
 
-      - name: Update Registry
-        id: update-registry
-        uses: ./.github/actions/registry
-        with:
-          command: process-registry-updates
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          log_level: DEBUG
-
       - name: Validate Registry
         uses: ./.github/actions/registry
         with:
@@ -38,11 +29,3 @@ jobs:
           verify_dll_downloads: 'true'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           log_level: INFO
-
-      - name: Commit changes
-        if: steps.update-registry.outputs.failed == 'false' && github.event.pull_request.head.repo.full_name == github.repository
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          branch: ${{ github.head_ref }}
-          add_options: '--all'
-          file_pattern: 'package_db/* registry/* dll_db/*'

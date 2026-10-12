@@ -104,17 +104,19 @@ class RegistryIntegrationTests(unittest.TestCase):
             from datetime import datetime
             from github import Github
             import requests
-            from zero_infra_mod_registry.models import Mod, Release
+            from zero_infra_mod_registry.models import Release
             from zero_infra_mod_registry.retriever import GithubModMetadataRetriever
 
-            def fetch_repo(self, repo):
-                path = Path("fixtures") / (repo.name + ".json")
-                return Mod.from_dict(json.loads(path.read_text())) if path.exists() else None
+            def fetch_release(self, repo, tag):
+                path = Path("fixtures/release.json")
+                if not path.exists():
+                    path = Path("fixtures") / (repo.name + ".json")
+                if not path.exists():
+                    return None
+                data = json.loads(path.read_text())
+                entries = data.get("releases", [data])
+                return next((Release.from_dict(entry) for entry in entries if entry["tag"] == tag), None)
 
-            def fetch_release(self, mod, tag):
-                return Release.from_dict(json.loads(Path("fixtures/release.json").read_text()))
-
-            GithubModMetadataRetriever.fetch_repo_metadata = fetch_repo
             GithubModMetadataRetriever.fetch_release_metadata = fetch_release
 
             def dll_repo(self, name):
@@ -168,17 +170,18 @@ class RegistryIntegrationTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout)
 
     def test_fresh_ingestion_with_empty_terminated_and_unterminated_indexes(self):
-        for ending in (None, "", "\n"):
+        for sequence, ending in enumerate((None, "", "\n")):
             with self.subTest(ending=ending):
                 self.write_mod("Existing")
                 self.index.write_text("Test/Existing" + (ending or "") if ending is not None else "")
                 org_index = self.registry / "Test.txt"
                 org_index.write_text("https://github.com/Test/Existing" + (ending or "")
                                      if ending is not None else "")
-                for name in ("NewOne", "NewTwo"):
+                names = (f"NewOne{sequence}", f"NewTwo{sequence}")
+                for name in names:
                     self.fixture(name)
-                    self.assert_success(self.cli("add-package", f"https://github.com/Test/{name}"))
-                expected = (["Test/Existing"] if ending is not None else []) + ["Test/NewOne", "Test/NewTwo"]
+                    self.assert_success(self.cli("add-package-release", f"https://github.com/Test/{name}", "v1.0.0"))
+                expected = (["Test/Existing"] if ending is not None else []) + [f"Test/{name}" for name in names]
                 self.assertEqual(self.index.read_text().splitlines(), expected)
                 self.assertEqual(org_index.read_text().splitlines(),
                                  ["https://github.com/" + entry for entry in expected])
@@ -212,7 +215,7 @@ class RegistryIntegrationTests(unittest.TestCase):
 
     def test_invalid_new_package_is_not_written(self):
         self.fixture("Invalid", missing_dependency=True)
-        result = self.cli("add-package", "https://github.com/Test/Invalid")
+        result = self.cli("add-package-release", "https://github.com/Test/Invalid", "v1.0.0")
         self.assertNotEqual(result.returncode, 0, result.stdout)
         self.assertIn("requires missing dependency", result.stdout)
         self.assertEqual(self.index.read_text(), "")
@@ -231,28 +234,25 @@ class RegistryIntegrationTests(unittest.TestCase):
         self.assertIn("requires missing dependency", result.stdout)
         self.assertEqual(path.read_bytes(), before)
 
-    def test_processing_failed_retrieval_does_not_write_index(self):
-        (self.registry / "Test.txt").write_text("https://github.com/Test/Unavailable")
-        result = self.cli("process-registry-updates")
-        self.assertNotEqual(result.returncode, 0, result.stdout)
-        self.assertIn("Failures occurred while processing", result.stdout)
-        self.assertEqual(self.index.read_text(), "")
+    def test_bulk_commands_are_rejected_without_changes(self):
+        for arguments in (("add-package", "https://github.com/Test/Plugin"), ("process-registry-updates",)):
+            with self.subTest(arguments=arguments):
+                result = self.cli(*arguments)
+                self.assertNotEqual(result.returncode, 0, result.stdout)
+                self.assertIn("invalid choice", result.stdout)
+                self.assertEqual(self.index.read_text(), "")
 
-    def test_processing_invalid_package_does_not_write_index(self):
-        self.fixture("Invalid", missing_dependency=True)
-        (self.registry / "Test.txt").write_text("https://github.com/Test/Invalid")
-        result = self.cli("process-registry-updates")
-        self.assertNotEqual(result.returncode, 0, result.stdout)
-        self.assertIn("requires missing dependency", result.stdout)
-        self.assertEqual(self.index.read_text(), "")
-
-    def test_processing_valid_package_passes_and_can_be_appended(self):
-        self.fixture("Existing")
-        (self.registry / "Test.txt").write_text("https://github.com/Test/Existing")
-        self.assert_success(self.cli("process-registry-updates"))
-        self.fixture("New")
-        self.assert_success(self.cli("add-package", "https://github.com/Test/New"))
-        self.assertEqual(self.index.read_text().splitlines(), ["Test/Existing", "Test/New"])
+    def test_first_registration_and_update_import_only_requested_tags(self):
+        data = metadata("New")
+        extra = dict(data["releases"][0], tag="v2.0.0", release_date="2026-02-01T00:00:00")
+        data["releases"].append(extra)
+        (self.workspace / "fixtures/New.json").write_text(json.dumps(data))
+        self.assert_success(self.cli("add-package-release", "https://github.com/Test/New", "v2.0.0"))
+        path = self.db / "packages/Test/New.json"
+        self.assertEqual([release["tag"] for release in json.loads(path.read_text())["releases"]], ["v2.0.0"])
+        self.assert_success(self.cli("add-package-release", "https://github.com/Test/New", "v1.0.0"))
+        self.assertEqual([release["tag"] for release in json.loads(path.read_text())["releases"]], ["v2.0.0", "v1.0.0"])
+        self.assertEqual(self.index.read_text(), "Test/New\n")
         self.assert_success(self.cli("validate"))
 
     def dll_fixture(self, version="v1.0.0", assets=1, draft=False, uploaded=False):
@@ -392,7 +392,7 @@ class RegistryIntegrationTests(unittest.TestCase):
             info["mod_dependencies"] = []
             info["plugin_dependencies"] = [{"repo_url": "https://github.com/Test/Plugin", "version": "1.0.0"}]
         (self.workspace / "fixtures/Pak.json").write_text(json.dumps(pak))
-        self.assert_success(self.cli("add-package", "https://github.com/Test/Pak"))
+        self.assert_success(self.cli("add-package-release", "https://github.com/Test/Pak", "v1.0.0"))
         self.dll_fixture(version="v2.0.0")
         info = {"name": "Plugin", "description": "Description", "authors": ["Author"],
                 "mod_dependencies": [{"repo_url": "https://github.com/Test/Pak", "version": "1.0.0"}],
