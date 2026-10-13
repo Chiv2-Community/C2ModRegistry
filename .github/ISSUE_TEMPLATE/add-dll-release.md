@@ -8,7 +8,7 @@ assignees: ''
 ---
 
 - Publish a GitHub release with a semantic version tag, such as `v1.0.0`.
-- Commit `plugin.json` at the repository root before tagging the release. Use the [plugin.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/plugin.schema.json) for its structure and dependencies.
+- Commit `plugin.json` at the repository root before tagging the release. Use the [plugin.json schema](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/v1/schemas/plugin.schema.json) for its structure and dependencies.
 - If you forget to create or update it for a particular release, upload the corrected file to that release's assets. The file in the release assets takes precedence over the file in the repo.
 - Attach your `.dll` file.
 
