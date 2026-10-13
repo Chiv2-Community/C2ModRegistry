@@ -7,6 +7,6 @@ permissions:
   contents: read
 jobs:
   validate:
-    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/validate-registry.yml@91583711a43d2ca53bf88e097d7a788165d9cf68
+    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/validate-registry.yml@v1
     with:
-      tool_ref: 91583711a43d2ca53bf88e097d7a788165d9cf68
+      tool_ref: v1

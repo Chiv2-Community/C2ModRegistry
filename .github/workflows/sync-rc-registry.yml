@@ -15,8 +15,8 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
-    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/publish-registry.yml@91583711a43d2ca53bf88e097d7a788165d9cf68
+    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/publish-registry.yml@v1
     with:
-      tool_ref: 91583711a43d2ca53bf88e097d7a788165d9cf68
+      tool_ref: v1
       target_branch: update-registry-format
       source_sha: ${{ inputs.source_sha || github.sha }}
