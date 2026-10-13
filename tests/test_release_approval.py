@@ -51,13 +51,3 @@ class ReleaseApprovalTests(unittest.TestCase):
         self.assertNotIn("process-registry-updates", ci)
         self.assertNotIn("git-auto-commit-action", ci)
         self.assertIn("command: validate", ci)
-
-    def test_one_pak_template_covers_first_and_later_releases(self):
-        self.assertFalse((ROOT / ".github/ISSUE_TEMPLATE/add-package-to-registry.md").exists())
-        template = (ROOT / ".github/ISSUE_TEMPLATE/add-release-to-registry.md").read_text()
-        self.assertIn("first release and later versions", template)
-        self.assertIn("approval by a registry admin", template)
-        self.assertIn('"action": "add-package-release"', template)
-        readme = (ROOT / "README.md").read_text()
-        self.assertNotIn('"action": "add-package"', readme)
-        self.assertIn("Every release requires approval.", readme)

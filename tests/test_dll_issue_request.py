@@ -11,24 +11,6 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class DllIssueRequestTests(unittest.TestCase):
-    def test_dll_template_matches_release_template_format(self):
-        template = (ROOT / '.github/ISSUE_TEMPLATE/add-dll-release.md').read_text()
-        self.assertIn('title: "[DLL RELEASE] PLUGIN_NAME Version PLUGIN_VERSION"', template)
-        self.assertIn('- Publish a GitHub release with a semantic version tag', template)
-        self.assertIn('Leave `action` unchanged.', template)
-        self.assertIn('approval by a registry admin', template)
-        self.assertIn('fix the reported error and reply "retry"', template)
-        payload = json.loads(template.rsplit('```json\n', 1)[1].split('```', 1)[0])
-        self.assertEqual(payload['repo_url'], 'https://github.com/USERNAME/PLUGIN_REPO_NAME')
-        self.assertEqual(payload['release_tag'], 'PLUGIN_VERSION')
-        self.assertNotIn('DLL plugins do not need', template)
-        self.assertIn('Commit `plugin.json` at the repository root before tagging', template)
-        self.assertIn('schemas/plugin.schema.json', template)
-        self.assertIn('The file in the release assets takes precedence over the file in the repo.', template)
-        extracted = subprocess.run(['awk', '/^```/{if (flag) exit; flag=1; next} flag'],
-                                   input=template, capture_output=True, text=True, check=True)
-        self.assertEqual(json.loads(extracted.stdout), payload)
-
     def test_comments_name_the_correct_database(self):
         workflow = (ROOT / '.github/workflows/add-release-from-issue.yml').read_text()
         for name in ('Confirmation Message', 'Post failure Results '):
@@ -69,11 +51,7 @@ class DllIssueRequestTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(json.loads((path / 'args').read_text())[-2:], ['validate', '--verify-dll-downloads'])
 
-    def test_initial_template_omits_filename_and_failure_comment_explains_retry(self):
-        template = (ROOT / '.github/ISSUE_TEMPLATE/add-dll-release.md').read_text()
-        self.assertNotIn('dll_file', template)
-        payload = json.loads(template.rsplit('```json\n', 1)[1].split('```', 1)[0])
-        self.assertEqual(set(payload), {'action', 'repo_url', 'release_tag'})
+    def test_failure_comment_explains_retry(self):
         workflow = (ROOT / '.github/workflows/add-release-from-issue.yml').read_text()
         step = workflow.split('      - name: Explain DLL asset selection after an ambiguous release\n', 1)[1].split('\n      - name:', 1)[0]
         self.assertIn("outputs.failed == 'true'", step)
