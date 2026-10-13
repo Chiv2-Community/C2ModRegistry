@@ -15,6 +15,29 @@
   },
   "releases": [
     {
+      "tag": "v1.0.0-RC3",
+      "hash": "b1d0c87284447fd25a21ecafa17382a05a5f2971a1ecd6f2ec08463526d695e6",
+      "dll_file_name": "UnchainedPlugin.dll",
+      "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC3/UnchainedPlugin.dll",
+      "size": 23808000,
+      "release_date": "2026-10-13T14:25:11+00:00",
+      "info": {
+        "name": "Unchained Core Plugin",
+        "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
+        "authors": [
+          "Dr Long",
+          "Jacoby6000",
+          "Nihilianth",
+          "Reciate"
+        ],
+        "plugin_dependencies": [],
+        "mod_dependencies": [],
+        "target": "shared",
+        "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
+      },
+      "release_notes_markdown": "## What's Changed\n* Fix two server crashes: Team Objective stack overflow under --desync-patch, access violation in the combat hooks by @wiseLlama0 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/64\n* Implement rust hooks maximal by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/45\n* Automatically request registry registration for plugin releases by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/65\n\n## New Contributors\n* @wiseLlama0 made their first contribution in https://github.com/Chiv2-Community/UnchainedPlugin/pull/64\n\n**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/compare/v1.0.0-RC2...v1.0.0-RC3"
+    },
+    {
       "tag": "v1.0.0-RC2",
       "hash": "fb8a576e48c910f340c9822210d0230eb458ae1d2b8a8800fd509422ae9d9e69",
       "dll_file_name": "UnchainedPlugin.dll",
