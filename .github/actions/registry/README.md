@@ -19,14 +19,5 @@ Only the selected DLL is registered, with no fallback on missing matches.
 
 Release metadata follows the upstream [mod.json](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/mod.schema.json) and [plugin.json](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/prepare-v1/schemas/plugin.schema.json) schemas. Release uploads take precedence over repository-root files at the release tag. Plugin records include release notes and publication dates; they do not contain pak manifests.
 
-Run the deterministic Docker/CLI regression suite with:
-
-```sh
-python3 -m unittest discover -s tests -v
-```
-
-Before an upstream dependency is published, you can test a local source checkout
-at the exact pinned commit with `REGISTRY_TEST_SOURCE=/path/to/checkout` set for
-that command. The production workflow still fetches upstream; it does not use
-local source overrides. Merge the upstream changes before submitting the
-C2ModRegistry PR, then update the pin to the published upstream commit as needed.
+Merge upstream changes before submitting the C2ModRegistry PR, then update the
+pin to the published upstream commit as needed.
