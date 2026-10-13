@@ -1,32 +1,15 @@
-name: Update package list
+name: Publish database branch
 on:
   push:
-    branches:
-      - 'main'
-  pull_request:
-    types: [closed]
-    branches:
-      - main
+    branches: [main]
+permissions:
+  contents: write
+concurrency:
+  group: publish-db
+  cancel-in-progress: false
 jobs:
-  merge-branch:
-    if: (github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true) || github.event_name == 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-
-      - name: Validate Registry
-        uses: ./.github/actions/registry
-        with:
-          command: validate
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          log_level: INFO
-
-
-      - name: Merge main into db
-        uses: everlytic/branch-merge@1.1.5
-        with:
-          github_token: ${{ github.token }}
-          source_ref: ${{ github.ref }}
-          target_branch: db
-          commit_message_template: Merge main into db
+  publish:
+    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/publish-registry.yml@91583711a43d2ca53bf88e097d7a788165d9cf68
+    with:
+      tool_ref: 91583711a43d2ca53bf88e097d7a788165d9cf68
+      target_branch: db

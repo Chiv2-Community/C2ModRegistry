@@ -1,28 +1,12 @@
 name: Validate registry
-
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches:
-      - main
-
+    branches: [main]
 permissions:
   contents: read
-
 jobs:
-  check-should-execute:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout PR branch
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.head_ref }}
-
-      - name: Validate Registry
-        uses: ./.github/actions/registry
-        with:
-          command: validate
-          verify_dll_downloads: 'true'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          log_level: INFO
+  validate:
+    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/validate-registry.yml@91583711a43d2ca53bf88e097d7a788165d9cf68
+    with:
+      tool_ref: 91583711a43d2ca53bf88e097d7a788165d9cf68
