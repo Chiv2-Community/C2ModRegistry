@@ -87,10 +87,10 @@
     },
     {
       "tag": "v0.5.0",
-      "hash": "b2e852828ed0b67ae1d37bcb34c1558456b84c67653b139bae097b629b23cfea",
+      "hash": "d5afb90d4fcddb14f5738caaf856f627949af12326800aca9d881803d4eb6c8c",
       "dll_file_name": "UnchainedPlugin.dll",
       "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v0.5.0/UnchainedPlugin.dll",
-      "size": 3646464,
+      "size": 3620352,
       "release_date": "2025-06-19T21:48:29+00:00",
       "info": {
         "name": "Unchained Core Plugin",
