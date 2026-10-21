@@ -17,10 +17,10 @@
   "releases": [
     {
       "tag": "v1.0.0-RC3",
-      "hash": "b1d0c87284447fd25a21ecafa17382a05a5f2971a1ecd6f2ec08463526d695e6",
+      "hash": "11f231931bd59c0b5682fbe1fd129cfc0fa47f9033e74572aef886c96c756390",
       "dll_file_name": "UnchainedPlugin.dll",
       "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC3/UnchainedPlugin.dll",
-      "size": 23808000,
+      "size": 23590912,
       "release_date": "2026-10-13T14:25:11+00:00",
       "info": {
         "name": "Unchained Core Plugin",
@@ -41,7 +41,7 @@
     },
     {
       "tag": "v1.0.0-RC2",
-      "hash": "fb8a576e48c910f340c9822210d0230eb458ae1d2b8a8800fd509422ae9d9e69",
+      "hash": "3c13360de95ffb2c049b3faa9243247f2a884e2fd090044621a36f3856c45fe0",
       "dll_file_name": "UnchainedPlugin.dll",
       "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC2/UnchainedPlugin.dll",
       "size": 23812608,
@@ -64,10 +64,10 @@
     },
     {
       "tag": "v1.0.0-RC1",
-      "hash": "b91b30d8fff02f2e3da51c97bb3d00fd47c3487f1a92ef3dc3c64160723c9cde",
+      "hash": "d60c3bb7d6aed0f69978728c7d4c18cb5c6a6fd446d8fbedb6acf9eebcf9736c",
       "dll_file_name": "UnchainedPlugin.dll",
       "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC1/UnchainedPlugin.dll",
-      "size": 23660032,
+      "size": 23638528,
       "release_date": "2026-03-21T21:24:21+00:00",
       "info": {
         "name": "Unchained Core Plugin",
@@ -87,10 +87,10 @@
     },
     {
       "tag": "v0.5.0",
-      "hash": "b2e852828ed0b67ae1d37bcb34c1558456b84c67653b139bae097b629b23cfea",
+      "hash": "d5afb90d4fcddb14f5738caaf856f627949af12326800aca9d881803d4eb6c8c",
       "dll_file_name": "UnchainedPlugin.dll",
       "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v0.5.0/UnchainedPlugin.dll",
-      "size": 3646464,
+      "size": 3620352,
       "release_date": "2025-06-19T21:48:29+00:00",
       "info": {
         "name": "Unchained Core Plugin",
