@@ -1,0 +1,202 @@
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/chivned/AldmereHardpoint",
+        "name": "Aldmere Hardpoint",
+        "description": "Hardpoint game mode for the Aldmere Works map. Five zones go live in turn for 70 s each, marked by a wall of light (white free, blue Agatha, red Mason, purple contested). A team scores 1 point per second while only its players hold the live zone; first to 220 wins. Everyone in the match needs it. It stays idle on other maps.",
+        "icon_url": null,
+        "image_urls": [],
+        "authors": [
+            "Ned"
+        ],
+        "mod_dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods",
+                "version": ">=0.0.1"
+            }
+        ],
+        "plugin_dependencies": []
+    },
+    "releases": [
+        {
+            "tag": "v0.4.9",
+            "hash": "e9fd7908c021e1918454736884fbde5f63724a30282937566e08282351e03fb17d32f202719dc27eb998dee42a216a91cb85de9b8328bba7c7249c32f8755a51",
+            "pak_file_name": "zz_AldmereHardpoint.pak",
+            "release_date": "2026-10-23T23:24:22",
+            "info": {
+                "repo_url": "https://github.com/chivned/AldmereHardpoint",
+                "name": "Aldmere Hardpoint",
+                "description": "Hardpoint game mode for the Aldmere Works map. Five zones go live in turn for 70 s each, marked by a wall of light (white free, blue Agatha, red Mason, purple contested). A team scores 1 point per second while only its players hold the live zone; first to 220 wins. Everyone in the match needs it. It stays idle on other maps.",
+                "icon_url": null,
+                "image_urls": [],
+                "authors": [
+                    "Ned"
+                ],
+                "mod_dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods",
+                        "version": ">=0.0.1"
+                    }
+                ],
+                "plugin_dependencies": []
+            },
+            "release_notes_markdown": "Hardpoint game mode for the Aldmere Works map. Live zone walls show who holds it, the Bell Pit bell tolls when a new zone goes live, and a marker shows the new zone for 5 seconds. Everyone in the match needs it.",
+            "manifest": {
+                "markers": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/AldmereHardpoint_Marker.uasset",
+                        "hash": "1c5a86274a4d10ecc4e7f57bed7fc3ed12d6daf54696a51c3080e5ca24697a9ded2cd59d23c401c3fa32c0868089cb96bdceb595c9e51644821e25f2d800261c",
+                        "object_class": "DA_ModMarker_C",
+                        "class_path": null,
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/AldmereHardpoint/AldmereHardpoint.uasset"
+                        ]
+                    }
+                ],
+                "blueprints": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/AldmereHardpoint.uasset",
+                        "hash": "a59a536c1dcf21844fd17c7034b410c09a4a563d9ed105aeeefcc7477b161c0df0eff8da7f1232dc1a79cde2714368443ea2e5bfe95b509c154d8ec320f9439e",
+                        "object_class": "ArgonSDKModBase_C",
+                        "class_path": "/Game/Mods/AgMods/AldmereHardpoint/AldmereHardpoint.AldmereHardpoint_C",
+                        "mod_name": "Aldmere Hardpoint",
+                        "version": "1.0.0",
+                        "author": "Ned",
+                        "mod_description": "",
+                        "mod_repo_url": "",
+                        "silent_load": false,
+                        "show_in_gui": false,
+                        "enable_by_default": false,
+                        "is_client_side": false,
+                        "online_only": false,
+                        "host_only": false,
+                        "allow_on_frontend": false,
+                        "is_hidden": false
+                    }
+                ],
+                "maps": [],
+                "replacements": [],
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/M_HP_Zone.uasset",
+                        "hash": "bc8c8b16297cbbfff265cdf2199f5df41d6d066cadd601b8cc45d5f0745bf14045d9c5c2284a43a4e1d356426b53700aee2555f813fd5f3b1b15406f56057c9a",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Zone_Next.uasset",
+                        "hash": "f1d15feff178b61f8af2d5274743f0531652701bb68d76e47cdccc37f4124106666b6e7d5a8004ce6c585a346eb7614b8c07114bc09421c1c1edacfc345f0cd9",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Zone_Mason.uasset",
+                        "hash": "891490be486668f43cea337158d3f8af00bf2da5d20c52b08ae4100d5038dba31d24430c6e6d8da25f685c7fcc1ce7462c27dba61819b7d142cb6b27d4c4980a",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Zone_Agatha.uasset",
+                        "hash": "e8e3d2840e834683d6a2beafc67a88eaed16254f57c2b7e37a971044bfb239c81435614c57bbf7d0513c8b992d9aeb61b235f6877ec8f90970338c337e279b16",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Wall_Neutral.uasset",
+                        "hash": "facdd369cb1b029dbc52b5c9e6692739d77229f14b12ed69b9b8146248a68f3efc9db18989fc53c81cca1761dace7e9547e6ae1d557ee1795a87d5ee46ca435d",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Wall_Contested.uasset",
+                        "hash": "7482f7debb0ac31f358ac479400ad28a55ce70466f625f0848659bacf678901b2d2f2cd7f69755bc3ee8c2e9296ba8a50abd8b22d1b6f911ebd90572745638b7",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_WallB_Next.uasset",
+                        "hash": "41ef9f3a49aac8f1b1bdbfe46030a1169518ed25bf1dbb14ce78f9f441c542efdc1400fb8557be835ed24a2f1193f41bda06d33d63bc390812a26bc49be2bc9f",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/M_HP_Wall.uasset",
+                        "hash": "74ec75df3e91bb4c2a1a48066e90713b89390485877c97249ab3a47a4832c7e6012154b2f247f8a3bff42481d740722c50ba5b105b05b205fb5c8cca1d3603e0",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Zone_Neutral.uasset",
+                        "hash": "cfb3bc30ac395d8b2fc3b64259113e011d806750479816018a363f0a11b940b9b2531250c1da62cb267b492e5264d06f9e109769d3f80f71b8948a7f3dddae9c",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Zone_Contested.uasset",
+                        "hash": "74c19c0a3cf786314f9d9a28359a324c1a67614741d725d119e59da1d0f578be6a5e943c637849f3253e7362dba15b389831727cc920c90ddecb2138c467413e",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Wall_Next.uasset",
+                        "hash": "5d46aab0e04ef77531279ec21c4cd72773f69700ed830b01da3a80db7533523d9da97162974adbd8cba2106d9c4c884f1872840c4720714a5b9f4a25112dbfec",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Wall_Mason.uasset",
+                        "hash": "cb5afd2c0c041da7913a98c283e11d32006711647269e54c5b5936161f8c3fa7fe08fca8796b8a41218529c692f9e7a6ae6f18a98e56cc7cdda809502a95ed7f",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_Wall_Agatha.uasset",
+                        "hash": "5d6266cd6dae2c6d6205a1ad6859e3bf0a233dc1de24c61f2e1068fc11710693740179260db3da2fe759472a4356c852cea0cd38655e120f23938ed6bbbaf0f1",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_WallB_Neutral.uasset",
+                        "hash": "3db14669cc4688ddd45dd270c8954f0912c640be27f532a338f2c51718bfebd5ca30ba438598618bfcffe84b4dfa4ce4be6d92d216817578a3fac0736f85d790",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_WallB_Mason.uasset",
+                        "hash": "fb2c0f54853ec5eb6810da7f60a691d43e3a07beb2890a1612f2d6d34ca5e378e7920b3942c831db9b2e780bbf9e51b2037428e2c79aeb176dca2a3251975ab6",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_WallB_Contested.uasset",
+                        "hash": "3f6ad7c39c3e2dec168e2ba20f954ec89d5667820564cfec2f2960de9424fdff1077d260bce63ea43b25098ee2b57ca64e9a007affb675051e90d0e5d856054a",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/AldmereHardpoint/Materials/MI_HP_WallB_Agatha.uasset",
+                        "hash": "95513ed01e375f8d7347855623711965de2e97526c0571672d312548f443a29e7aef363ff585875424adc9ad05ca24d16a393330b368babef271a1667b3f5e8b",
+                        "object_class": "MaterialInstanceConstant",
+                        "class_path": null,
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}
