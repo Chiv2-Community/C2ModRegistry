@@ -11,6 +11,7 @@
             "SageFlare"
         ],
         "mod_dependencies": [],
+        "dependencies": [],
         "plugin_dependencies": []
     },
     "releases": [
@@ -31,6 +32,7 @@
                     "SageFlare"
                 ],
                 "mod_dependencies": [],
+                "dependencies": [],
                 "plugin_dependencies": []
             },
             "release_notes_markdown": "Full public release. The same mirrors as [0.10.0](https://github.com/SageFlare/MirrorKit/releases/tag/v0.10.0), now submitted to the Unchained mod registry.\n\n- **License:** GPL-3.0 from this version. You may use, change and share MirrorKit; anything you publish that is built on it must be released under the same license, with its source. 0.10.0 and earlier stay under the MIT License.\n- **Docs:** https://sageflare.github.io/MirrorKit/\n\nAssets: `MirrorKit.pak` (+ `.sha256`) and `MirrorKit_Source.zip` (Content, docs, images). The full history is in [docs/CHANGELOG.md](docs/CHANGELOG.md).\n",
