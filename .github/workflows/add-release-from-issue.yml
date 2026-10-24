@@ -13,6 +13,6 @@ concurrency:
   cancel-in-progress: false
 jobs:
   register:
-    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/register-release.yml@v1
+    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/register-release.yml@v1.0.1
     with:
-      tool_ref: v1
+      tool_ref: v1.0.1
