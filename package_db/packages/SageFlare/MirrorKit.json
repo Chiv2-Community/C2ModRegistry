@@ -1,0 +1,334 @@
+{
+    "latest_release_info": {
+        "repo_url": "https://github.com/SageFlare/MirrorKit",
+        "name": "MirrorKit",
+        "description": "Reusable live reflections, mirror variants, shiny surfaces and breakable mirror tiles for Chivalry 2 Unchained maps.",
+        "icon_url": null,
+        "image_urls": [
+            "https://raw.githubusercontent.com/SageFlare/MirrorKit/main/images/MirrorPak.png"
+        ],
+        "authors": [
+            "SageFlare"
+        ],
+        "mod_dependencies": [],
+        "plugin_dependencies": []
+    },
+    "releases": [
+        {
+            "tag": "v1.0.0",
+            "hash": "b4e2226a7f3869a28e984a161475951b15933358c513f090bd71daf6a61baab9aa2f1e3a5542ca6117eba18b03292871cdfd5d5db64f967b4911e05edcc0fe5b",
+            "pak_file_name": "MirrorKit.pak",
+            "release_date": "2026-10-24T05:30:56",
+            "info": {
+                "repo_url": "https://github.com/SageFlare/MirrorKit",
+                "name": "MirrorKit",
+                "description": "Reusable live reflections, mirror variants, shiny surfaces and breakable mirror tiles for Chivalry 2 Unchained maps.",
+                "icon_url": null,
+                "image_urls": [
+                    "https://raw.githubusercontent.com/SageFlare/MirrorKit/main/images/MirrorPak.png"
+                ],
+                "authors": [
+                    "SageFlare"
+                ],
+                "mod_dependencies": [],
+                "plugin_dependencies": []
+            },
+            "release_notes_markdown": "Full public release. The same mirrors as [0.10.0](https://github.com/SageFlare/MirrorKit/releases/tag/v0.10.0), now submitted to the Unchained mod registry.\n\n- **License:** GPL-3.0 from this version. You may use, change and share MirrorKit; anything you publish that is built on it must be released under the same license, with its source. 0.10.0 and earlier stay under the MIT License.\n- **Docs:** https://sageflare.github.io/MirrorKit/\n\nAssets: `MirrorKit.pak` (+ `.sha256`) and `MirrorKit_Source.zip` (Content, docs, images). The full history is in [docs/CHANGELOG.md](docs/CHANGELOG.md).\n",
+            "manifest": {
+                "markers": [],
+                "blueprints": [],
+                "maps": [],
+                "replacements": [],
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Quality/MQ_Omega.uasset",
+                        "hash": "ac7ac25641b7a46c2cc76c0701fb0e86cce71433cac9c3774ea70cfed3f885592a9a8ebe899cb25bffc3764d315aa9c24084b06a2bc99e7d212be400721e9678",
+                        "object_class": "BP_MirrorQuality_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Quality/MQ_High.uasset",
+                        "hash": "a7987d2cfc18569ae5e22c6869d806a80dfe19980e1596df2c92f54399de8a903b7ceed2d105bd67605d5e73cb8a635830ed8e8e6c59644e10982032e0f01e33",
+                        "object_class": "BP_MirrorQuality_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Meshes/SM_MirrorTileCore.uasset",
+                        "hash": "5e7cd4966b98a0a5143c7fbe0e1554e20b9f4e035ed35f9878d5a1f87a3c09a184e0b9609765e78a1c0a505958b625ee8d73f6990274f103e476f413f75783c3",
+                        "object_class": "StaticMesh",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Materials/M_MirrorOff.uasset",
+                        "hash": "1a6b042b4ab766d45f04fb25e49ad7c809b47e2e0f191e968bfa267c51110214dfb4e047b1d232494829190e7ae70b74d19c283acfd0da68a9c27c3d08160554",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Materials/M_Matte.uasset",
+                        "hash": "dcb4779c51183ebdf7ed6bb71008122ac781312e07cd39828a37999c8eed1594757ba51abf560bd2ee4ebc55283381bc9105cb85ee7dee648f313631701416fd",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Materials/M_CaptureMirror.uasset",
+                        "hash": "00fe0f1595e320c946d56508e8f706dec33b002116685512ef9268191ea0d17db6bef0163fb4a8a5d3a5539d20ce7cb9e2c8935ca8cd616666696785ae234a04",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/E_MirrorStyle.uasset",
+                        "hash": "442ea52d2da1eda6ea33dd27dacc869a25fb4acb0758ea0936c25ac20d8357ee475af7836b7732666a4c1d68144caf397474be4fcaa1d29c76dc119758b4d43a",
+                        "object_class": "UserDefinedEnum",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/E_MirrorStaggerMode.uasset",
+                        "hash": "088b4c9f754df17efc9c68f320162e81041980d992e595c2013c160513ce1d7c91b20700a7aacdb93cec6e596ee4a387c4687b5118e9822a90873f02433852b9",
+                        "object_class": "UserDefinedEnum",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/E_MirrorSettingsSource.uasset",
+                        "hash": "617c442755c160608dd7c27b476cbcf05c35e6f559de6d62b41d22704f0c8cfbb6be4db4686f4e67424af42aa4ef0c113908b74990fa3963e428176cea627ee6",
+                        "object_class": "UserDefinedEnum",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/E_MirrorBody.uasset",
+                        "hash": "df43024c6384a0424d80e0e107b2f32e16814fd115ca18556023ebd32c5ec276088e7be9663d323dd891594c1a5007221fb7cfa39936a8e03af0c905322ab693",
+                        "object_class": "UserDefinedEnum",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorKitManager.uasset",
+                        "hash": "8df3c7dc6abdfd311504c8a3738be398f6321bbf384bab58d352e4091e68950e52d4fc10dec1efc0219ee60940b31a6191a616a7f49be14321757e0fa5b4bc45",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Textures/TC_MK_DefaultEnvironment.uasset",
+                        "hash": "bbd8698a2229edc3f9710fd1652808a5d02fdb6da8bd88af7cc6113c3aa7b173c4e418f9f756e164219d82920daa99326187718b071eda8471d4f83654f56080",
+                        "object_class": "TextureCube",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Quality/MQ_Medium.uasset",
+                        "hash": "d87eaedf7b0c208d7f56e831e4136d0c192affca50062ae886dbefd11f910dab47f1400d41c7f07d43c803b7345d5ecef7ad6a3c4777f3aa1254e6ce20124e36",
+                        "object_class": "BP_MirrorQuality_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Profiles/MP_MirrorMaze.uasset",
+                        "hash": "93054f6b943a768b42c4f9e82385dae935cfdaac8605c9cd75b0a3371a05611da5c9c79388c8b53ba8f88f2a89624a84ec985cb0748da0773dd556b3255ae49f",
+                        "object_class": "BP_MirrorProfile_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Materials/M_MirrorPolished.uasset",
+                        "hash": "22f29d16f1740a558b90ebbb1dc2b52309b1c6d4cb228ac4da7076e651b24f6b6a8567bc5c6fd608f483d1166387cfbaf87a61b8450cc012e9b6b65f1255e940",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Materials/M_MirrorCracked.uasset",
+                        "hash": "f2796759e9c1caf35509d5c9c44cc4026235eb632db09c3b8d9dcf3134c7531ed4bc7c46786a7e621e523c4e70b0cd37e682f8a07a8d0983ac8bbd3af54e1634",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorTileLive.uasset",
+                        "hash": "b70befd729f8b58cfd81eae638b96c9a82fd1bb58d5d87f5809cba33896cdfff6a07dff574fa16327e2951a39e72b1be6035fe6643a70c369ea119075f9dd20e",
+                        "object_class": "bp_breakableWindow_BT01_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorQuality.uasset",
+                        "hash": "9ec269d2c65d28dda68faa2afb3b46f4f2ede682bd07c33bfbd0bcc974a047b820839fbd00c6f850056d408906cc4dccfa61995023c48e29d7691bd7323726d9",
+                        "object_class": "PrimaryDataAsset",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorKitNet.uasset",
+                        "hash": "e9985bda6b2c299c25c0741b0cc5eab08566fce282a98155e505be24a4678f8a38537c57983d6ab406fceab5870bb50d2e8e69e1282bbfd95490443e1228a3e1",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_Mirror_Ghost.uasset",
+                        "hash": "93037076aa032175de6e32656c244448d018df7b6a52e3b98b647c869fc818f38c0ae0405d1e4abe650f83ffcdafd8062c718586dee7b15837955f7b560791d2",
+                        "object_class": "BP_CaptureMirror_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Quality/MQ_Off.uasset",
+                        "hash": "eb3cb6d61907f55b20bd732cc67720eee975177e260904a0beafa3c977bacde9dba72a87291c13d25184dc5976628e36f7a45367ad455ac590ad370cfc1671bb",
+                        "object_class": "BP_MirrorQuality_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Profiles/MP_HighDetail.uasset",
+                        "hash": "eb8f9fa8d4ad58f969685e0d81652d4c116f4a3637a558e0817e2cbc6b8334b16a055bfadaab34e6ccf795e62db00f51940d64b42063bb560ff330abfb097f86",
+                        "object_class": "BP_MirrorProfile_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Meshes/SM_MirrorTile_Cracked.uasset",
+                        "hash": "1cb7a098bf4df3a29d2a9b92b6aa25ff36f2228b6f321d9e07cf1b435b733b84310517dfca52a964185888ef1c2ff267aa8b3d4af86eedab22d9327f453bfd9c",
+                        "object_class": "StaticMesh",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Materials/M_MirrorEnvironment.uasset",
+                        "hash": "4c1e67f0e960d74fc7a8881c3109eb1d6a90f92c97d66ca3862f043115113a4e0c3836ecbdfc81d9d1f63224ae70b4a671588be96470a4eeb9617e7107122847",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorTile.uasset",
+                        "hash": "deba3542a1845430b851b1bccb9114df1c231c0fc63844d5e02ad88d83dfa9f559f4d174e76f95065ef3b50914e5ad164ea7c08b77f2c31785dbe320b6ebc445",
+                        "object_class": "bp_breakableWindow_SH01_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorKitSettings.uasset",
+                        "hash": "c10e19f07212e16438f9d02ee47dc9b2464fd93c0b8ce976177cbd7ac33591af6822c4742f3a5ffb55517569fd681047ed7eb3509964f257381c89d39fffc96a",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorDoubleStretch.uasset",
+                        "hash": "0640502608da41e55ef7af6321d561087da49db3ae2b5c8222df7ec0ccef84861dc5763bb581a57d7dcb6bf5fa9ba1a55da01deaaefd239777e3c873c427ee39",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorDoubleFull.uasset",
+                        "hash": "75a378821924fb216c3e1ecb3d501e242d94cebab6adc548051fb8df3dd12f6b067ee98c70a2cc425f4bc52ee679cacc4ab6f93920ae330fe1336e0765dd1921",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorDouble.uasset",
+                        "hash": "3393095df272d1795f134a1353544fa02707770392e1f272e7582ef351e96b799d89354c6e19e2955731486ceb9081266be696c88ed08554b4410cd9fc333445",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_Mirror_Headless.uasset",
+                        "hash": "87181174ed42a9f4f09becb78282747076cc663b1c95f1a0d40ac36a34b092d5f52aba826f7723795385cc4df0b5894d699f815d1aacd381a5162f4e29529fee",
+                        "object_class": "BP_CaptureMirror_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_Mirror_Funhouse.uasset",
+                        "hash": "f65bef569a975eea37a6dbbf5e682147083e3c54380c588374136d3b361630639055e501a497e435c1a873207bc852244c1512472abe60ac95705ae856b795b9",
+                        "object_class": "BP_CaptureMirror_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Quality/MQ_Ultra.uasset",
+                        "hash": "6d134609027e5e8352769a69404e8252e0323032f8107046fa218dff85e89e614d17371a5ec8cbe780845b2701b0bc3bf68a1e168c9b55237cd9812e01e02768",
+                        "object_class": "BP_MirrorQuality_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Quality/MQ_Low.uasset",
+                        "hash": "22e9c4a233a6810832b2f4a346e972e7e498470797a3c336adaae6ffa3ad3bd12c22928d2e7236c10d6b604f3427c21838be20aa8f15b04d69366cdc7b059969",
+                        "object_class": "BP_MirrorQuality_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Meshes/SM_MKCube.uasset",
+                        "hash": "a8c8aef73604147ac2cdcd85fec64a1e8ae2ce30f2607803d504f1321c4b82329f93beb1cf073c3f166e705899d8696ab0d0e919772337545cd0337f68010341",
+                        "object_class": "StaticMesh",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Meshes/SM_MirrorTile.uasset",
+                        "hash": "0b5f2d78d40d87f8126d154575c35cb5d6edbe562615ba7ad687630d02f2d593f6382e4a41e7fe24354946ff7872c80cf2c909520d701033b9aac0c35ef605db",
+                        "object_class": "StaticMesh",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Materials/M_MirrorDarkCenter.uasset",
+                        "hash": "ddb782ae6e5f54810e25f628c14a00e8ca9d317aa607d26169c78dd5374a15f843322dec2f46af7f0b3699f5f5877462273b9ee21fb78699f33746f0fb502ef4",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorTile_NoSnow.uasset",
+                        "hash": "5478fd0831763205fcda6b5a1038859fab2004aee274d2de8ee3ff9a7de927ed0105954f69e9a38bc49b5f51119ae1484c54557ef2be8ee0469fb8e84ecd0cbd",
+                        "object_class": "bp_breakableWindow_BT01_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorProfile.uasset",
+                        "hash": "59c7712ad073a191be851902ff35f72f27fa7951dd854fc5ff8a0650a472548a3f4fa80ca603fb1c6461a9005899bc1e13e16177196d80518f7bc04cb218970b",
+                        "object_class": "PrimaryDataAsset",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_MirrorKitBudget.uasset",
+                        "hash": "30fd0da8e0dceea8f3c4f191a0240301399a2e5aec439b6cf60c3777176e98dadc308aa76c6491af049a58dbdbebec2ba0d0783228356bc7592791f29f2c3b35",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_Mirror_StretchHead.uasset",
+                        "hash": "75331462a652d4439540194fa5531c81905771c06acc0a4ebdd04da257f965d698fad5d625027db5fd5635fbb19cd1d9c792d8bc60224fd2348dad481060d7fd",
+                        "object_class": "BP_CaptureMirror_C",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/MirrorKit/Blueprints/BP_CaptureMirror.uasset",
+                        "hash": "68f55b6b855230449a12178dc83437b632ce686560fc479ac36138bf3b3839c53ce7b0ee0beaf86547067c06d29f7d88fce8d3d44f7e83194ac953417c95af84",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    }
+                ]
+            }
+        }
+    ]
+}
