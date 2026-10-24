@@ -16,3 +16,4 @@ Knutschbert/RuneForged
 Knutschbert/Hitboxes
 SageFlare/MirrorKit
 SageFlare/MirrorLab
+SageFlare/MirrorMaze
