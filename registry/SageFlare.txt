@@ -1,2 +1,3 @@
 https://github.com/SageFlare/MirrorKit
 https://github.com/SageFlare/MirrorLab
+https://github.com/SageFlare/MirrorMaze
