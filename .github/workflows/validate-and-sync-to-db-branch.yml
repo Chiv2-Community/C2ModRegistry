@@ -9,7 +9,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   publish:
-    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/publish-registry.yml@v1.0.1
+    uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/publish-registry.yml@v1.0.2
     with:
-      tool_ref: v1.0.1
+      tool_ref: v1.0.2
       target_branch: db
