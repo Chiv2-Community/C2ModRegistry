@@ -11,7 +11,6 @@
     ],
     "plugin_dependencies": [],
     "mod_dependencies": [],
-    "dependencies": [],
     "target": "shared",
     "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
   },
@@ -35,7 +34,6 @@
         ],
         "plugin_dependencies": [],
         "mod_dependencies": [],
-        "dependencies": [],
         "target": "shared",
         "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
       },
@@ -59,7 +57,6 @@
         ],
         "plugin_dependencies": [],
         "mod_dependencies": [],
-        "dependencies": [],
         "target": "shared",
         "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
       },
@@ -83,7 +80,6 @@
         ],
         "plugin_dependencies": [],
         "mod_dependencies": [],
-        "dependencies": [],
         "target": "shared",
         "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
       },
@@ -107,7 +103,6 @@
         ],
         "plugin_dependencies": [],
         "mod_dependencies": [],
-        "dependencies": [],
         "target": "shared",
         "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin"
       },
