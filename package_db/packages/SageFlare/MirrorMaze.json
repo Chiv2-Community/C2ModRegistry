@@ -26,6 +26,254 @@
     },
     "releases": [
         {
+            "tag": "v1.1.0",
+            "hash": "08f5477a41d8f1314fa1d65ca77b3aa4ec44bd3b439aa67c68374a994648267fedb8e1efedfa3d8903ea8fede5a4630bdac3ef77b4bf840d91cf557f9412868d",
+            "pak_file_name": "MirrorMaze.pak",
+            "release_date": "2026-10-25T11:18:01",
+            "info": {
+                "repo_url": "https://github.com/SageFlare/MirrorMaze",
+                "name": "MirrorMaze",
+                "description": "A large free-for-all maze of live mirrors, illusion walls and breakable mirror tiles.",
+                "icon_url": null,
+                "image_urls": [
+                    "https://raw.githubusercontent.com/SageFlare/MirrorMaze/main/images/MirrorMaze.png"
+                ],
+                "authors": [
+                    "SageFlare"
+                ],
+                "mod_dependencies": [
+                    {
+                        "repo_url": "https://github.com/SageFlare/MirrorKit",
+                        "version": ">=1.0.0,<2.0.0"
+                    }
+                ],
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/SageFlare/MirrorKit",
+                        "version": ">=1.0.0,<2.0.0"
+                    }
+                ],
+                "plugin_dependencies": []
+            },
+            "release_notes_markdown": "Gameplay update, for [MirrorKit 1.0.0](https://github.com/SageFlare/MirrorKit/releases/tag/v1.0.0) or later (required). Same maze and mirrors as 1.0.0. The map now plays like the official free-for-all maps.\n\n- **Kill cap and end screen:** first to 40 kills wins (the cap grows with the player count, bots included, like on official FFA maps), with the objective bar, \"kills to win\" banners and announcer lines, and the end screen. 15-minute match timer.\n- **Spawns:** 128 spawn points over the whole maze (was 16), respawn waves every 6 seconds. Large bot counts no longer leave players stuck dead.\n- **Bots roam:** bots now explore the maze instead of staying in the room they spawned in.\n- **Cinematics:** an intro with a map-name voice line, then camera flights through the maze while players wait for the match.\n- **Normal match start:** the map no longer skips the start wait. Servers keep their own warmup settings.\n- **Map info:** the map now shows its name and description in the game's map details.\n\n**If every map started instantly after playing 1.0.0:** 1.0.0 skipped the start wait, and this may have been saved in your game settings. Open `%LOCALAPPDATA%\\Chivalry 2\\Saved_Unchained\\Config\\WindowsNoEditor\\Game.ini` and delete any `MinTimeBeforeStartingMatch=0` and `MaxTimeBeforeStartingMatch=0` lines.\n\nInstall `MirrorMaze.pak` together with `MirrorKit.pak`. Page: https://sageflare.github.io/MirrorMaze/\n",
+            "manifest": {
+                "markers": [],
+                "blueprints": [],
+                "maps": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/FFA_MirrorMaze.umap",
+                        "hash": "1b5969c669402dd8d79733ef08ded699505b327a013d127a16fa7add606941078f7167a849d769d8ab89820fce4c00c84c175c5aaedc3f51b09475fc0f428737",
+                        "object_class": "TBLMapSummary",
+                        "class_path": null,
+                        "game_mode": "Mode_FFA_C",
+                        "map_name": "Mirror Maze",
+                        "defending_faction": null,
+                        "attacking_faction": "EFaction::FFA",
+                        "game_mode_type": "EGameModeType::FreeForAll"
+                    }
+                ],
+                "replacements": [],
+                "arbitrary": [
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Cinematics/SEQ_Shot4.uasset",
+                        "hash": "e2e3ff1dc2e792665d2fd004edbae6e6c9a628ceeda7923a7d9e48e62b73ad587b252ce5f34792cbf1684ed885b304d3bbe8958cb275ed6afa90731594aa2a55",
+                        "object_class": "LevelSequence",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Blueprints/BP_MazeStartup.uasset",
+                        "hash": "5ecaead24db8226f45acac428e4856413fb8edf6916812671fd2d5c201500c3482c4c376a57c0e379712cc2eb997c0adf13230a9fc6396e541b08271a3a3b4b5",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Meshes/SM_MazeCube.uasset",
+                        "hash": "761b19caf25bd89d6ce9f1ab9781d5be1577bf094cd82ca77929b5d3e2067cebf89f1cb67be8fbf1ad750caa6f0a52c2e6506cb517624a0766c4b04f1d0049aa",
+                        "object_class": "StaticMesh",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Trim.uasset",
+                        "hash": "28eeaa3fcf1f7735ebb027250c0aa2ffc550807030ea26bc109693c854a59f188b525638e7b6233901e57403df9c03e0e25f84db55668bda260d426d7d559c0b",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_RV_Floor.uasset",
+                        "hash": "0a7730ba838343835be39ab4485d696fdd31a81a5a2e2e3e40064af85416fb77d19a581c140ab8ecb174c340eed7d5acb0b7fc34acd1e74766cae9fe86d51a3d",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_NeonFloor_Magenta.uasset",
+                        "hash": "791f337a8d276a1c518a6ffed509780b4b14ef7aaaa0fcc6a35d311d20ff2fd95ba0118ca38dcd8a3bdfe3ff2e26bf83d200682fcbd13adec8b960abe9b86229",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_NeonFloor_Cyan.uasset",
+                        "hash": "e2b9f3e2ef71c4aff4e0d478d7c85f5f592188a028aca135c11829510c7269739936a949c776cf522a51c68d83951fb71f14979b88cf4a4d6c452b3c5b34df52",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Neon_Violet.uasset",
+                        "hash": "268a1dfb613493991c509b73203cb4942567731613a78bb1f7db5245a099972cd34c93f88b220149039810de9f83a6d505cb0db2f45eaaf418331528065ff597",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Neon_Lime.uasset",
+                        "hash": "bcda253891e1758b575bc5675ef6a4243e226bf32d383ca121d06c1363ef975a537fca68ef5f6441f1cbeff919d5cb1f1e6d2ff2d2c93ff0ada47d8e4bbc36f9",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Lamp.uasset",
+                        "hash": "907dd3f96ea95363e3de24557358546d67eb901576618a657655b21ad488f607ae108a8fd1261fa0c1a98a1be35ed355f390d7f492c7f513b3acd05c9e42492e",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Floor.uasset",
+                        "hash": "d6b1970abb0b7bed0dead3eaa98c9561b40314b096a0bf67c09d0f212ebe36fd0a7cb3d1398bc2f9df777ef253e65066d5ae5ab4a83b0bf8da1b35d03ec6e9e5",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Cinematics/SEQ_Shot2.uasset",
+                        "hash": "779b970d9f2c8e57e8ea5642fcbfae58812f032f824b77702e320e3a0c47c69c9b9dcc5044075eae44515132eb004fd23b3d1680f659ada6df4851fcad3f08fd",
+                        "object_class": "LevelSequence",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Cinematics/SEQ_Prologue.uasset",
+                        "hash": "8c5b10208b6db50cc70fed6bb197d6f127be0e873ea40af26e0cd8b19b5fa257350025ffb16fbeb9152e0e8bb6997b49cf363126544af870ec127a77538352e7",
+                        "object_class": "LevelSequence",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Blueprints/BP_MazeRespawnWaves.uasset",
+                        "hash": "647898a73e985eb298f0062219fc27ce61a38b63bdc0fe39aa5b8176a05d8dfd2c5dd3a64b1deac6e88e955d0b2c041efc44b4ff0c68428a68a3cc182de995f0",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/FFA_MirrorMaze_BuiltData.uasset",
+                        "hash": "c4840e9cbf24948bd04eb6851c4623d415e6d69e47c569aa9e845725b184a0d0d911eaa151a36813797535eb4006aed7d97808e55b052fd1ee6ada8d79a430e5",
+                        "object_class": "MapBuildDataRegistry",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Cinematics/SEQ_Shot1.uasset",
+                        "hash": "48ef9c595b1bf14013352261e529fc968d49fffc5854222dd2c64b3c00cf2609a96530806b4f4910e28ab2c914c4db616e4658f7cecb1d08b5c81e48bde62358",
+                        "object_class": "LevelSequence",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Audio/SW_MirrorMazeIntro.uasset",
+                        "hash": "5430bce566cbb10cd8356013e8d7da5ba7b53f9906b4fa50a6a518366ac87a9ca048664dc2917a18f9c293c08bbdaa1eec27337ea04112c4a87cab2f4553eceb",
+                        "object_class": "SoundWave",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Meshes/SM_OpeningShade.uasset",
+                        "hash": "ebfa5a419d85f6c8c629537adefee050c6be861bd3b2e1087c65c0fab88fec09f3719836db1b94e44f31886f94357a5673a0cc5f47f9a3ab5df16852e4c70d58",
+                        "object_class": "StaticMesh",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_RV_Trim.uasset",
+                        "hash": "dbbb8bcc8386788c54d24460ef16057a1203964a24e2e0bc951aec5ce2bdfc2392841785b3ad591a44d3987aa9e17399f663f2a5dd0d1cfffdb9e1cad4ce6dee",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_OpeningShade.uasset",
+                        "hash": "ba62f2661821ffedca0934aa5e26dac683ab88762095d6c77f22b40046441847dd02133c1ca041ac96329ec44e4931257e31a861d2fc05218a6ea3043b3b88bc",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_NeonFloor_Lime.uasset",
+                        "hash": "d0c7de4883488be12388fd330e9bc96654880a46f10113d9fb030d362578bbb853b80c54e680ee4753e6d97f40609ad5ebbd22129437402b226935e9a47d54b1",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_NeonFloor_Amber.uasset",
+                        "hash": "4c90133758a8d799359d53c9d8b796512825e6146b87d572d861100fe13b513e0e329feddba883861480207782d772c0221a140298a0bca9c504cc7762c120d5",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Neon_Magenta.uasset",
+                        "hash": "7c8eb45c4e0c95aa6d2436c014966ab33935bedaba142a7ea9eb6967767c70e297a6860bc4392cedd0aa44ee3871523b8a3a4351899f55ab8048e46891867c1a",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Neon_Cyan.uasset",
+                        "hash": "542568ed391c55450fa0232a2a3e928b5ebd0a69e67202f99f5d3f3932ecdf83a62eb1c5927b1852a6ce3126908378afadd9e2efbc29ffc3ff82a572cf6b180c",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Materials/M_Neon_Amber.uasset",
+                        "hash": "904a3e59b479afd08f47efbffaf336d1c495e4bd159bb6822beb5488b282c3ca07f9edb7975ab655e739f9d2fab3db6b71cbf668a9988f4e9b8c8dfc473a73f4",
+                        "object_class": "Material",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Cinematics/SEQ_WaitingForPlayers.uasset",
+                        "hash": "e6adceb816ad9a6b15efa056d7da4cb02ec27f070946eedd3f42656559691def09c034fc292a6b555e847a507b78cdb988280217698ba8c4ab0392cbbc7b2231",
+                        "object_class": "LevelSequence",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Cinematics/SEQ_Shot3.uasset",
+                        "hash": "8c3b961eda31bf7384b4a1acadb6f0158409aae1c4da9995b5f0c1d256eb34c80a784380bed41f480f3a66de668d9cd118c0d594e13badfc3186c3c5f8a774f1",
+                        "object_class": "LevelSequence",
+                        "class_path": null,
+                        "mod_name": null
+                    },
+                    {
+                        "path": "TBL/Content/Mods/AgMods/MirrorMaze/Blueprints/BP_MazeLook.uasset",
+                        "hash": "fc422c997dc14185d9190db1d2dcedff0db0698e87fe26f4bfe58adcae7899cc3a66ff5490c4cc9e6f9377e8f6aa215a09142796f5fb627311b95db164aa8115",
+                        "object_class": "Actor",
+                        "class_path": null,
+                        "mod_name": null
+                    }
+                ]
+            }
+        },
+        {
             "tag": "v1.0.0",
             "hash": "3986a352c231c5113ae1d68ccd9a6e9efe50fc10ceeb07ea0d779e1db1ec5efd8de4202c9a7e44b89457534b13c0b584b7b110b56e1cba8dc7b88d93b33aef94",
             "pak_file_name": "MirrorMaze.pak",
