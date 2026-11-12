@@ -27,5 +27,4 @@ branches. Shared actions and workflows come from
 
 See [registry setup and action inputs](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/v1/docs/registry/README.md).
 Enable Actions PR creation in repository settings. Workflow references and
-`tool_ref` use upstream `f386aa30b606709b6f2a077f4ae8dc78e894958e`
-(v1.2.1 plus the Docker action build-context fix). Update both together.
+`tool_ref` use upstream `v1.2.2`. Update both together when changing versions.
