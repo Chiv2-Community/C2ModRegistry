@@ -1,85 +1,87 @@
 {
     "latest_release_info": {
-        "repo_url": "https://github.com/boltzed/FFA_Greenscreen",
-        "name": "FFA Greenscreen",
-        "description": "Map for content creators or people wanting cutouts of their in game character.\n\nMap features:\nIn game adjustable day/night time switch\nWeapon wall\nBlue and green screen\n\nImportant key binds:\nAlt F2 to enter free cam (Nvidia gpu only)\nTogglehud (console command to get rid of all UI)",
-        "icon_url": null,
-        "image_urls": [],
         "authors": [
             "boltzed"
         ],
-        "mod_dependencies": [],
         "dependencies": [],
-        "plugin_dependencies": []
+        "description": "Map for content creators or people wanting cutouts of their in game character.\n\nMap features:\nIn game adjustable day/night time switch\nWeapon wall\nBlue and green screen\n\nImportant key binds:\nAlt F2 to enter free cam (Nvidia gpu only)\nTogglehud (console command to get rid of all UI)",
+        "icon_url": null,
+        "image_urls": [],
+        "mod_dependencies": [],
+        "name": "FFA Greenscreen",
+        "plugin_dependencies": [],
+        "repo_url": "https://github.com/boltzed/FFA_Greenscreen",
+        "version": "1.0.0"
     },
     "releases": [
         {
-            "tag": "v1.0.0",
             "hash": "3b4673e7221c2a4ad0fa10c87f68175b54eb7398c39c037d5c9bdc0bacbb9a6224aec1822336143f6d81f149a8ebac0cbdbf4bae8f10c663d140f6b72135407f",
-            "pak_file_name": "FFA_Greenscreen.pak",
-            "release_date": "2026-11-10T07:20:46",
             "info": {
-                "repo_url": "https://github.com/boltzed/FFA_Greenscreen",
-                "name": "FFA Greenscreen",
-                "description": "Map for content creators or people wanting cutouts of their in game character.\n\nMap features:\nIn game adjustable day/night time switch\nWeapon wall\nBlue and green screen\n\nImportant key binds:\nAlt F2 to enter free cam (Nvidia gpu only)\nTogglehud (console command to get rid of all UI)",
-                "icon_url": null,
-                "image_urls": [],
                 "authors": [
                     "boltzed"
                 ],
-                "mod_dependencies": [],
                 "dependencies": [],
-                "plugin_dependencies": []
+                "description": "Map for content creators or people wanting cutouts of their in game character.\n\nMap features:\nIn game adjustable day/night time switch\nWeapon wall\nBlue and green screen\n\nImportant key binds:\nAlt F2 to enter free cam (Nvidia gpu only)\nTogglehud (console command to get rid of all UI)",
+                "icon_url": null,
+                "image_urls": [],
+                "mod_dependencies": [],
+                "name": "FFA Greenscreen",
+                "plugin_dependencies": [],
+                "repo_url": "https://github.com/boltzed/FFA_Greenscreen",
+                "version": "1.0.0"
             },
-            "release_notes_markdown": "First release. Install through the Unchained launcher, or download FFA_Greenscreen.pak below and put it in your Chivalry 2 TBL/Content/Paks folder.",
             "manifest": {
-                "markers": [],
+                "arbitrary": [
+                    {
+                        "class_path": null,
+                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
+                        "mod_name": null,
+                        "object_class": "SpawnSequence",
+                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "b1346fb5e872f8aa7a4ac78557773c5534d806b0969adad9dd7428eef51eb062d42d00420987113bf3da89be7b5b26b13b945066456ce09cf75c99a8ef5152e2",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/GreenScreen/M_GreenScreen_Blue.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "f11edc34a84703247d53a14b98759ea9ff950037976f3b415bc4fe2d505fcd9d8f8ba34e27fcf0cb89ce452699d0a7f8d99edb0e4b74893f1bbadb28b0556e96",
+                        "mod_name": null,
+                        "object_class": "StaticMeshActor",
+                        "path": "TBL/Content/Mods/GreenScreen/BP_GS_TimeDial.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "cf87cc7d95609cffa71fe9fd76951d6261807a20b8033a779d4571a7c30fc8931491bf60c922c4b58d6181b4eeff7e573193f802e29816a17f13ee58d5d204eb",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/GreenScreen/M_GreenScreen_Green.uasset"
+                    }
+                ],
                 "blueprints": [],
                 "maps": [
                     {
-                        "path": "TBL/Content/Mods/FFA_Greenscreen.umap",
-                        "hash": "65aadfcd589d86f770b98ba160aa15e946bb522135d837bf73db8d93bc9f84b126098acacc7b9c76bfebe919d62817b6638b6fe6bff82e5dfea6b69f4bd63e1f",
-                        "object_class": "LevelScriptActor",
-                        "class_path": null,
-                        "game_mode": "Mode_FFA_C",
-                        "map_name": "Greenscreen",
-                        "defending_faction": null,
                         "attacking_faction": null,
-                        "game_mode_type": "EGameModeType::FreeForAll"
+                        "class_path": null,
+                        "defending_faction": null,
+                        "game_mode": "Mode_FFA_C",
+                        "game_mode_type": "EGameModeType::FreeForAll",
+                        "hash": "65aadfcd589d86f770b98ba160aa15e946bb522135d837bf73db8d93bc9f84b126098acacc7b9c76bfebe919d62817b6638b6fe6bff82e5dfea6b69f4bd63e1f",
+                        "map_name": "Greenscreen",
+                        "object_class": "LevelScriptActor",
+                        "path": "TBL/Content/Mods/FFA_Greenscreen.umap"
                     }
                 ],
-                "replacements": [],
-                "arbitrary": [
-                    {
-                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset",
-                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
-                        "object_class": "SpawnSequence",
-                        "class_path": null,
-                        "mod_name": null
-                    },
-                    {
-                        "path": "TBL/Content/Mods/GreenScreen/M_GreenScreen_Blue.uasset",
-                        "hash": "b1346fb5e872f8aa7a4ac78557773c5534d806b0969adad9dd7428eef51eb062d42d00420987113bf3da89be7b5b26b13b945066456ce09cf75c99a8ef5152e2",
-                        "object_class": "Material",
-                        "class_path": null,
-                        "mod_name": null
-                    },
-                    {
-                        "path": "TBL/Content/Mods/GreenScreen/BP_GS_TimeDial.uasset",
-                        "hash": "f11edc34a84703247d53a14b98759ea9ff950037976f3b415bc4fe2d505fcd9d8f8ba34e27fcf0cb89ce452699d0a7f8d99edb0e4b74893f1bbadb28b0556e96",
-                        "object_class": "StaticMeshActor",
-                        "class_path": null,
-                        "mod_name": null
-                    },
-                    {
-                        "path": "TBL/Content/Mods/GreenScreen/M_GreenScreen_Green.uasset",
-                        "hash": "cf87cc7d95609cffa71fe9fd76951d6261807a20b8033a779d4571a7c30fc8931491bf60c922c4b58d6181b4eeff7e573193f802e29816a17f13ee58d5d204eb",
-                        "object_class": "Material",
-                        "class_path": null,
-                        "mod_name": null
-                    }
-                ]
-            }
+                "markers": [],
+                "replacements": []
+            },
+            "pak_file_name": "FFA_Greenscreen.pak",
+            "release_date": "2026-11-10T07:20:46",
+            "release_notes_markdown": "First release. Install through the Unchained launcher, or download FFA_Greenscreen.pak below and put it in your Chivalry 2 TBL/Content/Paks folder.",
+            "tag": "v1.0.0"
         }
     ]
 }

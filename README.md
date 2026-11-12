@@ -26,5 +26,5 @@ branches. Shared actions and workflows come from
   `update-registry-format` compatibility branch.
 
 See [registry setup and action inputs](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/v1/docs/registry/README.md).
-Enable Actions PR creation in repository settings. Workflow references and
-`tool_ref` use upstream `v1.0.2`. Update both together when changing versions.
+Enable Actions PR creation in repository settings.
+`tool_ref` uses the floating upstream `v1` tag; reusable workflows are pinned to `v1.2.2`.
