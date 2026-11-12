@@ -15,4 +15,4 @@ jobs:
   register:
     uses: Chiv2-Community/zero-infra-mod-registry/.github/workflows/register-release.yml@v1.2.2
     with:
-      tool_ref: v1.2.2
+      tool_ref: v1
