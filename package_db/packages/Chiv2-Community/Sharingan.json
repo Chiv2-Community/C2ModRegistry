@@ -34,20 +34,6 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "c4f59ac8f54cce781ef948203478437c89fa3808d774e93a042525508e64b90850c6496e44b07a56567ac374db8f5d3349a5c46d09e11a53eb75600794ee2ab8",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/Sharingan/debugBox.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "cb389d8b989f3415ce4e755fedd2a6aa002855c193388f0c86f6129abf1339a19a4c1c9310d18012460dfd2bb5d1ed68f3a1cd7cc1ed3ad77e65c3869be69ba9",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/Sharingan/translucentDebug.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "9a3c7287af73926efd16883591991da8547ce6f942720d76dadb87876e9487566271063e0a62e11eb7204d125fdbb22de411698077a302dc593cf2a69d116022",
                         "mod_name": null,
                         "object_class": "ArgonSDKModBase_C",
@@ -59,25 +45,38 @@
                         "mod_name": null,
                         "object_class": "StaticMesh",
                         "path": "TBL/Content/Mods/AgMods/Sharingan/Cube.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "c4f59ac8f54cce781ef948203478437c89fa3808d774e93a042525508e64b90850c6496e44b07a56567ac374db8f5d3349a5c46d09e11a53eb75600794ee2ab8",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/Sharingan/debugBox.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "cb389d8b989f3415ce4e755fedd2a6aa002855c193388f0c86f6129abf1339a19a4c1c9310d18012460dfd2bb5d1ed68f3a1cd7cc1ed3ad77e65c3869be69ba9",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/Sharingan/translucentDebug.uasset"
                     }
                 ],
                 "blueprints": [
                     {
                         "allow_on_frontend": false,
                         "author": "DrLong",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/Sharingan/Sharingan.Sharingan_C",
                         "enable_by_default": false,
                         "hash": "9a3c7287af73926efd16883591991da8547ce6f942720d76dadb87876e9487566271063e0a62e11eb7204d125fdbb22de411698077a302dc593cf2a69d116022",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "Sharingan",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/Sharingan/Sharingan.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
                         "version": "1.0.0"
                     }

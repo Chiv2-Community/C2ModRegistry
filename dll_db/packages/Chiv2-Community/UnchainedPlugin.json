@@ -4,16 +4,14 @@
       "Dr Long",
       "Jacoby6000",
       "Nihilianth",
-      "Reciate",
-      "@wiseLlama0"
+      "Reciate"
     ],
     "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
     "mod_dependencies": [],
     "name": "Unchained Core Plugin",
     "plugin_dependencies": [],
     "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin",
-    "target": "shared",
-    "version": "1.0.0-RC3"
+    "target": "shared"
   },
   "releases": [
     {
@@ -25,19 +23,17 @@
           "Dr Long",
           "Jacoby6000",
           "Nihilianth",
-          "Reciate",
-          "@wiseLlama0"
+          "Reciate"
         ],
         "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
         "mod_dependencies": [],
         "name": "Unchained Core Plugin",
         "plugin_dependencies": [],
         "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin",
-        "target": "shared",
-        "version": "1.0.0-RC3"
+        "target": "shared"
       },
-      "release_date": "2026-10-13T14:25:11+00:00",
-      "release_notes_markdown": "## What's Changed\n* Fix two server crashes: Team Objective stack overflow under --desync-patch, access violation in the combat hooks by @wiseLlama0 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/64\n* Implement rust hooks maximal by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/45\n* Automatically request registry registration for plugin releases by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/65\n\n## New Contributors\n* @wiseLlama0 made their first contribution in https://github.com/Chiv2-Community/UnchainedPlugin/pull/64\n\n**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/compare/v1.0.0-RC2...v1.0.0-RC3",
+      "release_date": "2026-10-19T21:38:04+00:00",
+      "release_notes_markdown": "**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/commits/v1.0.0-RC3",
       "size": 23590912,
       "tag": "v1.0.0-RC3"
     },

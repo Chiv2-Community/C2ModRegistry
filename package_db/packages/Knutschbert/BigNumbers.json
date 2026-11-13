@@ -54,17 +54,17 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "dbebdbd58428ad02e7ece212faec5c8e265a187e841cff511532ccd4a86959ea5f3aef162d6b7590a5ea700cde7d5b2032ac41c68bdc669cadbdd045c612aeb6",
-                        "mod_name": null,
-                        "object_class": "IngameModMenuBaseWidget_C",
-                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbersLoadoutMod.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "960a96e3faa234b80dcbccc0b2ae2db05874461250084cc4bac4d1e96d9c084fe8d4e624f95f8306dfeb2f495179b2536abdee8f241eeb4e54baa86e210b4ae4",
                         "mod_name": null,
                         "object_class": "UserWidget",
                         "path": "TBL/Content/Mods/AgMods/BigNumbers/BN_DamageEntry.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "dbebdbd58428ad02e7ece212faec5c8e265a187e841cff511532ccd4a86959ea5f3aef162d6b7590a5ea700cde7d5b2032ac41c68bdc669cadbdd045c612aeb6",
+                        "mod_name": null,
+                        "object_class": "IngameModMenuBaseWidget_C",
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbersLoadoutMod.uasset"
                     },
                     {
                         "class_path": null,
@@ -83,16 +83,15 @@
                         "hash": "e241c6e5f3dd3b056aaa553ced03bba2d95c0d681e62ee77b486c37b3d9255364e75524dffa3229f3452c16b39a981aa4893a0e5be83b030d4573e284ce56909",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "BigNumbers",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.2"
                     }
                 ],
                 "maps": [],
@@ -144,13 +143,6 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "910c1b07ae5d87a6c386ae76443344fc7be724a94df8bec49ef7c6533943e38ed6598fab9aa942719f7ccd06a702a2b8425ee40c8c26ed4c27ba5b8232814337",
-                        "mod_name": null,
-                        "object_class": "ArgonSDKModBase_C",
-                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "43e1a7bd830273bae4c8d2df307b8b0f34dec01e71038915d51900f0b758470349df969924c517d05b616b44348ae9d73ab9a42e6dfc1f22eb8fc37f057b4120",
                         "mod_name": null,
                         "object_class": "IngameModMenuBaseWidget_C",
@@ -158,36 +150,42 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "fa9a8e3d8d055c674bcbf98bd2e734245835a5214bcb8bbcf452fec17c12fd38a045c938530f39fd9645dc2f2959dec267de31e9a7f23533be1ba6d0b45e7b72",
-                        "mod_name": null,
-                        "object_class": "UserWidget",
-                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BN_DamageEntry.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "f10e3dc90c9c473fcad05f48d05613dfb070d4f9669a9902b6f73dc8c70567a647a8c2597f3df3ce700f907fdcadbf8093c197afb85956b4aaf29bc26ad4f80a",
                         "mod_name": null,
                         "object_class": "IngameModMenuBaseWidget_C",
                         "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbersWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "910c1b07ae5d87a6c386ae76443344fc7be724a94df8bec49ef7c6533943e38ed6598fab9aa942719f7ccd06a702a2b8425ee40c8c26ed4c27ba5b8232814337",
+                        "mod_name": null,
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "fa9a8e3d8d055c674bcbf98bd2e734245835a5214bcb8bbcf452fec17c12fd38a045c938530f39fd9645dc2f2959dec267de31e9a7f23533be1ba6d0b45e7b72",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/BigNumbers/BN_DamageEntry.uasset"
                     }
                 ],
                 "blueprints": [
                     {
                         "allow_on_frontend": false,
                         "author": "Nihi",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/BigNumbers/BigNumbers.BigNumbers_C",
                         "enable_by_default": false,
                         "hash": "910c1b07ae5d87a6c386ae76443344fc7be724a94df8bec49ef7c6533943e38ed6598fab9aa942719f7ccd06a702a2b8425ee40c8c26ed4c27ba5b8232814337",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "BigNumbers",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/BigNumbers/BigNumbers.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
                         "version": "1.0.0"
                     }

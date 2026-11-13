@@ -34,17 +34,17 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
-                        "mod_name": null,
-                        "object_class": "SpawnSequence",
-                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "b1346fb5e872f8aa7a4ac78557773c5534d806b0969adad9dd7428eef51eb062d42d00420987113bf3da89be7b5b26b13b945066456ce09cf75c99a8ef5152e2",
                         "mod_name": null,
                         "object_class": "Material",
                         "path": "TBL/Content/Mods/GreenScreen/M_GreenScreen_Blue.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
+                        "mod_name": null,
+                        "object_class": "SpawnSequence",
+                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset"
                     },
                     {
                         "class_path": null,

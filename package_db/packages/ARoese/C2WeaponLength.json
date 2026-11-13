@@ -43,10 +43,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9",
+                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc",
                         "mod_name": null,
                         "object_class": "Actor",
-                        "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset"
+                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset"
                     },
                     {
                         "class_path": null,
@@ -57,10 +57,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc",
+                        "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9",
                         "mod_name": null,
                         "object_class": "Actor",
-                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset"
+                        "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset"
                     }
                 ],
                 "blueprints": [],
@@ -106,10 +106,10 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc",
+                        "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9",
                         "mod_name": null,
                         "object_class": "Actor",
-                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset"
+                        "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset"
                     },
                     {
                         "class_path": null,
@@ -120,10 +120,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "c41910b34fc7cb06b9a01b4e5f9c52bc6c340480ae41a46a256e7ff99b6d63ed29282255089ad9ef52ea1d0608a2970cd8842394b58d7ea04d397dd3607063a9",
+                        "hash": "7f7db76668123a2d506e28120ec5885334bbfc47a5105918e9eb4db95405b66dd9f7e9a1e7bf65f87b06b2a440804a5db5d526dd19eb1108cd712e6735f549fc",
                         "mod_name": null,
                         "object_class": "Actor",
-                        "path": "TBL/Content/Mods/Maps/weaponLength/LengthTester.uasset"
+                        "path": "TBL/Content/Mods/Maps/weaponLength/NewLengthTester.uasset"
                     },
                     {
                         "class_path": null,
