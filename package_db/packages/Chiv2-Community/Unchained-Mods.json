@@ -11,9 +11,680 @@
         "name": "Unchained-Mods",
         "plugin_dependencies": [],
         "repo_url": "https://github.com/Chiv2-Community/Unchained-Mods",
-        "version": "0.2.0"
+        "version": "0.2.1"
     },
     "releases": [
+        {
+            "hash": "e1d5009152c2a5834fc1421dfecddc2cd74a680e646b9ec935be3adfa623b51a1686ae18b5f9b4ba3963d7871d7c1f59a448f05c126dde4a033eed1bc252f967",
+            "info": {
+                "authors": [
+                    "Nihi"
+                ],
+                "dependencies": [],
+                "description": "Mod Loading Framework and default mods",
+                "icon_url": null,
+                "image_urls": [],
+                "mod_dependencies": [],
+                "name": "Unchained-Mods",
+                "plugin_dependencies": [],
+                "repo_url": "https://github.com/Chiv2-Community/Unchained-Mods",
+                "version": "0.2.1"
+            },
+            "manifest": {
+                "arbitrary": [
+                    {
+                        "class_path": null,
+                        "hash": "f04a91016cbaf62f79f2a1f667f61b4260751b25f667f3be4ec736dccc56525e341236e3a377ddbae442543f842678376d163915dcf3203739ab7aeb45c40747",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Freeman/T_FREEMAN_512.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "9edf9a2695cae7535658feb36bbb6d5b76c70c50e0196aaeb093ec2949b36c2a07bc0b9db14aed4e32649499308cc828db63d30b8025eeedee9eb8ceabb24197",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/ArgonSDK/Freeman/T_FREEMAN_512_Mat.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "08016913c7e17609beca3b4db37a72a2f730aafa48fb6471690b52c1aff4d16ab83d169c6884e65f220eb9537268398abe0456e6abaa73f4b63c8d39e51a49e6",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/ArgonSDK/Freeman/T_FREEMAN_512_Mat_Inst.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "960d81121741216ce7e2bad5ecadda1d3f1a1bb9baa04015bb1b606ad7d1bfbabc244bc80503868e581c30a0c0128de31c730dfdb6d4aac00b0c642aac40641c",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Freeman/freeman_64.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "184602a1f66c845b6d3b6e2962ea1b0adec257934508b40f404bb66b2e22c62a49e69d2910f478a676862d28cdeac81d93ee0e3359aca968ecb50041ab510446",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ArgonSDKModBase.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "5226cb3f6200251bd86716f31a83a2a9fcf2d9570c83f5543b74c07f0342b8d23d1c5d15cc1505622de0bc121f339a7b92197368cbb313d92126ab21a50b3bc8",
+                        "mod_name": null,
+                        "object_class": "BlueprintFunctionLibrary",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/BPL_Unchained.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "77be2d59fcfa538ee800ac048f4d190a8223a8023ae9a8d87aa0d1fbc98e23e6507faa813184e28fec61ca9742776f181a32ae410634ef0ae4bff670483488ac",
+                        "mod_name": null,
+                        "object_class": "Object",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/BPML_Unchained.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "2b4577e9e2a08a935b6fc0f6b85c950538a6dcd54222daa0fe94f4495f23c8ed7f52bc2c3450c99665f9814cd88dc317ffcaa2c9f21c62168e99dba5d8eff129",
+                        "mod_name": null,
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/FPSSync/AgSDKFPSSync.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "f5d743dfcc003d49ce4dd445315f2104d4b8fd84c24bbf8e094e9a6f42dd7fb6e01c7575581d86341505678b2664c399802454206a120721dcf5800ce53dc736",
+                        "mod_name": null,
+                        "object_class": "DA_ModMarker_V2_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/FPSSync/FPSSync_ModMarker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "ce54508a2fa00d85aff5d037d6d8d480e1df35b07c1ad5c121c768639805a8dca4be45ef19d6984da5310c99aadc11d32620287719e609ace265464b45e4860f",
+                        "mod_name": null,
+                        "object_class": "TBLUserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/GameModeMarker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "69d83ce1610a0beccea4e357fca914b9ccf534d8a372d983eabdcbda6b568ea435283f9913670c954a3b8f62b77253ce2fe8486c907ef32193d61fa9df98b794",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/Lore_Worldmap_Kopie.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "6cb5874479cf569d4d56b9dbd16cd2ae909354057c82254fa6bb507f33e13e0ff2d5c5553d70ed28cacbdc906205cd216110ed50175231ca9b7bfd6a58959090",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/MapHudMarker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "e7deb0281c40400758f44ded61840a3846f5bf5a5628b3f36b7a1909cfbeccedb0eeaaa236d52f3d1abec12130550d221636d8750c4d848b095b1d314ca322a5",
+                        "mod_name": null,
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/MapSelector.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "20c8278ed6fea88dbbeb6b92da5f560c90b87a9dd52c14e0bc8bb3f52a8838d6d260ca215c30ee50a023788d29ceae366f689bb5fad5f356c1cf8d41cc1c2e1a",
+                        "mod_name": null,
+                        "object_class": "DA_ModMarker_V2_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/MapSelector_ModMarker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "1cbe8540089a635cad9c067a3c3b107dad731ca7c46478352769394bf4a58d3ac5fecd8c7040433b2016b6121008a4080ab8e7587ce7fec3f7766b44545fed37",
+                        "mod_name": null,
+                        "object_class": "IngameModMenuBaseWidget_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/MapViewWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "613b012d25478579baccb94aedb99e77495c72ac05d6fc58d571522cd2c5cb9f6da8e7fdeec861c325afa5c2084cc9205b9dfc4cb50e5a2ea6e8d1f3a11bbd82",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/SelectorExtraWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "87438bcb0aad75bb046a59131ca23fd3aac9ee1cd7d78122eb4917c7a9f13ce04ecdbc4fe2d8a67a09f6a5e6b1ad7c4db831264085d87883c18984a6c706391f",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/SimpleMapgridWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "cc5c1173517dfca6ab8e3362ce0fcad4ebb73a5d92120946031bb6a801cdcc292362181fc49427051efd61a1e78e143bd3fc5bfe68787aa3f231c350c55f9a55",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/SimpleMapgridWidget_Custom.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "2f69f1854fe92326bee9c6684ea9d0d6812b77c20c125a571570168f67ddd9c3ae9dd7f1d0a72f8345b2ff2085bc8c6f73a3aaf41fa4fa82b345188806b06afe",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/SoundItemEntryTest.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "12eb3e92b40d53d79538bd69bd2fb7403f7acb15988fb89ebfa7baf7f901ffc69e79f212d73833e50c7c7facd65d01b9931890a95dbb04b3f6789d4d5013cdda",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/SoundTestEntry.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "9e17136142165888ac4081ea7431a4b816db02fc2d90c66e0ff3e26a43f7fc69212f8b67b2fe4d0ad449052aed37a099294fcddfec438b3605fd9c540e5b2370",
+                        "mod_name": null,
+                        "object_class": "IngameModMenuBaseWidget_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/SoundTestWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "d08c5a0a40104ee4d76bbd65a9f1fa50bd3b9199b1cb72c546195a03ae21fa379c34a9d956696efd5a0ff551b7bd58fb0850141688e662adb3c48355e28ffc0e",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/TravelMapWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8aa5c1aee7496b55577889cede504490921661eb844053aa3fca604668cd66e5934f0188534b146670c4b5596b9a2abd5f0b84e2bf7dc8a3b523d73ec9a1a87c",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/TravelMapWidget_Big.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "c2b0b4dc68d504d3080935fe4aaa906f14b0b217ef42b2a631210716af63c6b857bbd737a525468d26cf579c820a35280bbc9c6781971b4854494b124813abb4",
+                        "mod_name": null,
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/banner_unfurl.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "c270c6035a9593742d8a38af2eaf2bceb404402d52837fd34e8abe78d352fb2002a35bc0b3593bb043afea4e93acea7dba5f59b06751eeee1a5d91455d3d8a53",
+                        "mod_name": null,
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/banner_unfurl2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "69061ff047a5917fd7bcf0fcc276ff4a2eaa462c06d8fa338a74aa81b4c5330dd1af1f4b1fcbb18f67e6168c87a293fd7e279dcdc11e6c59d70bba13fc9efbcb",
+                        "mod_name": null,
+                        "object_class": "SoundCue",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/banner_unfurl_Cue.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "b03ceb0069cc6b6d052f274738fe86cdd7a47e6310e0b64f9a3b5c30dcde541e48cd6072c36ea15eb3b3ca1cca3ed6cd60d6596fb221bf3a1e5487dd8432ae11",
+                        "mod_name": null,
+                        "object_class": "IngameModMenuBaseWidget_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/wMap.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "c21684fdda919c0e1c2f0d8b3c478bf3748100533696d205952c8e7185bfd238b1c4c5fd1e2552e17aaa50106008728fdb945f7c024a63e8b92038f6014895b4",
+                        "mod_name": null,
+                        "object_class": "BlueprintFunctionLibrary",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/BPF_ModLoading.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "153314dc8f6626781d61e4f2ea388b925e160ce2a61d68751129891ff8baf1b42c7c17b04856c4087bd0ea73f825c740ae4196eb3794d3e9f003d4829b0d8433",
+                        "mod_name": null,
+                        "object_class": "Object",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/BPML_ModLoading.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "61dc0130828c9befaa6a513fe43ded41c6499de89f45d42dac2fe2bb7eed61f8ce02b28515184dc26e66466c7d11b001115a983cab2f675acb705f117e575ab6",
+                        "mod_name": null,
+                        "object_class": "PrimaryDataAsset",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/DA_MapInfo.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "285ddbf3a747cd9e299340c97d9f2163e727a64e6f33c89a80bee4a371b85b4875421fa2f589da84af1547fd8aebfe534e638277d80176b2bdc63d71ae29c6da",
+                        "mod_name": null,
+                        "object_class": "PrimaryDataAsset",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/DA_ModMarker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "a37e6c7e0c83a7b80717e5e20d15c9b2582dcc8aa321d459bb6974b4df5b9aa275c0b25b30e85bf71642c21b2b68b595fa2ba0f9ae110b221e4947c750e72d09",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/IngameMenu/IMM_LeftPaneButton.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "7e2a329fd11ee3788171e7b601cbc15d453afddbb52dae7b3ea6a79d7cdedcfca2171792cae6b6e8da7bca0c6661b9a8d5c803910b1b7aaa9e14d20bcea91784",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/IngameMenu/IngameModMenuBaseWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "5cd819a90196942249a815ab8cdd7c29854259ea31b7c51f49a041d671ace1f9fa99c0b898671673acf20012c10332354c2c8f0362b91ea45f869a3b8b071ce6",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/IngameMenu/IngameModMenuScreen.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "b3cee01b6dc80d9acd30a3ab235716a25bbde3f4bbc96e3cc0057731d3ad2b02c50b7f9f3e59de04666df273a29ce346be8c4235fec88a738790509dec7b63bf",
+                        "mod_name": null,
+                        "object_class": "StringTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/IngameMenu/ST_KnownModRepos.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "0fc20f39ee3abc76f97bd083c5cd258b014f0925c1ad2c7c262e767046dd94f0b2e63b773d81887f5d46f694a5983ef1b6f664a2359d544d425a44bea3299d94",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/ModListEntry.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "1dd542224897939ad0a1c8e387444ab4ae01279a506d41bba6a95675fe2c7a0b3a829a8662d21c6dcb15fd7d034600b91dd6b93a365e30e7ce16cdf6d989044b",
+                        "mod_name": null,
+                        "object_class": "SaveGame",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/ModLoaderSettings.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "a7f5c24215d169238ed12cc472eb32e92d9b2cc83cd97f99afc809bed98a0b2b1eb0ba666ed533bd7b4e98016e0e478e1ad82bfab2aee6d32a49eec6dcfe450f",
+                        "mod_name": null,
+                        "object_class": "DA_ModMarker_V2_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/ModLoading_ModMarker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "38d77cdaabe241916cda5f673e0a999fa00560e428096032e13ee86657aaab5beb28ceaa7860556541b6f0ca3d323e10efb917255ba126d03f6b9cf85fb1a824",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/Textures/freeman.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "28b37df00a588c3278f474877cba1ab28de14eec3eee16bf73cadbc0d5ce57f7dd9b34f3e66cb48228eb8ee2bf6a87adbd4b622403cd30cf89275609bcad495c",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/Textures/freeman_extra_smooth.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "98ee8a551872b055d15cd0604e4a8a20d46b3573868d0fec5f7675e26a9d7d8da8a3ce4bc233ab3f5f4d7dbd9489779fd303aadbb678b1b07fc9b896cb4ddcdc",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/Textures/freemanuwu.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "f290c8e937b828cbb4f25042748ab4ad74d97c5a32be7229d13eb595ecf3e28495e073f986a869296c1f6de4c2f8242a5784d30ad0f8f6f4dbcd943fc662ce29",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/Textures/smoothed.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "e95122807f87e62a8580a0feb2ce9babf9cc48d80355a42373689affc72ede3d276afdf3056e11d2ff2d0274ec8ce1cf14297ea3f9c87d6855356d40feb138e0",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/VersionInfo/ModLoaderVersionListEntry.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "a534385d094b137d92371479d1bcdc5bc1d4236b5e369fc52e6c40ba84c1320d2f78655846f0143a220a55aae911dfd84b7ac7693ba58a0315a27e9fbdc74108",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/VersionInfo/ModLoaderVersionWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "984bc8e14f8aef00a143586ef805f1e3d3bae01c553a4e595417c59734c51512f78e169819d3186f40e8c20fe8358097c9efdc1c83a6b83bca08c4d5cfca92ed",
+                        "mod_name": null,
+                        "object_class": "BlueprintFunctionLibrary",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/BPF_ModLoader.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "ff02a551e0458e748120a7f3c9521efc8d1fb6b0bf48f67bc50c079a3bb097e01f041eb3dbd83d3b7bbed3b3d0952bc4447d137191d46fee10c162fe3e587627",
+                        "mod_name": null,
+                        "object_class": "PrimaryDataAsset",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/DataAssets/DA_MapMarker_V2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "92200cf86bef35783b559c917260edb2551f00ef78a81fcc0dee4e9362efa4a5a060ffe5f137de8f302f8d3f23273323421dd4170688d37de44fbdf1b60d0104",
+                        "mod_name": null,
+                        "object_class": "PrimaryDataAsset",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/DataAssets/DA_ModMarker_V2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "74b3e2ccf35b2856a1fe481d3d75685fcddc1a21ff563dad971923956a4c3d13b0f685b3c144f25434dc4c8f81c806d975cd24e38a4e7b35e68a9ff426fd6ae4",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/DefaultLoadingScreen.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "9f930eab5f758660ba8cc5ef5083b6a8f1ee327a1b0a039e9c43db0eda9b13c825a325b80d5bdcb170d38680f56b92079239ad6a4548dde46e3f944c8c3caa42",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/ModLoaderActor.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "366de9846aa222b063dcd2a2ec80fbe370c8fbedabf2d02513c2b1528229f60e9c33b2287bc1b35989c38675b68e71d66d55ad95b0f91464a655a5fb501f71f6",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/TO_HIPP.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "c26c742da45017dbda61c37cb2ac79d73e9fe956429f8b7f8ceb17bc44b6a5e1f2348c7fa1aa8464414c3c0777c19909603551c395f48e8dfea2547f9a0b93af",
+                        "mod_name": null,
+                        "object_class": "UserDefinedEnum",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/Types/E_MapShipState.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "d6674cf4cf3a08c35fd30904acbd51e251ddf8d610111fa3af456fd018b4b0356a582d559da0772f2813f3edece0390a32835ae3b931ed772de0679e6295c823",
+                        "mod_name": null,
+                        "object_class": "UserDefinedStruct",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/Types/F_ShippedMap.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "82e1b19dd7b050417c29fc7a27b854bb141602f526fb3e18c56aa27de7f87cd2a6619c07a4df90c52512151ce64d93c528389487b3bf5d677d3a295fe318b991",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModLoading/v2/screen_4.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "9d3493fe1ff68c7221a2581bed6822537340af3226da5c6fe87c98f2466c27e69c27f33aeb66f9d77154ad7bdc5d7fe6af07b6b0725b450c0e6e953df404c575",
+                        "mod_name": null,
+                        "object_class": "ForceFeedbackEffect",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/Addon_Marker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "23c18134bf78e9d2a10b71939f448a0470fad99fefd366d9afa9ed5e4e9ad3321714fc5c0844ddc7d508ccce3425ec5ad57600a443082705b3c63752ba9331ca",
+                        "mod_name": null,
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/AgSDKModMenu_2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8fc60772a8e256653c2b1082f28b66dfd795ecc88644275c8f6441a4f0ad1198c4cfbbf3970a57042d107263df4d7633c674c78ed110392dde8e5c1b19df9ea5",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/DT_NumpadMenuConsole.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8cda4563c807b219e982493d2729e1bfb8ef2e8e086e97f8e2e1c9de371c3a58f81d5c82c0f2fc334d14cb5d02e2bf2df37204fe5eb855bb95ccf83e866cfdcb",
+                        "mod_name": null,
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/ModMenu.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "09e6856bc41055dd06064a64bd929144131601d25c802cb7e1fcdb29321552cd792154a4da892180f4577783635ca1dd9a925523c2dc9d663bc5d7199be392c7",
+                        "mod_name": null,
+                        "object_class": "IngameModMenuBaseWidget_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/ModMenuWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "231da8036576a9524560a6d733f8c004217263fe7a8507263c67388c0d826e70e66237db88d558bf89d8ec4be8ddc0c3a66375c5ab3396a1dcb364f1aba90131",
+                        "mod_name": null,
+                        "object_class": "DA_ModMarker_V2_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/ModMenu_ModMarker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "3a050d4312237ecfb8964e9783cbdf2d39b3055f53c31794523ce8a786654188d7e661a8bc8586402f29c0a1c3bfee62b267e96f6fccfa8669c830c783353163",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NewDataTable.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "971d00e7031c4aa6172f7ed4c57d946103840dc98d3d7f1694dc15433cd682b0e0e3a8b0d53682e4368f5681b96707a1acedf685af10ae444611bf1849b3acda",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NewDataTable1.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "14ab00b08e3f64134de78c09deb25473f1c8dda08b193beffb669c022d3674992a060ec14d5a2e1d45e8d37d949ca0cb41c5d0530d0479c94a294646a2a6985c",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NewDataTable2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "608c3c0e54b5d4633c1612d0a4b4cf1b6ea116739078b5b6a1ad76b7559c8973b3de5a8ed312327d8028a4ec6ac6a3724e757ee4ff21beede8dff191b3ed3375",
+                        "mod_name": null,
+                        "object_class": "StringTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NewStringTable.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8100e605429ff9ecdf5873f394a48c65e467a6049a201b6f566f56763c353839453768cc747cf8123eff917e3534626732619977ee470006102704344f9dffb4",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NihiNumPadBtn.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "bdfec8d76f7fc327d960cba0fc2baca3f5ae436588f1daf897ec08088cb7a55eeb794d1721398cef5ceb9dc1055b5daec1121f17f33d908c36960ea6f0a5f8a9",
+                        "mod_name": null,
+                        "object_class": "TBLUserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NumpadCtrlWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "26c1556953eb90ce913af2f2fb8a0c839e41f5fe4a2929e2d0a0aed1dc9944e95bb4e2cdafb2113f2a2dfbef9dbb6d629e42b28e136c27be4f064c1181260de2",
+                        "mod_name": null,
+                        "object_class": "TBLUserWidget",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NumpadCtrlWidget_2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "4990039e039a8f7a43fc0c4e31d9c6d4ac63836b68c8b3589e3b63c23b54f45241b2889d6e3e57b45ce1f3571d67fa3e84c0a08866591cbce44911c109d92b2d",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NumpadHints.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "86555fee1c3cef619534ea8ecf7b05800ee4aaebfa98044aa10da8a5375d9831fe32b6d93206b4359c0a28b8ad193ed725e314f7d13d141f2fe2ed564d35cf77",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NumpadHints2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "e2f32926066d4a20ade33222561fce0f5113a0987f7398bf55a8ba17f42117acf548f9f326615ea7c01ccdaa71ecbe02cee1dfe1a837509854fec955c17046a6",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/NumpadMenuDefaultCats.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "4b6f1ecf1b5cbc01929c750296c32971ad9a57a01e0856d94d00e3863b23cf8a15d6611c12cf495bd014784042b3dc3dbd26195c99ae77b98a77cad48df27ade",
+                        "mod_name": null,
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/chivuwu_icon.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "f1ea38a0926046bc3fbaf5df78ccfda7b90b7bb5534fe7724568ad109c949ea20aec65dbfc68b9275c885ccb5b35e73b46d4ee8dc17d17d155f23e1cc29ee262",
+                        "mod_name": null,
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/factionoverridenumpadtest.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "96cc9a043f78817f130997b99d536861ea5d4e47d624a7c0a3af999d3f4005c56f3fdcb66d307f2f850575b41446058f8c6b17e7fd418f074d34a66683a86ce9",
+                        "mod_name": null,
+                        "object_class": "DA_ModMarker_V2_C",
+                        "path": "TBL/Content/Mods/ArgonSDK/Unchained-Mods_Marker.uasset"
+                    }
+                ],
+                "blueprints": [
+                    {
+                        "allow_on_frontend": false,
+                        "author": "",
+                        "class_path": "/Game/Mods/ArgonSDK/Mods/FPSSync/AgSDKFPSSync.AgSDKFPSSync_C",
+                        "enable_by_default": false,
+                        "hash": "2b4577e9e2a08a935b6fc0f6b85c950538a6dcd54222daa0fe94f4495f23c8ed7f52bc2c3450c99665f9814cd88dc317ffcaa2c9f21c62168e99dba5d8eff129",
+                        "host_only": false,
+                        "is_client_side": false,
+                        "is_hidden": false,
+                        "mod_description": "",
+                        "mod_name": "FPS Sync",
+                        "mod_repo_url": "",
+                        "object_class": "ArgonSDKModBase_C",
+                        "online_only": false,
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/FPSSync/AgSDKFPSSync.uasset",
+                        "show_in_gui": false,
+                        "silent_load": true,
+                        "version": "0.2.1"
+                    },
+                    {
+                        "allow_on_frontend": false,
+                        "author": "",
+                        "class_path": "/Game/Mods/ArgonSDK/Mods/MapSelector/MapSelector.MapSelector_C",
+                        "enable_by_default": false,
+                        "hash": "e7deb0281c40400758f44ded61840a3846f5bf5a5628b3f36b7a1909cfbeccedb0eeaaa236d52f3d1abec12130550d221636d8750c4d848b095b1d314ca322a5",
+                        "host_only": false,
+                        "is_client_side": false,
+                        "is_hidden": false,
+                        "mod_description": "",
+                        "mod_name": "MapSelector",
+                        "mod_repo_url": "",
+                        "object_class": "ArgonSDKModBase_C",
+                        "online_only": false,
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/MapSelector/MapSelector.uasset",
+                        "show_in_gui": false,
+                        "silent_load": false,
+                        "version": "0.2.1"
+                    },
+                    {
+                        "allow_on_frontend": false,
+                        "author": "Nihi",
+                        "class_path": "/Game/Mods/ArgonSDK/Mods/ModMenu/AgSDKModMenu_2.AgSDKModMenu_2_C",
+                        "enable_by_default": false,
+                        "hash": "23c18134bf78e9d2a10b71939f448a0470fad99fefd366d9afa9ed5e4e9ad3321714fc5c0844ddc7d508ccce3425ec5ad57600a443082705b3c63752ba9331ca",
+                        "host_only": false,
+                        "is_client_side": false,
+                        "is_hidden": false,
+                        "mod_description": "",
+                        "mod_name": "Nihi's Mod Menu",
+                        "mod_repo_url": "",
+                        "object_class": "ArgonSDKModBase_C",
+                        "online_only": false,
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/AgSDKModMenu_2.uasset",
+                        "show_in_gui": false,
+                        "silent_load": false,
+                        "version": "0.1.1"
+                    },
+                    {
+                        "allow_on_frontend": false,
+                        "author": "Nihi",
+                        "class_path": "/Game/Mods/ArgonSDK/Mods/ModMenu/ModMenu.ModMenu_C",
+                        "enable_by_default": false,
+                        "hash": "8cda4563c807b219e982493d2729e1bfb8ef2e8e086e97f8e2e1c9de371c3a58f81d5c82c0f2fc334d14cb5d02e2bf2df37204fe5eb855bb95ccf83e866cfdcb",
+                        "host_only": false,
+                        "is_client_side": false,
+                        "is_hidden": false,
+                        "mod_description": "",
+                        "mod_name": "Nihi's Mod Menu",
+                        "mod_repo_url": "",
+                        "object_class": "ArgonSDKModBase_C",
+                        "online_only": false,
+                        "path": "TBL/Content/Mods/ArgonSDK/Mods/ModMenu/ModMenu.uasset",
+                        "show_in_gui": false,
+                        "silent_load": false,
+                        "version": "0.2.1"
+                    }
+                ],
+                "maps": [],
+                "markers": [],
+                "replacements": [
+                    {
+                        "class_path": null,
+                        "hash": "6ac8edd65870bfb9285f32c4e86ad09e93e4013e50ada9e08f8e1e64a694c364efc460779b24bece28564bb959a27b4af97f4b70b63f334b73514ade366c9e46",
+                        "object_class": "DataTable",
+                        "path": "TBL/Content/AI/Utility/AIPersonalities.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "6b4aa4d68f0ed4f7e4749181479606a355e2afa3dd64fa6234a3619898ee001b4bb41bfdb8bbd7b7a7c763d9c371039245ad6ef0272213940f4ed837feaa32fe",
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Characters/Assets/Heraldry/Mason/H_M_LirikCat.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "824f051a53c04dc903a81b92c0508a474d1ba09e6c9aa276bc38ff32d50722ae9a56787a5149fd72907fbe56e408b38bcd27a54d4359761cbecd4d1542e04e9f",
+                        "object_class": "MapSpecificLoadingScreenConfig",
+                        "path": "TBL/Content/Config/LoadingScreensConfig.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "5554d2202cb29e383b696adb8f231674bdd596d8cf0ba29bfca95edf709febf8fbfc63d57065665454a2908293cfdf968b5e52c62f524d1508adf52016245098",
+                        "object_class": "TBLUserWidget",
+                        "path": "TBL/Content/UI/WidgetsFrontend/Campaigns/CampaignFrontendTracker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "6ab7db2e3bbbf9759fc3d8d4cf6eec24064f2c6e80c2759944a1749284125e311024e24e898ed11e751b3b531b2c88c138295c000fc1964305036cd753aae506",
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/UI/WidgetsFrontend/Campaigns/WBP_IMMSpinBox.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "58946271b822ee6d70a28ef0b98a8348f03c36e1a9f26c2ed0fb21235daa2fd1bcacfd49dbfd427ca9be72602ad3e10b3c261b96b9f167584e6099f437ae5c84",
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/UI/WidgetsFrontend/SocialMedia/Art/MI_TornbannerIcon_Flat.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "29c3da6ff875562279cfb2830fb730901e053877e31b1a35f9a315640027af814bee466378892c48a8bfa00cef62cdad0e80e5fb4bd3d2eba7aa1cbce3b17acc",
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/UI/WidgetsFrontend/SocialMedia/Art/TornbannerIcon.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "d17288f66a74890f20e27abdff56da261e993cdf90f0df1c5e26f0df7c732d1aa46b0bb48a0c261cdb33e12e48e4b5da5e04d6c67ce92b2fd0df093ec25546e0",
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/UI/WidgetsFrontend/SocialMedia/Art/TornbannerIcon_.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "f91eec8abcf4e1dbddddb1b8434f57414af515ffc41991f9699fe145e84c443d7ab44ed146ae5e86d8e93a90d64b0cdd25cd62e6e92494878836e1faecbd0047",
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Weapons/LightShield/MiniHeater/T_LightShield_MiniHeater_C.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "898d143177c5b0c391aa29aa66aecfe0e2807d4e0fb62ff847cc476c68a24bfbcc9caf900dc48f2414fad00ab5d187c18430ce13e36c03a2ec9f22fe9c0d71fc",
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Weapons/LightShield/MiniHeater/T_LightShield_MiniHeater_VAR1.uasset"
+                    }
+                ]
+            },
+            "pak_file_name": "Unchained-Mods.pak",
+            "release_date": "2026-11-13T17:36:20",
+            "release_notes_markdown": "- Do not rescan mod assets on start (delegated to newest UnchainedPlugin)\r\n- Editor: v2 mod/map marker support and tool menus\r\n- remove excessive logging ingame\r\n- fix mod validation bugs introduced in 0.2.0\r\n- sync sub-mod versions\r\n\r\nChanges in 0.2.0 (unpublished release):\r\n- mod loading will function on servers with --desync-patch\r\n- bot handling on servers:\r\n  - DisableSpawnBots is no longer used at the start of the round\r\n  - TBLSpawnAIFromClass calls are be working again.\r\n  - Fixed bot settings from launcher not propagating properly\r\n  - BotBackfill settings are now respected (if NumPlayerBots is not set via launcher)\r\n- Small visual updates (Larger menu etc.)",
+            "tag": "v0.2.1"
+        },
         {
             "hash": "d02bd282cfd247d467a9f2fda76b4fe8070095b88f6af5583c941dc14885098e219b488ee2c6874d225007c4848fc37148d6960cd6961970b5a9f002246d4d3e",
             "info": {
