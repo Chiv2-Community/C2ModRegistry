@@ -27,4 +27,4 @@ branches. Shared actions and workflows come from
 
 See [registry setup and action inputs](https://github.com/Chiv2-Community/zero-infra-mod-registry/blob/v1/docs/registry/README.md).
 Enable Actions PR creation in repository settings.
-`tool_ref` uses the floating upstream `v1` tag; reusable workflows are pinned to `v1.2.2`.
+Reusable workflows and `tool_ref` use the floating upstream `v1` tag.

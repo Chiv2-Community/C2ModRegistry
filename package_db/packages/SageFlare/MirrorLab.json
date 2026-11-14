@@ -54,24 +54,10 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "0318f8b0fc609547736e6ba67170f8f07d9df0006cba439d18b9358ff3732de43c58dc0017c9bc5e163111c2ab1652d720a4597032d45cc291a100b99b595001",
+                        "hash": "62a9b1f10d348039d3017826d7598e9f65f2564cbbacf53172ce18f587f272693f09b97e4ca256d8625190873a98f4bbea9dfe5a0bf35629b92f722e93f609c4",
                         "mod_name": null,
-                        "object_class": "TextureCube",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Textures/TC_BayC.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "2e4fc9869d614ec09cdc9379503ad51a54570b4dd1af9a8e18e41d212f73db3eec8d1c6f108054a5d52a54b372f9b5351f3d82db147e9bf4f851f4ddc206c057",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_PillarBlue.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "11d804a2e4cc8c682922596ee1c07b6014e7553146a6346c1ede4a7b7cc20912bb9246583f87c18c3b0a20de951c2f125bd32ca643d62a5e2f94c7e895c62ff7",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_LabelBlack.uasset"
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Blueprints/BP_MazeStartup.uasset"
                     },
                     {
                         "class_path": null,
@@ -82,10 +68,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "e4e4e3c477eefd5a451895597ff8cdc1aeb88afa3e43a595a9bd7b50b20804d615acbab95a82b0e6819c01f3a05dd78e220f282fe77d62f47c16cdffd21a7d46",
+                        "hash": "335042a9eb63e76541b76a03de0f21acf3f8e21012360a107a67ebc1a51d1e037a138de189b27b32afe04ff8e47d205bc0274ea841fa719d06ecc2d9a95b9c9b",
                         "mod_name": null,
-                        "object_class": "TextureCube",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Textures/TC_BayE.uasset"
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/MI_MirrorEnv_BayC_3.uasset"
                     },
                     {
                         "class_path": null,
@@ -96,31 +82,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "9fa08685d8a4b9acf642886cf17c79cef216742c4c1f7df8195bd71974f7c0262a4ee013b3ac68b339c330f66f2c327ffd86a29e581c168e4932a756e6b48a96",
+                        "hash": "98d5803eaff884a899edd9a5ff435d470aae6f9a679c331295514458c2f70233d58be5ae827cb16b645717be091df747c14bacae23be23cb3f27f7d20099943c",
                         "mod_name": null,
                         "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_PillarYellow.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "477090aa3e5e65427b9284f3f71ce31a4fca56919ded511f9d398c204d717e9023f097a6bf7831277b1f8991ebcf81f95d40418417613258ce4c40b5a7a11e25",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_PillarRed.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "1839853f225db07ff3e322836bf1ea645baf7e3221654ca9e0fbde36c065ea7c7719d975295ad84a842dfddd815530519c1ee9c220b2b6e1b7cb529f20072dec",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_Lamp.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "56ba1f0ded662e396c62d109596753f730a4eaf185f9ca8145006b6bb52bce8bd7eb4d9c56945a7a5c2da2131da42bead6462cd4783b8670168e43ad41a2fae4",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_LabMatte.uasset"
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_AlcoveRed.uasset"
                     },
                     {
                         "class_path": null,
@@ -131,31 +96,38 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "98d5803eaff884a899edd9a5ff435d470aae6f9a679c331295514458c2f70233d58be5ae827cb16b645717be091df747c14bacae23be23cb3f27f7d20099943c",
+                        "hash": "567a604b3817fc2341a181eb8a38a66dc88d6a98353383383f15244b26d74e8c4b3a590196f58e0844381eac7fdb31453b3d3e99f1c4c787cdaaf8026f557dc9",
                         "mod_name": null,
                         "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_AlcoveRed.uasset"
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_FloorMatte.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "1cf3993bc728ed9236739f42b258cd7d72beb281fc49959237ff687c5ffdcce4143d226742446e72a013610a23fcc578673633a17159ed296716cbb23586afb6",
+                        "hash": "56ba1f0ded662e396c62d109596753f730a4eaf185f9ca8145006b6bb52bce8bd7eb4d9c56945a7a5c2da2131da42bead6462cd4783b8670168e43ad41a2fae4",
                         "mod_name": null,
-                        "object_class": "TextureCube",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Textures/TC_BayC_3.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_LabMatte.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "69a71ec7538e1c266ecf3bad9e8db0736fe7cb392675e274350c87eb757ac190c2801820f3f52c415ac2205e621a2fccc24343dbd841fc8b4f72c18a612a1151",
+                        "hash": "11d804a2e4cc8c682922596ee1c07b6014e7553146a6346c1ede4a7b7cc20912bb9246583f87c18c3b0a20de951c2f125bd32ca643d62a5e2f94c7e895c62ff7",
                         "mod_name": null,
-                        "object_class": "StaticMesh",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Meshes/SM_LabCube.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_LabelBlack.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "335042a9eb63e76541b76a03de0f21acf3f8e21012360a107a67ebc1a51d1e037a138de189b27b32afe04ff8e47d205bc0274ea841fa719d06ecc2d9a95b9c9b",
+                        "hash": "1839853f225db07ff3e322836bf1ea645baf7e3221654ca9e0fbde36c065ea7c7719d975295ad84a842dfddd815530519c1ee9c220b2b6e1b7cb529f20072dec",
                         "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/MI_MirrorEnv_BayC_3.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_Lamp.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "2e4fc9869d614ec09cdc9379503ad51a54570b4dd1af9a8e18e41d212f73db3eec8d1c6f108054a5d52a54b372f9b5351f3d82db147e9bf4f851f4ddc206c057",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_PillarBlue.uasset"
                     },
                     {
                         "class_path": null,
@@ -166,17 +138,45 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "567a604b3817fc2341a181eb8a38a66dc88d6a98353383383f15244b26d74e8c4b3a590196f58e0844381eac7fdb31453b3d3e99f1c4c787cdaaf8026f557dc9",
+                        "hash": "477090aa3e5e65427b9284f3f71ce31a4fca56919ded511f9d398c204d717e9023f097a6bf7831277b1f8991ebcf81f95d40418417613258ce4c40b5a7a11e25",
                         "mod_name": null,
                         "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_FloorMatte.uasset"
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_PillarRed.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "62a9b1f10d348039d3017826d7598e9f65f2564cbbacf53172ce18f587f272693f09b97e4ca256d8625190873a98f4bbea9dfe5a0bf35629b92f722e93f609c4",
+                        "hash": "9fa08685d8a4b9acf642886cf17c79cef216742c4c1f7df8195bd71974f7c0262a4ee013b3ac68b339c330f66f2c327ffd86a29e581c168e4932a756e6b48a96",
                         "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Blueprints/BP_MazeStartup.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Materials/M_PillarYellow.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "69a71ec7538e1c266ecf3bad9e8db0736fe7cb392675e274350c87eb757ac190c2801820f3f52c415ac2205e621a2fccc24343dbd841fc8b4f72c18a612a1151",
+                        "mod_name": null,
+                        "object_class": "StaticMesh",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Meshes/SM_LabCube.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "0318f8b0fc609547736e6ba67170f8f07d9df0006cba439d18b9358ff3732de43c58dc0017c9bc5e163111c2ab1652d720a4597032d45cc291a100b99b595001",
+                        "mod_name": null,
+                        "object_class": "TextureCube",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Textures/TC_BayC.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "1cf3993bc728ed9236739f42b258cd7d72beb281fc49959237ff687c5ffdcce4143d226742446e72a013610a23fcc578673633a17159ed296716cbb23586afb6",
+                        "mod_name": null,
+                        "object_class": "TextureCube",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Textures/TC_BayC_3.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "e4e4e3c477eefd5a451895597ff8cdc1aeb88afa3e43a595a9bd7b50b20804d615acbab95a82b0e6819c01f3a05dd78e220f282fe77d62f47c16cdffd21a7d46",
+                        "mod_name": null,
+                        "object_class": "TextureCube",
+                        "path": "TBL/Content/Mods/AgMods/MirrorLab/Textures/TC_BayE.uasset"
                     }
                 ],
                 "blueprints": [],

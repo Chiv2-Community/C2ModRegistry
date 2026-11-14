@@ -61,16 +61,15 @@
                         "hash": "78ae01979a9028985a50dfe45a08b90b08531ea78205d35173e8eab9ce81f6948f11bb855d9ddf33003af5f2b6a3922ec716b1307e215e9e472ef8859536c6a2",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "Chivalry 2 Turbo",
-                        "mod_repo_url": "",
+                        "mod_repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.4"
                     }
                 ],
                 "maps": [],
@@ -132,21 +131,20 @@
                     {
                         "allow_on_frontend": false,
                         "author": "MochaPete and Nihi",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.Chiv2Turbo_C",
                         "enable_by_default": false,
                         "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "Chivalry 2 Turbo",
-                        "mod_repo_url": "",
+                        "mod_repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo/Chiv2Turbo.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.1"
                     }
                 ],
                 "maps": [],
@@ -198,21 +196,20 @@
                     {
                         "allow_on_frontend": false,
                         "author": "MochaPete and Nihi",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/Chiv2Turbo.Chiv2Turbo_C",
                         "enable_by_default": false,
                         "hash": "cb51c589e7c514b4ecce8ad3789ac10270e7ca65dedb10da7ce10164655dfa67a7c744aee88c96c675657854888e48697ca125c108e8fbf43c64c8f5ed9fad37",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "Chivalry 2 Turbo",
-                        "mod_repo_url": "",
+                        "mod_repo_url": "https://github.com/Chiv2-Community/Chiv2Turbo",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/Chiv2Turbo.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.1"
                     }
                 ],
                 "maps": [],

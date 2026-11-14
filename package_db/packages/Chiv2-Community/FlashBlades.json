@@ -54,41 +54,6 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "d98995c42f412a11ac68aff0860ca7c675a8ac002fea89278eef4cb6cef88d15f7799134c388aa3bc74d3c25dde9eae720e445fe3a231e0d368c92c5e5f62ab7",
-                        "mod_name": null,
-                        "object_class": "ActorComponent",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent_Client.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "074a29aeadb767c3653f7eedbc0acdd0d6bedccb353cc635a6910d04937f7ed6906f85f9ba525dad1768cfe39fdc4b234375afef0fea9a01f25829c163f2a2c3",
-                        "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_Flashblades_v2_Inst.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "4633f553144059e2836c3fae84750648beb7179d0efce74ee1dd6651655b1454f2c2a79a1d0321b37eaff39871ad2c7d94c402a16f2b466637e95a7eb89102d9",
-                        "mod_name": null,
-                        "object_class": "SoundWave",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/deactivate.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "57f9fe94f69b32c751028e8aad7aed420425262304065df0fd7e913dd55408cb304679991e776ab416160224c7950afa989e7af22e85c518da079b9663a3a435",
-                        "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_M.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "607175051408b2d7831204ef47803092209dbfbc43f1be02a78eebbc567964ff9166251f8b1084d19b4221ab5d5fdba45858d37e40775af43da13c578966c6de",
-                        "mod_name": null,
-                        "object_class": "SoundConcurrency",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewSoundConcurrency.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "fa6500903389439c63ec39768f0dd6a0a0ac3b641f88db8a861bc74bc26693e337b63938d53278c3ab87e6eb2fe5f728aafb2257249ebeaae2ff8361d373c1be",
                         "mod_name": null,
                         "object_class": "BlueprintFunctionLibrary",
@@ -96,10 +61,73 @@
                     },
                     {
                         "class_path": null,
+                        "hash": "53031c6cbe9df7e626d39fa1d070cf55e4b1c04793cb37c9bf175e56b16bfe97aada3b5f04d72bd52598fdcd11386a8f816bca7e5c45f0af0f34a776fde7d2de",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/CueTestWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "a661dec7c59e3f9956ebe5f03d16dc89bf1ae3cc1e418a2cbb2056af3ab9e8955fc3966d4ae3f04481ed67671583b6f16ee83ef4fef9c33ef17df79f242951db",
+                        "mod_name": null,
+                        "object_class": "Interface",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/DetailsViewInterface.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "849a6e5054840094ad8fa7d1c666029c9d9ea5af4ba1d24b58f23056e087184fc73cd1b78412ccfc8c3dd6b557197d3ddb505895a826b00ee023846239f0fc5c",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_AttachedActor.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "5b61298fc84e1eae0ee34e5c21c3832b6bbd61b394beed508d699f4ae2a25ebeea77fe898b68d9010fdc26046681b116200c8872cab3f473609aceb8f331bdef",
+                        "mod_name": null,
+                        "object_class": "ActorComponent",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "d98995c42f412a11ac68aff0860ca7c675a8ac002fea89278eef4cb6cef88d15f7799134c388aa3bc74d3c25dde9eae720e445fe3a231e0d368c92c5e5f62ab7",
+                        "mod_name": null,
+                        "object_class": "ActorComponent",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent_Client.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "09407131fc8669b552c362e389119600ba3a70fc243c4473a63dfd5cb7dc4e43688ebc2bc2a895b91ab6ad2a4d48170e0349526e8dfb27c8b86e21569232b72a",
+                        "mod_name": null,
+                        "object_class": "ActorComponent",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_CharacterComponent.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "9d1e1d9d5ec0ef13a33caaea2019f0ef0f68936e91e2daf7cb4df06dc464fd069d42c01509d16761ba802639f586b5f28a984bb88051e9317d51be08a6024b5b",
+                        "mod_name": null,
+                        "object_class": "Interface",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_Interface.uasset"
+                    },
+                    {
+                        "class_path": null,
                         "hash": "59d5529f605e55f4186cfab7be34547282f0af3cc73d0b241c8d576e425edcef62f1b72a710c92df503c49f3aec3235777a6e6faad28e12da7abd1923613736e",
                         "mod_name": null,
                         "object_class": "ActorComponent",
                         "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_InventoryItemComponent.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "744c7e222fc7fcd3e80da450b30b837cc9bc28d4fced4b2ba37e8e84dd3807beef5d94d0b98d674bc7d3d103feb7ef8a466ce496f9ecbcb9dee0410c50e78aba",
+                        "mod_name": null,
+                        "object_class": "SaveGame",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_SettingsSaveGame.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "602c28445e761c09b377458a5df4d445682af6e906374437f22287fe97db8ca04c24dfbf2d2fd4dcf70fbc14ba53e7befe1a0c1c7fde3a6d7effd96548d57db2",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_SettingsWidget.uasset"
                     },
                     {
                         "class_path": null,
@@ -117,136 +145,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "caa38e87b437df3d82777d3e65bfa0c787cfbd5228ec6d05307aae16ddf3f1f155103add284a3afedf9c4613a823a5ac738d66ab749e0bfa1ae52f48b300192e",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SphereMaskTest.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "d95b176947a35b8531243f4a46bcbf9bc52a977af6f715365927fef5ca4884f9204606d9f8be2a3e77e425a3b0be25d8d87c8fe8331ecc9228514c0521524cde",
-                        "mod_name": null,
-                        "object_class": "SoundCue",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop_2_5_Cue.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "5b61298fc84e1eae0ee34e5c21c3832b6bbd61b394beed508d699f4ae2a25ebeea77fe898b68d9010fdc26046681b116200c8872cab3f473609aceb8f331bdef",
-                        "mod_name": null,
-                        "object_class": "ActorComponent",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "c4da131c13afae40ec97ecbf868e76c9b5c7ca9a7f3287fd24d9e6cbcbe0795bdfbf7f9691b8b6b766ca76aff10d466240113aedadf96d682f7f72df84534c84",
+                        "hash": "c0c03eb238163f8741a8ffbc96bb54a20610eb39bacbf08e4fbd5cbf06083a1ba5e29bc9dfa7665cf28d806fe26fe1f92edefabc906598c824ef0779df17930b",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_A.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "5b6d0e053a90616427c42eeec4233a46fa0b02a7e5e5c6722d03bab79cba8733da5afd4b307f30141bd90be31e7ac85de58bd4ba76b0fde4b9e74fea188fa9ec",
-                        "mod_name": null,
-                        "object_class": "StaticMesh",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SM_Polearm_Halberd.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "9d1e1d9d5ec0ef13a33caaea2019f0ef0f68936e91e2daf7cb4df06dc464fd069d42c01509d16761ba802639f586b5f28a984bb88051e9317d51be08a6024b5b",
-                        "mod_name": null,
-                        "object_class": "Interface",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_Interface.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "e9403a7fa72b7c3b33d8b770cd8de76aa85bf59ee9c1b4ab7d20e1ffff02d4409e574acdb81f6a1cc477f7a6321bae6a0b81c94dcd99b5058ee01b98809f419f",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_Flashblades_v2.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "935e3d63e646065a5806fe7de054d6a80f24811059d353ca52845262dbfce9d3be6efe2509b68af492a6bae7cb1a0d25e6e25622de152d60266d373f72fe6c4b",
-                        "mod_name": null,
-                        "object_class": "SoundWave",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/activation.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "744c7e222fc7fcd3e80da450b30b837cc9bc28d4fced4b2ba37e8e84dd3807beef5d94d0b98d674bc7d3d103feb7ef8a466ce496f9ecbcb9dee0410c50e78aba",
-                        "mod_name": null,
-                        "object_class": "SaveGame",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_SettingsSaveGame.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "8673caa735fb6f4b7593dca528afed6eec220ff209d7d942ca487482b24a7daeda28417c4fb0cfdd9b1dfbe389edde39d1783eeaaa95bef1f156e39477b17dd0",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_FlashBlades_v2_Wireframe.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "09407131fc8669b552c362e389119600ba3a70fc243c4473a63dfd5cb7dc4e43688ebc2bc2a895b91ab6ad2a4d48170e0349526e8dfb27c8b86e21569232b72a",
-                        "mod_name": null,
-                        "object_class": "ActorComponent",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_CharacterComponent.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "ce3bc9ce32cec0e87db2e2e0617cdbfcff2837c78df466157edf126d46c9e84a4c93b9e6706fd0667367a32c0c284b26fde24a124ce2bbdd9a5886a818ab2044",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_EmissiveShield.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "067d327d3561a75094ec7af5726b454c8ff54a34d395acd5d67524148890b45b972f2d60d15a035a1cc8b4b34828f0caea96843ea58dbb3b60ef43501c55e520",
-                        "mod_name": null,
-                        "object_class": "SoundWave",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "af9d71e9ccf5e365297872df4a2118567322b6c606057a6c108f61290bd83700143abf9f679289461661150bf113c78b2fd19d188d094dfd07f1f34725883368",
-                        "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "9978e715e017b38e8d4575dca8161e5c9d60eb4e538303a6dc8363c528c137ecff6cbd94886375b34eb9fa2d21ed96a961dc2c04c3065d41dd9c6426d65c0479",
-                        "mod_name": null,
-                        "object_class": "ModularSynthPresetBank",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewModularSynthPresetBank.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "45979202e5abe4b6437ba8ca6ea1b67dbe7e32e7308c160b3735185114617b5dfc4ab9385e31165d3478bf91b038c5f3920b937cee38d8d47667d14a02bcd68f",
-                        "mod_name": null,
-                        "object_class": "SoundCue",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/deactivate_Cue.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "6b84df05ce84b1363c254e6365b154a81d6e8df41983c48ec81ffdb1a60cbd35458615b6f6375ace30e1a81c7a51e3f579a0390b2de577b7ec832dc621d57d3d",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_EdgeTest.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "5cf962acc9bd094c194695cace9315157fc677d184471bd547afb2d617715bf9023c84f4717ac129453c0e8bcd04d5b5d055262b1104ba4a0bb1f70cba8e3441",
-                        "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SphereMaskTest_Inst.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "849a6e5054840094ad8fa7d1c666029c9d9ea5af4ba1d24b58f23056e087184fc73cd1b78412ccfc8c3dd6b557197d3ddb505895a826b00ee023846239f0fc5c",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_AttachedActor.uasset"
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_EmissiveShield_A.uasset"
                     },
                     {
                         "class_path": null,
@@ -257,20 +159,6 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "4ed293076d0a6553dd5d29e8bff56a8672bc586b4e38e0ab415ced983101ba13ea0de9dd5a33c65aeb842b9ef2d5199662ecefa4afa532a45c02351a1d8c9550",
-                        "mod_name": null,
-                        "object_class": "SoundConcurrency",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewSoundConcurrency_2.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "53031c6cbe9df7e626d39fa1d070cf55e4b1c04793cb37c9bf175e56b16bfe97aada3b5f04d72bd52598fdcd11386a8f816bca7e5c45f0af0f34a776fde7d2de",
-                        "mod_name": null,
-                        "object_class": "UserWidget",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/CueTestWidget.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "afab00250623ec1f8f98f23402de01d2d89bd9e1159a1dbbb5b8090418812a460fc4db4a474e68c83ffec020f86a07864f5a0db000b2dcea53c9524c75cefce0",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
@@ -278,17 +166,24 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "ead867d54f9bf5615f127a055650e42f5f219e50bb6958b8cb5e5cfde53f256f198368e3cad7d8dd5d001c1fd0c5e72d6bfb0694c4a49c5dfc436d68c456c97c",
+                        "hash": "af9d71e9ccf5e365297872df4a2118567322b6c606057a6c108f61290bd83700143abf9f679289461661150bf113c78b2fd19d188d094dfd07f1f34725883368",
                         "mod_name": null,
-                        "object_class": "StaticMesh",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SM_HeavyMace_GrandMace.uasset"
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "90b790df78870b4cdfd8d5203ea58be3ebfd573493de138ddaecde1e642285a11a1e5792a2762ae28a12f00560c8341dec276d7825b2e9dc2763544beac82626",
+                        "hash": "c4da131c13afae40ec97ecbf868e76c9b5c7ca9a7f3287fd24d9e6cbcbe0795bdfbf7f9691b8b6b766ca76aff10d466240113aedadf96d682f7f72df84534c84",
                         "mod_name": null,
-                        "object_class": "SoundCue",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/activation_Cue.uasset"
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_A.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "57f9fe94f69b32c751028e8aad7aed420425262304065df0fd7e913dd55408cb304679991e776ab416160224c7950afa989e7af22e85c518da079b9663a3a435",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_M.uasset"
                     },
                     {
                         "class_path": null,
@@ -299,38 +194,24 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "6c73de75acb2374666592ba07b3ceee13673a812d53628bab755fa9694b14e07d4454e7afedd511b2c087021bdc0e5b52cf512b54e8a319aba6ded0af1be15a4",
+                        "hash": "6b84df05ce84b1363c254e6365b154a81d6e8df41983c48ec81ffdb1a60cbd35458615b6f6375ace30e1a81c7a51e3f579a0390b2de577b7ec832dc621d57d3d",
                         "mod_name": null,
-                        "object_class": "SubmixEffectFilterPreset",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewSoundEffectSubmixPreset.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_EdgeTest.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "e384da3524bfccc89408e345c783c4cc576d7ee01fa772568dd9ac72b5f6fcc51b0e454d3bd86d3169e27e82de144897f267cded75cbee9805321a58b119ece1",
+                        "hash": "ce3bc9ce32cec0e87db2e2e0617cdbfcff2837c78df466157edf126d46c9e84a4c93b9e6706fd0667367a32c0c284b26fde24a124ce2bbdd9a5886a818ab2044",
                         "mod_name": null,
-                        "object_class": "SoundCue",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop_Cue.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_EmissiveShield.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "602c28445e761c09b377458a5df4d445682af6e906374437f22287fe97db8ca04c24dfbf2d2fd4dcf70fbc14ba53e7befe1a0c1c7fde3a6d7effd96548d57db2",
+                        "hash": "8673caa735fb6f4b7593dca528afed6eec220ff209d7d942ca487482b24a7daeda28417c4fb0cfdd9b1dfbe389edde39d1783eeaaa95bef1f156e39477b17dd0",
                         "mod_name": null,
-                        "object_class": "UserWidget",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_SettingsWidget.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "a661dec7c59e3f9956ebe5f03d16dc89bf1ae3cc1e418a2cbb2056af3ab9e8955fc3966d4ae3f04481ed67671583b6f16ee83ef4fef9c33ef17df79f242951db",
-                        "mod_name": null,
-                        "object_class": "Interface",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/DetailsViewInterface.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "69b06a9c6601ff73dacfb6afeaa356eb9f2ba530c3efdb2cee4ee318ada9ee072fe553c902dedd59b029b0cd02795e37e6a366663d6277cba1e35bb8f7d5d0ae",
-                        "mod_name": null,
-                        "object_class": "SoundWave",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop_2_5.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_FlashBlades_v2_Wireframe.uasset"
                     },
                     {
                         "class_path": null,
@@ -341,10 +222,73 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "c0c03eb238163f8741a8ffbc96bb54a20610eb39bacbf08e4fbd5cbf06083a1ba5e29bc9dfa7665cf28d806fe26fe1f92edefabc906598c824ef0779df17930b",
+                        "hash": "e9403a7fa72b7c3b33d8b770cd8de76aa85bf59ee9c1b4ab7d20e1ffff02d4409e574acdb81f6a1cc477f7a6321bae6a0b81c94dcd99b5058ee01b98809f419f",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_Flashblades_v2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "074a29aeadb767c3653f7eedbc0acdd0d6bedccb353cc635a6910d04937f7ed6906f85f9ba525dad1768cfe39fdc4b234375afef0fea9a01f25829c163f2a2c3",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_EmissiveShield_A.uasset"
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/M_Flashblades_v2_Inst.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "ead867d54f9bf5615f127a055650e42f5f219e50bb6958b8cb5e5cfde53f256f198368e3cad7d8dd5d001c1fd0c5e72d6bfb0694c4a49c5dfc436d68c456c97c",
+                        "mod_name": null,
+                        "object_class": "StaticMesh",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SM_HeavyMace_GrandMace.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "5b6d0e053a90616427c42eeec4233a46fa0b02a7e5e5c6722d03bab79cba8733da5afd4b307f30141bd90be31e7ac85de58bd4ba76b0fde4b9e74fea188fa9ec",
+                        "mod_name": null,
+                        "object_class": "StaticMesh",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SM_Polearm_Halberd.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "caa38e87b437df3d82777d3e65bfa0c787cfbd5228ec6d05307aae16ddf3f1f155103add284a3afedf9c4613a823a5ac738d66ab749e0bfa1ae52f48b300192e",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SphereMaskTest.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "5cf962acc9bd094c194695cace9315157fc677d184471bd547afb2d617715bf9023c84f4717ac129453c0e8bcd04d5b5d055262b1104ba4a0bb1f70cba8e3441",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/SphereMaskTest_Inst.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "9978e715e017b38e8d4575dca8161e5c9d60eb4e538303a6dc8363c528c137ecff6cbd94886375b34eb9fa2d21ed96a961dc2c04c3065d41dd9c6426d65c0479",
+                        "mod_name": null,
+                        "object_class": "ModularSynthPresetBank",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewModularSynthPresetBank.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "607175051408b2d7831204ef47803092209dbfbc43f1be02a78eebbc567964ff9166251f8b1084d19b4221ab5d5fdba45858d37e40775af43da13c578966c6de",
+                        "mod_name": null,
+                        "object_class": "SoundConcurrency",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewSoundConcurrency.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "4ed293076d0a6553dd5d29e8bff56a8672bc586b4e38e0ab415ced983101ba13ea0de9dd5a33c65aeb842b9ef2d5199662ecefa4afa532a45c02351a1d8c9550",
+                        "mod_name": null,
+                        "object_class": "SoundConcurrency",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewSoundConcurrency_2.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "6c73de75acb2374666592ba07b3ceee13673a812d53628bab755fa9694b14e07d4454e7afedd511b2c087021bdc0e5b52cf512b54e8a319aba6ded0af1be15a4",
+                        "mod_name": null,
+                        "object_class": "SubmixEffectFilterPreset",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/NewSoundEffectSubmixPreset.uasset"
                     },
                     {
                         "class_path": null,
@@ -352,6 +296,62 @@
                         "mod_name": null,
                         "object_class": "SoundClass",
                         "path": "TBL/Content/Mods/AgMods/FlashBlades/TestSoundClass.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "935e3d63e646065a5806fe7de054d6a80f24811059d353ca52845262dbfce9d3be6efe2509b68af492a6bae7cb1a0d25e6e25622de152d60266d373f72fe6c4b",
+                        "mod_name": null,
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/activation.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "90b790df78870b4cdfd8d5203ea58be3ebfd573493de138ddaecde1e642285a11a1e5792a2762ae28a12f00560c8341dec276d7825b2e9dc2763544beac82626",
+                        "mod_name": null,
+                        "object_class": "SoundCue",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/activation_Cue.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "067d327d3561a75094ec7af5726b454c8ff54a34d395acd5d67524148890b45b972f2d60d15a035a1cc8b4b34828f0caea96843ea58dbb3b60ef43501c55e520",
+                        "mod_name": null,
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "69b06a9c6601ff73dacfb6afeaa356eb9f2ba530c3efdb2cee4ee318ada9ee072fe553c902dedd59b029b0cd02795e37e6a366663d6277cba1e35bb8f7d5d0ae",
+                        "mod_name": null,
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop_2_5.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "d95b176947a35b8531243f4a46bcbf9bc52a977af6f715365927fef5ca4884f9204606d9f8be2a3e77e425a3b0be25d8d87c8fe8331ecc9228514c0521524cde",
+                        "mod_name": null,
+                        "object_class": "SoundCue",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop_2_5_Cue.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "e384da3524bfccc89408e345c783c4cc576d7ee01fa772568dd9ac72b5f6fcc51b0e454d3bd86d3169e27e82de144897f267cded75cbee9805321a58b119ece1",
+                        "mod_name": null,
+                        "object_class": "SoundCue",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/active_loop_Cue.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "4633f553144059e2836c3fae84750648beb7179d0efce74ee1dd6651655b1454f2c2a79a1d0321b37eaff39871ad2c7d94c402a16f2b466637e95a7eb89102d9",
+                        "mod_name": null,
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/deactivate.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "45979202e5abe4b6437ba8ca6ea1b67dbe7e32e7308c160b3735185114617b5dfc4ab9385e31165d3478bf91b038c5f3920b937cee38d8d47667d14a02bcd68f",
+                        "mod_name": null,
+                        "object_class": "SoundCue",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/deactivate_Cue.uasset"
                     }
                 ],
                 "blueprints": [
@@ -362,17 +362,16 @@
                         "enable_by_default": false,
                         "hash": "e0e62820edfc109b017b2bb849aab6acd7ed6ac8d4fb5926027ed491c6af7df75bce9bc65ece5e43bce3b1342420bffa919f6dd8b89199e57ea08033d3de1286",
                         "host_only": false,
-                        "is_client_side": false,
-                        "is_hidden": false,
+                        "is_client_side": true,
                         "mod_description": "",
                         "mod_name": "FlashBlades",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/FlashBlades/FlashBlades.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.3"
                     },
                     {
                         "allow_on_frontend": false,
@@ -381,17 +380,16 @@
                         "enable_by_default": false,
                         "hash": "27d7bd987bb44eb4f300ebf3010ec5b4240bafadd83816cf89d24c2e3f6eb85ee8e801e1b52ff1c0f26f0473191a04ac604640ad3d11f00bd98c7a2304bd49e7",
                         "host_only": false,
-                        "is_client_side": false,
-                        "is_hidden": false,
+                        "is_client_side": true,
                         "mod_description": "",
                         "mod_name": "FlashBlades_Debug",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/FlashBlades/FlashBlades_Debug.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.1"
                     }
                 ],
                 "maps": [],
@@ -444,10 +442,10 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "5b0649aff48d41b7c33e6b443c81645f73acf99505d17134dca03429e0b531fd796b6a412c559aadf7d4ef2e34db616021d713f9df7f4d55733aba5c275a55c6",
+                        "hash": "aca00330f649368bcedcdba494dbe121d452f5e76232768fcd664d645a1cf6cee17c345c50f03c0f0ef1d40e3663a08444d66dbd0f4eee88a4d39e98a570976e",
                         "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_T.uasset"
+                        "object_class": "ActorComponent",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent.uasset"
                     },
                     {
                         "class_path": null,
@@ -458,10 +456,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "aca00330f649368bcedcdba494dbe121d452f5e76232768fcd664d645a1cf6cee17c345c50f03c0f0ef1d40e3663a08444d66dbd0f4eee88a4d39e98a570976e",
+                        "hash": "43d21a5d995d5ebfec66f5b57ede94b398651ad71b1f75f4a0ba2381fb4ec4cb706ab8a3f414aa5d61f260d3f1945d5fa49abee97cbd5322ab7c4cbac7355b10",
                         "mod_name": null,
-                        "object_class": "ActorComponent",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent.uasset"
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_A.uasset"
                     },
                     {
                         "class_path": null,
@@ -472,10 +470,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "43d21a5d995d5ebfec66f5b57ede94b398651ad71b1f75f4a0ba2381fb4ec4cb706ab8a3f414aa5d61f260d3f1945d5fa49abee97cbd5322ab7c4cbac7355b10",
+                        "hash": "5b0649aff48d41b7c33e6b443c81645f73acf99505d17134dca03429e0b531fd796b6a412c559aadf7d4ef2e34db616021d713f9df7f4d55733aba5c275a55c6",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_A.uasset"
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_T.uasset"
                     }
                 ],
                 "blueprints": [
@@ -487,16 +485,15 @@
                         "hash": "9a189bba3f1aac398af1afa9249868543b1ba31ad06ba1451ab95f2e7392bb3b1a68f0894ee5fbd0f90d0c91b715abff368ff3c5f19afae3fde34d5716c8fc29",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "FlashBlades",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/FlashBlades/FlashBlades.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.2"
                     }
                 ],
                 "maps": [],
@@ -548,6 +545,13 @@
                 "arbitrary": [
                     {
                         "class_path": null,
+                        "hash": "85c410e65e164a83940314410b42642c52a754917e54b1ec6de3331dedd847e9910b302d23587a2188410b350db7d2f78fb077cfb8d53da59207e67e931fa907",
+                        "mod_name": null,
+                        "object_class": "ActorComponent",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent.uasset"
+                    },
+                    {
+                        "class_path": null,
                         "hash": "24efa616f200c317baeac17ed83458e954f97c6e5fc93d1c46b36989fc12c171f2b237b69b8fb59206bbac2d6b157d47a6da6ff51b5417b4d907426f6c27697a",
                         "mod_name": null,
                         "object_class": "ArgonSDKModBase_C",
@@ -562,6 +566,13 @@
                     },
                     {
                         "class_path": null,
+                        "hash": "85b5dbe86cd75bf79177be4db1ba2a85728c6160f81cc0f163103aa59b8697eeafdae697dff68ed5d1544a10325d0525756357e8ce147af24b53047ac55a7f80",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_A.uasset"
+                    },
+                    {
+                        "class_path": null,
                         "hash": "797eec93b748b45d2405173064c2ea9048bf0cb8e5834182bc05abfde198a0b0c2ca8d91f95c2d8a5c32e43e450450983927288cc99d9baa4afe838f0b22dc21",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
@@ -569,45 +580,30 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "85c410e65e164a83940314410b42642c52a754917e54b1ec6de3331dedd847e9910b302d23587a2188410b350db7d2f78fb077cfb8d53da59207e67e931fa907",
-                        "mod_name": null,
-                        "object_class": "ActorComponent",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/FB_BladeComponent.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "8fd2032920d5c9029789f9ae92344971430beb33f0b884221a2faea1b12171ebe83f1ed46242cfdb455e6e5a6faec1c7384896376464fb2c9d442578bb083570",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
                         "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_T.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "85b5dbe86cd75bf79177be4db1ba2a85728c6160f81cc0f163103aa59b8697eeafdae697dff68ed5d1544a10325d0525756357e8ce147af24b53047ac55a7f80",
-                        "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/FlashBlades/Materials/MI_GlowingSword_A.uasset"
                     }
                 ],
                 "blueprints": [
                     {
                         "allow_on_frontend": false,
                         "author": "Nihi for ArgonSDK",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/FlashBlades/FlashBlades.FlashBlades_C",
                         "enable_by_default": false,
                         "hash": "24efa616f200c317baeac17ed83458e954f97c6e5fc93d1c46b36989fc12c171f2b237b69b8fb59206bbac2d6b157d47a6da6ff51b5417b4d907426f6c27697a",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "FlashBlades",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/FlashBlades/FlashBlades.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.1a"
                     }
                 ],
                 "maps": [],
