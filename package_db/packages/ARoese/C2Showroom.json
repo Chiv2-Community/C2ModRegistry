@@ -54,13 +54,6 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "569eb848aaeb98c2cb80a4ac5afb0d51f210f454978f9b648914e4dac8de185b9d301d53c0eae81e7cf6a33eeb0042172967d23bfebae925b4c329cd9adab753",
-                        "mod_name": null,
-                        "object_class": "ArgonSDKModBase_C",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
@@ -68,10 +61,24 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "df152494e9c928e25336dac83fdbebefd018b8b5ad03885cf392fd868ca05758c0a551de07cbbbd4f9a67b0ecc34a5b5df4a00eb1a9b4d335e7c9e613c979b93",
+                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b",
                         "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset"
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset"
                     },
                     {
                         "class_path": null,
@@ -89,43 +96,35 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4",
+                        "hash": "df152494e9c928e25336dac83fdbebefd018b8b5ad03885cf392fd868ca05758c0a551de07cbbbd4f9a67b0ecc34a5b5df4a00eb1a9b4d335e7c9e613c979b93",
                         "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset"
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef",
+                        "hash": "569eb848aaeb98c2cb80a4ac5afb0d51f210f454978f9b648914e4dac8de185b9d301d53c0eae81e7cf6a33eeb0042172967d23bfebae925b4c329cd9adab753",
                         "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset"
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
                     }
                 ],
                 "blueprints": [
                     {
                         "allow_on_frontend": false,
                         "author": "DrLong",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/showRoom/showroom.showroom_C",
                         "enable_by_default": false,
                         "hash": "569eb848aaeb98c2cb80a4ac5afb0d51f210f454978f9b648914e4dac8de185b9d301d53c0eae81e7cf6a33eeb0042172967d23bfebae925b4c329cd9adab753",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "showroom",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
                         "version": "1.0.0"
                     }
@@ -169,31 +168,17 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4",
-                        "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
-                        "mod_name": null,
-                        "object_class": "ArgonSDKModBase_C",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
                         "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset"
                     },
                     {
                         "class_path": null,
@@ -204,10 +189,17 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00",
+                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5",
                         "mod_name": null,
                         "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset"
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset"
                     },
                     {
                         "class_path": null,
@@ -218,29 +210,35 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "77da0e7d2ee61370e6c964f0feab64dead2e00eca73f4977d2e77a8d9d2fb0f08534e79d00ed7fbed84928391679fbc9a5a6c758f2c5bb077a4d048db7a7a92b",
+                        "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatColor.uasset"
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
+                        "mod_name": null,
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
                     }
                 ],
                 "blueprints": [
                     {
                         "allow_on_frontend": false,
                         "author": "DrLong",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/showRoom/showroom.showroom_C",
                         "enable_by_default": false,
                         "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "showroom",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
                         "version": "1.0.0"
                     }
@@ -284,10 +282,10 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
+                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee",
                         "mod_name": null,
-                        "object_class": "ArgonSDKModBase_C",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset"
                     },
                     {
                         "class_path": null,
@@ -298,17 +296,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "ea5424d9f3c8b65efde307bef38cda1d09e1444630f544f474cd6c3a4298d5f57fb54b5f21508d27c69680053fd679746b72ec7e3579323814cb073abb9b419f",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_green.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee",
+                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset"
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset"
                     },
                     {
                         "class_path": null,
@@ -319,6 +310,20 @@
                     },
                     {
                         "class_path": null,
+                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "ea5424d9f3c8b65efde307bef38cda1d09e1444630f544f474cd6c3a4298d5f57fb54b5f21508d27c69680053fd679746b72ec7e3579323814cb073abb9b419f",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_green.uasset"
+                    },
+                    {
+                        "class_path": null,
                         "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00",
                         "mod_name": null,
                         "object_class": "Actor",
@@ -326,36 +331,28 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef",
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
                         "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset"
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
                     }
                 ],
                 "blueprints": [
                     {
                         "allow_on_frontend": false,
                         "author": "DrLong",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/showRoom/showroom.showroom_C",
                         "enable_by_default": false,
                         "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "showroom",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
                         "version": "1.0.0"
                     }
@@ -389,10 +386,10 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
+                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee",
                         "mod_name": null,
-                        "object_class": "ArgonSDKModBase_C",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset"
                     },
                     {
                         "class_path": null,
@@ -403,31 +400,24 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "049e0066a6b3626e6b1aea53ca36ad08f49615f9b006adb76f420a26583229e7ecae8857f65f7ba994579ce786704aaef9f28a83b0b7a1b367b2c104e79711ee",
-                        "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatBlu.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "6a47d4568c8ad6e4e85e93e2ced3b85b23fda4c29a9cc085881ad29dd636dfb9a8ccd89901db8d621802f068c6be83b2635faba8417d12c04e5d1e8fcf7ee6ef",
                         "mod_name": null,
                         "object_class": "MaterialInstanceConstant",
                         "path": "TBL/Content/Mods/AgMods/showRoom/flatGrn.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4",
+                        "mod_name": null,
+                        "object_class": "MaterialInstanceConstant",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "e3794a17b4a6d40f54777910632b531ae15fd943ef85db05855fd775924a4ce6f6786dbc99a8ba1a7cee09cbc35cf36b9d55395f8d2f1ce6c1dbed244b0c37d5",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_blue.uasset"
                     },
                     {
                         "class_path": null,
@@ -438,29 +428,35 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "067c0e4aaf1b18b2979541a2db537d1b90cd71f19f6af5fbcb625b59d26806f356f76a362c1af854b67b9850d81cbc022ec063e60b5097286e7e1b2d1e6d41f4",
+                        "hash": "3f6f6e1b2b8eaf2d5d22ce4814b7f4d237c615bf3b23f353c0721378e62772c896f2297a3083ba85e9cabb42ab7740abbbbb3768362a45c824ee0b9516bf9c00",
                         "mod_name": null,
-                        "object_class": "MaterialInstanceConstant",
-                        "path": "TBL/Content/Mods/AgMods/showRoom/flatRed.uasset"
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showcase_red.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
+                        "mod_name": null,
+                        "object_class": "ArgonSDKModBase_C",
+                        "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset"
                     }
                 ],
                 "blueprints": [
                     {
                         "allow_on_frontend": false,
                         "author": "DrLong",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/showRoom/showroom.showroom_C",
                         "enable_by_default": false,
                         "hash": "fd4f35a2a1c2537374a593a0961f9a708a106e0acef302521fbf34822abe480b26f2abc5977c769634ddcd37bdfc1cb96633e62a6c1660e8e4142603eba7c7e3",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "showroom",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/showRoom/showroom.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
                         "version": "1.0.0"
                     }

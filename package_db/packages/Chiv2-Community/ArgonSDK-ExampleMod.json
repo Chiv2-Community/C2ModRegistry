@@ -64,21 +64,20 @@
                     {
                         "allow_on_frontend": false,
                         "author": "",
-                        "class_path": null,
+                        "class_path": "/Game/Mods/AgMods/ExampleMod/ExampleMod.ExampleMod_C",
                         "enable_by_default": false,
                         "hash": "2084b9a65768acfc22ce29f7edfd1fff6e2788adcf6ad2610f7a266905b54781f1e83181463d8715a713bc83df9821253aa714f6dd374564ab2d4bb4a50b68e4",
                         "host_only": false,
                         "is_client_side": false,
-                        "is_hidden": false,
                         "mod_description": "",
                         "mod_name": "Example Mod",
                         "mod_repo_url": "",
                         "object_class": "ArgonSDKModBase_C",
                         "online_only": false,
                         "path": "TBL/Content/Mods/AgMods/ExampleMod/ExampleMod.uasset",
-                        "show_in_gui": false,
+                        "show_in_gui": null,
                         "silent_load": false,
-                        "version": "1.0.0"
+                        "version": "v0.0.1"
                     }
                 ],
                 "maps": [],

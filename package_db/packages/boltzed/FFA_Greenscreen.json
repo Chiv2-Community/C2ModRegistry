@@ -34,10 +34,10 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
+                        "hash": "f11edc34a84703247d53a14b98759ea9ff950037976f3b415bc4fe2d505fcd9d8f8ba34e27fcf0cb89ce452699d0a7f8d99edb0e4b74893f1bbadb28b0556e96",
                         "mod_name": null,
-                        "object_class": "SpawnSequence",
-                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset"
+                        "object_class": "StaticMeshActor",
+                        "path": "TBL/Content/Mods/GreenScreen/BP_GS_TimeDial.uasset"
                     },
                     {
                         "class_path": null,
@@ -48,17 +48,17 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "f11edc34a84703247d53a14b98759ea9ff950037976f3b415bc4fe2d505fcd9d8f8ba34e27fcf0cb89ce452699d0a7f8d99edb0e4b74893f1bbadb28b0556e96",
-                        "mod_name": null,
-                        "object_class": "StaticMeshActor",
-                        "path": "TBL/Content/Mods/GreenScreen/BP_GS_TimeDial.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "cf87cc7d95609cffa71fe9fd76951d6261807a20b8033a779d4571a7c30fc8931491bf60c922c4b58d6181b4eeff7e573193f802e29816a17f13ee58d5d204eb",
                         "mod_name": null,
                         "object_class": "Material",
                         "path": "TBL/Content/Mods/GreenScreen/M_GreenScreen_Green.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
+                        "mod_name": null,
+                        "object_class": "SpawnSequence",
+                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset"
                     }
                 ],
                 "blueprints": [],
