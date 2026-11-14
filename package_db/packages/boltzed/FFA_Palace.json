@@ -34,48 +34,6 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "7428eea7789f0ab2fc44b7cb4522857cfac09429a9a1e88af5ffcf8ca2a0fa72bba6a644173f103d988603c358078b939e7a5358acee8f1a8a83aa4d0ed8f0b3",
-                        "mod_name": null,
-                        "object_class": "StaticMesh",
-                        "path": "TBL/Content/Mods/BiomeMap/SM_Weapon_CripplingAxe_Galaxy.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "b0da3e2c49b90d632a6b3feb5e9755fb06bb0e7d33c7e4d56db9ac1ed0475594a418fd3f41971b419fcc801dc54a6a2ca1c598bb28e9c884b00214d1b55b2f6a",
-                        "mod_name": null,
-                        "object_class": "StaticMesh",
-                        "path": "TBL/Content/Mods/BiomeMap/SM_Weapon_FireMesser_Galaxy.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "35bfc466d0f28cb94e5998038cf87d826d088661a2dcc14d8d66b2545bd2358b017b26575202f52251f7e51f93f7e852b31a16fd8b94f14af98bafa880c85d41",
-                        "mod_name": null,
-                        "object_class": "Weapon_Messer_C",
-                        "path": "TBL/Content/Mods/BiomeMap/Weapon_FireMesser.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "d39c75d1cf98005783ad7ec9c85d96f6620386f6087926ba387b2e2be15f60c73d1a8561e084d2cfee46d97cfadffc02c7e93b6765e5b0ad192aad4b895349d2",
-                        "mod_name": null,
-                        "object_class": "Texture2D",
-                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_green.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "8b2b6e68613534125fb890c79576370f177d6d9001433b97b1809495a1ec28fbb54e0e6b3858728092cb2892d32f7012dde1e3512e7e1e15815542904ce038da",
-                        "mod_name": null,
-                        "object_class": "Weapon_BattleAxe_C",
-                        "path": "TBL/Content/Mods/BiomeMap/Weapon_CripplingAxe.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "27e728d290afa1f1eca674bb74d2779b4037644a6a0b024496352d47ee5597f38a9f5c62425d8f9d523cbcadc05d27954c5ddd75264262a6086c781357785e7f",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/BiomeMap/M_Galaxy_orange.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "29dedb739c6a32af50071992a3a16a45116729537fdc2de2148145cbb2511c8e6613c80172fbf00846282d8cab5e73d3e11f81b371514b611d2a88d3e232c29b",
                         "mod_name": null,
                         "object_class": "Material",
@@ -90,31 +48,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "8d79ed3a61231e91bac8f07aabe9cc693c47157d3d31f1e2b5f62e82266fabc3bebe6bf77041d93a291cf651bdad5f1fc003c8cf6df4c50ca9305af5136b3cab",
+                        "hash": "27e728d290afa1f1eca674bb74d2779b4037644a6a0b024496352d47ee5597f38a9f5c62425d8f9d523cbcadc05d27954c5ddd75264262a6086c781357785e7f",
                         "mod_name": null,
                         "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_vine.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "67d392739b0feaa3a1dbb4b438f6bf7a3d605370663c8cede6849e0939c2ba22763c510c65d3e35408e5464eb08f67d8994481ca91007d4f951eea630d01dfff",
-                        "mod_name": null,
-                        "object_class": "StaticMesh",
-                        "path": "TBL/Content/Mods/BiomeMap/SM_Weapon_HealDaneAxe_Galaxy.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "8edb3e6e1e73604048a17ca273ff651ce477835aef5b2a47d3f9c6e34f63c715ebf40f5e4a25d395251d3c9e25054d05dfd4eec92c45a95c44884f7703c336f5",
-                        "mod_name": null,
-                        "object_class": "SoundWave",
-                        "path": "TBL/Content/Mods/OvergrownTemple/SpaceAmbient.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "29005e937de07d7876e89d300d5a34b7fc6b88a065f2ff2034b7ba1c980eb6ca4612639d7df7ad9ed6cc5f0bf4c87624559e92c2760fbab321899581f9866efb",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_mossy_stone.uasset"
+                        "path": "TBL/Content/Mods/BiomeMap/M_Galaxy_orange.uasset"
                     },
                     {
                         "class_path": null,
@@ -125,136 +62,24 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "3888547c76c10c108619c60efaf18bc9c6b08581ea2f474d4b41f4d5feae6c26ee2df745ef90273029bfe0015e9f532383995eabe4b9cc83018d1d6af8b6462f",
+                        "hash": "7428eea7789f0ab2fc44b7cb4522857cfac09429a9a1e88af5ffcf8ca2a0fa72bba6a644173f103d988603c358078b939e7a5358acee8f1a8a83aa4d0ed8f0b3",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_stone_half.uasset"
+                        "object_class": "StaticMesh",
+                        "path": "TBL/Content/Mods/BiomeMap/SM_Weapon_CripplingAxe_Galaxy.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "bd7e463e66f64a68cef1db339dcb2ec01b5bb8dc98d651d48fb26f4a3cb254507eabcebcee683e55de1f1ac90c4ab027f1c9dee4849b6df70c14ce6b8095b9c2",
+                        "hash": "b0da3e2c49b90d632a6b3feb5e9755fb06bb0e7d33c7e4d56db9ac1ed0475594a418fd3f41971b419fcc801dc54a6a2ca1c598bb28e9c884b00214d1b55b2f6a",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_dirt.uasset"
+                        "object_class": "StaticMesh",
+                        "path": "TBL/Content/Mods/BiomeMap/SM_Weapon_FireMesser_Galaxy.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "bf4249aa3a32eca946689e7025354478698b6f362cf37ab0172098acc31949f5e5621d7aaaa2e5689f9c1f9c47c8a048a6f15ab106a488fd39f12d02fc4a9738",
+                        "hash": "67d392739b0feaa3a1dbb4b438f6bf7a3d605370663c8cede6849e0939c2ba22763c510c65d3e35408e5464eb08f67d8994481ca91007d4f951eea630d01dfff",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_stone.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "ca97efdb2cd145d96ecd030ded6c23a892d5b6afc905bd3af92cb584ce77e0231c088ed10a49fd2cbffe216f804285f76956bd5af87c1f8235d20a183e713035",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_mossy_stone.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "34c3870277db47b96ddbc6f3cb281118a7623946df8bcfab7fd20ca9d501cab914bff335199e47a4a140045e144125d7ec604776b341a736477868ce97babb11",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_marker.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "6eb40af650421c8fe8b00dfc9c593b359c13dfd05802ad53c059abd2b206bc899fa5f445af20060387cda5e0f8dc99d4ad7535ee0f5dfa4aae98d1d6a6e8dd3a",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_ground.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "5c0b9a322c53456b083ed63571374c76c20f62be0bf640cdccfc7ca2fbf71bc1c20538cb0511d9e09f84a198c52b1587092f9541ffce7bbbe23db084e6331eeb",
-                        "mod_name": null,
-                        "object_class": "Weapon_HeavyMace_C",
-                        "path": "TBL/Content/Mods/BiomeMap/Weapon_StaminaMace.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "fbc249f4e76b1b7cadd6996972092ef10ccda42e4b7d9131c28fffb8c97b755b24c33cfa180d2c564517f2e026611a86d1f377bb1dda25e699e7cc3c7d8e2957",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_wood.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "b132de6624e0aeb3aea7d395a604e09f26bc8d897f7bf6f7f70e84610eedc71e3db78660e3063011096456b869d58178cb7bb6d0139fb106de2d4bf2ec2e6155",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_ground_grass.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "abbda5567c37904d4b1ab51123e468d6d2476a0075a142e96f43b65f8c9b37ccc8b34d8606005f93dc31a439d39d4f0df665e993c1c24dec941628d18bf432d4",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Stars.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "d72018a4901c28d5ab09a068a23199f227fcc420e55d11e18f10059631206483f631699de2e71af822311d6d197127e4bed83fdc643c60cab077867e05dca36f",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_ground_grass.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "0311f62d3c8ddd9e216414640082f9ba225fdf92d783cab9ee5e9865dff692c758991cb92a152b1f95cc3862cb1130bf381c9fdb9194094a47b6a6b1ff4350ff",
-                        "mod_name": null,
-                        "object_class": "Weapon_DaneAxe_C",
-                        "path": "TBL/Content/Mods/BiomeMap/Weapon_HealDaneAxe.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "7949d6dab63f2c6297cf7586d18a9783ed6be22e99bb1f7df0f5f447014d99b9c22cb17f00bbea4e8498681242e160805bcc9194086df89a4aec4e15a8c87104",
-                        "mod_name": null,
-                        "object_class": "MapBuildDataRegistry",
-                        "path": "TBL/Content/Mods/OvergrownTemple/FFA_Palace_BuiltData.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "aae63700ead8ac1a53fe7d0afeafcb4c2c1a20319f5190b6389be46131349ed9aa4142ebdb1cb1512e0ee4df773d50c98d1c79192ce4723109583c77ab31e8e9",
-                        "mod_name": null,
-                        "object_class": "StaticMeshActor",
-                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_WellInteract.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "5c5ee4b982b8e394803c3279adf1ba775fcb3a83a38c1080b98b22f6ed1c674d67f92704fc70bd634245dda90857315cefb0b05377b4994dda8a84beb21a0f3b",
-                        "mod_name": null,
-                        "object_class": "Texture2D",
-                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_blue.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "b89025da05f3a67200edda9ab8d4cfc7b6c71f3d9a6c757d8eb667d19bc5a2a8e1ac707f075d53bc3ed69b2521fe859321af229c39b627a828ff042a38e0f070",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_dirt.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "bf695bf3f2950259a5b88dde84e1cc6d25752a1b6246e94b212ab2e8e1992aa6fe28f88dd6219c6478bb8a9bc23c1c1fb9d135725dfcee69c5c00bff2f493008",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/M_HealingPluses.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
-                        "mod_name": null,
-                        "object_class": "SpawnSequence",
-                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "d2fd7ef8661d7631233747450e5a85cc5190c3470b22f94fc64e34a22e0ee4a9f83fa75676530ff0cf7e8a783bcad213bc358cfc782fcd9c3a126ca06b245b31",
-                        "mod_name": null,
-                        "object_class": "Texture2D",
-                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_yellow.uasset"
+                        "object_class": "StaticMesh",
+                        "path": "TBL/Content/Mods/BiomeMap/SM_Weapon_HealDaneAxe_Galaxy.uasset"
                     },
                     {
                         "class_path": null,
@@ -265,94 +90,59 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "ba2f61e1ed1679e78f63ad58853a2e363541f17cac3448ea814032150346b5ef062f0ba36f1b7a68151d6b524e7bf0922b605bdfa39f95b7dac002bbe1b47994",
+                        "hash": "5c5ee4b982b8e394803c3279adf1ba775fcb3a83a38c1080b98b22f6ed1c674d67f92704fc70bd634245dda90857315cefb0b05377b4994dda8a84beb21a0f3b",
                         "mod_name": null,
                         "object_class": "Texture2D",
-                        "path": "TBL/Content/Mods/OvergrownTemple/T_HealingPluses.uasset"
+                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_blue.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "679c1aa6eb56d16a1dc0e870af6f0c7d25cb72434a5abace17d6974b06cea195b7f71f9093a403c0b62f5cb9c0b72257f8ad59960a09a0f4e235ba380c9e656e",
+                        "hash": "d39c75d1cf98005783ad7ec9c85d96f6620386f6087926ba387b2e2be15f60c73d1a8561e084d2cfee46d97cfadffc02c7e93b6765e5b0ad192aad4b895349d2",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_wood.uasset"
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_green.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "312cd95aa456a77ca9bd790f760d9ad7732b31532a1850f2a3bb16bcec27af7dacde86b76ace8d6c145205336a4deb202202f51e09bba30c369c79e2da874062",
+                        "hash": "82407aaeb2b1cbdc997b313ec5463fd6b1d6849494c0f223147e59bcbf39671af999bc003dea66adbd6678516ebe3d6cecb34455436a39bd8549f3dafe2af52e",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_stone.uasset"
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_orange.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "490c66efdfdbb676eef9c0d878d574468f35a4d23ec65b428ac761ecda17a5b85064cc687c737a7ccdb96619eb9e5a10683b39a825cd3ea0101b8983dd02dfd7",
+                        "hash": "d2fd7ef8661d7631233747450e5a85cc5190c3470b22f94fc64e34a22e0ee4a9f83fa75676530ff0cf7e8a783bcad213bc358cfc782fcd9c3a126ca06b245b31",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_cliff.uasset"
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_yellow.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "c5802b405e47fa0665b8113f10e1322816c8ef6e566ab781c0cfb02b31dcc6a6ab5324c5f1b452dcafd0319c6ff500c6e03d6c4bc36829a50418d845f452ef6f",
+                        "hash": "8b2b6e68613534125fb890c79576370f177d6d9001433b97b1809495a1ec28fbb54e0e6b3858728092cb2892d32f7012dde1e3512e7e1e15815542904ce038da",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_objective.uasset"
+                        "object_class": "Weapon_BattleAxe_C",
+                        "path": "TBL/Content/Mods/BiomeMap/Weapon_CripplingAxe.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "46383af5733a4465a432d988b6de4eb3f718cbbb5803887d8f527456ad5bd9164d7b39314954db9fd289636ee4b8372134e50c30c82691e4174efa0a4919c608",
+                        "hash": "35bfc466d0f28cb94e5998038cf87d826d088661a2dcc14d8d66b2545bd2358b017b26575202f52251f7e51f93f7e852b31a16fd8b94f14af98bafa880c85d41",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_leaves.uasset"
+                        "object_class": "Weapon_Messer_C",
+                        "path": "TBL/Content/Mods/BiomeMap/Weapon_FireMesser.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "d0fa6f313044042ce1c39e38453daddea7b6a387c66f31a8e15183d9313f78b96509c8d708c85de0ac64db39705f51da8e5ca2396a7fd0d213f9ce7f50d62380",
+                        "hash": "0311f62d3c8ddd9e216414640082f9ba225fdf92d783cab9ee5e9865dff692c758991cb92a152b1f95cc3862cb1130bf381c9fdb9194094a47b6a6b1ff4350ff",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Cloud_Night.uasset"
+                        "object_class": "Weapon_DaneAxe_C",
+                        "path": "TBL/Content/Mods/BiomeMap/Weapon_HealDaneAxe.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "02c4dbf4be700778d740af7499469b414c56fc29103d5a6d829e57449516310a4b34881057dddcefd1354a926097f712c6fdf9df8e04d34bf7542dfe5979f9d8",
+                        "hash": "5c0b9a322c53456b083ed63571374c76c20f62be0bf640cdccfc7ca2fbf71bc1c20538cb0511d9e09f84a198c52b1587092f9541ffce7bbbe23db084e6331eeb",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Cloud_Half.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "12c79333acca05c1a7d16bec36ee0353575813b1de1e795eddfcc2a9897a1f52fb6c45d1c930ea6b4dea952a03dd72cb8b774a94ffd7ccd3bf27630a12eb786d",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Cloud.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "72e6e68674c27793b47f7d23ebfd9a4a53fbef938966589eb96709389d356637f4a283bb42bb92f3d2a647f99177ae19c5d32fa7376e67547f1080d302fba5eb",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_cliff.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "4a78276587738b71c3e58e3f53b639fd09e3a4e4f75d11abbadf985f02f92cbc60c795252f8458cec1d192bc672457e36724d147e7d5862fbccd3f6742933316",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_bark.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "04b7e0962106e6262225da435554971293dbb885307686e9dd1654497081140146eb133f68601008aa428803a670c505851e31338f818c683a44f36b8caa8824",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_bamboo.uasset"
-                    },
-                    {
-                        "class_path": null,
-                        "hash": "43f62d56dfa3867db76f30a7e44d0eefeb25c66c273d2404e2fc5a59810c9f02ade46f7c5760fcd3e96797ef91857b5633cef05e6d5f01d5e9b4f9e2ee937a39",
-                        "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/OvergrownTemple/M_OT_SpaceSky.uasset"
+                        "object_class": "Weapon_HeavyMace_C",
+                        "path": "TBL/Content/Mods/BiomeMap/Weapon_StaminaMace.uasset"
                     },
                     {
                         "class_path": null,
@@ -363,10 +153,220 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "82407aaeb2b1cbdc997b313ec5463fd6b1d6849494c0f223147e59bcbf39671af999bc003dea66adbd6678516ebe3d6cecb34455436a39bd8549f3dafe2af52e",
+                        "hash": "8516036fd0e242cffe6f17d59bb58fbed0f930d4ed768f45d518d4aa97dff91af35defcb8774ab55d963b8bcdb222a7cc146c81530e2ab526aaa94469afb2add",
+                        "mod_name": null,
+                        "object_class": "SpawnSequence",
+                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_RespawnWaves.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "aae63700ead8ac1a53fe7d0afeafcb4c2c1a20319f5190b6389be46131349ed9aa4142ebdb1cb1512e0ee4df773d50c98d1c79192ce4723109583c77ab31e8e9",
+                        "mod_name": null,
+                        "object_class": "StaticMeshActor",
+                        "path": "TBL/Content/Mods/OvergrownTemple/BP_OT_WellInteract.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "7949d6dab63f2c6297cf7586d18a9783ed6be22e99bb1f7df0f5f447014d99b9c22cb17f00bbea4e8498681242e160805bcc9194086df89a4aec4e15a8c87104",
+                        "mod_name": null,
+                        "object_class": "MapBuildDataRegistry",
+                        "path": "TBL/Content/Mods/OvergrownTemple/FFA_Palace_BuiltData.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "bf695bf3f2950259a5b88dde84e1cc6d25752a1b6246e94b212ab2e8e1992aa6fe28f88dd6219c6478bb8a9bc23c1c1fb9d135725dfcee69c5c00bff2f493008",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/M_HealingPluses.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "43f62d56dfa3867db76f30a7e44d0eefeb25c66c273d2404e2fc5a59810c9f02ade46f7c5760fcd3e96797ef91857b5633cef05e6d5f01d5e9b4f9e2ee937a39",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/M_OT_SpaceSky.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "12c79333acca05c1a7d16bec36ee0353575813b1de1e795eddfcc2a9897a1f52fb6c45d1c930ea6b4dea952a03dd72cb8b774a94ffd7ccd3bf27630a12eb786d",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Cloud.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "02c4dbf4be700778d740af7499469b414c56fc29103d5a6d829e57449516310a4b34881057dddcefd1354a926097f712c6fdf9df8e04d34bf7542dfe5979f9d8",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Cloud_Half.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "d0fa6f313044042ce1c39e38453daddea7b6a387c66f31a8e15183d9313f78b96509c8d708c85de0ac64db39705f51da8e5ca2396a7fd0d213f9ce7f50d62380",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Cloud_Night.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "abbda5567c37904d4b1ab51123e468d6d2476a0075a142e96f43b65f8c9b37ccc8b34d8606005f93dc31a439d39d4f0df665e993c1c24dec941628d18bf432d4",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_Stars.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "04b7e0962106e6262225da435554971293dbb885307686e9dd1654497081140146eb133f68601008aa428803a670c505851e31338f818c683a44f36b8caa8824",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_bamboo.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "4a78276587738b71c3e58e3f53b639fd09e3a4e4f75d11abbadf985f02f92cbc60c795252f8458cec1d192bc672457e36724d147e7d5862fbccd3f6742933316",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_bark.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "72e6e68674c27793b47f7d23ebfd9a4a53fbef938966589eb96709389d356637f4a283bb42bb92f3d2a647f99177ae19c5d32fa7376e67547f1080d302fba5eb",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_cliff.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "b89025da05f3a67200edda9ab8d4cfc7b6c71f3d9a6c757d8eb667d19bc5a2a8e1ac707f075d53bc3ed69b2521fe859321af229c39b627a828ff042a38e0f070",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_dirt.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "6eb40af650421c8fe8b00dfc9c593b359c13dfd05802ad53c059abd2b206bc899fa5f445af20060387cda5e0f8dc99d4ad7535ee0f5dfa4aae98d1d6a6e8dd3a",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_ground.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "d72018a4901c28d5ab09a068a23199f227fcc420e55d11e18f10059631206483f631699de2e71af822311d6d197127e4bed83fdc643c60cab077867e05dca36f",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_ground_grass.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "46383af5733a4465a432d988b6de4eb3f718cbbb5803887d8f527456ad5bd9164d7b39314954db9fd289636ee4b8372134e50c30c82691e4174efa0a4919c608",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_leaves.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "34c3870277db47b96ddbc6f3cb281118a7623946df8bcfab7fd20ca9d501cab914bff335199e47a4a140045e144125d7ec604776b341a736477868ce97babb11",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_marker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "ca97efdb2cd145d96ecd030ded6c23a892d5b6afc905bd3af92cb584ce77e0231c088ed10a49fd2cbffe216f804285f76956bd5af87c1f8235d20a183e713035",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_mossy_stone.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "c5802b405e47fa0665b8113f10e1322816c8ef6e566ab781c0cfb02b31dcc6a6ab5324c5f1b452dcafd0319c6ff500c6e03d6c4bc36829a50418d845f452ef6f",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_objective.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "bf4249aa3a32eca946689e7025354478698b6f362cf37ab0172098acc31949f5e5621d7aaaa2e5689f9c1f9c47c8a048a6f15ab106a488fd39f12d02fc4a9738",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_stone.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "490c66efdfdbb676eef9c0d878d574468f35a4d23ec65b428ac761ecda17a5b85064cc687c737a7ccdb96619eb9e5a10683b39a825cd3ea0101b8983dd02dfd7",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_cliff.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "bd7e463e66f64a68cef1db339dcb2ec01b5bb8dc98d651d48fb26f4a3cb254507eabcebcee683e55de1f1ac90c4ab027f1c9dee4849b6df70c14ce6b8095b9c2",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_dirt.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "b132de6624e0aeb3aea7d395a604e09f26bc8d897f7bf6f7f70e84610eedc71e3db78660e3063011096456b869d58178cb7bb6d0139fb106de2d4bf2ec2e6155",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_ground_grass.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "29005e937de07d7876e89d300d5a34b7fc6b88a065f2ff2034b7ba1c980eb6ca4612639d7df7ad9ed6cc5f0bf4c87624559e92c2760fbab321899581f9866efb",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_mossy_stone.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "312cd95aa456a77ca9bd790f760d9ad7732b31532a1850f2a3bb16bcec27af7dacde86b76ace8d6c145205336a4deb202202f51e09bba30c369c79e2da874062",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_stone.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "3888547c76c10c108619c60efaf18bc9c6b08581ea2f474d4b41f4d5feae6c26ee2df745ef90273029bfe0015e9f532383995eabe4b9cc83018d1d6af8b6462f",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_stone_half.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "fbc249f4e76b1b7cadd6996972092ef10ccda42e4b7d9131c28fffb8c97b755b24c33cfa180d2c564517f2e026611a86d1f377bb1dda25e699e7cc3c7d8e2957",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_tex_wood.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8d79ed3a61231e91bac8f07aabe9cc693c47157d3d31f1e2b5f62e82266fabc3bebe6bf77041d93a291cf651bdad5f1fc003c8cf6df4c50ca9305af5136b3cab",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_vine.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "679c1aa6eb56d16a1dc0e870af6f0c7d25cb72434a5abace17d6974b06cea195b7f71f9093a403c0b62f5cb9c0b72257f8ad59960a09a0f4e235ba380c9e656e",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/OvergrownTemple/Materials/M_OT_wood.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "8edb3e6e1e73604048a17ca273ff651ce477835aef5b2a47d3f9c6e34f63c715ebf40f5e4a25d395251d3c9e25054d05dfd4eec92c45a95c44884f7703c336f5",
+                        "mod_name": null,
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/OvergrownTemple/SpaceAmbient.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "ba2f61e1ed1679e78f63ad58853a2e363541f17cac3448ea814032150346b5ef062f0ba36f1b7a68151d6b524e7bf0922b605bdfa39f95b7dac002bbe1b47994",
                         "mod_name": null,
                         "object_class": "Texture2D",
-                        "path": "TBL/Content/Mods/BiomeMap/T_Galaxy_orange.uasset"
+                        "path": "TBL/Content/Mods/OvergrownTemple/T_HealingPluses.uasset"
                     }
                 ],
                 "blueprints": [],

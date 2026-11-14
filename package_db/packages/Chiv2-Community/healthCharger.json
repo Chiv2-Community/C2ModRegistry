@@ -34,17 +34,17 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "ce18bb14764366599b21cf6f6b1b5c1e9d5ed81b35b6b116fbe1d7fcbc476ee36db6cf4ab771d7e8c7df3ad917216b8b438f7fbfcbe68ba9bd8ec3ca403bf1f5",
-                        "mod_name": null,
-                        "object_class": "Actor",
-                        "path": "TBL/Content/Mods/healthCharger/healthcharger.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "0dbee0c128a9922dbe081a1b45be47a15e11d0cb825997af6dcfdf1706ad1c25df33900fabee1fa090a74f3f3de66495b52a16bab2090363afe9784cceb4696c",
                         "mod_name": null,
                         "object_class": "SoundAttenuation",
                         "path": "TBL/Content/Mods/healthCharger/HealthChargerAttenuation.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "fcd40183934919ba3c464278d84314e48d13816f308810760551793a67e1db8af624bcecf9889478e2da0538d08dd21063b3e4d8dc5f668a11530eef5630feb7",
+                        "mod_name": null,
+                        "object_class": "Material",
+                        "path": "TBL/Content/Mods/healthCharger/M_healthcharger_border.uasset"
                     },
                     {
                         "class_path": null,
@@ -55,17 +55,17 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "727730c40714c89ce769426115333e2d3655aac490151eff4454919048d6e3a04fe015c4b2253f6322870b7f790ccd773dd9fa7fb34878d3fe50851b69644c30",
+                        "hash": "ce18bb14764366599b21cf6f6b1b5c1e9d5ed81b35b6b116fbe1d7fcbc476ee36db6cf4ab771d7e8c7df3ad917216b8b438f7fbfcbe68ba9bd8ec3ca403bf1f5",
                         "mod_name": null,
-                        "object_class": "Texture2D",
-                        "path": "TBL/Content/Mods/healthCharger/healthchargerface.uasset"
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/healthCharger/healthcharger.uasset"
                     },
                     {
                         "class_path": null,
-                        "hash": "fcd40183934919ba3c464278d84314e48d13816f308810760551793a67e1db8af624bcecf9889478e2da0538d08dd21063b3e4d8dc5f668a11530eef5630feb7",
+                        "hash": "ab16072385682c4cd755abcc4a9c264066dae94854161b84d7ff33dc7feef845b07d3886f52de8190e7ec08947d3579f772206c542dfdaeb08ad7ce7805f9cb1",
                         "mod_name": null,
-                        "object_class": "Material",
-                        "path": "TBL/Content/Mods/healthCharger/M_healthcharger_border.uasset"
+                        "object_class": "SoundWave",
+                        "path": "TBL/Content/Mods/healthCharger/healthcharger_end.uasset"
                     },
                     {
                         "class_path": null,
@@ -83,10 +83,10 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "ab16072385682c4cd755abcc4a9c264066dae94854161b84d7ff33dc7feef845b07d3886f52de8190e7ec08947d3579f772206c542dfdaeb08ad7ce7805f9cb1",
+                        "hash": "727730c40714c89ce769426115333e2d3655aac490151eff4454919048d6e3a04fe015c4b2253f6322870b7f790ccd773dd9fa7fb34878d3fe50851b69644c30",
                         "mod_name": null,
-                        "object_class": "SoundWave",
-                        "path": "TBL/Content/Mods/healthCharger/healthcharger_end.uasset"
+                        "object_class": "Texture2D",
+                        "path": "TBL/Content/Mods/healthCharger/healthchargerface.uasset"
                     }
                 ],
                 "blueprints": [],

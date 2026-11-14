@@ -128,17 +128,17 @@
                     },
                     {
                         "class_path": null,
-                        "hash": "bec99435a264f8745a99407d8ee3a1f6855a5e018c7703ffa92b7b4eef85ed9869b109f6a7e7baf4b9cca06de78afc73f9877d7f8d1a66c4155655dbab9be91d",
-                        "mod_name": null,
-                        "object_class": "CTTorso",
-                        "path": "TBL/Content/Mods/AgMods/ManlyMen/Mason_Vanguard_Stronghold_Torso_T4.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "c167f4da917c9327b0941bd17d8589cbb80db95e004ef6505a8e5b115bcaede24db6b879c751c669bd3c3110ae34ba96e125a081cafa94c25d0361954ef96c9d",
                         "mod_name": null,
                         "object_class": "CTLeg",
                         "path": "TBL/Content/Mods/AgMods/ManlyMen/Mason_Vanguard_Stronghold_Leg_T4.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "bec99435a264f8745a99407d8ee3a1f6855a5e018c7703ffa92b7b4eef85ed9869b109f6a7e7baf4b9cca06de78afc73f9877d7f8d1a66c4155655dbab9be91d",
+                        "mod_name": null,
+                        "object_class": "CTTorso",
+                        "path": "TBL/Content/Mods/AgMods/ManlyMen/Mason_Vanguard_Stronghold_Torso_T4.uasset"
                     }
                 ],
                 "blueprints": [

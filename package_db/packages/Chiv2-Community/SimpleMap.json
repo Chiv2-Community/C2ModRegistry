@@ -54,13 +54,6 @@
                 "arbitrary": [
                     {
                         "class_path": null,
-                        "hash": "4967340d35a1fc2d39362dfc192e2459fcdc719d844f3b39f7b89865a760d8380da4090850d6ccb825f01b4db3b802d1888c2ef3a2ec087bb5a85562f357a0aa",
-                        "mod_name": null,
-                        "object_class": "LevelSequence",
-                        "path": "TBL/Content/Mods/Maps/SimpleMap/WarmupSequence.uasset"
-                    },
-                    {
-                        "class_path": null,
                         "hash": "08f7e83d08450003574a6ea5981a93132c1127d742d3a83ff5cfc49543539f077812857498eb5b93bfd88316d87b9a56d4847aab5d43708c1fef84597e9c3356",
                         "mod_name": null,
                         "object_class": "Material",
@@ -72,6 +65,13 @@
                         "mod_name": null,
                         "object_class": "MapBuildDataRegistry",
                         "path": "TBL/Content/Mods/Maps/SimpleMap/SimpleMap_BuiltData.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "4967340d35a1fc2d39362dfc192e2459fcdc719d844f3b39f7b89865a760d8380da4090850d6ccb825f01b4db3b802d1888c2ef3a2ec087bb5a85562f357a0aa",
+                        "mod_name": null,
+                        "object_class": "LevelSequence",
+                        "path": "TBL/Content/Mods/Maps/SimpleMap/WarmupSequence.uasset"
                     },
                     {
                         "class_path": null,
