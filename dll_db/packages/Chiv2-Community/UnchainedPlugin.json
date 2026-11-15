@@ -4,7 +4,8 @@
       "Dr Long",
       "Jacoby6000",
       "Nihilianth",
-      "Reciate"
+      "Reciate",
+      "@wiseLlama0"
     ],
     "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
     "mod_dependencies": [],
@@ -14,6 +15,30 @@
     "target": "shared"
   },
   "releases": [
+    {
+      "dll_file_name": "UnchainedPlugin.dll",
+      "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-rc4/UnchainedPlugin.dll",
+      "hash": "f14ad1e741a3730e72d6b54c06d03ef7db016b728d29eecaf403030833ab1449",
+      "info": {
+        "authors": [
+          "Dr Long",
+          "Jacoby6000",
+          "Nihilianth",
+          "Reciate",
+          "@wiseLlama0"
+        ],
+        "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
+        "mod_dependencies": [],
+        "name": "Unchained Core Plugin",
+        "plugin_dependencies": [],
+        "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin",
+        "target": "shared"
+      },
+      "release_date": "2026-11-15T00:03:02+00:00",
+      "release_notes_markdown": "## What's Changed\n* Move Discord event-log processing into a background task by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/2\n* Harden Unreal allocator access and startup initialization by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/1\n* Fix empty MOTD and multiline chat parsing by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/10\n* Implement support for INI file config overrides. by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/12\n* Logging Standardization by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/13\n* Restore per-call function prefixes and simplify console labels by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/15\n* Decouple Discord delivery from event batching by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/11\n* Fix startup banner colors under Wine by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/16\n* Forward console output and add --attach-std by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/17\n* Ipv6 server support by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/19\n* Re-register servers after rejected updates or heartbeats by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/18\n* Support inline log palette switches by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/21\n* Name opaque native hook pointer types by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/23\n* Fix startup banner padding and truecolor encoding by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/25\n* Mod loading, console interaction, mod loader settings by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/24\n* Load log4rs.yaml from the working directory by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/26\n* Fix Steam ticket leak in Redpoint login probe by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/27\n* Fix PlayFab authentication crash during server shutdown by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/32\n* Mod Asset Registry loading and V2 mod/map markers by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/31\n* Finalize logging standardization and nonblocking console selection by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/30\n* Consolidate Rust CI caches by build profile by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/40\n* Remove unused dependencies while preserving logging features by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/41\n* Scan the mod registry once per registration worker and condense V2-marker logging by @Knutschbert in https://github.com/Chiv2-Community/UnchainedPlugin/pull/39\n* Add magenta Client Message column to senderless system logs by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/45\n\n## New Contributors\n* @Jacoby6000 made their first contribution in https://github.com/Chiv2-Community/UnchainedPlugin/pull/2\n* @Knutschbert made their first contribution in https://github.com/Chiv2-Community/UnchainedPlugin/pull/12\n\n**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/compare/v0.5.0...v1.0.0-rc4",
+      "size": 24990720,
+      "tag": "v1.0.0-rc4"
+    },
     {
       "dll_file_name": "UnchainedPlugin.dll",
       "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0-RC3/UnchainedPlugin.dll",
