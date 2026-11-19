@@ -17,6 +17,30 @@
   "releases": [
     {
       "dll_file_name": "UnchainedPlugin.dll",
+      "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.1/UnchainedPlugin.dll",
+      "hash": "85cf655d7af84ea9d933c06d05efdb11743ab1d5a93aefeff1e0de474ced469d",
+      "info": {
+        "authors": [
+          "Dr Long",
+          "Jacoby6000",
+          "Nihilianth",
+          "Reciate",
+          "@wiseLlama0"
+        ],
+        "description": "Allows users to run mods and connect to unchained servers. Required for modded play and self-hosted servers.",
+        "mod_dependencies": [],
+        "name": "Unchained Core Plugin",
+        "plugin_dependencies": [],
+        "repo_url": "https://github.com/Chiv2-Community/UnchainedPlugin",
+        "target": "shared"
+      },
+      "release_date": "2026-11-18T19:31:52+00:00",
+      "release_notes_markdown": "## Fixes\n\n- **Chat stability:** dispatch native chat broadcasts on the game thread rather than from asynchronous tasks. ([#49](https://github.com/Chiv2-Community/UnchainedPlugin/pull/49))\n- **MOTD timing:** broadcast only during live matches, skip empty messages, and cancel pending broadcasts when a match ends or a map loads. ([#49](https://github.com/Chiv2-Community/UnchainedPlugin/pull/49))\n\n## Server integration\n\n- Migrate server-browser registration and ban checks to the backend's generated Rust client and lifecycle SDK. Delegate registration leases, retries, heartbeats, metadata updates, and cleanup to the SDK. ([#44](https://github.com/Chiv2-Community/UnchainedPlugin/pull/44))\n- Advertise the configured A2S query port, propagate active mod changes into registration, and drain registration during shutdown or voted restarts. This migration does not enable Discord authentication. ([#44](https://github.com/Chiv2-Community/UnchainedPlugin/pull/44))\n\n## Build and diagnostics\n\n- Add a documented Linux-to-Windows DLL build script using `cargo-xwin`, without requiring Wine for compilation. Preserve Windows version resources and identify the binary as a DLL. ([#50](https://github.com/Chiv2-Community/UnchainedPlugin/pull/50))\n- Embed the Git commit and tracked-source dirty status in build metadata and startup diagnostics. ([#50](https://github.com/Chiv2-Community/UnchainedPlugin/pull/50))\n- Add portable backend transport tests and containerized backend integration coverage. ([#44](https://github.com/Chiv2-Community/UnchainedPlugin/pull/44))\n\nIncludes merged PRs #44, #49, and #50 since v1.0.0.\n\n**Full changelog:** https://github.com/Chiv2-Community/UnchainedPlugin/compare/v1.0.0...v1.0.1\n\n\n## What's Changed\n* Add shared Linux-to-Windows DLL build workflow by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/50\n* Run chat broadcasts on the game thread and gate MOTD on live matches by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/49\n* Migrate existing backend integration to generated Rust SDK by @Jacoby6000 in https://github.com/Chiv2-Community/UnchainedPlugin/pull/44\n\n\n**Full Changelog**: https://github.com/Chiv2-Community/UnchainedPlugin/compare/v1.0.0...v1.0.1",
+      "size": 23342592,
+      "tag": "v1.0.1"
+    },
+    {
+      "dll_file_name": "UnchainedPlugin.dll",
       "download_url": "https://github.com/Chiv2-Community/UnchainedPlugin/releases/download/v1.0.0/UnchainedPlugin.dll",
       "hash": "4eabc713fd2476262d14694ec53d23ae9c3d14b983fd6b86b3dfde2f8dd71ba3",
       "info": {
