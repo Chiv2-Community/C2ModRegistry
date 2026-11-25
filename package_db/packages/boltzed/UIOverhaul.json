@@ -1,0 +1,124 @@
+{
+    "latest_release_info": {
+        "authors": [
+            "boltzed"
+        ],
+        "dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods",
+                "version": ">=0.0.1"
+            }
+        ],
+        "description": "A UI overhaul for every map and mode.\n\nFeatures:\nExact health and stamina numbers on your own bars\nSpectator overhead bar on every player (health, stamina, weapon icon)\nSpectator camera switch between first and third person\n\nOther players' stamina is only shown to pure spectators, never to dead players on the death cam, so it can't be used to gain an edge.",
+        "icon_url": null,
+        "image_urls": [],
+        "mod_dependencies": [
+            {
+                "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods",
+                "version": ">=0.0.1"
+            }
+        ],
+        "name": "UI Overhaul",
+        "plugin_dependencies": [],
+        "repo_url": "https://github.com/boltzed/UIOverhaul",
+        "version": "0.1.0"
+    },
+    "releases": [
+        {
+            "hash": "49ca2cbbdae9f900606bd308c2728f82376e6666ca2142724c3c40183486e6ae7b3fd7d506093e0bb5ae6faaa34b045e882b7285a0f847924b3af66c04e76337",
+            "info": {
+                "authors": [
+                    "boltzed"
+                ],
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods",
+                        "version": ">=0.0.1"
+                    }
+                ],
+                "description": "A UI overhaul for every map and mode.\n\nFeatures:\nExact health and stamina numbers on your own bars\nSpectator overhead bar on every player (health, stamina, weapon icon)\nSpectator camera switch between first and third person\n\nOther players' stamina is only shown to pure spectators, never to dead players on the death cam, so it can't be used to gain an edge.",
+                "icon_url": null,
+                "image_urls": [],
+                "mod_dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/ArgonSDK-Mods",
+                        "version": ">=0.0.1"
+                    }
+                ],
+                "name": "UI Overhaul",
+                "plugin_dependencies": [],
+                "repo_url": "https://github.com/boltzed/UIOverhaul",
+                "version": "0.1.0"
+            },
+            "manifest": {
+                "arbitrary": [
+                    {
+                        "class_path": null,
+                        "hash": "3fbd4b521031ac3fd73f47ddf9406dceae7810d97c895554e6b34563566ba38a1b95e943bebda07ceb065cd440604abf45a14c2617c97d0f4f6b40d5fcf44007",
+                        "mod_name": null,
+                        "object_class": "CameraActor",
+                        "path": "TBL/Content/Mods/AgMods/UIOverhaul/UIO_Cam.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "38e71c368da6d449ae29915339e7d4d52b4fa7badf9081ad2cd454ae9c313e6075019b15391441060db2a454d14c66b997d70d183a153711adf5ab8b73b32be2",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/UIOverhaul/UIO_HpNum.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "58d8db6f042a83de13994abd17d12428bbb2facfc9c0740c5858a978c7b7802a1d129bdc9490899bc0c7d9fcac05c5b8900a84cdcc737e5edff58099c0c82acc",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/UIOverhaul/UIO_Over.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "eae6fd0b1ba3038f8b8e148ff6f6511f73e44abada200548d87814237d8ad77e62d81e6c82e17be5d065dc9810218af118d74da89e16f2115f1606bb5df4bf6b",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/UIOverhaul/UIO_StNum.uasset"
+                    }
+                ],
+                "blueprints": [
+                    {
+                        "allow_on_frontend": false,
+                        "author": "",
+                        "class_path": "/Game/Mods/AgMods/UIOverhaul/UIOverhaul.UIOverhaul_C",
+                        "enable_by_default": true,
+                        "hash": "d38b993fc409d1c448589df1967a9b3456772ba72fdf3d09f5cb1a1c4ea8ad7259612ef6bceb8b73622eedf71c84e9bcc9f4b1f4d6ac989b28a563c8925b7d4b",
+                        "host_only": false,
+                        "is_client_side": true,
+                        "mod_description": "",
+                        "mod_name": "UI Overhaul",
+                        "mod_repo_url": "",
+                        "object_class": "ArgonSDKModBase_C",
+                        "online_only": false,
+                        "path": "TBL/Content/Mods/AgMods/UIOverhaul/UIOverhaul.uasset",
+                        "show_in_gui": null,
+                        "silent_load": false,
+                        "version": "0.1.0"
+                    }
+                ],
+                "maps": [],
+                "markers": [
+                    {
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/UIOverhaul/UIOverhaul.uasset"
+                        ],
+                        "class_path": null,
+                        "hash": "67b88fe1c8ac6270887a413d754d8980ee482c6927163f37039b4161234b4aa6fc1916ee791b8435e4f1c67cdd0f592ed5cd379082ccfb6dc0b5efec39ef0dff",
+                        "object_class": "DA_ModMarker_C",
+                        "path": "TBL/Content/Mods/AgMods/UIOverhaul/UIOverhaul_Marker.uasset"
+                    }
+                ],
+                "replacements": []
+            },
+            "pak_file_name": "UIOverhaul.pak",
+            "release_date": "2026-11-25T01:18:26",
+            "release_notes_markdown": "First release. Install through the Unchained launcher, or download UIOverhaul.pak below.",
+            "tag": "v0.1.0"
+        }
+    ]
+}

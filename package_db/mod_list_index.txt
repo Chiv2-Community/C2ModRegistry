@@ -20,3 +20,4 @@ SageFlare/MirrorMaze
 boltzed/FFA_Palace
 boltzed/FFA_Greenscreen
 rebelancap/Chiv2-Splitscreen
+boltzed/UIOverhaul
