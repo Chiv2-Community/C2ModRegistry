@@ -10,7 +10,7 @@
                 "version": ">=0.2.2"
             }
         ],
-        "description": "Local splitscreen for 2 to 4 players on one PC.\nEach player gets their own view, HUD, scoreboard and loadout menu.\n\nUsage: Play Offline, turn the Splitscreen skull gold, then type ssplayers=3 (2 to 4) in the Options box.\nAdd sskbm=1 to put player 1 on keyboard and mouse.\n\nGuide, bug reports and feature requests:\nhttps://github.com/rebelancap/Chiv2-Splitscreen",
+        "description": "Local splitscreen for 2 to 4 players on one PC.\n\nUsage: Play Offline, then click Splitscreen in the mod list. A gold highlight means it is enabled.\nTo change the player count, click Edit options, type ssplayers=3 (2 to 4) on its own line, then click Save preset. Saving is needed even for the Temporary preset.\nP1 can also change ssplayers in their options. Splitscreen keeps these settings for future sessions.\n\nGuide, bug reports and feature requests:\nhttps://github.com/rebelancap/Chiv2-Splitscreen",
         "icon_url": null,
         "image_urls": [
             "https://raw.githubusercontent.com/rebelancap/Chiv2-Splitscreen/main/docs/screenshot.jpg"
@@ -24,9 +24,143 @@
         "name": "Splitscreen",
         "plugin_dependencies": [],
         "repo_url": "https://github.com/rebelancap/Chiv2-Splitscreen",
-        "version": "0.5.0"
+        "version": "0.6.0"
     },
     "releases": [
+        {
+            "hash": "7f4311cc3f5ee6dcfc7729eb4ca6515e421c581f2e73a9540a64e7039a3372751be3cf180d14c151477b9796ba4bf617d862bc420833f0d63d5447c80dd54dd9",
+            "info": {
+                "authors": [
+                    "rebelancap",
+                    "Nihi"
+                ],
+                "dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/Unchained-Mods",
+                        "version": ">=0.2.2"
+                    }
+                ],
+                "description": "Local splitscreen for 2 to 4 players on one PC.\n\nUsage: Play Offline, then click Splitscreen in the mod list. A gold highlight means it is enabled.\nTo change the player count, click Edit options, type ssplayers=3 (2 to 4) on its own line, then click Save preset. Saving is needed even for the Temporary preset.\nP1 can also change ssplayers in their options. Splitscreen keeps these settings for future sessions.\n\nGuide, bug reports and feature requests:\nhttps://github.com/rebelancap/Chiv2-Splitscreen",
+                "icon_url": null,
+                "image_urls": [
+                    "https://raw.githubusercontent.com/rebelancap/Chiv2-Splitscreen/main/docs/screenshot.jpg"
+                ],
+                "mod_dependencies": [
+                    {
+                        "repo_url": "https://github.com/Chiv2-Community/Unchained-Mods",
+                        "version": ">=0.2.2"
+                    }
+                ],
+                "name": "Splitscreen",
+                "plugin_dependencies": [],
+                "repo_url": "https://github.com/rebelancap/Chiv2-Splitscreen",
+                "version": "0.6.0"
+            },
+            "manifest": {
+                "arbitrary": [
+                    {
+                        "class_path": null,
+                        "hash": "ea3955e1c89999fb2f90722301651da392a67181556cf01e4780efaf5fea2585651dcc90f9a6f65d3bb1bb20050b2936e0b7690c1521f90e9b5fe40704a5f929",
+                        "mod_name": null,
+                        "object_class": "ForceFeedbackEffect",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/Addon_Marker.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "7ccea646efbbcaca9817982b0885e05e6edff885cfb7280f6d49a3d95001918cde8fff9ea4ad264ae997d6e5611f8fc1ec9d24c3e57bf16ad3b8336dfdedd7cc",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SS_BloodVolume.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "2c8041f3c2a35001471a0325d806276c4cb2d995069f5c697b233be9399ce554c439775c373cbfac073328a77b7c957b36a924ecda300673342afe8589b4a41e",
+                        "mod_name": null,
+                        "object_class": "SaveGame",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SS_Config.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "7f7576ed289380e6224edaf17e62bddf70e2c9890926696ae9a3c0df98baf88e766454284c3788dd28bcc4152ade4d21e08a0204fd39a9f866c13ad79156332d",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SS_OptionRow.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "3b98afb2c59a3ae78f5b9a225def23c59c5b1e258d649fcb410082bdfb691df5a5b0124ae467371ba47de4dd9ea510c9d32b38fd300297091c5dde1e2c2a18a5",
+                        "mod_name": null,
+                        "object_class": "SaveGame",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SS_Save.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "3d82b880ac1039c4437a06febbb53d2334993687d5549da320416646ae9a86742a008ab5f136cc4b3dbc58f8c50e7f0691d203130575c12752b4d5f1c8c794e7",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SS_WeaponClone.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "2722bfabd2d781fecd7017981659cf8a1ca4a6d451152430b412415c95bc95f884bedb491bda0dc0563f4e5f30462222fab8457db93b18db31cf76d8e298d82a",
+                        "mod_name": null,
+                        "object_class": "HUDWidget_C",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SplitHUDWidget.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "a73a66992a8b2865b379a2b993a7d7b1ce8331d5a7b460b8414a8e44e17fa5f756d3d04efcf5ce9e393fe5b6f1049bf8e5f9e734ea7e7046df9d0b3bb77ae8ef",
+                        "mod_name": null,
+                        "object_class": "UserWidget",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SplitLoadoutScreen.uasset"
+                    },
+                    {
+                        "class_path": null,
+                        "hash": "71174444636c90c8a55427a24aceb203c276a2759f825f988096f811d13e6fa05be6f39722e955a865dc1b99ba470b06c36d775a5d158acf0f0afc20f18893cb",
+                        "mod_name": null,
+                        "object_class": "Actor",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/SplitscreenInputProxy.uasset"
+                    }
+                ],
+                "blueprints": [
+                    {
+                        "allow_on_frontend": false,
+                        "author": "rebelancap & Nihi",
+                        "class_path": "/Game/Mods/AgMods/Splitscreen/Splitscreen.Splitscreen_C",
+                        "enable_by_default": false,
+                        "hash": "0f0a1d266a0af3ab64f80031675abd67c7030433c3d6acc6a379800324bdbe649b2453c42788a88d8862e57256b65536521c4ed80f83cecbca999e0e18b242cc",
+                        "host_only": false,
+                        "is_client_side": false,
+                        "mod_description": "2-4 player splitscreen",
+                        "mod_name": "Splitscreen",
+                        "mod_repo_url": "https://github.com/rebelancap/Chiv2-Splitscreen",
+                        "object_class": "ArgonSDKModBase_C",
+                        "online_only": false,
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/Splitscreen.uasset",
+                        "show_in_gui": null,
+                        "silent_load": false,
+                        "version": "0.6.0"
+                    }
+                ],
+                "maps": [],
+                "markers": [
+                    {
+                        "associated_blueprints": [
+                            "TBL/Content/Mods/AgMods/Splitscreen/Splitscreen.uasset"
+                        ],
+                        "class_path": null,
+                        "hash": "89a43e468957f6edb3d15f5dbbae92791d29996f5db032ae5d018b496ee30d512c4fe6059b0059cc1febe9379d48d6a607c0f4e1d0151b8e55a86207fe78ac63",
+                        "object_class": "DA_ModMarker_C",
+                        "path": "TBL/Content/Mods/AgMods/Splitscreen/ModMarker.uasset"
+                    }
+                ],
+                "replacements": []
+            },
+            "pak_file_name": "Splitscreen.pak",
+            "release_date": "2026-11-26T16:20:33",
+            "release_notes_markdown": "Local splitscreen for Chivalry 2: 2 to 4 players on one PC.\n\n**Install:** through the Unchained Launcher, or put `Splitscreen.pak` in the game's `TBL\\Content\\Paks\\` folder. See the [README](https://github.com/rebelancap/Chiv2-Splitscreen#readme) for how to play and the options.\n\n\n- Bots on player 1's options page: number of bots (0 to 64) changed during the match, enhanced playerbots, all bots against the splitscreen players (`VS US`) or even teams, and the game mode of the next map\n- L3 switch on player 1's options page: throw and follow (default) or the game's own Alternate Attack, for all players (`ssl3=0`)\n- Options page in every player's loadout menu (View, or O on keyboard): look speed, inverted look, field of view and rumble per player\n- Player 1's options page also sets the player count, the screen split, gamepad or keyboard and mouse, and can end the match (hold A)\n- Side-by-side split for 2 players, switchable during a match (`sssplit=1`)\n- Per-player look speed can also be typed (`sslook=100,150`)\n- Fixed: Random (Y) in the loadout menu did nothing\n- Fixed: an unnamed second health bar flashing when aiming away from a player\n- Fixed: turning keyboard and mouse mode off left player 1 without rumble\n- Fixed: the scoreboard header was oversized in a half-width view\n- Known: gamepad aim assist does not work properly in splitscreen (it is measured from the centre of the whole screen)\n\n",
+            "tag": "v0.6.0"
+        },
         {
             "hash": "1be2257648552529ec601a0d59458f0fa469ca651a64726fd83ccadeaedc38ac4a79b0648f659cd1e62d5174c59c4f07a2a474963c9528dbd9ad40e99b2816fb",
             "info": {
